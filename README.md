@@ -1,63 +1,52 @@
 # CorralizaMath
 
-Sitio web de CorralizaMath: recursos, clases y materiales de matemáticas
-para estudiantes, padres y docentes, con un enfoque claro y práctico.
+Portal educativo para organizar recursos de matemáticas, desarrollo profesional docente, inteligencia artificial educativa, presentaciones, publicaciones y documentos de referencia del Departamento de Educación de Puerto Rico.
 
-## Estructura
+## Estructura principal
 
 ```
 .
-├── index.html                          # Página principal
+├── index.html
 ├── css/
-│   └── styles.css                      # Estilos del sitio
+│   └── styles.css
 ├── js/
-│   └── main.js                         # Interactividad (menú móvil, año dinámico)
-├── img/                                 # Imágenes del sitio
+│   └── main.js
+├── matematicas/
+│   └── index.html
+├── docentes/
+│   └── index.html
+├── ia-tecnologia/
+│   └── index.html
+├── presentaciones/
+│   └── index.html
+├── libros/
+│   └── index.html
+├── normativas-depr/
+│   └── index.html
 ├── modulos/
 │   ├── ia-para-docentes/
-│   │   ├── index.html                  # Módulo interactivo de autoestudio
-│   │   ├── module.css
-│   │   └── module.js
 │   └── microaprendizaje-adultos/
-│       ├── index.html                  # Módulo interactivo de autoestudio
-│       ├── module.css
-│       └── module.js
 └── recursos/
-    ├── IA-para-Docentes-Corraliza.pptx           # Presentación original descargable
+    ├── IA-para-Docentes-Corraliza.pptx
     └── Microaprendizaje-Adultos-RUTA-Corraliza.pptx
 ```
 
-## Módulos interactivos
+## Áreas del portal
 
-Los talleres de desarrollo profesional se publican como módulos de
-autoestudio en `modulos/<nombre-del-modulo>/index.html`, enlazados desde
-la sección "Módulos interactivos" de la página principal. Cada módulo:
+- **Matemáticas por niveles:** recursos para 3–5, 6–8 y 9–12.
+- **Recursos para docentes:** planificación, DUA, evaluación, microlecciones y materiales profesionales.
+- **IA y Tecnología Educativa:** ingeniería de prompts, RC-TTF, herramientas digitales y uso responsable.
+- **Presentaciones y talleres:** archivos descargables y módulos interactivos.
+- **Libros y publicaciones:** publicaciones propias o cuya distribución esté autorizada.
+- **Normativas y Documentos DEPR:** estándares, mapas curriculares, cartas circulares, guías y documentos oficiales.
 
-- Incluye el contenido completo del taller original, organizado en
-  secciones navegables desde una barra lateral con seguimiento de progreso.
-- Añade actividades interactivas (constructores, acordeones, gráficas,
-  autoevaluaciones) que no estaban en la presentación original.
-- Ofrece un botón para descargar la presentación `.pptx` original desde
-  `recursos/`.
-- Guarda el progreso del usuario (casillas marcadas, secciones vistas) en
-  `localStorage` del navegador — no requiere servidor ni base de datos.
+## Publicación
 
-## Cómo verlo localmente
+La rama de producción es `main` y está conectada a Cloudflare. Los cambios enviados a `main` pueden activar un nuevo despliegue automático.
 
-Al ser un sitio estático, basta con abrir `index.html` en el navegador,
-o servirlo localmente:
+## Criterio para documentos oficiales
 
-```bash
-python3 -m http.server 8000
-```
-
-Luego visita `http://localhost:8000`.
-
-## Publicar con GitHub Pages
-
-1. Ve a **Settings → Pages** en este repositorio.
-2. En "Source", selecciona la rama principal (`main`) y la carpeta raíz (`/`).
-3. Guarda; GitHub Pages publicará el sitio en unos minutos.
+En la sección DEPR se recomienda conservar, cuando sea posible, el título oficial, fecha o vigencia, categoría y enlace a la fuente institucional para facilitar la verificación de versiones.
 
 ## Contacto
 
