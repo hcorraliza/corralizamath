@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microaprendizaje para Adultos | Módulo interactivo · CorralizaMath</title>
+<meta name="description" content="Módulo interactivo de autoestudio: Microaprendizaje para Adultos, Proyecto RUTA (Universidad Interamericana de Puerto Rico, Recinto de Ponce). Andragogía, arquitectura de microunidades, repertorio de formatos y producción asistida por IA.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>∑</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/styles.css">
+<link rel="stylesheet" href="module.css">
+</head>
+<body class="module-body">
+
+<header class="module-header">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="module-header-inner">
+    <a href="../../index.html" class="module-back">← Corraliza<span style="color:var(--color-accent)">Math</span></a>
+    <span class="module-title-mini">Microaprendizaje para Adultos</span>
+    <div class="module-header-actions">
+      <button class="btn btn-ghost btn-sm" id="sidebarToggle" aria-label="Abrir índice">☰ <span class="btn-label">Índice</span></button>
+      <a class="btn btn-primary btn-sm" href="../../recursos/Microaprendizaje-Adultos-RUTA-Corraliza.pptx" download>
+        <span class="btn-icon">⬇</span><span class="btn-label">Descargar presentación</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="module-shell">
+
+  <aside class="module-sidebar" id="moduleSidebar">
+    <p class="sidebar-progress" id="sidebarProgressLabel">0 de 9 secciones vistas</p>
+    <ul class="sidebar-nav">
+      <li><a href="#portada"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Presentación</a></li>
+      <li><a href="#objetivos"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Antes de empezar</a></li>
+      <li><a href="#activacion"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Activación</a></li>
+      <li><a href="#modulo-1"><span class="sidebar-num"><span class="sidebar-num-text">1</span></span> Fundamentos</a></li>
+      <li><a href="#modulo-2"><span class="sidebar-num"><span class="sidebar-num-text">2</span></span> Arquitectura</a></li>
+      <li><a href="#modulo-3"><span class="sidebar-num"><span class="sidebar-num-text">3</span></span> El repertorio</a></li>
+      <li><a href="#modulo-4"><span class="sidebar-num"><span class="sidebar-num-text">4</span></span> Producción con IA</a></li>
+      <li><a href="#cierre"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Cierre</a></li>
+      <li><a href="#referencias"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Referencias</a></li>
+    </ul>
+  </aside>
+
+  <main class="module-content">
+   <div class="slides-viewport" id="slidesViewport">
+    <div class="slides-track" id="slidesTrack">
+
+    <!-- PORTADA -->
+    <section class="module-cover" id="portada">
+      <p class="eyebrow">Taller de desarrollo profesional · 4 horas · Módulo interactivo de autoestudio</p>
+      <h1>Microaprendizaje para adultos</h1>
+      <p class="lead">Contenidos breves, relevantes y aplicables. Planificación de unidades cortas y focalizadas que producen una competencia útil y observable.</p>
+      <div class="cover-actions">
+        <a href="#objetivos" class="btn btn-on-dark">Comenzar el módulo</a>
+        <a class="btn btn-outline-on-dark" href="../../recursos/Microaprendizaje-Adultos-RUTA-Corraliza.pptx" download>⬇ Descargar presentación original (.pptx)</a>
+      </div>
+      <div class="cover-meta">
+        <div><span>Proyecto</span><span>Proyecto RUTA · Universidad Interamericana de Puerto Rico, Recinto de Ponce</span></div>
+        <div><span>Facilitador</span><span>Dr. Héctor J. Corraliza Montero, Ed.D. — Director, Proyecto RUTA</span></div>
+        <div><span>Dirigido a</span><span>Docentes y facilitadores de educación de adultos</span></div>
+        <div><span>Fecha</span><span>Septiembre 2026 · Programa financiado bajo WIOA</span></div>
+      </div>
+    </section>
+
+    <!-- ANTES DE EMPEZAR: punto de partida + objetivos + agenda -->
+    <section class="module-section" id="objetivos">
+      <span class="section-kicker">Punto de partida</span>
+      <h2>Nuestro participante no tiene una hora libre: tiene diez minutos</h2>
+
+      <div class="subsection">
+        <div class="grid-3">
+          <div class="info-card">
+            <span class="tag">1 · El reto real</span>
+            <p>El adulto que atendemos estudia entre turnos de trabajo, responsabilidades de cuido, traslados y una escolaridad interrumpida.</p>
+            <p><strong>La unidad larga compite con su vida. La unidad corta se acomoda a ella.</strong></p>
+          </div>
+          <div class="info-card">
+            <span class="tag">2 · Lo que dice la evidencia</span>
+            <p>En un estudio con 104 estudiantes universitarios, el grupo que recibió microaprendizaje superó al grupo control en ejecución (M = 6.6 frente a 5.6; <em>p</em> &lt; .001) y reportó mayor disfrute del proceso.</p>
+            <p class="source-note" style="margin-top:0; border-top:none; padding-top:0;">Balasundaram et al. (2024)</p>
+          </div>
+          <div class="info-card">
+            <span class="tag">3 · Nuestra apuesta</span>
+            <p>Que cada experiencia de 5 a 15 minutos cierre con una competencia útil y observable, no con un tema "cubierto".</p>
+            <p><strong>El criterio de éxito deja de ser cuánto expuse y pasa a ser qué puede hacer hoy quien aprendió.</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <span class="section-kicker">Hacia dónde vamos</span>
+        <h3>Objetivos del taller</h3>
+        <p class="section-dek">Al finalizar las cuatro horas, cada participante será capaz de. Marque cada objetivo a medida que lo sienta cumplido — su progreso se guarda en este navegador.</p>
+        <ul class="checklist">
+          <li class="checklist-item">
+            <input type="checkbox" id="obj1" data-persist="obj-1">
+            <label for="obj1"><strong>1. Fundamentar el microaprendizaje en la andragogía y la ciencia cognitiva.</strong><br>Explicar, con al menos tres argumentos, por qué una unidad corta y focalizada se ajusta mejor al adulto que una sesión extensa.</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" id="obj2" data-persist="obj-2">
+            <label for="obj2"><strong>2. Formular competencias observables alcanzables en una unidad corta.</strong><br>Redactar la competencia de una microunidad con condición, verbo observable, objeto y criterio de logro.</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" id="obj3" data-persist="obj-3">
+            <label for="obj3"><strong>3. Diseñar una cápsula educativa completa.</strong><br>Construir los cinco momentos de la cápsula, su práctica inmediata y su microevaluación, aplicando principios del DUA.</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" id="obj4" data-persist="obj-4">
+            <label for="obj4"><strong>4. Producir y verificar microcontenido con apoyo de inteligencia artificial.</strong><br>Utilizar el modelo RC-TTF para generar guiones, guías visuales e ítems de microevaluación, y aplicar cinco controles de verificación humana.</label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <span class="section-kicker">Ruta del día</span>
+        <h3>Agenda de las cuatro horas</h3>
+        <table class="data-table">
+          <thead><tr><th>Bloque</th><th>Contenido</th><th>Producto del bloque</th><th>Tiempo</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Apertura</strong></td><td>Cápsula cero: vivir el microaprendizaje antes de explicarlo</td><td>Acuerdos de trabajo</td><td>15 min</td></tr>
+            <tr><td><strong>Módulo 1</strong></td><td>Fundamentos: por qué el adulto aprende mejor en microunidades</td><td>Diagnóstico de mi curso</td><td>45 min</td></tr>
+            <tr><td><strong>Módulo 2</strong></td><td>Arquitectura de una microunidad: del objetivo a la competencia observable</td><td>Competencia + esqueleto de cápsula</td><td>55 min</td></tr>
+            <tr><td><strong>Receso</strong></td><td>Pausa activa</td><td>—</td><td>10 min</td></tr>
+            <tr><td><strong>Módulo 3</strong></td><td>El repertorio: cápsulas, videos breves, guías visuales, práctica y microevaluación</td><td>Cápsula producida</td><td>55 min</td></tr>
+            <tr><td><strong>Módulo 4</strong></td><td>Producción asistida por IA con el modelo RC-TTF</td><td>Cápsula refinada y verificada</td><td>40 min</td></tr>
+            <tr><td><strong>Cierre</strong></td><td>Micro-exposiciones, rúbrica y plan de implementación de 14 días</td><td>Compromiso de implementación</td><td>20 min</td></tr>
+          </tbody>
+        </table>
+        <p class="source-note">Total: 240 minutos · Modalidad: presencial con trabajo en equipos de 3 a 4 docentes por programa.</p>
+      </div>
+    </section>
+
+    <!-- ACTIVACIÓN: cápsula cero -->
+    <section class="module-section" id="activacion">
+      <span class="section-kicker">Activación</span>
+      <h2>Cápsula cero: vivamos una microunidad antes de definirla</h2>
+      <p class="section-dek">Microexperiencia de 6 minutos — siga el reloj. Inicie el temporizador y complete cada momento en el tiempo indicado, igual que lo haría un participante de RUTA.</p>
+
+      <div class="timer-widget" id="capsulaCeroTimer" data-countdown data-seconds="360">
+        <div class="timer-head">
+          <div class="timer-display">6:00</div>
+          <div class="timer-actions">
+            <button class="timer-btn timer-start" type="button">Iniciar</button>
+            <button class="timer-btn timer-reset" type="button">Reiniciar</button>
+          </div>
+        </div>
+        <div class="timer-steps">
+          <div class="timer-step" data-from="0" data-to="60"><span class="ts-time">0:00 – 1:00 · Gancho</span>Piense en el último contenido que enseñó y que sus participantes olvidaron en una semana. Escríbalo en una nota adhesiva.</div>
+          <div class="timer-step" data-from="60" data-to="180"><span class="ts-time">1:00 – 3:00 · Núcleo</span>Lea la definición operacional de abajo. Subraye las dos palabras que más le incomoden.</div>
+          <div class="timer-step" data-from="180" data-to="300"><span class="ts-time">3:00 – 5:00 · Práctica</span>Reescriba el contenido de su nota adhesiva en una sola oración que empiece con «Al terminar, el participante podrá…».</div>
+          <div class="timer-step" data-from="300" data-to="360"><span class="ts-time">5:00 – 6:00 · Chequeo</span>Intercambie su nota con un colega (o revísela usted mismo/a). Responda únicamente: ¿esto se puede ver? ¿esto se puede hacer en diez minutos?</div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="callout callout-primary">
+          <span class="callout-title">Definición operacional de trabajo</span>
+          <p>«Una microunidad es una experiencia breve y focalizada, dirigida a uno o dos objetivos, integrada a una estructura mayor, activa y participativa, que produce evidencia de logro.»</p>
+        </div>
+        <div>
+          <h4>Acuerdos de trabajo</h4>
+          <ul class="checklist">
+            <li class="checklist-item"><label>Se trabaja con el curso real que usted enseña.</label></li>
+            <li class="checklist-item"><label>Todo producto se comparte en tres minutos.</label></li>
+            <li class="checklist-item"><label>El celular es herramienta de producción, no distracción.</label></li>
+            <li class="checklist-item"><label>Se puede discrepar; se sostiene con argumento.</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="worksheet-box">
+        <label for="notaAdhesiva">Su nota adhesiva (Gancho)</label>
+        <textarea id="notaAdhesiva" data-persist-text="capsula-cero-nota" placeholder="El último contenido que sus participantes olvidaron en una semana…"></textarea>
+      </div>
+      <div class="worksheet-box">
+        <label for="oracionCompetencia">Su oración de práctica</label>
+        <textarea id="oracionCompetencia" data-persist-text="capsula-cero-oracion" placeholder="Al terminar, el participante podrá…"></textarea>
+        <p class="worksheet-hint">Guarde esta oración: es el insumo de la Actividad 1 en el Módulo 1.</p>
+      </div>
+    </section>
+
+    <!-- MÓDULO 1: FUNDAMENTOS -->
+    <section class="module-section" id="modulo-1">
+      <span class="section-kicker"><span class="num-badge">1</span> Fundamentos · 45 minutos</span>
+      <h2>Por qué el adulto aprende mejor en microunidades</h2>
+      <p class="section-dek">Andragogía, arquitectura cognitiva y evidencia empírica.</p>
+
+      <div class="subsection">
+        <h3>Contexto: el participante que tenemos delante y lo que exige del diseño</h3>
+        <div class="grid-4">
+          <div class="info-card"><h4>Jornada laboral</h4><p>Estudia después de una jornada completa o entre turnos.</p><p><strong>Implicación de diseño:</strong> diseñe para el cansancio: una idea por unidad, no seis.</p></div>
+          <div class="info-card"><h4>Responsabilidades de cuido</h4><p>Atiende hijos, nietos o familiares dependientes.</p><p><strong>Implicación de diseño:</strong> diseñe para la interrupción: la unidad debe poder retomarse sin releerlo todo.</p></div>
+          <div class="info-card"><h4>Escolaridad interrumpida</h4><p>Regresa a estudiar tras años fuera del aula.</p><p><strong>Implicación de diseño:</strong> diseñe para la confianza: victorias visibles y tempranas.</p></div>
+          <div class="info-card"><h4>Necesidad inmediata</h4><p>Busca un empleo, un diploma o una destreza concreta.</p><p><strong>Implicación de diseño:</strong> diseñe para el uso: la utilidad debe verse en la primera pantalla.</p></div>
+        </div>
+        <p class="source-note">Retrato de trabajo, no dato estadístico: contrástelo con la matrícula real de su grupo antes de usarlo para tomar decisiones.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Definición: qué es el microaprendizaje (y qué no depende del reloj)</h3>
+        <div class="callout callout-quote">
+          <p>«Un evento de aprendizaje corto y focalizado, que no se define por un límite de tiempo arbitrario» (Kapp y Defelice, 2019)</p>
+        </div>
+        <div class="grid-3">
+          <div class="info-card"><span class="tag">A</span><h4>Foco estrecho</h4><p>Atiende uno o dos objetivos de aprendizaje. Si necesita tres, no es una microunidad: son dos microunidades mal unidas.</p></div>
+          <div class="info-card"><span class="tag">B</span><h4>Integración a una estructura mayor</h4><p>No vive suelta. Pertenece a una ruta, un módulo o una secuencia. Una cápsula aislada es un dato; una cápsula secuenciada es aprendizaje.</p></div>
+          <div class="info-card"><span class="tag">C</span><h4>Actividad y participación</h4><p>Exige hacer algo, no solo mirar. Un video de tres minutos sin práctica es un video corto, no microaprendizaje.</p></div>
+        </div>
+        <p class="section-dek">Y produce evidencia: lo que el participante hace queda registrado.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Precisión conceptual: cinco confusiones que conviene resolver hoy</h3>
+        <table class="data-table">
+          <thead><tr><th>Lo que se suele creer</th><th>Lo que sostiene la literatura</th><th>Consecuencia para el diseño</th></tr></thead>
+          <tbody>
+            <tr><td>«Es cortar la clase en pedazos»</td><td>Fragmentar no es focalizar: cada unidad necesita objetivo, práctica y cierre propios.</td><td>Rediseñe, no recorte.</td></tr>
+            <tr><td>«Sirve para cualquier contenido»</td><td>No todo lo que hay que saber puede enseñarse en microformato (Kapp y Defelice, 2019).</td><td>Reserve la unidad larga para lo complejo e integrador.</td></tr>
+            <tr><td>«Mientras más breve, mejor»</td><td>La brevedad sin foco produce olvido; el criterio es la unidad de sentido, no el cronómetro.</td><td>Dure lo que la competencia exija: 5, 10 o 15 minutos.</td></tr>
+            <tr><td>«Es solo contenido digital»</td><td>Hug (2006) incluye lo presencial y lo monomedial entre las formas de microaprendizaje.</td><td>Una microunidad puede ser una hoja impresa bien diseñada.</td></tr>
+            <tr><td>«Sustituye al docente»</td><td>Sin secuenciación, retroalimentación y acompañamiento, la cápsula se vuelve un archivo más.</td><td>El docente pasa de transmisor a arquitecto de la ruta.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subsection">
+        <h3>Anclaje andragógico: los seis principios de Knowles traducidos a microunidades</h3>
+        <table class="data-table">
+          <thead><tr><th>Principio del aprendizaje adulto</th><th>Cómo se materializa en la microunidad</th></tr></thead>
+          <tbody>
+            <tr><td>Necesidad de saber</td><td>La cápsula abre declarando para qué sirve hoy: «Al terminar podrá pedir una cita médica por teléfono».</td></tr>
+            <tr><td>Autoconcepto de persona autodirigida</td><td>El participante decide cuándo y en qué orden completa las cápsulas de la ruta.</td></tr>
+            <tr><td>Papel de la experiencia previa</td><td>El gancho parte de una situación que la persona ya vivió, no de una definición.</td></tr>
+            <tr><td>Disposición a aprender</td><td>El contenido responde a una tarea real de esta semana: una entrevista, un examen, un formulario.</td></tr>
+            <tr><td>Orientación al problema</td><td>La destreza se enseña dentro del problema, no como paso previo abstracto.</td></tr>
+            <tr><td>Motivación interna</td><td>El cierre evidencia una competencia lograda —algo que antes no podía hacer—, no una calificación.</td></tr>
+          </tbody>
+        </table>
+        <p class="source-note">Knowles, Holton y Swanson (2020)</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Arquitectura cognitiva: tres leyes que explican por qué la unidad corta funciona</h3>
+        <div class="step-list">
+          <div class="step-item">
+            <span class="step-num">1</span>
+            <div>
+              <h4>Carga cognitiva</h4>
+              <p>La memoria de trabajo sostiene pocos elementos a la vez. Una unidad con un solo objetivo reduce la carga ajena a la tarea y libera capacidad para el aprendizaje.</p>
+              <p><strong>Decisión:</strong> elimine todo lo que no sirva al objetivo, por interesante que sea.</p>
+              <p class="source-note" style="border:none; margin:0; padding:0;">Sweller, van Merriënboer y Paas (2019)</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <span class="step-num">2</span>
+            <div>
+              <h4>Práctica espaciada</h4>
+              <p>Distribuir tres cápsulas de ocho minutos en tres días distintos produce más retención que una sesión continua de veinticuatro minutos.</p>
+              <p><strong>Decisión:</strong> planifique el calendario de la ruta, no solo el contenido de la cápsula.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <span class="step-num">3</span>
+            <div>
+              <h4>Práctica de recuperación</h4>
+              <p>Recuperar información de la memoria consolida más que volver a leerla. El chequeo final de la cápsula no mide: enseña.</p>
+              <p><strong>Decisión:</strong> cierre siempre con una pregunta o tarea que obligue a recuperar, aunque no lleve nota.</p>
+              <p class="source-note" style="border:none; margin:0; padding:0;">Roediger y Karpicke (2006)</p>
+            </div>
+          </div>
+        </div>
+        <div class="callout callout-accent">
+          <p>El olvido no es fallo del participante: es la condición que el diseño debe anticipar.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Marco de análisis: las siete dimensiones de una microunidad</h3>
+        <div class="grid-3">
+          <div class="info-card"><h4>Tiempo</h4><p>¿Cuánto esfuerzo real exige?</p></div>
+          <div class="info-card"><h4>Contenido</h4><p>¿Es un asunto acotado o encubre varios?</p></div>
+          <div class="info-card"><h4>Currículo</h4><p>¿Dónde encaja en el módulo o la ruta?</p></div>
+          <div class="info-card"><h4>Forma</h4><p>¿Fragmento, episodio, elemento de destreza?</p></div>
+          <div class="info-card"><h4>Proceso</h4><p>¿Actividad aislada o integrada al flujo?</p></div>
+          <div class="info-card"><h4>Medialidad</h4><p>¿Presencial, impresa, multimedia?</p></div>
+          <div class="info-card"><h4>Tipo de aprendizaje</h4><p>¿Repetitivo, reflexivo, orientado a problema?</p></div>
+        </div>
+        <p class="source-note">Hug (2006). Estas siete preguntas son la lista de cotejo con la que se revisa cada cápsula en las micro-exposiciones del cierre.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Tipología de uso: seis funciones de una microunidad</h3>
+        <div class="grid-3">
+          <div class="info-card"><h4>Preparatoria</h4><p>Prepara el terreno antes de una sesión mayor.</p><p><em>Ejemplo RUTA:</em> cápsula sobre vocabulario de entrevista, la víspera del taller de empleabilidad.</p></div>
+          <div class="info-card"><h4>De práctica</h4><p>Ejercita una destreza ya enseñada.</p><p><em>Ejemplo RUTA:</em> tres problemas de porcentaje con retroalimentación inmediata.</p></div>
+          <div class="info-card"><h4>Posinstruccional</h4><p>Refuerza y espacia lo aprendido.</p><p><em>Ejemplo RUTA:</em> recordatorio de fórmulas al tercer y séptimo día.</p></div>
+          <div class="info-card"><h4>De desempeño</h4><p>Apoya en el momento exacto de la tarea.</p><p><em>Ejemplo RUTA:</em> guía visual junto a la computadora para completar el formulario en línea.</p></div>
+          <div class="info-card"><h4>Reflexiva</h4><p>Provoca pensamiento sobre la propia práctica.</p><p><em>Ejemplo RUTA:</em> una pregunta al final de la semana: ¿dónde usé el inglés fuera del salón?</p></div>
+          <div class="info-card"><h4>Persuasiva</h4><p>Mueve actitudes y sostiene la permanencia.</p><p><em>Ejemplo RUTA:</em> testimonio de 90 segundos de un egresado del programa.</p></div>
+        </div>
+        <p class="source-note">Kapp y Defelice (2019)</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Actividad 1 · 7 minutos — Diagnóstico: ¿dónde cabe una microunidad en mi curso?</h3>
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">1</span><p style="margin:0;">Nombre un contenido de su curso que los participantes olvidan, evaden o repiten sin dominar. Use la nota adhesiva de la Cápsula Cero.</p></div>
+          <div class="step-item"><span class="step-num">2</span><p style="margin:0;">Ubique ese contenido en una de las siete dimensiones de Hug que más lo explique: ¿es problema de tiempo, de contenido, de forma o de medialidad?</p></div>
+          <div class="step-item"><span class="step-num">3</span><p style="margin:0;">Elija una de las seis funciones —distinta a «de práctica»— para atacarlo.</p></div>
+          <div class="step-item"><span class="step-num">4</span><p style="margin:0;">Escriba en una oración: «Una microunidad de tipo ____ podría resolver que ____».</p></div>
+        </div>
+        <div class="callout callout-primary">
+          <span class="callout-title">Ejemplo modelado</span>
+          <p>«Una microunidad de tipo DESEMPEÑO podría resolver que los participantes no completen su solicitud en línea sin ayuda presencial».</p>
+        </div>
+        <div class="worksheet-box">
+          <label for="diagnostico1">Mi diagnóstico</label>
+          <textarea id="diagnostico1" data-persist-text="modulo1-diagnostico" placeholder="Una microunidad de tipo ____ podría resolver que ____."></textarea>
+          <p class="worksheet-hint">Producto que se conserva: esta oración es el insumo del Módulo 2.</p>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <p class="quiz-title">✓ Autoevaluación rápida</p>
+        <p class="quiz-question">Según Kapp y Defelice (2019), ¿qué determina realmente si algo es microaprendizaje?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false" data-feedback="La duración NO es el criterio definitorio, según la propia definición.">Que dure menos de cinco minutos</button>
+          <button class="quiz-option" data-correct="true" data-feedback="Correcto: foco estrecho, integración a una estructura mayor y actividad con evidencia — no la duración.">Foco estrecho, integración a una secuencia mayor y actividad con evidencia</button>
+          <button class="quiz-option" data-correct="false" data-feedback="Hug (2006) incluye lo presencial y lo monomedial: no depende de ser digital.">Que sea contenido digital, como un video o una app</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+    </section>
+
+    <!-- MÓDULO 2: ARQUITECTURA -->
+    <section class="module-section" id="modulo-2">
+      <span class="section-kicker"><span class="num-badge">2</span> Arquitectura de una microunidad · 55 minutos</span>
+      <h2>Del objetivo amplio a la competencia observable</h2>
+      <p class="section-dek">Los cinco momentos, la dosificación y la secuenciación de la ruta.</p>
+
+      <div class="subsection">
+        <h3>Principio rector: una microunidad, una competencia observable</h3>
+        <div class="callout callout-quote">
+          <p>Si no puedo ver lo que la persona hace distinto al terminar, no diseñé una microunidad: diseñé un contenido corto.</p>
+        </div>
+        <div class="grid-3">
+          <div class="info-card"><span class="tag">?</span><h4>Prueba de observabilidad</h4><p>¿Puedo describir, sin ambigüedad, la conducta que veré? «Comprender» y «conocer» no pasan la prueba; «clasificar», «calcular», «redactar» y «demostrar» sí.</p></div>
+          <div class="info-card"><span class="tag">?</span><h4>Prueba de dosificación</h4><p>¿Puede lograrse en el tiempo disponible del participante —entre 5 y 15 minutos— sin recortar la práctica? Si la respuesta es no, divida en dos unidades.</p></div>
+          <div class="info-card"><span class="tag">?</span><h4>Prueba de utilidad</h4><p>¿La persona puede usar esto en su vida o su trabajo dentro de las próximas 72 horas? Si no, la unidad quizás pertenezca a otro momento de la ruta.</p></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Herramienta 1: fórmula para redactar la competencia de la microunidad</h3>
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">1</span><div><h4>Condición</h4><p>¿Con qué recursos o en qué situación? <em>Ejemplo:</em> «Dado un recibo de servicios…»</p></div></div>
+          <div class="step-item"><span class="step-num">2</span><div><h4>Verbo observable</h4><p>¿Qué hará que yo pueda ver? <em>Ejemplo:</em> «…identificará…»</p></div></div>
+          <div class="step-item"><span class="step-num">3</span><div><h4>Objeto</h4><p>¿Sobre qué contenido? <em>Ejemplo:</em> «…los tres cargos fijos…»</p></div></div>
+          <div class="step-item"><span class="step-num">4</span><div><h4>Criterio</h4><p>¿Con qué nivel de logro? <em>Ejemplo:</em> «…con 70&nbsp;% de exactitud, en 10 minutos.»</p></div></div>
+        </div>
+        <div class="callout callout-primary">
+          <p>«Dado un recibo de servicios, el participante identificará los tres cargos fijos con 70&nbsp;% de exactitud, en 10 minutos.»</p>
+        </div>
+
+        <h4 style="margin-top:26px;">🛠 Construya su propia competencia observable</h4>
+        <p>Complete los cuatro campos con un contenido real de su curso. El texto se genera automáticamente abajo.</p>
+        <div class="builder">
+          <div class="builder-grid">
+            <div class="builder-field">
+              <label for="cb-condicion"><span class="letter-badge">1</span>Condición</label>
+              <input type="text" id="cb-condicion" placeholder="ej. Dado un formulario de solicitud de empleo en línea">
+            </div>
+            <div class="builder-field">
+              <label for="cb-verbo"><span class="letter-badge">2</span>Verbo observable</label>
+              <input type="text" id="cb-verbo" placeholder="ej. completará">
+            </div>
+            <div class="builder-field">
+              <label for="cb-objeto"><span class="letter-badge">3</span>Objeto</label>
+              <input type="text" id="cb-objeto" placeholder="ej. los campos obligatorios del formulario">
+            </div>
+            <div class="builder-field">
+              <label for="cb-criterio"><span class="letter-badge">4</span>Criterio</label>
+              <input type="text" id="cb-criterio" placeholder="ej. sin asistencia, en 8 minutos">
+            </div>
+          </div>
+          <div class="builder-output" id="competencyOutput"><span class="placeholder">Su competencia observable aparecerá aquí a medida que complete los cuatro campos…</span></div>
+          <div class="builder-actions">
+            <button class="btn btn-primary btn-sm" id="competencyCopy" type="button">Copiar competencia</button>
+            <button class="btn btn-ghost btn-sm" id="competencyReset" type="button">Borrar campos</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Contraste: antes y después, de tema amplio a competencia observable</h3>
+        <table class="data-table">
+          <thead><tr><th>Programa</th><th>Como suele redactarse</th><th>Redacción como microunidad</th></tr></thead>
+          <tbody>
+            <tr><td>Inglés conversacional</td><td>Practicar vocabulario relacionado con la salud.</td><td>Dado un guion de tres turnos, el participante solicitará una cita médica por teléfono usando cinco expresiones clave, sin apoyo escrito, en 8 minutos.</td></tr>
+            <tr><td>Tutorías de examen de equivalencia — Matemáticas</td><td>Repasar operaciones con fracciones.</td><td>Dadas cuatro sumas de fracciones con distinto denominador, el participante determinará el denominador común y resolverá tres de las cuatro correctamente, en 10 minutos.</td></tr>
+            <tr><td>Destrezas digitales</td><td>Conocer el manejo del correo electrónico.</td><td>Dado un adjunto en la bandeja de entrada, el participante descargará el archivo y lo guardará en una carpeta nombrada, sin asistencia, en 5 minutos.</td></tr>
+            <tr><td>Empleabilidad</td><td>Orientar sobre la entrevista de empleo.</td><td>Ante la pregunta «hábleme de usted», el participante formulará una respuesta de 60 segundos con tres elementos: función, logro y disponibilidad.</td></tr>
+          </tbody>
+        </table>
+        <p class="source-note">Observe que la columna derecha no es más larga por adorno: cada palabra añadida es una decisión de diseño verificable.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Herramienta 2: la regla 1-1-1, el filtro de foco</h3>
+        <div class="grid-3">
+          <div class="info-card"><span class="tag">1</span><h4>Un objetivo</h4><p>Una sola competencia observable por unidad. Si al redactarla aparece una «y», sospeche: probablemente son dos unidades.</p></div>
+          <div class="info-card"><span class="tag">1</span><h4>Un formato dominante</h4><p>Video breve, cápsula escrita o guía visual: elija uno como soporte principal. Mezclar tres formatos en diez minutos fragmenta la atención.</p></div>
+          <div class="info-card"><span class="tag">1</span><h4>Una práctica</h4><p>Una sola tarea de aplicación, hecha durante la unidad y no después. Si el participante cierra la cápsula sin haber hecho nada, no hubo aprendizaje: hubo exposición.</p></div>
+        </div>
+        <div class="callout callout-accent">
+          <p><strong>Prueba rápida:</strong> si usted no puede explicar su cápsula en una sola oración, todavía no está focalizada.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Estructura: los cinco momentos de una cápsula educativa</h3>
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">1</span><div><h4>Gancho — 10&nbsp;% del tiempo</h4><p>Una situación real, una pregunta o un dato que produzca incomodidad productiva.</p></div></div>
+          <div class="step-item"><span class="step-num">2</span><div><h4>Núcleo — 25&nbsp;% del tiempo</h4><p>El contenido mínimo indispensable. Solo lo que la práctica exige.</p></div></div>
+          <div class="step-item"><span class="step-num">3</span><div><h4>Modelado — 20&nbsp;% del tiempo</h4><p>El docente o el video muestra el procedimiento completo, pensando en voz alta.</p></div></div>
+          <div class="step-item"><span class="step-num">4</span><div><h4>Práctica — 35&nbsp;% del tiempo</h4><p>El participante ejecuta. Es el momento más largo y el más protegido.</p></div></div>
+          <div class="step-item"><span class="step-num">5</span><div><h4>Chequeo — 10&nbsp;% del tiempo</h4><p>Recuperación breve: qué logró, qué sigue.</p></div></div>
+        </div>
+
+        <div class="stack-bar">
+          <div class="stack-seg" style="width:10%; background:#84a89a;">10%</div>
+          <div class="stack-seg" style="width:25%; background:#1f5c4a;">25%</div>
+          <div class="stack-seg" style="width:20%; background:#c98a3e;">20%</div>
+          <div class="stack-seg" style="width:35%; background:#143d31;">35%</div>
+          <div class="stack-seg" style="width:10%; background:#84a89a;">10%</div>
+        </div>
+        <div class="stack-legend">
+          <span><i style="background:#84a89a;"></i>Gancho</span>
+          <span><i style="background:#1f5c4a;"></i>Núcleo</span>
+          <span><i style="background:#c98a3e;"></i>Modelado</span>
+          <span><i style="background:#143d31;"></i>Práctica</span>
+          <span><i style="background:#84a89a;"></i>Chequeo</span>
+        </div>
+
+        <div class="callout callout-warn">
+          <p><strong>Regla de oro:</strong> la práctica nunca se sacrifica. Si falta tiempo, se recorta el núcleo — no el momento en que la persona hace.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Dosificación: cuánto dura cada momento según el largo de la cápsula</h3>
+        <table class="data-table">
+          <thead><tr><th>Momento</th><th>Cápsula de 5 min</th><th>Cápsula de 10 min</th><th>Cápsula de 15 min</th><th>Qué se ajusta al crecer</th></tr></thead>
+          <tbody>
+            <tr><td>Gancho</td><td>30 segundos</td><td>1 minuto</td><td>1.5 minutos</td><td>Se mantiene breve siempre</td></tr>
+            <tr><td>Núcleo</td><td>1 minuto</td><td>2.5 minutos</td><td>4 minutos</td><td>Se añaden ejemplos, no temas</td></tr>
+            <tr><td>Modelado</td><td>1 minuto</td><td>2 minutos</td><td>3 minutos</td><td>Se agrega un segundo caso contrastante</td></tr>
+            <tr><td>Práctica</td><td>2 minutos</td><td>3.5 minutos</td><td>5 minutos</td><td>Se aumenta el número de reactivos</td></tr>
+            <tr><td>Chequeo</td><td>30 segundos</td><td>1 minuto</td><td>1.5 minutos</td><td>Se añade autoevaluación del proceso</td></tr>
+          </tbody>
+        </table>
+        <div class="grid-2">
+          <div class="info-card"><h4>Cuándo usar 5 minutos</h4><p>Refuerzo, recordatorio espaciado o apoyo al desempeño en el momento de la tarea.</p></div>
+          <div class="info-card"><h4>Cuándo usar 15 minutos</h4><p>Destreza nueva con procedimiento de varios pasos que exige modelado y práctica supervisada.</p></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>De la cápsula a la ruta: la secuenciación — el efecto está en el calendario, no en la pieza</h3>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-year">Día 1</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content"><strong>Cápsula A.</strong> Introduce la destreza y su primera práctica.</div></div>
+          <div class="timeline-item"><span class="timeline-year">Día 3</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content"><strong>Cápsula B.</strong> Recupera A sin volver a explicarla y añade un caso nuevo.</div></div>
+          <div class="timeline-item"><span class="timeline-year">Día 7</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content"><strong>Cápsula C.</strong> Aplica la destreza en un contexto distinto al original.</div></div>
+          <div class="timeline-item"><span class="timeline-year">Día 14</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content"><strong>Chequeo.</strong> Recuperación acumulativa de A, B y C en cinco minutos.</div></div>
+        </div>
+        <div class="grid-2">
+          <div class="info-card"><h4>Lo que el participante percibe</h4><p>Cuatro esfuerzos cortos y llevaderos, con la sensación de avanzar cada vez.</p></div>
+          <div class="info-card"><h4>Lo que ocurre cognitivamente</h4><p>Práctica espaciada más recuperación repetida: la combinación con mayor respaldo empírico para la retención a largo plazo.</p></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Accesibilidad: el DUA en microformato — tres decisiones de un minuto</h3>
+        <div class="grid-3">
+          <div class="info-card">
+            <span class="tag">1</span><h4>Múltiples formas de representación</h4>
+            <ul style="padding-left:18px; margin:8px 0 0; color:var(--color-ink-soft); font-size:0.9rem;">
+              <li>Todo audio lleva texto; todo texto clave lleva apoyo visual.</li>
+              <li>Vocabulario técnico definido en la misma pantalla.</li>
+              <li>Contraste alto y tipografía de 14 puntos o más.</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <span class="tag">2</span><h4>Múltiples formas de acción y expresión</h4>
+            <ul style="padding-left:18px; margin:8px 0 0; color:var(--color-ink-soft); font-size:0.9rem;">
+              <li>La práctica admite respuesta escrita, oral o demostrada.</li>
+              <li>Se permite usar apuntes, calculadora o diccionario si la competencia no los excluye.</li>
+              <li>Hay una vía sin conexión para quien no tiene datos.</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <span class="tag">3</span><h4>Múltiples formas de participación</h4>
+            <ul style="padding-left:18px; margin:8px 0 0; color:var(--color-ink-soft); font-size:0.9rem;">
+              <li>El gancho conecta con una situación de la vida adulta del participante.</li>
+              <li>El criterio de logro se declara desde el inicio.</li>
+              <li>Se puede repetir la cápsula sin penalidad.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="source-note">Marco de referencia: CAST (2024), Pautas del Diseño Universal para el Aprendizaje, versión 3.0.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Plantilla A: diseño de cápsula educativa — hoja de trabajo</h3>
+        <p class="section-dek">Complete su propia columna "Su cápsula" — cada campo se guarda automáticamente en este navegador.</p>
+        <table class="worksheet-table">
+          <thead><tr><th style="width:20%;">Campo</th><th style="width:38%;">Qué se escribe</th><th>Su cápsula</th></tr></thead>
+          <tbody>
+            <tr><td>Programa y grupo</td><td>Curso, nivel y número aproximado de participantes.</td><td><input type="text" data-persist-text="plantillaA-1"></td></tr>
+            <tr><td>Función de la microunidad</td><td>Preparatoria, de práctica, posinstruccional, de desempeño, reflexiva o persuasiva.</td><td><input type="text" data-persist-text="plantillaA-2"></td></tr>
+            <tr><td>Competencia observable</td><td>Condición + verbo observable + objeto + criterio de logro.</td><td><input type="text" data-persist-text="plantillaA-3"></td></tr>
+            <tr><td>Formato dominante</td><td>Cápsula escrita, video breve o guía visual (uno solo).</td><td><input type="text" data-persist-text="plantillaA-4"></td></tr>
+            <tr><td>Duración total</td><td>5, 10 o 15 minutos.</td><td><input type="text" data-persist-text="plantillaA-5"></td></tr>
+            <tr><td>Gancho</td><td>Situación, pregunta o dato de arranque.</td><td><input type="text" data-persist-text="plantillaA-6"></td></tr>
+            <tr><td>Núcleo</td><td>Contenido mínimo indispensable para la práctica.</td><td><input type="text" data-persist-text="plantillaA-7"></td></tr>
+            <tr><td>Modelado</td><td>Procedimiento mostrado paso a paso.</td><td><input type="text" data-persist-text="plantillaA-8"></td></tr>
+            <tr><td>Práctica inmediata</td><td>Tarea que el participante ejecuta durante la cápsula.</td><td><input type="text" data-persist-text="plantillaA-9"></td></tr>
+            <tr><td>Microevaluación</td><td>Formato del chequeo y criterio de aprobación (70&nbsp;%).</td><td><input type="text" data-persist-text="plantillaA-10"></td></tr>
+            <tr><td>Decisiones DUA</td><td>Una por cada principio: representación, expresión, participación.</td><td><input type="text" data-persist-text="plantillaA-11"></td></tr>
+            <tr><td>Lugar en la ruta</td><td>Qué cápsula la antecede y cuál la sigue; días de espaciamiento.</td><td><input type="text" data-persist-text="plantillaA-12"></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subsection">
+        <h3>Actividad 2 · 20 minutos — Redactar la competencia y armar el esqueleto</h3>
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">1–6</span><p style="margin:0;">Conviertan el problema de la Actividad 1 en una competencia observable con los cuatro componentes. Escríbanla y sométanla a las tres pruebas del principio rector.</p></div>
+          <div class="step-item"><span class="step-num">7–10</span><p style="margin:0;">Intercambien la plantilla con otro equipo (o revísela usted mismo/a en frío). El equipo revisor solo marca lo que no puede ver y lo que no cabe en el tiempo.</p></div>
+          <div class="step-item"><span class="step-num">11–16</span><p style="margin:0;">Corrijan y decidan función, formato dominante y duración total.</p></div>
+          <div class="step-item"><span class="step-num">17–20</span><p style="margin:0;">Redacten el gancho en una o dos oraciones.</p></div>
+        </div>
+
+        <h4>Criterios de revisión entre pares</h4>
+        <div class="self-check" data-msg-yes="Su competencia pasa los cuatro criterios de revisión. Puede avanzar a la Plantilla A completa." data-msg-no="Todavía no: ajuste su competencia antes de continuar al Módulo 3.">
+          <h4>¿Su competencia pasa la revisión?</h4>
+          <div class="self-check-q" data-answer="">
+            <p>¿El verbo es observable?</p>
+            <div class="self-check-toggle"><button class="sc-btn" data-answer="yes">Sí</button><button class="sc-btn" data-answer="no">No</button></div>
+          </div>
+          <div class="self-check-q" data-answer="">
+            <p>¿Hay criterio de logro numérico?</p>
+            <div class="self-check-toggle"><button class="sc-btn" data-answer="yes">Sí</button><button class="sc-btn" data-answer="no">No</button></div>
+          </div>
+          <div class="self-check-q" data-answer="">
+            <p>¿Cabe en la duración declarada?</p>
+            <div class="self-check-toggle"><button class="sc-btn" data-answer="yes">Sí</button><button class="sc-btn" data-answer="no">No</button></div>
+          </div>
+          <div class="self-check-q" data-answer="">
+            <p>¿Se usa en 72 horas?</p>
+            <div class="self-check-toggle"><button class="sc-btn" data-answer="yes">Sí</button><button class="sc-btn" data-answer="no">No</button></div>
+          </div>
+          <div class="self-check-result"></div>
+        </div>
+        <p class="section-dek">Al terminar: cada equipo tiene la mitad superior de la Plantilla A completada. Después del receso se produce el material y se diseña la microevaluación.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Receso</h3>
+        <div class="timer-widget" id="recesoTimer" data-countdown data-seconds="600">
+          <div class="timer-head">
+            <div class="timer-display">10:00</div>
+            <div class="timer-actions">
+              <button class="timer-btn timer-start" type="button">Iniciar</button>
+              <button class="timer-btn timer-reset" type="button">Reiniciar</button>
+            </div>
+          </div>
+        </div>
+        <p class="section-dek">Al regresar: producción del material y diseño de la microevaluación.</p>
+      </div>
+
+      <div class="quiz">
+        <p class="quiz-title">✓ Autoevaluación rápida</p>
+        <p class="quiz-question">Si a una cápsula le falta tiempo, según la Regla de Oro, ¿qué se recorta primero?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false" data-feedback="La práctica nunca se sacrifica: es el momento más protegido (35% del tiempo).">La práctica</button>
+          <button class="quiz-option" data-correct="true" data-feedback="Correcto: se recorta el núcleo, nunca el momento en que la persona hace.">El núcleo</button>
+          <button class="quiz-option" data-correct="false" data-feedback="El chequeo es breve por diseño (10%), pero la regla de oro apunta específicamente al núcleo.">El chequeo</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+    </section>
+
+    <!-- MÓDULO 3: EL REPERTORIO -->
+    <section class="module-section" id="modulo-3">
+      <span class="section-kicker"><span class="num-badge">3</span> El repertorio · 55 minutos</span>
+      <h2>Cápsulas, videos breves, guías visuales, práctica y microevaluación</h2>
+      <p class="section-dek">Cuándo usar cada formato y cómo producirlo bien.</p>
+
+      <div class="subsection">
+        <h3>Decisión de formato: mapa del repertorio</h3>
+        <table class="data-table">
+          <thead><tr><th>Formato</th><th>Úselo cuando…</th><th>Duración</th><th>Evidencia que produce</th></tr></thead>
+          <tbody>
+            <tr><td>Cápsula escrita</td><td>El contenido debe consultarse otra vez y la conexión es intermitente.</td><td>5 a 10 min</td><td>Documento resuelto o formulario completado.</td></tr>
+            <tr><td>Video breve</td><td>Hay un procedimiento que debe verse ejecutar paso a paso.</td><td>60 a 180 s</td><td>Grabación del participante replicando el procedimiento.</td></tr>
+            <tr><td>Guía visual</td><td>La destreza se aplica en el momento de una tarea concreta.</td><td>Consulta</td><td>Tarea completada con la guía al lado.</td></tr>
+            <tr><td>Audio breve</td><td>Se trabaja pronunciación, escucha o el participante se desplaza.</td><td>60 a 120 s</td><td>Grabación de voz del participante.</td></tr>
+            <tr><td>Práctica guiada presencial</td><td>La destreza requiere retroalimentación inmediata del docente.</td><td>10 a 15 min</td><td>Demostración observada con lista de cotejo.</td></tr>
+          </tbody>
+        </table>
+        <div class="callout callout-primary">
+          <p>El formato se elige después de la competencia, nunca antes. Primero qué debe poder hacer la persona; luego, con qué se lo enseño.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Formato 1 — Cápsula escrita: anatomía de una sola página</h3>
+        <div class="grid-2">
+          <div>
+            <h4>Estructura de la página</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.94rem;">
+              <li>Título en forma de promesa: «Al terminar podrá calcular el 15&nbsp;% de propina mentalmente».</li>
+              <li>Situación de arranque en dos o tres oraciones.</li>
+              <li>Contenido mínimo en viñetas, nunca en párrafos largos.</li>
+              <li>Procedimiento numerado, un paso por línea.</li>
+              <li>Ejemplo resuelto completo, con el razonamiento visible.</li>
+              <li>Zona de práctica con espacio real para escribir.</li>
+              <li>Chequeo de tres preguntas con las respuestas al reverso.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Criterios de calidad</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.94rem;">
+              <li>Cabe en una página; si no cabe, son dos cápsulas.</li>
+              <li>Tipografía de 14 puntos o mayor, alto contraste.</li>
+              <li>Ningún párrafo de más de cuatro líneas.</li>
+              <li>Funciona impresa y en pantalla de celular.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout callout-warn">
+          <span class="callout-title">Errores que la arruinan</span>
+          <ul style="padding-left:18px; margin:0;">
+            <li>Escribir el resumen del tema en vez del procedimiento.</li>
+            <li>Dejar el ejemplo a medias, «para que piensen».</li>
+            <li>Poner la práctica en otra hoja: se pierde.</li>
+            <li>Usar lenguaje académico donde cabe lenguaje llano.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Formato 2 — Video breve: guion de cuatro bloques y producción con celular</h3>
+        <p>Haga clic en cada bloque del guion:</p>
+        <div class="stepper-group">
+          <div class="stepper">
+            <button class="stepper-btn active" data-detail="Diga qué podrá hacer quien vea el video. Sin presentaciones ni saludos largos.">
+              <span class="stepper-num">1</span><strong>0:00–0:15 · Promesa</strong><span class="desc">Qué podrá hacer quien lo vea</span>
+            </button>
+            <button class="stepper-btn" data-detail="Muestre el problema real, no la definición del concepto.">
+              <span class="stepper-num">2</span><strong>0:15–0:45 · Situación</strong><span class="desc">El problema real</span>
+            </button>
+            <button class="stepper-btn" data-detail="Ejecute paso a paso pensando en voz alta. Este es el corazón del video.">
+              <span class="stepper-num">3</span><strong>0:45–2:15 · Procedimiento</strong><span class="desc">El corazón del video</span>
+            </button>
+            <button class="stepper-btn" data-detail="Deje una tarea concreta que se haga inmediatamente después.">
+              <span class="stepper-num">4</span><strong>2:15–2:45 · Encargo</strong><span class="desc">Tarea inmediata</span>
+            </button>
+          </div>
+          <div class="stepper-detail">Diga qué podrá hacer quien vea el video. Sin presentaciones ni saludos largos.</div>
+        </div>
+
+        <div class="grid-2" style="margin-top:20px;">
+          <div>
+            <h4>Reglas de producción con celular</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.94rem;">
+              <li>Grabe en horizontal, con la luz de frente y el celular apoyado.</li>
+              <li>Grabe en tomas cortas y únalas; no busque una toma perfecta.</li>
+              <li>Audio limpio antes que imagen bonita: acérquese al micrófono.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Accesibilidad mínima no negociable</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.94rem;">
+              <li>Subtítulos o transcripción siempre: hay quien lo verá sin audio.</li>
+              <li>Lo que se dice en voz también aparece escrito en pantalla.</li>
+              <li>Archivo liviano y descargable, para quien tiene datos limitados.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Formato 3 — Guía visual: la pieza que se consulta mientras se hace la tarea</h3>
+        <div class="grid-2">
+          <div class="info-card"><span class="tag">1</span><h4>Regla de los tres bloques</h4><p>Título con la tarea, secuencia de pasos numerada y un aviso de error frecuente. Nada más.</p></div>
+          <div class="info-card"><span class="tag">2</span><h4>Jerarquía visual</h4><p>Un elemento domina la pieza. Si todo está resaltado, nada está resaltado.</p></div>
+          <div class="info-card"><span class="tag">3</span><h4>Contraste y tamaño</h4><p>Texto oscuro sobre fondo claro, mínimo 14 puntos. Debe leerse a un brazo de distancia.</p></div>
+          <div class="info-card"><span class="tag">4</span><h4>Prueba del vistazo</h4><p>Si en cinco segundos la persona no identifica qué hacer primero, rediseñe.</p></div>
+        </div>
+        <p class="source-note">Aplicación en RUTA: pegada junto a la computadora del laboratorio, junto al teléfono en la práctica de inglés o dentro del cuaderno de matemáticas.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>El momento decisivo: práctica inmediata, la tarea de transferencia</h3>
+        <div class="callout callout-quote">
+          <p>La cápsula no termina cuando el participante entiende. Termina cuando hace.</p>
+        </div>
+        <div class="grid-4">
+          <div class="info-card"><span class="tag">1</span><h4>Ocurre dentro de la cápsula</h4><p>No es tarea para la casa. Se ejecuta ahora, con la explicación todavía fresca.</p></div>
+          <div class="info-card"><span class="tag">2</span><h4>Reproduce la condición real</h4><p>Si la competencia dice «sin apoyo escrito», la práctica se hace sin apoyo escrito.</p></div>
+          <div class="info-card"><span class="tag">3</span><h4>Produce algo observable</h4><p>Un cálculo, una grabación, un formulario, una demostración. Algo que exista después.</p></div>
+          <div class="info-card"><span class="tag">4</span><h4>Tiene retroalimentación inmediata</h4><p>Respuesta modelo, lista de cotejo o par que revisa. Nunca «lo vemos la próxima semana».</p></div>
+        </div>
+        <p class="source-note">Ejemplo RUTA — Inglés conversacional: tras el modelado, el participante llama al celular de un compañero y solicita la cita médica. Dos turnos, 90 segundos, con lista de cotejo de cinco expresiones.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Evaluaciones rápidas: seis formatos de microevaluación para cerrar la cápsula</h3>
+        <div class="grid-3">
+          <div class="tool-card"><span class="tool-badge">1</span><div><h4>Ticket de salida</h4><span class="tool-url">1 min</span><p>Una pregunta de aplicación, respondida en una línea antes de cerrar.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">2</span><div><h4>Chequeo de tres ítems</h4><span class="tool-url">2 min</span><p>Tres reactivos con respuesta modelo al reverso. Autocorregible.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">3</span><div><h4>Demostración observada</h4><span class="tool-url">3 min</span><p>El participante ejecuta; el docente marca una lista de cotejo de cuatro criterios.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">4</span><div><h4>Explicación en 60 segundos</h4><span class="tool-url">1 min</span><p>Explicar el procedimiento a un compañero, con cronómetro.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">5</span><div><h4>Autochequeo con semáforo</h4><span class="tool-url">1 min</span><p>Verde, amarillo o rojo sobre el propio dominio, con evidencia que lo sustente.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">6</span><div><h4>Producto a la carpeta</h4><span class="tool-url">—</span><p>La pieza producida se archiva en la carpeta de evidencias del participante.</p></div></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Criterios: qué hace buena a una microevaluación</h3>
+        <table class="data-table">
+          <thead><tr><th>Criterio</th><th>Qué significa</th><th>Señal de que se incumple</th></tr></thead>
+          <tbody>
+            <tr><td>Alineación</td><td>Mide exactamente el verbo y el criterio de la competencia declarada.</td><td>La competencia dice «calculará» y el ítem pide definir.</td></tr>
+            <tr><td>Brevedad</td><td>Se completa en tres minutos o menos, sin apurar al participante.</td><td>El chequeo dura más que la práctica.</td></tr>
+            <tr><td>Autonomía</td><td>El participante puede saber si acertó sin esperar al docente.</td><td>No hay respuesta modelo ni lista de cotejo.</td></tr>
+            <tr><td>Función formativa</td><td>Consolida el aprendizaje al obligar a recuperar; no clasifica ni castiga.</td><td>El resultado se usa solo para poner nota.</td></tr>
+            <tr><td>Criterio explícito</td><td>El umbral de logro se conoce desde el inicio: 70&nbsp;% de ejecución.</td><td>El participante no sabe qué es «suficiente».</td></tr>
+            <tr><td>Ruta de reenseñanza</td><td>Si no alcanza el umbral, hay una acción definida, no una repetición idéntica.</td><td>Se le pide «que lo estudie otra vez».</td></tr>
+          </tbody>
+        </table>
+        <p class="source-note">Puntuación mínima de ejecución: 70&nbsp;%, el mismo umbral de la planilla de especificaciones. Coherencia entre instrumentos.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Plantillas B y C: guion de video breve y planilla de microevaluación</h3>
+        <div class="grid-2">
+          <div>
+            <h4>Plantilla B — Guion de video breve</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.9rem;">
+              <li>Promesa (0:00–0:15): «Al terminar este video usted podrá ______».</li>
+              <li>Situación (0:15–0:45): describa el problema real, sin definiciones.</li>
+              <li>Procedimiento (0:45–2:15): paso 1 ___ · paso 2 ___ · paso 3 ___ (verbalice el porqué de cada uno).</li>
+              <li>Encargo (2:15–2:45): «Ahora usted va a ______ y me lo envía por ______».</li>
+              <li>Texto en pantalla: liste las palabras que deben aparecer escritas.</li>
+              <li>Recursos: lugar, luz, apoyo visual y quién graba.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Plantilla C — Planilla de microevaluación</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.9rem;">
+              <li>Competencia evaluada: copie textualmente la de la Plantilla A.</li>
+              <li>Formato del chequeo: uno de los seis formatos de microevaluación.</li>
+              <li>Cantidad de reactivos o criterios: (recomendado: 3 o 4).</li>
+              <li>Valor de cada uno y puntuación total.</li>
+              <li>Puntuación mínima de ejecución: 70&nbsp;% → ______ puntos.</li>
+              <li>Respuesta modelo o lista de cotejo: escríbala antes de aplicar.</li>
+              <li>Acción de reenseñanza si no alcanza el umbral.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="worksheet-box">
+            <label for="plantillaB">Mi guion de video (Plantilla B)</label>
+            <textarea id="plantillaB" data-persist-text="plantillaB" placeholder="Promesa / Situación / Procedimiento / Encargo…"></textarea>
+          </div>
+          <div class="worksheet-box">
+            <label for="plantillaC">Mi planilla de microevaluación (Plantilla C)</label>
+            <textarea id="plantillaC" data-persist-text="plantillaC" placeholder="Competencia evaluada, formato del chequeo, reactivos, puntuación, acción de reenseñanza…"></textarea>
+          </div>
+        </div>
+        <p class="source-note">Reparta ambas plantillas impresas en un taller presencial. La Plantilla B se usa solo si eligió video como formato dominante; la C se usa siempre, sin excepción. El campo más importante de la Plantilla C es el último: la acción de reenseñanza se escribe antes de aplicar el instrumento, no después de ver los resultados.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Actividad 3 · 25 minutos — Producción: construyan la cápsula completa</h3>
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">1–5</span><p style="margin:0;">Escriban el núcleo. Solo lo que la práctica exige; tachen todo lo demás.</p></div>
+          <div class="step-item"><span class="step-num">6–12</span><p style="margin:0;">Redacten el modelado y produzcan el material en el formato elegido (página escrita, guion de video o guía visual).</p></div>
+          <div class="step-item"><span class="step-num">13–18</span><p style="margin:0;">Diseñen la práctica inmediata verificando los cuatro criterios del momento decisivo.</p></div>
+          <div class="step-item"><span class="step-num">19–23</span><p style="margin:0;">Completen la Plantilla C, incluida la respuesta modelo y la acción de reenseñanza.</p></div>
+          <div class="step-item"><span class="step-num">24–25</span><p style="margin:0;">Marquen las tres decisiones DUA y ubiquen la cápsula en la ruta.</p></div>
+        </div>
+        <p class="section-dek">Si eligieron video: graben una toma de prueba de 30 segundos con el celular. No busquen la versión final: busquen comprobar audio, encuadre y ritmo.</p>
+        <div class="worksheet-box">
+          <label for="notasProduccion">Notas de producción de mi cápsula</label>
+          <textarea id="notasProduccion" data-persist-text="modulo3-produccion" placeholder="Núcleo, modelado, práctica, decisiones DUA, lugar en la ruta…"></textarea>
+        </div>
+        <p class="section-dek">Al terminar: cada equipo tiene una cápsula completa y evaluable. En el Módulo 4 la refinaremos con inteligencia artificial y la someteremos a verificación humana.</p>
+      </div>
+
+      <div class="quiz">
+        <p class="quiz-title">✓ Autoevaluación rápida</p>
+        <p class="quiz-question">¿Qué formato de microevaluación exige explícitamente "evidencia que sustente" el resultado, y no solo una sensación?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false" data-feedback="El ticket de salida es una pregunta de aplicación, no requiere justificar con evidencia un color o nivel.">Ticket de salida</button>
+          <button class="quiz-option" data-correct="true" data-feedback="Correcto: sin esa exigencia, el autochequeo con semáforo se vuelve un ejercicio de autoestima, no de metacognición.">Autochequeo con semáforo</button>
+          <button class="quiz-option" data-correct="false" data-feedback="El producto a la carpeta es la pieza archivada, no una autoevaluación de dominio.">Producto a la carpeta</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+    </section>
+
+    <!-- MÓDULO 4: PRODUCCIÓN ASISTIDA POR IA -->
+    <section class="module-section" id="modulo-4">
+      <span class="section-kicker"><span class="num-badge">4</span> Producción asistida por IA · 40 minutos</span>
+      <h2>El modelo RC-TTF aplicado al microaprendizaje</h2>
+      <p class="section-dek">Generar guiones, guías visuales y microevaluaciones, y verificarlos con criterio profesional. La IA no diseña la cápsula — el docente ya la diseñó en el Módulo 3. La IA acelera la producción; el criterio pedagógico sigue siendo humano.</p>
+
+      <div class="subsection">
+        <h3>Modelo de prompting: RC-TTF, cinco componentes para pedir bien</h3>
+        <p>Haga clic en cada letra:</p>
+        <div class="sense-row">
+          <div class="sense-letter"><span class="big">R</span><strong>Rol</strong><p>Quién debe ser la IA al responder. <em>Ejemplo:</em> "Actúa como diseñador instruccional de educación de adultos."</p></div>
+          <div class="sense-letter"><span class="big">C</span><strong>Contexto</strong><p>Quién aprende, dónde y con qué restricciones. <em>Ejemplo:</em> "Adultos de un programa WIOA en Ponce, con conectividad intermitente."</p></div>
+          <div class="sense-letter"><span class="big">T</span><strong>Tarea</strong><p>Qué debe producir, con qué límites. <em>Ejemplo:</em> "Redacta el guion de una cápsula de 10 minutos sobre suma de fracciones."</p></div>
+          <div class="sense-letter"><span class="big">T</span><strong>Tono</strong><p>Con qué registro y nivel de lenguaje. <em>Ejemplo:</em> "Lenguaje llano, en español de Puerto Rico, sin tecnicismos innecesarios."</p></div>
+          <div class="sense-letter"><span class="big">F</span><strong>Formato</strong><p>En qué estructura debe entregarlo. <em>Ejemplo:</em> "Tabla con los cinco momentos, su duración y el texto de cada uno."</p></div>
+        </div>
+        <div class="callout callout-quote">
+          <p>En microaprendizaje, la precisión del prompt es la brevedad útil del producto: si no acoto, la IA devuelve una lección, no una cápsula.</p>
+          <p class="source-note" style="border:none; margin:4px 0 0; padding:0;">Modelo RC-TTF (Corraliza Montero, 2024)</p>
+        </div>
+
+        <h4 style="margin-top:26px;">🛠 Construya su propio prompt RC-TTF</h4>
+        <p>Complete los cinco campos para una cápsula real de su curso.</p>
+        <div class="builder">
+          <div class="builder-grid">
+            <div class="builder-field">
+              <label for="pb-rol"><span class="letter-badge">R</span>Rol</label>
+              <input type="text" id="pb-rol" placeholder="ej. diseñador instruccional de educación de adultos">
+            </div>
+            <div class="builder-field">
+              <label for="pb-contexto"><span class="letter-badge">C</span>Contexto</label>
+              <input type="text" id="pb-contexto" placeholder="ej. Adultos de un programa WIOA en Ponce, conectividad intermitente.">
+            </div>
+            <div class="builder-field">
+              <label for="pb-tarea"><span class="letter-badge">T</span>Tarea</label>
+              <input type="text" id="pb-tarea" placeholder="ej. Redacta el guion de una cápsula de 10 minutos sobre… No introduzcas contenido fuera de la competencia.">
+            </div>
+            <div class="builder-field">
+              <label for="pb-tono"><span class="letter-badge">T</span>Tono</label>
+              <input type="text" id="pb-tono" placeholder="ej. español de Puerto Rico, lenguaje llano, trato de usted">
+            </div>
+            <div class="builder-field" style="grid-column: span 2;">
+              <label for="pb-formato"><span class="letter-badge">F</span>Formato</label>
+              <input type="text" id="pb-formato" placeholder="ej. tabla de tres columnas: momento, duración y texto literal">
+            </div>
+          </div>
+          <div class="builder-output" id="promptOutput"><span class="placeholder">Su instrucción RC-TTF aparecerá aquí a medida que complete los cinco campos…</span></div>
+          <div class="builder-actions">
+            <button class="btn btn-primary btn-sm" id="promptCopy" type="button">Copiar instrucción</button>
+            <button class="btn btn-ghost btn-sm" id="promptReset" type="button">Borrar campos</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Tres prompts modelados</h3>
+        <div class="subject-accordion">
+
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">1</span><span><strong>Generar el guion de una cápsula de diez minutos</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <div class="rc-prompt">[ROL] Actúa como diseñador instruccional especializado en educación de adultos.
+
+[CONTEXTO] Participantes adultos de un programa WIOA en Ponce, Puerto Rico. Escolaridad interrumpida, estudian después de su jornada laboral, conectividad intermitente.
+
+[TAREA] Redacta el guion de una cápsula de 10 minutos para la competencia: "Dadas cuatro sumas de fracciones con distinto denominador, el participante determinará el denominador común y resolverá tres de las cuatro correctamente, en 10 minutos". Respeta esta dosificación: gancho 1 min, núcleo 2.5, modelado 2, práctica 3.5, chequeo 1. No introduzcas contenido fuera de la competencia.
+
+[TONO] Español de Puerto Rico, lenguaje llano, trato de usted, sin tecnicismos innecesarios.
+
+[FORMATO] Tabla de tres columnas: momento, duración y texto literal. Al final, lista de los materiales necesarios.</div>
+              <div class="grid-2" style="margin-top:14px;">
+                <div><h4>Qué hace funcionar este prompt</h4><ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.9rem;"><li>Pega la competencia textualmente, no la resume.</li><li>Impone la dosificación minuto a minuto.</li><li>Prohíbe explícitamente ampliar el alcance.</li></ul></div>
+                <div><h4>Qué revisar en la salida</h4><ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.9rem;"><li>Que el modelado verbalice el porqué, no solo los pasos.</li><li>Que la práctica sea del participante, no del docente.</li><li>Que el vocabulario corresponda al nivel real del grupo.</li></ul></div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">2</span><span><strong>Generar la microevaluación con su baremo</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <div class="rc-prompt">[ROL] Actúa como especialista en assessment de educación de adultos.
+
+[CONTEXTO] La cápsula que acabas de generar. El chequeo se aplica en los últimos 2 minutos y debe ser autocorregible por el propio participante.
+
+[TAREA] Construye 3 reactivos alineados al verbo "determinará y resolverá". Uno de reconocimiento del denominador común, uno de ejecución completa y uno de aplicación a una situación de compra. Incluye la respuesta modelo de cada uno con el procedimiento visible.
+
+[TONO] Claro y directo. Enunciados de una sola oración.
+
+[FORMATO] Para cada reactivo: enunciado, respuesta modelo, valor en puntos. Al final, una tabla con puntuación total, puntuación mínima de ejecución al 70&nbsp;% y la acción de reenseñanza sugerida si no se alcanza.</div>
+              <div class="grid-2" style="margin-top:14px;">
+                <div><h4>Lo que se le exige a la IA</h4><ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.9rem;"><li>Alineación explícita al verbo de la competencia.</li><li>Variedad de demanda cognitiva entre los tres reactivos.</li><li>Respuesta modelo con el procedimiento visible.</li></ul></div>
+                <div><h4>Lo que la IA no puede decidir</h4><ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.9rem;"><li>Si el nivel es el adecuado para su grupo real.</li><li>Si el contexto de la situación es culturalmente pertinente.</li><li>Si la acción de reenseñanza es viable con sus recursos.</li></ul></div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">3</span><span><strong>Fragmentar un contenido extenso en una ruta de microunidades</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <div class="rc-prompt">[ROL] Actúa como diseñador de rutas de aprendizaje para adultos.
+
+[CONTEXTO] Tengo un módulo de 3 horas sobre "llenar la solicitud de empleo en línea" que hoy se da en una sola sesión y del que los participantes retienen poco.
+
+[TAREA] Divídelo en 4 microunidades de 10 minutos. Cada una debe tener una sola competencia observable con condición, verbo, objeto y criterio. Distribúyelas en los días 1, 3, 7 y 14, e indica qué recupera cada una de las anteriores sin volver a explicarlas. Señala cuál de las seis funciones de microaprendizaje cumple cada unidad.
+
+[TONO] Técnico pero legible para un docente sin formación en diseño instruccional.
+
+[FORMATO] Tabla: día, competencia observable, función, formato sugerido y qué recupera de las unidades previas.</div>
+              <p style="margin-top:14px;">Fragmentar es la tarea más lenta del rediseño y la que la IA acelera con mayor fidelidad, porque las reglas de fragmentación son explícitas y verificables.</p>
+              <div class="callout callout-warn">
+                <span class="callout-title">Advertencia</span>
+                <p>La IA propondrá una división plausible, no necesariamente la correcta para su grupo. Usted decide qué va primero según lo que sus participantes ya dominan.</p>
+              </div>
+            </div></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Criterio profesional: cinco controles de verificación humana</h3>
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">1</span><div><h4>Alineación</h4><p>¿Cada elemento sirve a la competencia declarada, o hay contenido añadido?</p></div></div>
+          <div class="step-item"><span class="step-num">2</span><div><h4>Exactitud</h4><p>¿Los datos, procedimientos y ejemplos son correctos? Verifique todo cálculo y toda referencia.</p></div></div>
+          <div class="step-item"><span class="step-num">3</span><div><h4>Pertinencia cultural</h4><p>¿Los ejemplos corresponden a la vida de nuestros participantes en Puerto Rico?</p></div></div>
+          <div class="step-item"><span class="step-num">4</span><div><h4>Nivel de lenguaje</h4><p>¿El vocabulario es alcanzable para el grupo real, no para el grupo ideal?</p></div></div>
+          <div class="step-item"><span class="step-num">5</span><div><h4>Accesibilidad</h4><p>¿Se cumplen las tres decisiones DUA? ¿Funciona sin conexión?</p></div></div>
+        </div>
+        <div class="callout callout-warn">
+          <span class="callout-title">Límites éticos no negociables</span>
+          <p>No se introducen datos personales de participantes. No se atribuye a la IA lo que no verificó. Toda cifra, cita o código de expectativa se comprueba en la fuente oficial.</p>
+        </div>
+        <div class="callout callout-primary">
+          <p><strong>La regla que resume el módulo:</strong> la inteligencia artificial redacta más rápido de lo que usted escribe, pero no conoce a su grupo. La decisión pedagógica no se delega.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Actividad 4 · 15 minutos — Refinar la cápsula con IA y verificarla</h3>
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">1–4</span><p style="margin:0;">Escriban su propio prompt RC-TTF usando la competencia textual de su Plantilla A. Escríbanlo antes de tocar el teclado.</p></div>
+          <div class="step-item"><span class="step-num">5–9</span><p style="margin:0;">Ejecútenlo y generen una variante de su cápsula o de su microevaluación.</p></div>
+          <div class="step-item"><span class="step-num">10–14</span><p style="margin:0;">Apliquen los cinco controles de verificación. Marquen con rojo todo lo que no pasa.</p></div>
+          <div class="step-item"><span class="step-num">15</span><p style="margin:0;">Decidan qué se queda de la versión con IA y qué se queda de la versión propia. Justifiquen con una razón pedagógica.</p></div>
+        </div>
+        <p class="section-dek">Si no hay conexión: redacten el prompt completo igual y sometan su propia cápsula a los cinco controles. El valor del ejercicio está en la verificación, no en la generación.</p>
+        <div class="worksheet-box">
+          <label for="miPromptFinal">Mi prompt RC-TTF</label>
+          <textarea id="miPromptFinal" data-persist-text="modulo4-prompt" placeholder="Rol / Contexto / Tarea / Tono / Formato…"></textarea>
+        </div>
+        <div class="worksheet-box">
+          <label for="miJustificacion">Qué me quedo de la IA y qué de mi versión (razón pedagógica)</label>
+          <textarea id="miJustificacion" data-persist-text="modulo4-justificacion" placeholder="Justifique con una razón pedagógica, no de comodidad…"></textarea>
+        </div>
+        <div class="callout callout-primary">
+          <span class="callout-title">Producto final del taller</span>
+          <p>Una cápsula educativa completa, verificada, con su microevaluación y su lugar en una ruta de cuatro momentos.</p>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <p class="quiz-title">✓ Autoevaluación rápida</p>
+        <p class="quiz-question">Un modelo de IA genera el procedimiento de una suma de fracciones para su cápsula. Según los cinco controles de verificación, ¿qué debe hacer usted antes de entregarlo?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true" data-feedback="Correcto: el control de Exactitud exige verificar todo cálculo y toda referencia antes de usarlo.">Resolver usted mismo el ejercicio y confirmar que el procedimiento es correcto</button>
+          <button class="quiz-option" data-correct="false" data-feedback="Un formato prolijo no garantiza exactitud aritmética; los modelos de lenguaje predicen texto, no calculan.">Confiar en el resultado si el formato se ve profesional</button>
+          <button class="quiz-option" data-correct="false" data-feedback="La verificación de exactitud es responsabilidad del docente que conoce la competencia, no se delega a otro modelo.">Delegar la verificación a otro modelo de IA distinto</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="module-section" id="cierre">
+      <span class="section-kicker">Cierre · 20 minutos</span>
+      <h2>Micro-exposiciones, rúbrica y plan de implementación</h2>
+
+      <div class="subsection">
+        <h3>Micro-exposiciones: tres minutos por equipo</h3>
+        <div class="grid-2">
+          <div>
+            <h4>Protocolo de la presentación</h4>
+            <div class="step-list">
+              <div class="step-item"><span class="step-num">1</span><p style="margin:0;">Lea la competencia observable, textualmente.</p></div>
+              <div class="step-item"><span class="step-num">2</span><p style="margin:0;">Muestre el material producido.</p></div>
+              <div class="step-item"><span class="step-num">3</span><p style="margin:0;">Explique la microevaluación y su acción de reenseñanza.</p></div>
+            </div>
+          </div>
+          <div>
+            <h4>Cómo escucha el grupo</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft);">
+              <li>Aplique las tres pruebas del principio rector: observabilidad, dosificación, utilidad.</li>
+              <li>Una sola pregunta por equipo oyente. Pregunta, no consejo.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h4 style="margin-top:22px;">Las siete preguntas de Hug como lista de cotejo final</h4>
+        <div class="self-check" data-msg-yes="Su cápsula cumple los siete criterios de Hug. Está lista para las micro-exposiciones." data-msg-no="Todavía hay un criterio de Hug sin cumplir: revíselo antes de presentar." style="margin-top:12px;">
+          <table class="yn-table">
+            <tbody>
+              <tr><td>
+                <div class="self-check-q" data-answer=""><p>¿El esfuerzo real cabe en el tiempo del participante? · ¿El contenido es un asunto acotado?</p><div class="self-check-toggle"><button class="sc-btn" data-answer="yes">Sí</button><button class="sc-btn" data-answer="no">No</button></div></div>
+              </td></tr>
+              <tr><td>
+                <div class="self-check-q" data-answer=""><p>¿Está ubicada en la ruta? · ¿La forma corresponde a la destreza?</p><div class="self-check-toggle"><button class="sc-btn" data-answer="yes">Sí</button><button class="sc-btn" data-answer="no">No</button></div></div>
+              </td></tr>
+              <tr><td>
+                <div class="self-check-q" data-answer=""><p>¿El proceso se integra al flujo del curso? · ¿La medialidad es accesible para todos?</p><div class="self-check-toggle"><button class="sc-btn" data-answer="yes">Sí</button><button class="sc-btn" data-answer="no">No</button></div></div>
+              </td></tr>
+              <tr><td>
+                <div class="self-check-q" data-answer=""><p>¿El tipo de aprendizaje corresponde a la función elegida?</p><div class="self-check-toggle"><button class="sc-btn" data-answer="yes">Sí</button><button class="sc-btn" data-answer="no">No</button></div></div>
+              </td></tr>
+            </tbody>
+          </table>
+          <div class="self-check-result"></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Evaluación del producto: rúbrica de la cápsula de microaprendizaje</h3>
+        <table class="data-table">
+          <thead><tr><th>Criterio</th><th>Ejemplar (4)</th><th>Competente (3)</th><th>En desarrollo (2)</th><th>Inicial (1)</th></tr></thead>
+          <tbody>
+            <tr><td>Pertinencia andragógica</td><td>Responde a una necesidad real y de uso inmediato; el gancho parte de la experiencia del adulto.</td><td>Responde a una necesidad real; el gancho es pertinente aunque general.</td><td>La utilidad se declara pero no se evidencia en el diseño.</td><td>El contenido se organiza desde la lógica del tema, no del participante.</td></tr>
+            <tr><td>Focalización y competencia observable</td><td>Una sola competencia con condición, verbo observable, objeto y criterio; cumple la regla 1-1-1.</td><td>Competencia observable con criterio; algún componente implícito.</td><td>Objetivo redactado, pero con verbo no observable o sin criterio.</td><td>Enuncia un tema en lugar de una competencia.</td></tr>
+            <tr><td>Diseño del contenido y accesibilidad</td><td>Cinco momentos con dosificación adecuada y las tres decisiones DUA explícitas.</td><td>Cinco momentos presentes; al menos dos decisiones DUA.</td><td>Faltan momentos o el núcleo desplaza a la práctica.</td><td>Contenido expositivo sin estructura de cápsula.</td></tr>
+            <tr><td>Práctica y microevaluación</td><td>Práctica dentro de la cápsula, evidencia observable, respuesta modelo y acción de reenseñanza definida.</td><td>Práctica y chequeo alineados; falta la acción de reenseñanza.</td><td>Hay práctica o chequeo, pero no ambos, o no están alineados.</td><td>No hay práctica ni evidencia de logro.</td></tr>
+          </tbody>
+        </table>
+        <p class="source-note">Puntuación total: 16 puntos · Puntuación mínima de ejecución: 70&nbsp;% = 12 puntos · Uso formativo: identifique el criterio más bajo y rediseñe solo ese componente.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Compromiso: plan de implementación de catorce días</h3>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-year">Días 1–2</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">Aplique la cápsula que diseñó hoy con un grupo real.</div></div>
+          <div class="timeline-item"><span class="timeline-year">Días 3–5</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">Registre el resultado de la microevaluación y ejecute la acción de reenseñanza.</div></div>
+          <div class="timeline-item"><span class="timeline-year">Días 6–9</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">Produzca la segunda cápsula de la ruta: recupera la primera sin volver a explicarla.</div></div>
+          <div class="timeline-item"><span class="timeline-year">Días 10–14</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">Aplique el chequeo acumulativo y comparta un hallazgo con el equipo del programa.</div></div>
+        </div>
+        <ul class="checklist">
+          <li class="checklist-item"><input type="checkbox" id="plan14-1" data-persist="plan14-1"><label for="plan14-1">Aplicar la cápsula con un grupo real (días 1–2)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="plan14-2" data-persist="plan14-2"><label for="plan14-2">Registrar el resultado y ejecutar la reenseñanza (días 3–5)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="plan14-3" data-persist="plan14-3"><label for="plan14-3">Producir la segunda cápsula de la ruta (días 6–9)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="plan14-4" data-persist="plan14-4"><label for="plan14-4">Aplicar el chequeo acumulativo y compartir un hallazgo (días 10–14)</label></li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Ticket de salida del taller — responda en una línea cada una antes de cerrar</h3>
+        <div class="worksheet-box">
+          <label for="ticket1">¿Qué puede hacer usted hoy que no podía hacer a las ocho de la mañana?</label>
+          <textarea id="ticket1" data-persist-text="ticket-1"></textarea>
+        </div>
+        <div class="worksheet-box">
+          <label for="ticket2">¿Cuál es el primer contenido de su curso que va a convertir en microunidad, y qué día lo aplica?</label>
+          <textarea id="ticket2" data-persist-text="ticket-2"></textarea>
+        </div>
+        <div class="worksheet-box">
+          <label for="ticket3">¿Qué necesita del Proyecto para lograrlo: tiempo, equipo, acompañamiento o materiales?</label>
+          <textarea id="ticket3" data-persist-text="ticket-3"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFERENCIAS -->
+    <section class="module-section" id="referencias">
+      <div class="module-closing">
+        <p class="quote">Lo breve no es lo superficial. Es lo que cabe en la vida de quien aprende.</p>
+        <p class="quote-sign">Gracias por las cuatro horas. Nos vemos en catorce días con la ruta funcionando.</p>
+      </div>
+
+      <span class="section-kicker">Referencias · APA 7.ª edición</span>
+      <h2>Referencias</h2>
+      <ul class="ref-list">
+        <li>Balasundaram, S., Mathew, J., &amp; Nair, S. (2024). Microlearning and learning performance in higher education: A post-test control group study. <em>Journal of Learning for Development, 11</em>(1), 1–14.</li>
+        <li>CAST. (2024). Universal Design for Learning guidelines version 3.0. <a href="https://udlguidelines.cast.org" target="_blank" rel="noopener">https://udlguidelines.cast.org</a></li>
+        <li>Corraliza Montero, H. J. (2024). <em>Modelo RC-TTF: Rol, Contexto, Tarea, Tono y Formato para la interacción con inteligencia artificial en contextos educativos</em> [Modelo pedagógico propio].</li>
+        <li>Hase, S., &amp; Kenyon, C. (2013). <em>Self-determined learning: Heutagogy in action</em>. Bloomsbury Academic.</li>
+        <li>Hug, T. (2006). Microlearning: A new pedagogical challenge (Introductory note). En T. Hug, M. Lindner y P. A. Bruck (Eds.), <em>Microlearning: Emerging concepts, practices and technologies after e-learning</em> (pp. 7–11). Innsbruck University Press.</li>
+        <li>Kapp, K. M., &amp; Defelice, R. A. (2019). <em>Microlearning: Short and sweet</em>. ATD Press.</li>
+        <li>Knowles, M. S., Holton, E. F., III, &amp; Swanson, R. A. (2020). <em>The adult learner: The definitive classic in adult education and human resource development</em> (9.ª ed.). Routledge.</li>
+        <li>Mayer, R. E. (2021). <em>Multimedia learning</em> (3.ª ed.). Cambridge University Press.</li>
+        <li>Roediger, H. L., III, &amp; Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. <em>Psychological Science, 17</em>(3), 249–255.</li>
+        <li>Sweller, J., van Merriënboer, J. J. G., &amp; Paas, F. (2019). Cognitive architecture and instructional design: 20 years later. <em>Educational Psychology Review, 31</em>(2), 261–292.</li>
+      </ul>
+      <p class="source-note" style="text-align:center; margin-top:16px;">Verifique la referencia del modelo RC-TTF conforme a su publicación más reciente antes de distribuir el material.</p>
+
+      <div class="callout callout-primary" style="margin-top:32px; text-align:center;">
+        <h3 style="margin-bottom:6px;">Dr. Héctor J. Corraliza Montero, Ed.D.</h3>
+        <p style="margin-bottom:0;">Director, Proyecto RUTA · Universidad Interamericana de Puerto Rico, Recinto de Ponce<br>Septiembre 2026</p>
+      </div>
+
+      <div class="cover-actions" style="justify-content:center; margin-top:28px;">
+        <a class="btn btn-primary" href="../../recursos/Microaprendizaje-Adultos-RUTA-Corraliza.pptx" download>⬇ Descargar presentación original (.pptx)</a>
+        <a class="btn btn-ghost" href="../../index.html#contacto">Escribir al facilitador</a>
+      </div>
+    </section>
+
+    </div>
+
+    <div class="slide-controls">
+      <button class="slide-btn slide-prev" id="slidePrev" type="button" aria-label="Sección anterior">← Anterior</button>
+      <div class="slide-dots" id="slideDots"></div>
+      <span class="slide-counter" id="slideCounter">1 / 9</span>
+      <button class="slide-btn slide-next" id="slideNext" type="button" aria-label="Siguiente sección">Siguiente →</button>
+    </div>
+
+   </div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; <span id="year"></span> CorralizaMath · Módulo interactivo desarrollado a partir del taller "Microaprendizaje para Adultos", Proyecto RUTA, del Dr. Héctor J. Corraliza Montero.</p>
+  </div>
+</footer>
+
+<script src="module.js"></script>
+</body>
+</html>

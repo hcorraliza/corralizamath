@@ -622,6 +622,19 @@
 
 .example-block { background: var(--color-bg-alt); border-radius: 12px; padding: 18px 20px; }
 
+.rc-prompt {
+  background: var(--color-bg-alt);
+  border-left: 3px solid var(--color-primary);
+  border-radius: 8px;
+  padding: 16px 18px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.83rem;
+  line-height: 1.65;
+  white-space: pre-wrap;
+  color: var(--color-ink);
+  margin: 10px 0;
+}
+
 .example-prompt {
   background: #fff;
   border-left: 3px solid var(--color-primary);
@@ -991,6 +1004,119 @@
 }
 .module-closing .quote-sign { color: #cfe8dc; font-size: 0.95rem; }
 
+/* ---------- Countdown timer ---------- */
+.timer-widget {
+  background: var(--color-primary-dark);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin: 20px 0;
+}
+
+.timer-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+.timer-display { font-family: var(--font-display); font-size: 2.4rem; font-weight: 700; letter-spacing: 0.02em; }
+.timer-actions { display: flex; gap: 10px; }
+
+.timer-btn {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #fff;
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.timer-btn:hover { background: rgba(255,255,255,0.22); }
+
+.timer-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 18px; }
+
+.timer-step {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.8rem;
+}
+.timer-step .ts-time { display: block; font-size: 0.7rem; color: #b9dccb; margin-bottom: 4px; }
+.timer-step.current { background: var(--color-accent); border-color: var(--color-accent); }
+.timer-step.current .ts-time { color: #fff2df; }
+.timer-step.done { opacity: 0.5; }
+
+.timer-widget.timer-done .timer-display { color: var(--color-accent); }
+
+/* ---------- Stacked proportion bar ---------- */
+.stack-bar {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 18px 0 10px;
+  border: 1px solid var(--color-border);
+}
+
+.stack-seg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.stack-legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 0.78rem; color: var(--color-ink-soft); }
+.stack-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.stack-legend i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+/* ---------- Editable worksheet table ---------- */
+.worksheet-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; font-size: 0.88rem; }
+.worksheet-table th, .worksheet-table td { padding: 10px 14px; border-bottom: 1px solid var(--color-border); text-align: left; vertical-align: top; }
+.worksheet-table th { background: var(--color-bg-alt); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--color-primary-dark); }
+.worksheet-table tr:last-child td { border-bottom: none; }
+.worksheet-table input[type="text"] {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 7px 9px;
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  background: var(--color-bg);
+  box-sizing: border-box;
+}
+.worksheet-table input[type="text"]:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
+
+/* ---------- Worksheet textarea (free-write, persisted) ---------- */
+.worksheet-box {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  margin: 18px 0;
+}
+.worksheet-box label { display: block; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 8px; font-size: 0.92rem; }
+.worksheet-box textarea {
+  width: 100%;
+  min-height: 90px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  background: var(--color-bg);
+  resize: vertical;
+  box-sizing: border-box;
+}
+.worksheet-box textarea:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
+.worksheet-hint { font-size: 0.78rem; color: var(--color-ink-soft); margin-top: 6px; }
+.worksheet-saved { font-size: 0.74rem; color: var(--color-primary); margin-top: 6px; display: none; }
+
+/* ---------- Yes/No checklist table (Hug review) ---------- */
+.yn-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; }
+.yn-table td { padding: 12px 16px; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; }
+.yn-table tr:last-child td { border-bottom: none; }
+.yn-table .self-check-toggle { justify-content: flex-end; }
+
 /* ---------- Mobile menu toggle for sidebar ---------- */
 .sidebar-toggle { display: none; }
 
@@ -1008,9 +1134,12 @@
   }
   .module-sidebar.open-mobile { display: block; }
   .module-title-mini { display: block; }
-  .grid-2, .grid-3, .grid-4, .reveal-grid, .stat-tiles, .stepper, .sense-row, .scale-row, .checklist-two-col, .builder-grid {
+  .grid-2, .grid-3, .grid-4, .reveal-grid, .stat-tiles, .stepper, .sense-row, .scale-row, .checklist-two-col, .builder-grid, .timer-steps {
     grid-template-columns: 1fr;
   }
+  .timer-head { justify-content: center; text-align: center; }
+  .stack-bar { height: auto; flex-direction: column; }
+  .stack-seg { padding: 6px 8px; justify-content: flex-start; }
   .before-after { grid-template-columns: 1fr; }
   .ba-arrow { text-align: center; transform: rotate(90deg); }
   .bar-row { grid-template-columns: 110px 1fr 46px; }

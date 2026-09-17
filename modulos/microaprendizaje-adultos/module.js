@@ -1,4 +1,4 @@
-const STORAGE_KEY = "corralizamath.ia-docentes.v1";
+const STORAGE_KEY = "corralizamath.microaprendizaje-adultos.v1";
 
 function loadState() {
   try {
@@ -224,10 +224,11 @@ function evaluateSelfCheck(box) {
   if (answered.length < questions.length) return;
   const allYes = questions.every((q) => q.dataset.answer === "yes");
   const result = box.querySelector(".self-check-result");
+  if (!result) return;
   result.classList.add("show");
   result.textContent = allYes
-    ? "Listo: puede usar este contenido con estudiantes o colegas con verificación adecuada."
-    : "Todavía no: resuelva el vacío antes de usar el resultado con estudiantes o colegas.";
+    ? box.dataset.msgYes || "Listo: puede usar este contenido con estudiantes o colegas con verificación adecuada."
+    : box.dataset.msgNo || "Todavía no: resuelva el vacío antes de usar el resultado con estudiantes o colegas.";
 }
 
 /* ---------- Persisted checklists ---------- */
@@ -243,6 +244,21 @@ document.querySelectorAll("[data-persist]").forEach((input) => {
   });
 });
 
+/* ---------- Persisted worksheet text (textareas / inputs) ---------- */
+state.texts = state.texts || {};
+document.querySelectorAll("[data-persist-text]").forEach((field) => {
+  const key = field.dataset.persistText;
+  if (state.texts[key]) field.value = state.texts[key];
+  let saveTimer;
+  field.addEventListener("input", () => {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(() => {
+      state.texts[key] = field.value;
+      saveState(state);
+    }, 400);
+  });
+});
+
 function updateChecklistCounters() {
   document.querySelectorAll("[data-checklist-counter]").forEach((counter) => {
     const groupName = counter.dataset.checklistCounter;
@@ -253,59 +269,159 @@ function updateChecklistCounters() {
 }
 updateChecklistCounters();
 
-/* ---------- RC-TTF builder ---------- */
-const builderFields = ["rol", "contexto", "tarea", "tono", "formato"];
-const builderOutput = document.getElementById("builderOutput");
+/* ---------- Generic template builder (reusable for several constructors) ---------- */
+function initTemplateBuilder({ fieldIds, outputId, copyId, resetId, placeholder, template }) {
+  const output = document.getElementById(outputId);
+  if (!output) return;
 
-function renderBuilder() {
-  if (!builderOutput) return;
-  const values = builderFields.map((f) => document.getElementById("b-" + f)?.value.trim() || "");
-  const hasAny = values.some((v) => v.length > 0);
-  if (!hasAny) {
-    builderOutput.innerHTML = '<span class="placeholder">Su instrucción aparecerá aquí a medida que complete los cinco campos…</span>';
-    return;
-  }
-  const [rol, contexto, tarea, tono, formato] = values;
-  let text = "";
-  if (rol) text += `Actúa como ${rol}. `;
-  if (contexto) text += `${contexto} `;
-  if (tarea) text += `${tarea} `;
-  if (tono) text += `Usa un tono ${tono}. `;
-  if (formato) text += `Entrégalo en el siguiente formato: ${formato}.`;
-  builderOutput.textContent = text.trim();
-}
-
-builderFields.forEach((f) => {
-  const el = document.getElementById("b-" + f);
-  if (el) el.addEventListener("input", renderBuilder);
-});
-renderBuilder();
-
-const copyBtn = document.getElementById("builderCopy");
-if (copyBtn) {
-  copyBtn.addEventListener("click", async () => {
-    const text = builderOutput.textContent;
-    if (!text || builderOutput.querySelector(".placeholder")) return;
-    try {
-      await navigator.clipboard.writeText(text);
-      copyBtn.textContent = "Copiado ✓";
-      setTimeout(() => (copyBtn.textContent = "Copiar instrucción"), 1800);
-    } catch (e) {
-      /* clipboard no disponible */
+  function render() {
+    const values = fieldIds.map((id) => document.getElementById(id)?.value.trim() || "");
+    const hasAny = values.some((v) => v.length > 0);
+    if (!hasAny) {
+      output.innerHTML = `<span class="placeholder">${placeholder}</span>`;
+      return;
     }
+    output.textContent = template(values).trim();
+  }
+
+  fieldIds.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener("input", render);
   });
+  render();
+
+  const copyBtn = document.getElementById(copyId);
+  if (copyBtn) {
+    copyBtn.addEventListener("click", async () => {
+      const text = output.textContent;
+      if (!text || output.querySelector(".placeholder")) return;
+      try {
+        await navigator.clipboard.writeText(text);
+        const original = copyBtn.textContent;
+        copyBtn.textContent = "Copiado ✓";
+        setTimeout(() => (copyBtn.textContent = original), 1800);
+      } catch (e) {
+        /* clipboard no disponible */
+      }
+    });
+  }
+
+  const resetBtn = document.getElementById(resetId);
+  if (resetBtn) {
+    resetBtn.addEventListener("click", () => {
+      fieldIds.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) el.value = "";
+      });
+      render();
+    });
+  }
 }
 
-const resetBtn = document.getElementById("builderReset");
-if (resetBtn) {
-  resetBtn.addEventListener("click", () => {
-    builderFields.forEach((f) => {
-      const el = document.getElementById("b-" + f);
-      if (el) el.value = "";
+initTemplateBuilder({
+  fieldIds: ["cb-condicion", "cb-verbo", "cb-objeto", "cb-criterio"],
+  outputId: "competencyOutput",
+  copyId: "competencyCopy",
+  resetId: "competencyReset",
+  placeholder: "Su competencia observable aparecerá aquí a medida que complete los cuatro campos…",
+  template: ([condicion, verbo, objeto, criterio]) => {
+    let text = "";
+    if (condicion) text += `${condicion}, `;
+    text += "el participante ";
+    if (verbo) text += `${verbo} `;
+    if (objeto) text += `${objeto} `;
+    if (criterio) text += `${criterio}.`;
+    return text;
+  },
+});
+
+initTemplateBuilder({
+  fieldIds: ["pb-rol", "pb-contexto", "pb-tarea", "pb-tono", "pb-formato"],
+  outputId: "promptOutput",
+  copyId: "promptCopy",
+  resetId: "promptReset",
+  placeholder: "Su instrucción RC-TTF aparecerá aquí a medida que complete los cinco campos…",
+  template: ([rol, contexto, tarea, tono, formato]) => {
+    let text = "";
+    if (rol) text += `Actúa como ${rol}. `;
+    if (contexto) text += `${contexto} `;
+    if (tarea) text += `${tarea} `;
+    if (tono) text += `Usa un tono ${tono}. `;
+    if (formato) text += `Entrégalo en el siguiente formato: ${formato}.`;
+    return text;
+  },
+});
+
+/* ---------- Countdown timer (Cápsula cero, Receso) ---------- */
+function initCountdown(rootId) {
+  const root = document.getElementById(rootId);
+  if (!root) return;
+  const totalSeconds = parseInt(root.dataset.seconds, 10);
+  const display = root.querySelector(".timer-display");
+  const startBtn = root.querySelector(".timer-start");
+  const resetBtn = root.querySelector(".timer-reset");
+  const steps = Array.from(root.querySelectorAll(".timer-step"));
+  let remaining = totalSeconds;
+  let intervalId = null;
+
+  function format(s) {
+    const m = Math.floor(s / 60);
+    const sec = s % 60;
+    return `${m}:${String(sec).padStart(2, "0")}`;
+  }
+
+  function highlightStep() {
+    const elapsed = totalSeconds - remaining;
+    steps.forEach((step) => {
+      const from = parseInt(step.dataset.from, 10);
+      const to = parseInt(step.dataset.to, 10);
+      step.classList.toggle("current", elapsed >= from && elapsed < to);
+      step.classList.toggle("done", elapsed >= to);
     });
-    renderBuilder();
-  });
+  }
+
+  function tick() {
+    remaining -= 1;
+    if (display) display.textContent = format(Math.max(remaining, 0));
+    highlightStep();
+    if (remaining <= 0) {
+      clearInterval(intervalId);
+      intervalId = null;
+      if (startBtn) startBtn.textContent = "Terminado ✓";
+      root.classList.add("timer-done");
+    }
+  }
+
+  if (display) display.textContent = format(remaining);
+  highlightStep();
+
+  if (startBtn) {
+    startBtn.addEventListener("click", () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+        intervalId = null;
+        startBtn.textContent = "Reanudar";
+        return;
+      }
+      root.classList.remove("timer-done");
+      startBtn.textContent = "Pausar";
+      intervalId = setInterval(tick, 1000);
+    });
+  }
+  if (resetBtn) {
+    resetBtn.addEventListener("click", () => {
+      clearInterval(intervalId);
+      intervalId = null;
+      remaining = totalSeconds;
+      if (display) display.textContent = format(remaining);
+      if (startBtn) startBtn.textContent = "Iniciar";
+      root.classList.remove("timer-done");
+      highlightStep();
+    });
+  }
 }
+
+document.querySelectorAll("[data-countdown]").forEach((el) => initCountdown(el.id));
 
 /* ---------- Year in footer ---------- */
 const yearEl = document.getElementById("year");

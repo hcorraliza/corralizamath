@@ -14,12 +14,17 @@ para estudiantes, padres y docentes, con un enfoque claro y práctico.
 │   └── main.js                         # Interactividad (menú móvil, año dinámico)
 ├── img/                                 # Imágenes del sitio
 ├── modulos/
-│   └── ia-para-docentes/
+│   ├── ia-para-docentes/
+│   │   ├── index.html                  # Módulo interactivo de autoestudio
+│   │   ├── module.css
+│   │   └── module.js
+│   └── microaprendizaje-adultos/
 │       ├── index.html                  # Módulo interactivo de autoestudio
 │       ├── module.css
 │       └── module.js
 └── recursos/
-    └── IA-para-Docentes-Corraliza.pptx # Presentación original descargable
+    ├── IA-para-Docentes-Corraliza.pptx           # Presentación original descargable
+    └── Microaprendizaje-Adultos-RUTA-Corraliza.pptx
 ```
 
 ## Módulos interactivos
