@@ -20,27 +20,39 @@ const state = loadState();
 state.checks = state.checks || {};
 state.visited = state.visited || {};
 
-/* ---------- Progress bar (scroll) ---------- */
-function updateProgressBar() {
-  const bar = document.getElementById("progressFill");
-  if (!bar) return;
-  const doc = document.documentElement;
-  const scrollTop = doc.scrollTop || document.body.scrollTop;
-  const height = doc.scrollHeight - doc.clientHeight;
-  const pct = height > 0 ? (scrollTop / height) * 100 : 0;
-  bar.style.width = pct + "%";
-}
-
-/* ---------- Sidebar scrollspy ---------- */
-const sections = Array.from(document.querySelectorAll(".module-section[id]"));
+/* ---------- Horizontal slide navigation ---------- */
 const sidebarLinks = Array.from(document.querySelectorAll(".sidebar-nav a"));
+const track = document.getElementById("slidesTrack");
+const slides = track ? Array.from(track.children) : [];
+const slideIndexById = {};
+slides.forEach((s, i) => (slideIndexById[s.id] = i));
+
+const dotsWrap = document.getElementById("slideDots");
+if (dotsWrap) {
+  slides.forEach((s, i) => {
+    const dot = document.createElement("button");
+    dot.className = "slide-dot";
+    dot.type = "button";
+    dot.setAttribute("aria-label", "Ir a la sección " + (i + 1));
+    dot.addEventListener("click", () => goToSlide(i));
+    dotsWrap.appendChild(dot);
+  });
+}
+const dots = dotsWrap ? Array.from(dotsWrap.children) : [];
+
+const prevBtn = document.getElementById("slidePrev");
+const nextBtn = document.getElementById("slideNext");
+const counterEl = document.getElementById("slideCounter");
+const progressFill = document.getElementById("progressFill");
+
+let currentIndex = 0;
 
 function markVisited(id) {
   if (!state.visited[id]) {
     state.visited[id] = true;
     saveState(state);
-    updateSidebarProgress();
   }
+  updateSidebarProgress();
 }
 
 function updateSidebarProgress() {
@@ -54,28 +66,56 @@ function updateSidebarProgress() {
   });
 }
 
-if ("IntersectionObserver" in window && sections.length) {
-  const spy = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const id = entry.target.id;
-        const link = sidebarLinks.find((a) => a.getAttribute("href") === "#" + id);
-        if (!link) return;
-        if (entry.isIntersecting) {
-          sidebarLinks.forEach((a) => a.classList.remove("active"));
-          link.classList.add("active");
-          markVisited(id);
-        }
-      });
-    },
-    { rootMargin: "-30% 0px -55% 0px", threshold: 0 }
-  );
-  sections.forEach((s) => spy.observe(s));
+function animateBarsIn(slide) {
+  slide.querySelectorAll(".bar-fill").forEach((fill) => {
+    fill.style.width = fill.dataset.value + "%";
+  });
 }
 
-updateSidebarProgress();
-window.addEventListener("scroll", updateProgressBar, { passive: true });
-updateProgressBar();
+function goToSlide(index) {
+  if (!slides.length) return;
+  index = Math.max(0, Math.min(slides.length - 1, index));
+  currentIndex = index;
+  track.style.transform = `translateX(-${index * 100}%)`;
+  const activeSlide = slides[index];
+  activeSlide.scrollTop = 0;
+
+  sidebarLinks.forEach((a) => a.classList.remove("active"));
+  const activeLink = sidebarLinks.find((a) => a.getAttribute("href") === "#" + activeSlide.id);
+  if (activeLink) activeLink.classList.add("active");
+
+  dots.forEach((d, i) => d.classList.toggle("active", i === index));
+  if (counterEl) counterEl.textContent = `${index + 1} / ${slides.length}`;
+  if (prevBtn) prevBtn.disabled = index === 0;
+  if (nextBtn) nextBtn.disabled = index === slides.length - 1;
+  if (progressFill) progressFill.style.width = (index / (slides.length - 1)) * 100 + "%";
+
+  history.replaceState(null, "", "#" + activeSlide.id);
+  markVisited(activeSlide.id);
+  animateBarsIn(activeSlide);
+  if (moduleSidebar) moduleSidebar.classList.remove("open-mobile");
+}
+
+if (prevBtn) prevBtn.addEventListener("click", () => goToSlide(currentIndex - 1));
+if (nextBtn) nextBtn.addEventListener("click", () => goToSlide(currentIndex + 1));
+
+document.addEventListener("keydown", (e) => {
+  const tag = document.activeElement?.tagName;
+  if (tag === "INPUT" || tag === "TEXTAREA") return;
+  if (e.key === "ArrowRight") goToSlide(currentIndex + 1);
+  if (e.key === "ArrowLeft") goToSlide(currentIndex - 1);
+});
+
+/* Intercept any in-page anchor that targets a known slide id */
+document.addEventListener("click", (e) => {
+  const link = e.target.closest('a[href^="#"]');
+  if (!link) return;
+  const id = link.getAttribute("href").slice(1);
+  if (id in slideIndexById) {
+    e.preventDefault();
+    goToSlide(slideIndexById[id]);
+  }
+});
 
 /* ---------- Mobile sidebar toggle ---------- */
 const sidebarToggle = document.getElementById("sidebarToggle");
@@ -84,10 +124,12 @@ if (sidebarToggle && moduleSidebar) {
   sidebarToggle.addEventListener("click", () => {
     moduleSidebar.classList.toggle("open-mobile");
   });
-  sidebarLinks.forEach((a) =>
-    a.addEventListener("click", () => moduleSidebar.classList.remove("open-mobile"))
-  );
 }
+
+/* Initial slide: honor a deep link hash if it matches a slide, else start at cover */
+const initialId = location.hash.slice(1);
+goToSlide(initialId in slideIndexById ? slideIndexById[initialId] : 0);
+updateSidebarProgress();
 
 /* ---------- Generic accordion (event delegation) ---------- */
 document.addEventListener("click", (e) => {
@@ -256,23 +298,6 @@ if (resetBtn) {
     });
     renderBuilder();
   });
-}
-
-/* ---------- Animated bar charts (IntersectionObserver trigger) ---------- */
-if ("IntersectionObserver" in window) {
-  const barObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const fill = entry.target;
-          fill.style.width = fill.dataset.value + "%";
-          barObserver.unobserve(fill);
-        }
-      });
-    },
-    { threshold: 0.4 }
-  );
-  document.querySelectorAll(".bar-fill").forEach((el) => barObserver.observe(el));
 }
 
 /* ---------- Year in footer ---------- */

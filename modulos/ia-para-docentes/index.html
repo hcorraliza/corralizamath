@@ -47,6 +47,8 @@
   </aside>
 
   <main class="module-content">
+   <div class="slides-viewport">
+    <div class="slides-track" id="slidesTrack">
 
     <!-- PORTADA -->
     <section class="module-cover" id="portada">
@@ -199,10 +201,6 @@
         <p class="quiz-feedback"></p>
       </div>
 
-      <div class="section-nav">
-        <a href="#objetivos" class="prev"><span class="dir">← Anterior</span><strong>Objetivos de aprendizaje</strong></a>
-        <a href="#seccion-2" class="next"><span class="dir">Siguiente →</span><strong>2. Fundamentos</strong></a>
-      </div>
     </section>
 
     <!-- SECCIÓN 2 -->
@@ -312,10 +310,6 @@
         <p class="quiz-feedback"></p>
       </div>
 
-      <div class="section-nav">
-        <a href="#seccion-1" class="prev"><span class="dir">← Anterior</span><strong>1. Dónde estamos</strong></a>
-        <a href="#seccion-3" class="next"><span class="dir">Siguiente →</span><strong>3. Ingeniería de prompts</strong></a>
-      </div>
     </section>
 
     <!-- SECCIÓN 3 -->
@@ -621,10 +615,6 @@
         </div>
       </div>
 
-      <div class="section-nav">
-        <a href="#seccion-2" class="prev"><span class="dir">← Anterior</span><strong>2. Fundamentos</strong></a>
-        <a href="#seccion-4" class="next"><span class="dir">Siguiente →</span><strong>4. El ecosistema 2026</strong></a>
-      </div>
     </section>
 
     <!-- SECCIÓN 4 -->
@@ -775,10 +765,6 @@
         <p class="section-dek" style="margin-top:14px;">No se trata de prohibir tecnología, sino de no poner el sello de un taller institucional sobre herramientas cuyo uso principal es evadir el aprendizaje.</p>
       </div>
 
-      <div class="section-nav">
-        <a href="#seccion-3" class="prev"><span class="dir">← Anterior</span><strong>3. Ingeniería de prompts</strong></a>
-        <a href="#seccion-5" class="next"><span class="dir">Siguiente →</span><strong>5. Uso responsable</strong></a>
-      </div>
     </section>
 
     <!-- SECCIÓN 5 -->
@@ -945,10 +931,6 @@
         <p class="quiz-feedback"></p>
       </div>
 
-      <div class="section-nav">
-        <a href="#seccion-4" class="prev"><span class="dir">← Anterior</span><strong>4. El ecosistema 2026</strong></a>
-        <a href="#seccion-6" class="next"><span class="dir">Siguiente →</span><strong>6. Práctica</strong></a>
-      </div>
     </section>
 
     <!-- SECCIÓN 6 -->
@@ -999,10 +981,6 @@
         </div>
       </div>
 
-      <div class="section-nav">
-        <a href="#seccion-5" class="prev"><span class="dir">← Anterior</span><strong>5. Uso responsable</strong></a>
-        <a href="#seccion-7" class="next"><span class="dir">Siguiente →</span><strong>7. Plan de acción</strong></a>
-      </div>
     </section>
 
     <!-- SECCIÓN 7 -->
@@ -1055,20 +1033,15 @@
         </div>
       </div>
 
-      <div class="section-nav">
-        <a href="#seccion-6" class="prev"><span class="dir">← Anterior</span><strong>6. Práctica</strong></a>
-        <a href="#referencias" class="next"><span class="dir">Siguiente →</span><strong>Referencias</strong></a>
-      </div>
     </section>
-
-    <!-- CIERRE -->
-    <div class="module-closing">
-      <p class="quote">La pregunta no es si la inteligencia artificial va a sustituir a los maestros. Es si los maestros que la usan con criterio van a enseñar mejor que los que la ignoran.</p>
-      <p class="quote-sign">Y esa decisión, hoy, sigue siendo suya.</p>
-    </div>
 
     <!-- REFERENCIAS -->
     <section class="module-section" id="referencias">
+      <div class="module-closing">
+        <p class="quote">La pregunta no es si la inteligencia artificial va a sustituir a los maestros. Es si los maestros que la usan con criterio van a enseñar mejor que los que la ignoran.</p>
+        <p class="quote-sign">Y esa decisión, hoy, sigue siendo suya.</p>
+      </div>
+
       <span class="section-kicker">Referencias · APA 7ma edición</span>
       <h2>Referencias</h2>
       <ul class="ref-list">
@@ -1098,6 +1071,16 @@
       </div>
     </section>
 
+    </div>
+
+    <div class="slide-controls">
+      <button class="slide-btn slide-prev" id="slidePrev" type="button" aria-label="Sección anterior">← Anterior</button>
+      <div class="slide-dots" id="slideDots"></div>
+      <span class="slide-counter" id="slideCounter">1 / 10</span>
+      <button class="slide-btn slide-next" id="slideNext" type="button" aria-label="Siguiente sección">Siguiente →</button>
+    </div>
+
+   </div>
   </main>
 </div>
 
