@@ -297,3 +297,115 @@ a { color: var(--color-primary); }
 
   .site-nav.open { display: flex; }
 }
+
+
+/* Portal de recursos */
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.portal-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+  padding: 26px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.portal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(20, 61, 49, 0.12);
+  border-color: #b7c9bf;
+}
+
+.portal-card-featured {
+  border: 2px solid var(--color-primary);
+}
+
+.portal-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  background: var(--color-bg-alt);
+  color: var(--color-primary-dark);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.portal-card h3 { margin-bottom: 10px; }
+.portal-card p { flex: 1; font-size: 0.94rem; }
+.portal-cta { font-weight: 700; color: var(--color-primary); }
+
+.page-hero {
+  padding: 64px 0 48px;
+  background: linear-gradient(180deg, #eef3ee 0%, var(--color-bg) 100%);
+}
+
+.breadcrumb {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.resource-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.resource-item {
+  padding: 22px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.resource-meta {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.resource-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.btn-small {
+  padding: 9px 16px;
+  font-size: 0.85rem;
+}
+
+.empty-state {
+  padding: 30px;
+  border: 1px dashed #bcb5a6;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.5);
+}
+
+@media (max-width: 900px) {
+  .portal-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 620px) {
+  .portal-grid { grid-template-columns: 1fr; }
+}
