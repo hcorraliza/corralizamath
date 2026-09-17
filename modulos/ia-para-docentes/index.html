@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IA para Docentes | Módulo interactivo · CorralizaMath</title>
+<meta name="description" content="Módulo interactivo de autoestudio: Inteligencia Artificial para Docentes, por el Dr. Héctor J. Corraliza Montero. Fundamentos, ingeniería de prompts (RC-TTF), ecosistema de herramientas, uso responsable y plan de acción.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>∑</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/styles.css">
+<link rel="stylesheet" href="module.css">
+</head>
+<body class="module-body">
+
+<header class="module-header">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="module-header-inner">
+    <a href="../../index.html" class="module-back">← Corraliza<span style="color:var(--color-accent)">Math</span></a>
+    <span class="module-title-mini">IA para Docentes</span>
+    <div class="module-header-actions">
+      <button class="btn btn-ghost btn-sm" id="sidebarToggle" aria-label="Abrir índice">☰ <span class="btn-label">Índice</span></button>
+      <a class="btn btn-primary btn-sm" href="../../recursos/IA-para-Docentes-Corraliza.pptx" download>
+        <span class="btn-icon">⬇</span><span class="btn-label">Descargar presentación</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="module-shell">
+
+  <aside class="module-sidebar" id="moduleSidebar">
+    <p class="sidebar-progress" id="sidebarProgressLabel">0 de 10 secciones vistas</p>
+    <ul class="sidebar-nav">
+      <li><a href="#portada"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Presentación</a></li>
+      <li><a href="#objetivos"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Objetivos</a></li>
+      <li><a href="#seccion-1"><span class="sidebar-num"><span class="sidebar-num-text">1</span></span> Dónde estamos</a></li>
+      <li><a href="#seccion-2"><span class="sidebar-num"><span class="sidebar-num-text">2</span></span> Fundamentos</a></li>
+      <li><a href="#seccion-3"><span class="sidebar-num"><span class="sidebar-num-text">3</span></span> Ingeniería de prompts</a></li>
+      <li><a href="#seccion-4"><span class="sidebar-num"><span class="sidebar-num-text">4</span></span> El ecosistema 2026</a></li>
+      <li><a href="#seccion-5"><span class="sidebar-num"><span class="sidebar-num-text">5</span></span> Uso responsable</a></li>
+      <li><a href="#seccion-6"><span class="sidebar-num"><span class="sidebar-num-text">6</span></span> Práctica</a></li>
+      <li><a href="#seccion-7"><span class="sidebar-num"><span class="sidebar-num-text">7</span></span> Plan de acción</a></li>
+      <li><a href="#referencias"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Referencias</a></li>
+    </ul>
+  </aside>
+
+  <main class="module-content">
+
+    <!-- PORTADA -->
+    <section class="module-cover" id="portada">
+      <p class="eyebrow">Taller de desarrollo profesional · Módulo interactivo de autoestudio</p>
+      <h1>Inteligencia Artificial para Docentes</h1>
+      <p class="lead">Decisiones pedagógicas informadas sobre cuándo, cómo y por qué usar IA en el salón — no una lista de 40 herramientas.</p>
+      <div class="cover-actions">
+        <a href="#objetivos" class="btn btn-on-dark">Comenzar el módulo</a>
+        <a class="btn btn-outline-on-dark" href="../../recursos/IA-para-Docentes-Corraliza.pptx" download>⬇ Descargar presentación original (.pptx)</a>
+      </div>
+      <div class="cover-meta">
+        <div><span>Facilitador</span><span>Dr. Héctor J. Corraliza Montero, Ed.D.</span></div>
+        <div><span>Cargo</span><span>Facilitador Docente de Matemáticas</span></div>
+        <div><span>Institución</span><span>Oficina Regional Educativa de Ponce · DEPR</span></div>
+        <div><span>Fecha</span><span>Septiembre 2026</span></div>
+      </div>
+    </section>
+
+    <!-- OBJETIVOS -->
+    <section class="module-section" id="objetivos">
+      <span class="section-kicker">Objetivos de aprendizaje</span>
+      <h2>Al finalizar este módulo usted podrá</h2>
+      <p class="section-dek">Marque cada objetivo a medida que lo sienta cumplido. Su progreso se guarda en este navegador.</p>
+      <ul class="checklist">
+        <li class="checklist-item">
+          <input type="checkbox" id="obj1" data-persist="obj-1">
+          <label for="obj1"><strong>1.</strong> Explicar qué es y qué no es la IA generativa, y por qué produce errores plausibles.</label>
+        </li>
+        <li class="checklist-item">
+          <input type="checkbox" id="obj2" data-persist="obj-2">
+          <label for="obj2"><strong>2.</strong> Distinguir las herramientas de propósito general de las diseñadas para el aula.</label>
+        </li>
+        <li class="checklist-item">
+          <input type="checkbox" id="obj3" data-persist="obj-3">
+          <label for="obj3"><strong>3.</strong> Aplicar el modelo RC-TTF para redactar instrucciones (prompts) de calidad.</label>
+        </li>
+        <li class="checklist-item">
+          <input type="checkbox" id="obj4" data-persist="obj-4">
+          <label for="obj4"><strong>4.</strong> Cumplir con la política del DEPR, FERPA y COPPA al usar IA con estudiantes.</label>
+        </li>
+        <li class="checklist-item">
+          <input type="checkbox" id="obj5" data-persist="obj-5">
+          <label for="obj5"><strong>5.</strong> Rediseñar una tarea de su curso para que la IA fortalezca —y no sustituya— el aprendizaje.</label>
+        </li>
+        <li class="checklist-item">
+          <input type="checkbox" id="obj6" data-persist="obj-6">
+          <label for="obj6"><strong>6.</strong> Evaluar críticamente cualquier herramienta nueva antes de llevarla al salón.</label>
+        </li>
+      </ul>
+
+      <div class="subsection">
+        <h3>Ruta del taller</h3>
+        <div class="grid-4">
+          <div class="info-card"><span class="tag">1</span><h4>Dónde estamos</h4><p>El panorama de la IA en 2026 y los datos del uso docente.</p></div>
+          <div class="info-card"><span class="tag">2</span><h4>Fundamentos</h4><p>Qué es, cómo funciona y por qué se equivoca.</p></div>
+          <div class="info-card"><span class="tag">3</span><h4>Ingeniería de prompts</h4><p>El modelo RC-TTF y ejemplos por materia de 6.º a 12.º grado.</p></div>
+          <div class="info-card"><span class="tag">4</span><h4>El ecosistema</h4><p>Asistentes generales y herramientas para el aula.</p></div>
+          <div class="info-card"><span class="tag">5</span><h4>Uso responsable</h4><p>Política del DEPR, privacidad, sesgo e integridad académica.</p></div>
+          <div class="info-card"><span class="tag">6</span><h4>Práctica</h4><p>Rediseño de tareas y reglas de uso en cada asignación.</p></div>
+          <div class="info-card"><span class="tag">7</span><h4>Plan de acción</h4><p>Sus próximos 30, 60 y 90 días.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 1 -->
+    <section class="module-section" id="seccion-1">
+      <span class="section-kicker"><span class="num-badge">1</span> Dónde estamos</span>
+      <h2>El panorama de la inteligencia artificial en 2026</h2>
+      <p class="section-dek">La IA dejó de ser novedad y pasó a ser infraestructura. Antes de las herramientas, conviene ubicarnos en el momento actual y en lo que dicen los datos sobre el uso docente.</p>
+
+      <div class="subsection">
+        <h3>Punto de partida: usted ya usa IA todos los días</h3>
+        <p>La pregunta no es si va a usar inteligencia artificial. Es si la va a usar con criterio.</p>
+        <div class="grid-4">
+          <div class="info-card"><h4>Teclado predictivo</h4><p>Su celular predice la próxima palabra con el mismo principio que ChatGPT.</p></div>
+          <div class="info-card"><h4>Filtro de correo</h4><p>Clasifica spam aprendiendo de millones de ejemplos etiquetados.</p></div>
+          <div class="info-card"><h4>Mapas y tránsito</h4><p>Predice tiempos de llegada con datos históricos y en tiempo real.</p></div>
+          <div class="info-card"><h4>Traductor</h4><p>Traduce por contexto completo, no palabra por palabra.</p></div>
+          <div class="info-card"><h4>Recomendaciones</h4><p>Netflix, Spotify y YouTube modelan su comportamiento.</p></div>
+          <div class="info-card"><h4>Cámara del celular</h4><p>Reconoce rostros y mejora la foto antes de que usted la vea.</p></div>
+          <div class="info-card"><h4>Detección de fraude</h4><p>El banco bloquea una compra que no encaja con su patrón.</p></div>
+          <div class="info-card"><h4>Asistentes de voz</h4><p>Siri y Alexa hoy operan sobre modelos de lenguaje grandes.</p></div>
+        </div>
+        <p class="section-dek" style="margin-top:14px;"><strong>Actividad de reflexión:</strong> ¿cuántas de estas ocho usó hoy? La mayoría de los docentes usa al menos cuatro. El punto: la IA no es futuro, es presente invisible.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Datos verificados · Gallup, 2026 — los docentes ya la usan</h3>
+        <div class="chart-wrap">
+          <span class="chart-title">Uso de IA entre docentes de EE. UU.</span>
+          <div class="bar-chart">
+            <div class="bar-row"><span class="bar-label">Usa IA en su trabajo</span><div class="bar-track"><div class="bar-fill" data-value="60"></div></div><span class="bar-value">60%</span></div>
+            <div class="bar-row"><span class="bar-label">La usa al menos semanalmente</span><div class="bar-track"><div class="bar-fill" data-value="30"></div></div><span class="bar-value">30%</span></div>
+            <div class="bar-row"><span class="bar-label">Recibe guía formal de su distrito</span><div class="bar-track"><div class="bar-fill accent" data-value="18"></div></div><span class="bar-value">18%</span></div>
+            <div class="bar-row"><span class="bar-label">No recibe ninguna guía</span><div class="bar-track"><div class="bar-fill accent" data-value="34"></div></div><span class="bar-value">34%</span></div>
+          </div>
+        </div>
+        <div class="stat-tiles">
+          <div class="stat-tile" style="grid-column: span 4;"><span class="num">5.9 hrs/semana</span><p>es el tiempo que los docentes estiman recuperar cuando usan IA con regularidad — cerca de seis semanas de trabajo al año.</p></div>
+        </div>
+        <div class="callout callout-primary">
+          <p>La adopción va muy por delante de la formación. Ese vacío es exactamente lo que este módulo busca cerrar: 6 de cada 10 docentes ya usan IA, pero solo 18% recibe guía formal. La ausencia de política no detiene el uso; solo lo vuelve invisible y riesgoso.</p>
+        </div>
+        <p class="source-note">Fuente: Gallup (2026). Encuesta nacional a 2,069 docentes de escuelas públicas K-12 de EE. UU., 9 de febrero – 2 de marzo de 2026; margen de error ±2.5 puntos.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Datos verificados · RAND, 2025 — la brecha entre el uso y la política</h3>
+        <div class="stat-tiles">
+          <div class="stat-tile"><span class="num">53%</span><p>de los docentes de español, matemáticas y ciencias usaron IA para la escuela</p></div>
+          <div class="stat-tile"><span class="num">54%</span><p>de los estudiantes reportaron usar IA para tareas escolares</p></div>
+          <div class="stat-tile"><span class="num">45%</span><p>de los directores dijo tener una política escolar o distrital sobre IA</p></div>
+          <div class="stat-tile"><span class="num">34%</span><p>de los docentes tenía acceso a normas sobre integridad académica y IA</p></div>
+        </div>
+        <div class="callout callout-warn">
+          <span class="callout-title">⚠ Dato de alarma</span>
+          <p>Más del 80% de los estudiantes dijo que sus maestros nunca les explicaron cómo usar la IA en el trabajo escolar. El silencio institucional no es neutral: deja a cada estudiante negociando solo las reglas del juego, y a cada docente improvisando su propio criterio.</p>
+        </div>
+        <p class="source-note">Fuente: RAND Corporation (2025). AI Use in Schools Is Quickly Increasing but Guidance Lags Behind: Findings from the RAND Survey Panels (RR-A4180-1). El problema no es la tecnología; es el vacío normativo y formativo. Puerto Rico ya dio un paso — la sección 5 lo detalla.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Contexto económico: un sector que se cuadruplica</h3>
+        <div class="chart-wrap">
+          <span class="chart-title">Mercado global de IA en educación (USD, miles de millones)</span>
+          <div class="bar-chart">
+            <div class="bar-row"><span class="bar-label">2026</span><div class="bar-track"><div class="bar-fill" data-value="25"></div></div><span class="bar-value">$10.6</span></div>
+            <div class="bar-row"><span class="bar-label">2027</span><div class="bar-track"><div class="bar-fill" data-value="37"></div></div><span class="bar-value">$15.9</span></div>
+            <div class="bar-row"><span class="bar-label">2028</span><div class="bar-track"><div class="bar-fill" data-value="54"></div></div><span class="bar-value">$23.0</span></div>
+            <div class="bar-row"><span class="bar-label">2029</span><div class="bar-track"><div class="bar-fill" data-value="76"></div></div><span class="bar-value">$32.2</span></div>
+            <div class="bar-row"><span class="bar-label">2030</span><div class="bar-track"><div class="bar-fill" data-value="100"></div></div><span class="bar-value">$42.5</span></div>
+          </div>
+        </div>
+        <div class="grid-3">
+          <div class="info-card"><h4>Lo que sí significa</h4><p>Habrá muchas más herramientas, muchas más ofertas comerciales y mucha más presión para adoptar.</p></div>
+          <div class="info-card"><h4>Lo que no significa</h4><p>Que más inversión equivalga a mejor aprendizaje. La evidencia de impacto todavía es escasa y desigual.</p></div>
+          <div class="info-card"><h4>Su tarea como docente</h4><p>Ser el filtro crítico. Ninguna plataforma sustituye el juicio pedagógico de quien conoce a sus estudiantes.</p></div>
+        </div>
+        <p class="source-note">Fuente: Research and Markets (2026). AI in Education Market Report 2026. Proyección de $10.6 mil millones (2026) a $42.48 mil millones (2030). <em>Nota de corrección:</em> la cifra que circulaba de "$20 billones al 2027" confundía billion (mil millones) con billón. La proyección verificada es de $10.6 mil millones en 2026.</p>
+      </div>
+
+      <div class="quiz">
+        <p class="quiz-title">✓ Autoevaluación rápida</p>
+        <p class="quiz-question">Según Gallup (2026), ¿qué porcentaje de docentes de EE. UU. recibe guía formal de su distrito sobre el uso de IA?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false" data-feedback="Ese es el porcentaje que usa IA semanalmente, no el que recibe guía.">30%</button>
+          <button class="quiz-option" data-correct="true" data-feedback="Correcto: solo 18% recibe guía formal, frente a un 60% que ya usa IA en su trabajo.">18%</button>
+          <button class="quiz-option" data-correct="false" data-feedback="34% es el porcentaje que no recibe ninguna guía.">34%</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+
+      <div class="section-nav">
+        <a href="#objetivos" class="prev"><span class="dir">← Anterior</span><strong>Objetivos de aprendizaje</strong></a>
+        <a href="#seccion-2" class="next"><span class="dir">Siguiente →</span><strong>2. Fundamentos</strong></a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2 -->
+    <section class="module-section" id="seccion-2">
+      <span class="section-kicker"><span class="num-badge">2</span> Fundamentos</span>
+      <h2>Qué es la IA, cómo funciona y por qué se equivoca</h2>
+      <p class="section-dek">Sección conceptual. Sin esto, el docente usa la herramienta como caja negra y no puede anticipar sus fallos.</p>
+
+      <div class="subsection">
+        <h3>Definición operativa</h3>
+        <p>Conjunto de sistemas computacionales capaces de realizar tareas que tradicionalmente requerían inteligencia humana: reconocer patrones, razonar sobre información, tomar decisiones y generar lenguaje, imágenes o código.</p>
+        <h4>Las tres capas que debe distinguir</h4>
+        <div class="grid-3">
+          <div class="info-card"><span class="tag">Machine Learning</span><h4>Aprendizaje automático</h4><p>El sistema aprende reglas a partir de ejemplos, en lugar de recibirlas programadas.</p></div>
+          <div class="info-card"><span class="tag">Deep Learning</span><h4>Aprendizaje profundo</h4><p>Redes neuronales de muchas capas que detectan patrones cada vez más abstractos.</p></div>
+          <div class="info-card"><span class="tag">LLM · IA Generativa</span><h4>Modelos de lenguaje grandes</h4><p>Entrenados con enormes volúmenes de texto para predecir y producir lenguaje humano.</p></div>
+        </div>
+        <p class="section-dek" style="margin-top:12px;"><strong>Analogía:</strong> muñecas rusas. Toda IA generativa es aprendizaje profundo; todo aprendizaje profundo es aprendizaje automático; pero no toda IA es generativa. Un filtro de spam es IA y no genera nada.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>El motor por dentro: cómo funciona realmente un modelo de lenguaje</h3>
+        <p>Un LLM no consulta una base de datos de hechos. Calcula, palabra por palabra, cuál es la continuación más probable del texto. Haga clic en cada paso:</p>
+        <div class="stepper-group">
+          <div class="stepper">
+            <button class="stepper-btn active" data-detail="Procesa miles de millones de textos y aprende qué palabras tienden a seguir a cuáles.">
+              <span class="stepper-num">1</span><strong>Entrenamiento</strong><span class="desc">Aprende patrones del lenguaje</span>
+            </button>
+            <button class="stepper-btn" data-detail="Convierte cada fragmento en un vector numérico que codifica su significado en contexto.">
+              <span class="stepper-num">2</span><strong>Representación</strong><span class="desc">Convierte texto en números</span>
+            </button>
+            <button class="stepper-btn" data-detail="Ante su pregunta, calcula la probabilidad de cada posible próxima palabra.">
+              <span class="stepper-num">3</span><strong>Predicción</strong><span class="desc">Calcula probabilidades</span>
+            </button>
+            <button class="stepper-btn" data-detail="Escoge una palabra, la añade al texto y repite el cálculo miles de veces.">
+              <span class="stepper-num">4</span><strong>Generación</strong><span class="desc">Escribe palabra por palabra</span>
+            </button>
+          </div>
+          <div class="stepper-detail">Procesa miles de millones de textos y aprende qué palabras tienden a seguir a cuáles.</div>
+        </div>
+        <div class="callout callout-warn">
+          <span class="callout-title">? Por eso alucina</span>
+          <p>Cuando el modelo no sabe algo, no se detiene: genera la continuación más plausible. Una cita falsa se ve exactamente igual de convincente que una verdadera, porque el sistema optimiza <strong>verosimilitud</strong>, no <strong>veracidad</strong>.</p>
+        </div>
+        <p class="section-dek">Este es el concepto más importante del módulo. Si entiende que el modelo predice y no consulta, entiende de inmediato por qué inventa referencias bibliográficas y por qué falla en aritmética larga.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Dos clasificaciones que suelen confundirse</h3>
+        <h4>Por capacidad</h4>
+        <div class="grid-3">
+          <div class="info-card"><span class="tag">Real</span><h4>IA estrecha (ANI)</h4><p>Resuelve un dominio de tareas. Es todo lo que existe hoy, incluidos ChatGPT, Gemini y Claude.</p></div>
+          <div class="info-card"><span class="tag">Hipotética</span><h4>IA general (AGI)</h4><p>Igualaría a un ser humano en cualquier tarea intelectual. Todavía no existe; el debate sobre su cercanía es abierto.</p></div>
+          <div class="info-card"><span class="tag">Hipotética</span><h4>Superinteligencia (ASI)</h4><p>Superaría a la humanidad en toda actividad cognitiva. Especulación teórica.</p></div>
+        </div>
+        <div class="callout callout-accent">
+          <p><strong>Corrección importante:</strong> no existe IA general hoy. Cualquier titular que diga lo contrario está vendiendo algo. Toda herramienta que verá en este módulo es IA estrecha de memoria limitada.</p>
+        </div>
+        <h4 style="margin-top:22px;">Por funcionalidad</h4>
+        <div class="grid-4">
+          <div class="info-card"><h4>Máquinas reactivas</h4><p>Responden al estímulo presente sin memoria. Ej.: Deep Blue en ajedrez.</p></div>
+          <div class="info-card"><h4>Memoria limitada</h4><p>Usan datos recientes para decidir. Aquí están todos los sistemas actuales.</p></div>
+          <div class="info-card"><h4>Teoría de la mente</h4><p>Comprenderían emociones e intenciones ajenas. En investigación.</p></div>
+          <div class="info-card"><h4>Autoconciencia</h4><p>Tendrían conciencia de sí mismas. Puramente especulativo.</p></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Higiene conceptual: siete mitos que conviene desmontar</h3>
+        <p>Haga clic en cada tarjeta para ver por qué es falso.</p>
+        <div class="reveal-grid">
+          <div class="reveal-card"><div class="reveal-face"><strong>“La IA piensa y entiende”</strong><span class="reveal-mark">✗</span></div><div class="reveal-body"><p>Procesa patrones estadísticos. No comprende el significado de lo que escribe.</p></div></div>
+          <div class="reveal-card"><div class="reveal-face"><strong>“Si lo dice, es cierto”</strong><span class="reveal-mark">✗</span></div><div class="reveal-body"><p>Genera texto plausible. Puede inventar datos, citas y autores con total seguridad.</p></div></div>
+          <div class="reveal-card"><div class="reveal-face"><strong>“Es objetiva y neutral”</strong><span class="reveal-mark">✗</span></div><div class="reveal-body"><p>Reproduce los sesgos presentes en los datos con que fue entrenada.</p></div></div>
+          <div class="reveal-card"><div class="reveal-face"><strong>“Va a sustituir al maestro”</strong><span class="reveal-mark">✗</span></div><div class="reveal-body"><p>Automatiza tareas, no relaciones. La mediación pedagógica sigue siendo humana.</p></div></div>
+          <div class="reveal-card"><div class="reveal-face"><strong>“Todo lo que escribo es privado”</strong><span class="reveal-mark">✗</span></div><div class="reveal-body"><p>En cuentas gratuitas, sus textos pueden usarse para entrenar el modelo.</p></div></div>
+          <div class="reveal-card"><div class="reveal-face"><strong>“Los detectores identifican la IA”</strong><span class="reveal-mark">✗</span></div><div class="reveal-body"><p>Fallan con frecuencia y perjudican a estudiantes bilingües. Vea la sección 5.</p></div></div>
+          <div class="reveal-card" style="grid-column: span 2;"><div class="reveal-face"><strong>“Sabe lo que pasó ayer”</strong><span class="reveal-mark">✗</span></div><div class="reveal-body"><p>Su conocimiento tiene fecha de corte, salvo que la herramienta busque en la web.</p></div></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Hitos verificados: línea de tiempo de la IA</h3>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-year">1943</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">McCulloch y Pitts proponen el primer modelo matemático de neurona artificial.</div></div>
+          <div class="timeline-item"><span class="timeline-year">1950</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">Alan Turing publica <em>Computing Machinery and Intelligence</em> y propone su prueba.</div></div>
+          <div class="timeline-item"><span class="timeline-year">1956</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">La Conferencia de Dartmouth consagra el término "inteligencia artificial", acuñado por John McCarthy en la propuesta de 1955.</div></div>
+          <div class="timeline-item"><span class="timeline-year">1966</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">ELIZA, del MIT, se convierte en el primer chatbot ampliamente conocido.</div></div>
+          <div class="timeline-item"><span class="timeline-year">1997</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">Deep Blue derrota al campeón mundial de ajedrez Garry Kaspárov.</div></div>
+          <div class="timeline-item"><span class="timeline-year">2011</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">Watson gana Jeopardy!; Apple lanza Siri.</div></div>
+          <div class="timeline-item"><span class="timeline-year">2016</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">AlphaGo vence a Lee Sedol en Go; en 2017 derrota a Ke Jie.</div></div>
+          <div class="timeline-item"><span class="timeline-year">2017</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">Google publica <em>Attention Is All You Need</em>: nace la arquitectura Transformer, base de todo lo que vendría.</div></div>
+          <div class="timeline-item"><span class="timeline-year">2022</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">ChatGPT abre la IA generativa al público masivo.</div></div>
+          <div class="timeline-item"><span class="timeline-year">2023–26</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">Modelos multimodales y agentes: GPT-5.x, Claude Opus 5, Gemini 3, Llama, DeepSeek.</div></div>
+        </div>
+        <p class="source-note">Correcciones a versiones anteriores: Ada Lovelace escribió sus notas en 1843 y la Máquina Analítica nunca se construyó; AlphaGo venció a Lee Sedol en 2016, no en 2015; el caso "Eugene Goostman" (2014) no se considera una superación válida de la prueba de Turing.</p>
+      </div>
+
+      <div class="quiz">
+        <p class="quiz-title">✓ Autoevaluación rápida</p>
+        <p class="quiz-question">¿Por qué "alucina" un modelo de lenguaje?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false" data-feedback="No consulta ninguna base de datos de hechos: predice texto.">Porque consulta una base de datos desactualizada</button>
+          <button class="quiz-option" data-correct="true" data-feedback="Exacto: optimiza verosimilitud (que suene bien), no veracidad (que sea cierto).">Porque optimiza que el texto suene plausible, no que sea verdadero</button>
+          <button class="quiz-option" data-correct="false" data-feedback="Los LLM actuales son IA estrecha, no AGI.">Porque es una IA general (AGI) con fallos de diseño</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+
+      <div class="section-nav">
+        <a href="#seccion-1" class="prev"><span class="dir">← Anterior</span><strong>1. Dónde estamos</strong></a>
+        <a href="#seccion-3" class="next"><span class="dir">Siguiente →</span><strong>3. Ingeniería de prompts</strong></a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3 -->
+    <section class="module-section" id="seccion-3">
+      <span class="section-kicker"><span class="num-badge">3</span> Ingeniería de prompts</span>
+      <h2>El modelo RC-TTF</h2>
+      <p class="section-dek">Esta es la destreza de mayor rendimiento inmediato. La calidad de la respuesta depende de la calidad de la instrucción: cinco elementos convierten una pregunta vaga en un encargo profesional. <em>Corraliza, 2024.</em></p>
+
+      <div class="subsection">
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">R</span><div><h4>Rol — qué experiencia debe asumir el modelo</h4><p>"Actúa como facilitador docente de matemáticas de escuela superior…"</p></div></div>
+          <div class="step-item"><span class="step-num">C</span><div><h4>Contexto — quién, dónde y bajo qué condiciones</h4><p>"…para un grupo de 28 estudiantes de 10mo grado en una escuela pública de Ponce…"</p></div></div>
+          <div class="step-item"><span class="step-num">T</span><div><h4>Tarea — qué debe producir exactamente</h4><p>"…diseña tres actividades de introducción a funciones cuadráticas…"</p></div></div>
+          <div class="step-item"><span class="step-num">T</span><div><h4>Tono — con qué registro y para quién</h4><p>"…con lenguaje accesible, sin tecnicismos innecesarios…"</p></div></div>
+          <div class="step-item"><span class="step-num">F</span><div><h4>Formato — cómo debe entregarlo</h4><p>"…en una tabla con columnas de objetivo, actividad, materiales y tiempo estimado."</p></div></div>
+        </div>
+        <p class="section-dek" style="margin-top:14px;">Este marco fue validado en talleres previos con facilitadores, superintendentes y bibliotecarios escolares.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Misma necesidad, dos instrucciones: la diferencia en la práctica</h3>
+        <div class="before-after">
+          <div class="ba-card ba-before">
+            <strong>Instrucción débil</strong>
+            <p style="margin:8px 0;">"Hazme un plan de clase de matemáticas."</p>
+            <p style="margin:0;"><strong>Qué obtiene:</strong></p>
+            <ul style="margin:6px 0 0; padding-left:18px;">
+              <li>Un plan genérico sin grado ni estándar</li>
+              <li>Ejemplos descontextualizados</li>
+              <li>Formato impredecible</li>
+              <li>Veinte minutos reescribiéndolo usted mismo</li>
+            </ul>
+          </div>
+          <span class="ba-arrow">→</span>
+          <div class="ba-card ba-after">
+            <strong>Instrucción con RC-TTF</strong>
+            <p style="margin:8px 0;">"Actúa como facilitador de matemáticas. Para 10mo grado en una escuela pública de Ponce, diseña una lección de 50 minutos sobre función cuadrática, en lenguaje accesible, en tabla con objetivo, actividad, materiales y avalúo."</p>
+            <p style="margin:0;"><strong>Qué obtiene:</strong></p>
+            <ul style="margin:6px 0 0; padding-left:18px;">
+              <li>Una lección ajustada al nivel y al tiempo real</li>
+              <li>Ejemplos que puede contextualizar sin rehacer</li>
+              <li>Formato listo para pegar en su plantilla</li>
+              <li>Cinco minutos de ajuste fino</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>🛠 Construya su propia instrucción RC-TTF</h3>
+        <p>Complete los cinco campos con una necesidad real de su salón esta semana. El texto se genera automáticamente abajo — cópielo y péguelo en su asistente de IA preferido.</p>
+        <div class="builder">
+          <div class="builder-grid">
+            <div class="builder-field">
+              <label for="b-rol"><span class="letter-badge">R</span>Rol</label>
+              <input type="text" id="b-rol" placeholder="ej. facilitador docente de matemáticas de escuela intermedia">
+            </div>
+            <div class="builder-field">
+              <label for="b-contexto"><span class="letter-badge">C</span>Contexto</label>
+              <input type="text" id="b-contexto" placeholder="ej. Enseño a 27 estudiantes de 8vo grado en Ponce; varios con dificultad en fracciones.">
+            </div>
+            <div class="builder-field">
+              <label for="b-tarea"><span class="letter-badge">T</span>Tarea</label>
+              <input type="text" id="b-tarea" placeholder="ej. Diseña tres actividades de 15 minutos sobre razones y proporciones.">
+            </div>
+            <div class="builder-field">
+              <label for="b-tono"><span class="letter-badge">T</span>Tono</label>
+              <input type="text" id="b-tono" placeholder="ej. sencillo, sin vocabulario técnico innecesario">
+            </div>
+            <div class="builder-field" style="grid-column: span 2;">
+              <label for="b-formato"><span class="letter-badge">F</span>Formato</label>
+              <input type="text" id="b-formato" placeholder="ej. tabla con columnas: objetivo, actividad, materiales, tiempo y pregunta de cierre">
+            </div>
+          </div>
+          <div class="builder-output" id="builderOutput"><span class="placeholder">Su instrucción aparecerá aquí a medida que complete los cinco campos…</span></div>
+          <div class="builder-actions">
+            <button class="btn btn-primary btn-sm" id="builderCopy" type="button">Copiar instrucción</button>
+            <button class="btn btn-ghost btn-sm" id="builderReset" type="button">Borrar campos</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Ejemplos RC-TTF por materia (6.º a 12.º grado)</h3>
+        <p>Siete materias, dos bandas de grado cada una — catorce instrucciones completas, listas para adaptar. Haga clic para expandir cada materia.</p>
+
+        <div class="subject-accordion">
+
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">M</span><span><strong>Matemáticas</strong><br><span class="subj-sub">1 de 7</span></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <div class="tabs">
+                <div class="tabs-nav">
+                  <button class="tab-btn active" data-tab-target="mat1">6.º a 8.º grado</button>
+                  <button class="tab-btn" data-tab-target="mat2">9.º a 12.º grado</button>
+                </div>
+                <div class="tab-panel active" data-tab="mat1">
+                  <div class="example-block">
+                    <h4>Razones y proporciones</h4>
+                    <div class="example-prompt">Actúa como facilitador docente de matemáticas de escuela intermedia. Enseño a 26 estudiantes de 7.º grado en una escuela pública de Ponce; varios llegan con dificultad en operaciones con fracciones. Diseña una secuencia de tres actividades de 15 minutos que conecte razones y proporciones con recetas de cocina puertorriqueña. Usa lenguaje sencillo, sin vocabulario técnico innecesario. Entrégalo en una tabla con columnas: objetivo, actividad, materiales, tiempo y pregunta de cierre.</div>
+                    <div class="rcttf-tags"><span>Rol</span><span>Contexto</span><span>Tarea</span><span>Tono</span><span>Formato</span></div>
+                    <p class="example-logra"><strong>Qué logra:</strong> obtiene material listo para usar, anclado a un contexto que sus estudiantes reconocen, en vez de ejemplos genéricos que tendría que reescribir.</p>
+                  </div>
+                </div>
+                <div class="tab-panel" data-tab="mat2">
+                  <div class="example-block">
+                    <h4>Función cuadrática en contexto</h4>
+                    <div class="example-prompt">Actúa como maestro de Álgebra II con experiencia en avalúo formativo. Mi grupo de 11.º grado domina la factorización, pero falla al interpretar el vértice de una parábola en un problema real. Redacta cinco problemas de aplicación con función cuadrática usando datos de Puerto Rico: lluvia mensual, precios de gasolina o asistencia a un evento. Con tono de reto intelectual, no de examen. Presenta cada problema, luego la solución paso a paso y el error conceptual más probable.</div>
+                    <div class="rcttf-tags"><span>Rol</span><span>Contexto</span><span>Tarea</span><span>Tono</span><span>Formato</span></div>
+                    <p class="example-logra"><strong>Qué logra:</strong> el componente de error probable convierte la respuesta en herramienta de anticipación docente, no solo en una hoja de ejercicios.</p>
+                    <p class="example-caution">⚠ Verifique siempre los cálculos con Wolfram Alpha o GeoGebra.</p>
+                  </div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">C</span><span><strong>Ciencias</strong><br><span class="subj-sub">2 de 7</span></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <div class="tabs">
+                <div class="tabs-nav">
+                  <button class="tab-btn active" data-tab-target="cie1">6.º a 8.º grado</button>
+                  <button class="tab-btn" data-tab-target="cie2">9.º a 12.º grado</button>
+                </div>
+                <div class="tab-panel active" data-tab="cie1">
+                  <div class="example-block">
+                    <h4>Erosión costera</h4>
+                    <div class="example-prompt">Actúa como maestro de Ciencias Terrestres de escuela intermedia. Doy clase a 8.º grado en la costa sur de Puerto Rico, donde los estudiantes ven la erosión costera todos los días. Diseña una investigación guiada de dos períodos sobre erosión, con hipótesis, variables y un modelo físico construible con materiales de bajo costo. Con lenguaje cercano y preguntas que inviten a la curiosidad. Guía del estudiante en una página, más una hoja aparte de respuestas para el maestro.</div>
+                    <div class="rcttf-tags"><span>Rol</span><span>Contexto</span><span>Tarea</span><span>Tono</span><span>Formato</span></div>
+                    <p class="example-logra"><strong>Qué logra:</strong> convierte un fenómeno que los estudiantes ya observan en objeto de indagación formal, con separación clara entre material del alumno y del docente.</p>
+                  </div>
+                </div>
+                <div class="tab-panel" data-tab="cie2">
+                  <div class="example-block">
+                    <h4>Mitosis y meiosis</h4>
+                    <div class="example-prompt">Actúa como maestro de Biología de escuela superior alineado a los estándares del DEPR. Mis estudiantes de 10.º grado confunden mitosis con meiosis año tras año, incluso después de estudiar el diagrama. Crea un organizador comparativo y tres preguntas de discrepancia que obliguen a distinguir ambos procesos, usando el mosquito Aedes aegypti como ejemplo local. Tono directo y preciso. Tabla comparativa, seguida de las preguntas con la respuesta esperada.</div>
+                    <div class="rcttf-tags"><span>Rol</span><span>Contexto</span><span>Tarea</span><span>Tono</span><span>Formato</span></div>
+                    <p class="example-logra"><strong>Qué logra:</strong> nombrar la confusión específica en el contexto orienta la respuesta hacia la discriminación conceptual, no hacia otro resumen del tema.</p>
+                    <p class="example-caution">⚠ Contraste todo dato biológico con una fuente primaria.</p>
+                  </div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">I</span><span><strong>Inglés</strong><br><span class="subj-sub">3 de 7</span></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <div class="tabs">
+                <div class="tabs-nav">
+                  <button class="tab-btn active" data-tab-target="ing1">6.º a 8.º grado</button>
+                  <button class="tab-btn" data-tab-target="ing2">9.º a 12.º grado</button>
+                </div>
+                <div class="tab-panel active" data-tab="ing1">
+                  <div class="example-block">
+                    <h4>Producción oral con baja ansiedad</h4>
+                    <div class="example-prompt">Act as a middle school ESL teacher working with Spanish-dominant students. My 6th graders in Ponce can read simple English but freeze when they have to speak in front of others. Design five low-anxiety speaking routines of three minutes each, built around their everyday life in Puerto Rico. Use warm, encouraging language. Give me each routine with the teacher prompt, a sentence frame, and one follow-up question.</div>
+                    <div class="rcttf-tags"><span>Rol</span><span>Contexto</span><span>Tarea</span><span>Tono</span><span>Formato</span></div>
+                    <p class="example-logra"><strong>Qué logra:</strong> el marco de oración (sentence frame) baja la carga cognitiva; pedirlo explícitamente en el formato garantiza que aparezca.</p>
+                  </div>
+                </div>
+                <div class="tab-panel" data-tab="ing2">
+                  <div class="example-block">
+                    <h4>Lectura diferenciada e inferencia</h4>
+                    <div class="example-prompt">Act as a high school English teacher preparing students for College Board reading. My 12th graders read at very different levels and lose motivation with unfamiliar academic texts. Adapt the passage I will paste into three reading levels and write four inference questions for each level. Keep an academic but accessible register. Return three labeled versions, followed by the question set and an answer key.</div>
+                    <div class="rcttf-tags"><span>Rol</span><span>Contexto</span><span>Tarea</span><span>Tono</span><span>Formato</span></div>
+                    <p class="example-logra"><strong>Qué logra:</strong> un mismo texto en tres niveles permite diseño universal real: todos discuten el mismo contenido con distinto andamiaje.</p>
+                    <p class="example-caution">⚠ Redacte el prompt en inglés: la respuesta será más natural.</p>
+                  </div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">E</span><span><strong>Español</strong><br><span class="subj-sub">4 de 7</span></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <div class="tabs">
+                <div class="tabs-nav">
+                  <button class="tab-btn active" data-tab-target="esp1">6.º a 8.º grado</button>
+                  <button class="tab-btn" data-tab-target="esp2">9.º a 12.º grado</button>
+                </div>
+                <div class="tab-panel active" data-tab="esp1">
+                  <div class="example-block">
+                    <h4>Estructura del párrafo</h4>
+                    <div class="example-prompt">Actúa como maestro de Español de escuela intermedia. Mis estudiantes de 7.º grado escriben oraciones correctas, pero no logran organizarlas en un párrafo con idea central. Diseña cuatro mini-lecciones sobre estructura de párrafo usando como modelo un cuento de Abelardo Díaz Alfaro. Con tono cercano y ejemplos del habla puertorriqueña. Cada mini-lección en un bloque con objetivo, modelo, práctica guiada y práctica independiente.</div>
+                    <div class="rcttf-tags"><span>Rol</span><span>Contexto</span><span>Tarea</span><span>Tono</span><span>Formato</span></div>
+                    <p class="example-logra"><strong>Qué logra:</strong> anclar la gramática a un autor del canon local enseña estructura y lectura literaria en el mismo movimiento.</p>
+                  </div>
+                </div>
+                <div class="tab-panel" data-tab="esp2">
+                  <div class="example-block">
+                    <h4>Opinión frente a argumento</h4>
+                    <div class="example-prompt">Actúa como maestro de Español de undécimo grado. Voy a trabajar el ensayo argumentativo y mis estudiantes tienden a confundir opinar con argumentar. Redacta tres pares de textos breves —uno de opinión y otro argumentativo— sobre un mismo tema de interés juvenil en Puerto Rico. Con un tono que respete su criterio y no los sermonee. Tres pares numerados, seguidos de una rúbrica de cuatro criterios.</div>
+                    <div class="rcttf-tags"><span>Rol</span><span>Contexto</span><span>Tarea</span><span>Tono</span><span>Formato</span></div>
+                    <p class="example-logra"><strong>Qué logra:</strong> el contraste pareado hace visible la diferencia que una definición abstracta no logra transmitir.</p>
+                    <p class="example-caution">⚠ Revise que los ejemplos no impongan una postura política.</p>
+                  </div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">S</span><span><strong>Estudios Sociales</strong><br><span class="subj-sub">5 de 7</span></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <div class="tabs">
+                <div class="tabs-nav">
+                  <button class="tab-btn active" data-tab-target="soc1">6.º a 8.º grado</button>
+                  <button class="tab-btn" data-tab-target="soc2">9.º a 12.º grado</button>
+                </div>
+                <div class="tab-panel active" data-tab="soc1">
+                  <div class="example-block">
+                    <h4>Análisis de fuentes</h4>
+                    <div class="example-prompt">Actúa como maestro de Estudios Sociales de escuela intermedia. Enseño historia de Puerto Rico a 8.º grado y mis estudiantes memorizan fechas sin comprender causas ni consecuencias. Diseña una actividad de análisis con tres documentos breves sobre la Ley Foraker, adaptados al nivel de lectura de 8.º grado. Lenguaje claro y presentación equilibrada de las posturas de la época. Los tres documentos, seguidos de cinco preguntas de análisis en dificultad creciente.</div>
+                    <div class="rcttf-tags"><span>Rol</span><span>Contexto</span><span>Tarea</span><span>Tono</span><span>Formato</span></div>
+                    <p class="example-logra"><strong>Qué logra:</strong> trabajar con fuentes desplaza la clase de la memorización hacia la interpretación histórica, que es la destreza evaluada.</p>
+                  </div>
+                </div>
+                <div class="tab-panel" data-tab="soc2">
+                  <div class="example-block">
+                    <h4>Debate estructurado</h4>
+                    <div class="example-prompt">Actúa como maestro de Historia de escuela superior. Mi grupo de 10.º grado debe comprender la migración puertorriqueña del siglo XX desde varias perspectivas. Crea un debate estructurado con cuatro roles históricos, cada uno con su contexto, sus intereses y dos datos verificables. Tono neutral: cada rol debe resultar defendible. Una tarjeta de rol por página, más las reglas del debate y una rúbrica de participación.</div>
+                    <div class="rcttf-tags"><span>Rol</span><span>Contexto</span><span>Tarea</span><span>Tono</span><span>Formato</span></div>
+                    <p class="example-logra"><strong>Qué logra:</strong> pedir explícitamente neutralidad y datos verificables reduce el riesgo de que el modelo caricaturice alguna postura.</p>
+                    <p class="example-caution">⚠ Verifique cada dato histórico antes de repartir las tarjetas.</p>
+                  </div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">F</span><span><strong>Educación Física</strong><br><span class="subj-sub">6 de 7</span></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <div class="tabs">
+                <div class="tabs-nav">
+                  <button class="tab-btn active" data-tab-target="ef1">6.º a 8.º grado</button>
+                  <button class="tab-btn" data-tab-target="ef2">9.º a 12.º grado</button>
+                </div>
+                <div class="tab-panel active" data-tab="ef1">
+                  <div class="example-block">
+                    <h4>Capacidad aeróbica diferenciada</h4>
+                    <div class="example-prompt">Actúa como maestro de Educación Física de escuela intermedia. Tengo 32 estudiantes de 6.º grado, una cancha al sol y niveles de condición física muy distintos dentro del mismo grupo. Diseña una unidad de tres clases sobre capacidad aeróbica con tres niveles de intensidad para una misma actividad. Tono motivador, sin comparar a los estudiantes entre sí. Una tabla por clase con calentamiento, actividad principal, adaptaciones por nivel y cierre reflexivo.</div>
+                    <div class="rcttf-tags"><span>Rol</span><span>Contexto</span><span>Tarea</span><span>Tono</span><span>Formato</span></div>
+                    <p class="example-logra"><strong>Qué logra:</strong> tres intensidades para una sola actividad mantiene al grupo junto y evita que la diferenciación se vuelva exclusión.</p>
+                  </div>
+                </div>
+                <div class="tab-panel" data-tab="ef2">
+                  <div class="example-block">
+                    <h4>Plan personal de acondicionamiento</h4>
+                    <div class="example-prompt">Actúa como maestro de Educación Física de escuela superior con formación en salud. Mis estudiantes de 9.º grado deben diseñar su propio plan de acondicionamiento y no saben por dónde empezar. Crea una plantilla de plan personal de ocho semanas con metas medibles y un registro de progreso. Tono respetuoso con la diversidad corporal; enfoque en función y bienestar, nunca en peso ni apariencia. Plantilla imprimible, más un ejemplo completo ya llenado.</div>
+                    <div class="rcttf-tags"><span>Rol</span><span>Contexto</span><span>Tarea</span><span>Tono</span><span>Formato</span></div>
+                    <p class="example-logra"><strong>Qué logra:</strong> el tono es aquí una decisión ética: sin esa instrucción, el modelo tiende a producir material centrado en el peso.</p>
+                    <p class="example-caution">⚠ Consulte al personal de salud escolar ante cualquier restricción médica.</p>
+                  </div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">T</span><span><strong>Teatro</strong><br><span class="subj-sub">7 de 7</span></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <div class="tabs">
+                <div class="tabs-nav">
+                  <button class="tab-btn active" data-tab-target="tea1">6.º a 8.º grado</button>
+                  <button class="tab-btn" data-tab-target="tea2">9.º a 12.º grado</button>
+                </div>
+                <div class="tab-panel active" data-tab="tea1">
+                  <div class="example-block">
+                    <h4>Vencer el pánico escénico</h4>
+                    <div class="example-prompt">Actúa como maestro de Teatro de escuela intermedia. Mis estudiantes de 7.º grado sienten pánico escénico y evitan improvisar frente al grupo completo. Diseña una progresión de seis ejercicios que avance del trabajo en parejas al trabajo frente a toda la clase. Tono lúdico y sin presión de evaluación. Cada ejercicio con objetivo, duración, instrucciones y la señal de que el grupo está listo para el siguiente.</div>
+                    <div class="rcttf-tags"><span>Rol</span><span>Contexto</span><span>Tarea</span><span>Tono</span><span>Formato</span></div>
+                    <p class="example-logra"><strong>Qué logra:</strong> pedir una progresión —y no una lista— obliga al modelo a graduar la exposición, que es justamente el problema pedagógico.</p>
+                  </div>
+                </div>
+                <div class="tab-panel" data-tab="tea2">
+                  <div class="example-block">
+                    <h4>Conceptos de montaje</h4>
+                    <div class="example-prompt">Actúa como director teatral y maestro de escuela superior. Voy a montar una escena breve con 12.º grado y quiero explorar el tema de la identidad puertorriqueña. Propón tres conceptos de montaje para una escena de René Marqués, cada uno con una decisión escénica distinta. Con tono de colaboración creativa, no de instrucción. Los tres conceptos comparados en una tabla con propuesta, justificación dramatúrgica y reto de producción.</div>
+                    <div class="rcttf-tags"><span>Rol</span><span>Contexto</span><span>Tarea</span><span>Tono</span><span>Formato</span></div>
+                    <p class="example-logra"><strong>Qué logra:</strong> tres alternativas contrastadas convierten a la IA en interlocutor de diseño, no en autor de la decisión artística.</p>
+                    <p class="example-caution">⚠ La decisión artística final es suya y del grupo.</p>
+                  </div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Síntesis: cinco hábitos que multiplican el resultado</h3>
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">1</span><div><h4>Escriba el contexto real, no el ideal</h4><p>Treinta y dos estudiantes, cuarenta minutos, sin acceso a internet. El modelo trabaja con lo que usted le diga.</p></div></div>
+          <div class="step-item"><span class="step-num">2</span><div><h4>Pida el formato exacto que va a usar</h4><p>Tabla, rúbrica, guía de una página. Si no lo especifica, recibirá prosa que tendrá que reformatear.</p></div></div>
+          <div class="step-item"><span class="step-num">3</span><div><h4>Itere: el primer resultado es un borrador</h4><p>"Más corto", "más concreto", "añade un ejemplo de Ponce". Tres ajustes suelen bastar.</p></div></div>
+          <div class="step-item"><span class="step-num">4</span><div><h4>Nombre el error que quiere atacar</h4><p>"Confunden mitosis con meiosis" produce material útil; "explica la mitosis" produce otro resumen.</p></div></div>
+          <div class="step-item"><span class="step-num">5</span><div><h4>Guarde sus mejores prompts</h4><p>Un archivo con veinte instrucciones probadas vale más que veinte herramientas nuevas.</p></div></div>
+        </div>
+      </div>
+
+      <div class="section-nav">
+        <a href="#seccion-2" class="prev"><span class="dir">← Anterior</span><strong>2. Fundamentos</strong></a>
+        <a href="#seccion-4" class="next"><span class="dir">Siguiente →</span><strong>4. El ecosistema 2026</strong></a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4 -->
+    <section class="module-section" id="seccion-4">
+      <span class="section-kicker"><span class="num-badge">4</span> El ecosistema 2026</span>
+      <h2>Asistentes de propósito general y herramientas para el aula</h2>
+      <p class="section-dek">Este panorama caduca rápido. Lo que no caduca es el criterio para evaluarlo, que se trabaja en esta misma sección.</p>
+
+      <div class="callout callout-primary">
+        <span class="callout-title">Directorio externo</span>
+        <p>Para explorar el universo completo de herramientas de IA (más allá de las seleccionadas en este módulo), el taller original remite a un directorio actualizado: <a href="https://www.toolify.ai/es" target="_blank" rel="noopener">toolify.ai/es</a> — Dispositorio de IA.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Panorama a septiembre de 2026: los asistentes de propósito general</h3>
+        <table class="data-table">
+          <thead><tr><th>Herramienta</th><th>Empresa</th><th>Modelo vigente</th><th>Qué aporta al docente</th></tr></thead>
+          <tbody>
+            <tr><td><strong>ChatGPT</strong></td><td>OpenAI</td><td>GPT-5.6</td><td>El más difundido. Ecosistema amplio de GPTs personalizados y modo de voz.</td></tr>
+            <tr><td><strong>Claude</strong></td><td>Anthropic</td><td>Opus 5 / Sonnet 5</td><td>Textos largos y análisis de documentos extensos. Muy usado en trabajo académico.</td></tr>
+            <tr><td><strong>Gemini</strong></td><td>Google</td><td>Gemini 3</td><td>Integrado a Workspace, Drive y Gemini Notebook (antes NotebookLM).</td></tr>
+            <tr><td><strong>Copilot</strong></td><td>Microsoft</td><td>GPT + Microsoft 365</td><td>Herramienta institucional autorizada por el DEPR. Integrada a Word, Excel y Teams.</td></tr>
+            <tr><td><strong>DeepSeek</strong></td><td>DeepSeek AI</td><td>V4 / R1</td><td>Modelo abierto de bajo costo. Precaución: servidores y normativa fuera de EE. UU.</td></tr>
+            <tr><td><strong>Llama</strong></td><td>Meta</td><td>Llama (abierto)</td><td>De pesos abiertos; se puede ejecutar localmente. Requiere perfil técnico.</td></tr>
+          </tbody>
+        </table>
+        <p class="source-note">Los nombres de modelo cambian cada pocos meses. Verifique la versión vigente antes de citar cifras o capacidades en clase.</p>
+      </div>
+
+      <div class="subsection">
+        <div class="callout callout-accent">
+          <span class="callout-title">★ Lo primero que debe saber</span>
+          <p><strong>Copilot: la herramienta autorizada por el DEPR.</strong> Si va a usar IA con estudiantes dentro del sistema público, Microsoft Copilot en cuenta institucional es la vía autorizada.</p>
+        </div>
+        <div class="grid-3">
+          <div class="info-card"><h4>Cuenta institucional, no personal</h4><p>El acceso debe hacerse desde la cuenta y el dispositivo del DEPR. Las cuentas personales quedan expresamente excluidas.</p></div>
+          <div class="info-card"><h4>Edad mínima de 13 años</h4><p>Para estudiantes menores de 13 años o con rezago, el DEPR orienta hacia los Learning Accelerators de Microsoft.</p></div>
+          <div class="info-card"><h4>Uso siempre supervisado</h4><p>La guía prohíbe el uso no supervisado. El docente revisa las instrucciones dadas y las respuestas obtenidas.</p></div>
+          <div class="info-card"><h4>Protección de datos</h4><p>Los datos no salen del entorno institucional del mismo modo que en una cuenta gratuita de consumo.</p></div>
+          <div class="info-card"><h4>Integrado al flujo de trabajo</h4><p>Funciona dentro de Word, Excel, PowerPoint, Outlook y Teams, donde ya trabaja el docente.</p></div>
+          <div class="info-card"><h4>Capacitación previa obligatoria</h4><p>La política exige formar antes a estudiantes, docentes y familias. Este módulo forma parte de ese requisito.</p></div>
+        </div>
+        <p class="source-note">Fuente: Departamento de Educación de Puerto Rico (2026). Guía para el uso de la inteligencia artificial en el aprendizaje estudiantil (14 de enero de 2026).</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Lista de cotejo de cinco preguntas: antes de adoptar cualquier herramienta</h3>
+        <ul class="checklist">
+          <li class="checklist-item">
+            <input type="checkbox" id="chk1" data-persist="tool-check-1">
+            <label for="chk1"><strong>1. ¿Resuelve un problema real que yo tengo?</strong><br>Si la respuesta empieza con "sería interesante…", no la adopte todavía. Empiece por una tarea que le consume tiempo cada semana.</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" id="chk2" data-persist="tool-check-2">
+            <label for="chk2"><strong>2. ¿Qué datos pide y dónde los guarda?</strong><br>Busque la política de privacidad. Si no encuentra dónde se almacenan los datos ni por cuánto tiempo, eso ya es una respuesta.</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" id="chk3" data-persist="tool-check-3">
+            <label for="chk3"><strong>3. ¿Cumple con FERPA y COPPA?</strong><br>Si la herramienta procesará información de estudiantes identificables, esta pregunta no es opcional.</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" id="chk4" data-persist="tool-check-4">
+            <label for="chk4"><strong>4. ¿Puedo verificar lo que produce?</strong><br>Si usted no domina el contenido lo suficiente como para detectar un error, no está en posición de usarla para ese fin.</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" id="chk5" data-persist="tool-check-5">
+            <label for="chk5"><strong>5. ¿Qué pasa si mañana desaparece o empieza a cobrar?</strong><br>Muchas herramientas educativas de IA cierran o cambian de modelo de negocio en menos de dos años. No construya su curso sobre una sola.</label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Herramientas por categoría</h3>
+
+        <h4>1 de 5 · Planificación y creación de recursos</h4>
+        <div class="grid-2">
+          <div class="tool-card"><span class="tool-badge">M</span><div><h4>MagicSchool</h4><span class="tool-url">magicschool.ai · plan gratuito para docentes</span><p>Más de 80 generadores: planes de clase, rúbricas, cartas a familias, actividades y avalúos.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">B</span><div><h4>Brisk Teaching</h4><span class="tool-url">briskteaching.com · extensión de navegador</span><p>Trabaja dentro de Google Docs y Microsoft: crea, retroalimenta y ajusta nivel sin salir del documento.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">E</span><div><h4>Eduaide.AI</h4><span class="tool-url">eduaide.ai</span><p>Espacio de trabajo con más de un centenar de tipos de recurso y asistente de retroalimentación.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">K</span><div><h4>Khanmigo para docentes</h4><span class="tool-url">khanmigo.ai · gratuito para educadores</span><p>Gratuito para maestros mediante la alianza Khan Academy–Microsoft. Alineado a estándares.</p></div></div>
+        </div>
+
+        <h4 style="margin-top:26px;">2 de 5 · Diferenciación y accesibilidad</h4>
+        <div class="grid-2">
+          <div class="tool-card"><span class="tool-badge">D</span><div><h4>Diffit</h4><span class="tool-url">diffit.me</span><p>Adapta cualquier texto, artículo o video al nivel de lectura del estudiante y genera preguntas asociadas.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">B</span><div><h4>Brisk · Change Level</h4><span class="tool-url">briskteaching.com</span><p>Reescribe un mismo texto en varios niveles de complejidad y traduce a más de 50 idiomas.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">S</span><div><h4>Speechify</h4><span class="tool-url">speechify.com</span><p>Convierte texto en audio. Apoyo real para estudiantes con dislexia o dificultades de decodificación.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">S</span><div><h4>SchoolAI</h4><span class="tool-url">schoolai.com</span><p>Espacios de IA supervisados por el docente, con panel de monitoreo y cumplimiento FERPA y COPPA.</p></div></div>
+        </div>
+        <p class="source-note">La diferenciación con IA no sustituye el diseño universal para el aprendizaje (DUA): lo hace operativamente viable en un salón de treinta estudiantes.</p>
+
+        <h4 style="margin-top:26px;">3 de 5 · Avalúo y evaluación</h4>
+        <div class="grid-2">
+          <div class="tool-card"><span class="tool-badge">Q</span><div><h4>Quizizz</h4><span class="tool-url">quizizz.com · interfaz en español</span><p>Genera cuestionarios con IA a partir de un texto o tema y ofrece práctica adaptativa.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">C</span><div><h4>ClassPoint</h4><span class="tool-url">classpoint.io</span><p>Convierte PowerPoint en clase interactiva: preguntas en vivo, votación y gamificación.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">C</span><div><h4>Curipod</h4><span class="tool-url">curipod.com</span><p>Crea lecciones interactivas con preguntas abiertas y retroalimentación automática por IA.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">R</span><div><h4>Rúbricas con IA</h4><span class="tool-url">MagicSchool · Eduaide · Copilot</span><p>Redacte la rúbrica con IA y ajústela usted. Nunca delegue la calificación final a la máquina.</p></div></div>
+        </div>
+        <div class="callout callout-warn">
+          <p><strong>Regla firme:</strong> la IA puede proponer una nota o una retroalimentación inicial; la decisión evaluativa que afecta al estudiante debe pasar siempre por juicio humano.</p>
+        </div>
+
+        <h4 style="margin-top:26px;">4 de 5 · Matemáticas y ciencias</h4>
+        <div class="grid-2">
+          <div class="tool-card"><span class="tool-badge">W</span><div><h4>Wolfram Alpha</h4><span class="tool-url">wolframalpha.com</span><p>Motor de cálculo simbólico con solución paso a paso. Confiable donde los LLM fallan en aritmética.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">G</span><div><h4>GeoGebra</h4><span class="tool-url">geogebra.org · gratuito</span><p>Visualización dinámica de funciones, geometría y estadística. Estándar en el aula de matemáticas.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">D</span><div><h4>Desmos</h4><span class="tool-url">desmos.com · gratuito</span><p>Graficador y actividades de clase con panel docente. Excelente para exploración guiada.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">C</span><div><h4>Copilot con Excel</h4><span class="tool-url">Microsoft 365 institucional</span><p>Analiza distribuciones de notas, genera gráficas y explica fórmulas dentro de la hoja de cálculo.</p></div></div>
+        </div>
+        <div class="callout callout-warn">
+          <p><strong>Advertencia técnica:</strong> los modelos de lenguaje predicen texto, no calculan. Para operaciones exactas use una herramienta de cálculo o pida al modelo que muestre y verifique cada paso.</p>
+        </div>
+
+        <h4 style="margin-top:26px;">5 de 5 · Comunicación visual, audio y video</h4>
+        <div class="grid-2">
+          <div class="tool-card"><span class="tool-badge">N</span><div><h4>Napkin AI</h4><span class="tool-url">napkin.ai</span><p>Convierte un texto en diagramas y esquemas editables. Muy útil para material de apoyo visual.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">G</span><div><h4>Gamma</h4><span class="tool-url">gamma.app</span><p>Genera presentaciones completas a partir de un guion o un documento.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">C</span><div><h4>Canva con Magic Studio</h4><span class="tool-url">canva.com · plan gratuito para educadores</span><p>Diseño gráfico, imágenes y video con IA integrada. Cuenta educativa gratuita.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">S</span><div><h4>Synthesia</h4><span class="tool-url">synthesia.io</span><p>Convierte un guion en video con presentador virtual y locución en más de 130 idiomas.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">G</span><div><h4>Gemini Notebook</h4><span class="tool-url">notebooklm.google.com</span><p>Antes NotebookLM. Analiza sus propios documentos y genera resúmenes y audio-resúmenes.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">E</span><div><h4>ElevenLabs · Murf</h4><span class="tool-url">elevenlabs.io · murf.ai</span><p>Locución sintética de alta calidad para narrar material en español.</p></div></div>
+        </div>
+        <p class="source-note">Toda imagen, voz o video generado por IA debe rotularse como tal cuando se comparte con estudiantes o familias. Es una práctica de transparencia, no una formalidad. Todas las herramientas de esta sección fueron verificadas en septiembre de 2026; confirme siempre la política vigente antes de registrar a estudiantes.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Para su propia formación: investigación y trabajo académico</h3>
+        <div class="grid-2">
+          <div class="tool-card"><span class="tool-badge">P</span><div><h4>Perplexity</h4><span class="tool-url">perplexity.ai</span><p>Buscador con IA que cita las fuentes de cada afirmación. Permite verificar en un clic.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">E</span><div><h4>Elicit</h4><span class="tool-url">elicit.com</span><p>Localiza y sintetiza literatura científica. Extrae datos de múltiples artículos a la vez.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">C</span><div><h4>ChatPDF</h4><span class="tool-url">chatpdf.com</span><p>Convierte un documento largo en interlocutor: pregunte directamente al PDF.</p></div></div>
+          <div class="tool-card"><span class="tool-badge">S</span><div><h4>Scribbr · BibGuru</h4><span class="tool-url">scribbr.com · bibguru.com</span><p>Generadores de referencias en APA 7. Verifique siempre el resultado contra la fuente original.</p></div></div>
+        </div>
+        <div class="callout callout-warn">
+          <span class="callout-title">Advertencia de integridad</span>
+          <p>Nunca acepte una referencia bibliográfica producida por un modelo de lenguaje sin comprobar que el artículo, el DOI y los autores existen realmente. La invención de referencias es el error más frecuente y más dañino en trabajo académico.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Criterio, no censura: herramientas que este módulo no recomienda</h3>
+        <div class="reveal-grid">
+          <div class="reveal-card not-recommended"><div class="reveal-face"><strong>Escritores de IA "indetectables"</strong><span class="reveal-mark">✗</span></div><div class="reveal-body"><p>Su propuesta de valor explícita es evadir la detección académica. Recomendarlas a docentes contradice el propósito formativo de este módulo.</p></div></div>
+          <div class="reveal-card not-recommended"><div class="reveal-face"><strong>Asistentes de IA por WhatsApp con número comercial</strong><span class="reveal-mark">✗</span></div><div class="reveal-body"><p>Los números y los términos cambian sin aviso, y los mensajes circulan por servidores de terceros sin garantías para datos estudiantiles.</p></div></div>
+          <div class="reveal-card not-recommended"><div class="reveal-face"><strong>Generadores de imágenes sin filtros para menores</strong><span class="reveal-mark">✗</span></div><div class="reveal-body"><p>Sin control de contenido ni verificación de edad, no son apropiados para uso con estudiantes.</p></div></div>
+          <div class="reveal-card not-recommended"><div class="reveal-face"><strong>Plataformas sin política de privacidad localizable</strong><span class="reveal-mark">✗</span></div><div class="reveal-body"><p>Si no puede determinar qué hacen con los datos, la decisión pedagógica prudente ya está tomada.</p></div></div>
+        </div>
+        <p class="section-dek" style="margin-top:14px;">No se trata de prohibir tecnología, sino de no poner el sello de un taller institucional sobre herramientas cuyo uso principal es evadir el aprendizaje.</p>
+      </div>
+
+      <div class="section-nav">
+        <a href="#seccion-3" class="prev"><span class="dir">← Anterior</span><strong>3. Ingeniería de prompts</strong></a>
+        <a href="#seccion-5" class="next"><span class="dir">Siguiente →</span><strong>5. Uso responsable</strong></a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 5 -->
+    <section class="module-section" id="seccion-5">
+      <span class="section-kicker"><span class="num-badge">5</span> Uso responsable</span>
+      <h2>Política del DEPR, privacidad, sesgo e integridad académica</h2>
+      <p class="section-dek">Sección de mayor peso normativo. Si el módulo se estudia por partes, esta sección no se omite.</p>
+
+      <div class="subsection">
+        <h3>Tres niveles de normativa: el marco que le aplica a usted</h3>
+        <div class="grid-3">
+          <div class="info-card"><span class="tag">Federal</span><h4>FERPA y COPPA</h4><p>FERPA protege el expediente educativo del estudiante. COPPA regula la recopilación de datos de menores de 13 años. Ninguna herramienta de IA lo exime de ambas.</p></div>
+          <div class="info-card"><span class="tag">Puerto Rico</span><h4>Guía del DEPR (2026)</h4><p>Establece el modelo SENSE, autoriza MS Copilot en cuenta institucional para estudiantes de 13 años en adelante y exige supervisión docente y capacitación previa.</p></div>
+          <div class="info-card"><span class="tag">Internacional</span><h4>Marco UNESCO (2024)</h4><p>Quince competencias en cinco dimensiones —mentalidad centrada en lo humano, ética de la IA, fundamentos, pedagogía y desarrollo profesional— en tres niveles de progresión.</p></div>
+        </div>
+        <div class="callout callout-primary">
+          <span class="callout-title">Principio que unifica los tres niveles</span>
+          <p><strong>Supervisión humana significativa.</strong> Ninguna decisión que afecte la trayectoria académica de un estudiante —una nota, una clasificación, una recomendación de ubicación— puede quedar en manos de un sistema automatizado sin revisión de un profesional.</p>
+        </div>
+        <p class="source-note">Fuentes: DEPR (2026); DEPR (2024), <em>La inteligencia artificial en el sistema educativo</em>; UNESCO (2024), <em>AI Competency Framework for Teachers</em>.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Marco rector de la política puertorriqueña: el modelo SENSE del DEPR</h3>
+        <p>Haga clic en cada letra para ver su significado completo.</p>
+        <div class="sense-row">
+          <div class="sense-letter"><span class="big">S</span><strong>Seguridad</strong><p>Dispositivos y cuentas institucionales. Nunca cuentas personales ni datos sensibles.</p></div>
+          <div class="sense-letter"><span class="big">E</span><strong>Ética</strong><p>Respeto a los derechos de autor. Prohibido el plagio y todo uso para acoso o discriminación.</p></div>
+          <div class="sense-letter"><span class="big">N</span><strong>Narrativa</strong><p>El estudiante explica y defiende su proceso; la IA no puede sustituir su voz.</p></div>
+          <div class="sense-letter"><span class="big">S</span><strong>Sinergia</strong><p>La IA amplía capacidades humanas. Complementa el razonamiento; no lo reemplaza.</p></div>
+          <div class="sense-letter"><span class="big">E</span><strong>Evaluación</strong><p>Se verifica el aprendizaje real mediante explicación oral, defensa del trabajo o cuestionario.</p></div>
+        </div>
+        <div class="callout callout-quote">
+          <p>"La tecnología, por sí sola, no transforma la educación; lo hace el maestro mediante decisiones pedagógicas fundamentadas."</p>
+        </div>
+        <p class="source-note">Fuente: Departamento de Educación de Puerto Rico (2026). Guía para el uso de la inteligencia artificial en el aprendizaje estudiantil.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Alucinaciones y control de calidad: verificar no es opcional</h3>
+        <div class="grid-2">
+          <div>
+            <h4>Lo que el modelo inventa con más frecuencia</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.94rem;">
+              <li>Referencias bibliográficas, DOI y números de página</li>
+              <li>Citas textuales atribuidas a autores reales</li>
+              <li>Datos estadísticos con apariencia de precisión</li>
+              <li>Fechas, leyes y números de carta circular</li>
+              <li>Resultados de operaciones aritméticas largas</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Protocolo de verificación en tres pasos</h4>
+            <div class="step-list">
+              <div class="step-item"><span class="step-num">1</span><p style="margin:0;">Contraste todo dato con una fuente primaria localizable.</p></div>
+              <div class="step-item"><span class="step-num">2</span><p style="margin:0;">Busque cada referencia por su título exacto antes de usarla.</p></div>
+              <div class="step-item"><span class="step-num">3</span><p style="margin:0;">Si no domina el tema, no publique el resultado: consúltelo.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <h4 style="margin-top:22px;">La regla de las dos preguntas</h4>
+        <p>Antes de usar cualquier producto de IA con estudiantes o colegas, respóndase honestamente:</p>
+        <div class="self-check">
+          <h4>¿Está listo para usarlo?</h4>
+          <div class="self-check-q" data-answer="">
+            <p>¿Tengo el conocimiento necesario para detectar un error en esto?</p>
+            <div class="self-check-toggle">
+              <button class="sc-btn" data-answer="yes">Sí</button>
+              <button class="sc-btn" data-answer="no">No</button>
+            </div>
+          </div>
+          <div class="self-check-q" data-answer="">
+            <p>¿Verifiqué al menos los datos que un estudiante podría citar después?</p>
+            <div class="self-check-toggle">
+              <button class="sc-btn" data-answer="yes">Sí</button>
+              <button class="sc-btn" data-answer="no">No</button>
+            </div>
+          </div>
+          <div class="self-check-result"></div>
+        </div>
+        <p class="section-dek">Si alguna respuesta es no, todavía no está listo para usarlo.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Integridad académica: los detectores de IA no son evidencia</h3>
+        <div class="chart-wrap">
+          <span class="chart-title">Exactitud del detector según el tipo de texto</span>
+          <div class="bar-chart">
+            <div class="bar-row"><span class="bar-label">Texto escrito por humano</span><div class="bar-track"><div class="bar-fill" data-value="96"></div></div><span class="bar-value">96%</span></div>
+            <div class="bar-row"><span class="bar-label">Texto traducido automáticamente</span><div class="bar-track"><div class="bar-fill" data-value="76"></div></div><span class="bar-value">76%</span></div>
+            <div class="bar-row"><span class="bar-label">Texto de IA sin editar</span><div class="bar-track"><div class="bar-fill" data-value="74"></div></div><span class="bar-value">74%</span></div>
+            <div class="bar-row"><span class="bar-label">Texto de IA editado a mano</span><div class="bar-track"><div class="bar-fill accent" data-value="42"></div></div><span class="bar-value">42%</span></div>
+            <div class="bar-row"><span class="bar-label">Texto de IA parafraseado</span><div class="bar-track"><div class="bar-fill accent" data-value="26"></div></div><span class="bar-value">26%</span></div>
+          </div>
+        </div>
+        <div class="callout callout-warn">
+          <span class="callout-title">Lo que concluyó el estudio</span>
+          <p>Ninguna de las catorce herramientas evaluadas alcanzó 80% de exactitud. Los autores concluyen que "no son ni exactas ni confiables" y recomiendan no usarlas como prueba de falta académica.</p>
+        </div>
+        <h4>Qué hacer en su lugar</h4>
+        <div class="grid-4">
+          <div class="info-card"><p style="margin:0;">Pida el proceso, no solo el producto</p></div>
+          <div class="info-card"><p style="margin:0;">Incorpore defensa oral del trabajo</p></div>
+          <div class="info-card"><p style="margin:0;">Evalúe borradores y revisiones</p></div>
+          <div class="info-card"><p style="margin:0;">Acuerde reglas explícitas desde el día uno</p></div>
+        </div>
+        <p class="source-note">Fuente: Weber-Wulff, D., Anohina-Naumeca, A., Bjelobaba, S., et al. (2023). Testing of detection tools for AI-generated text. <em>International Journal for Educational Integrity, 19</em>(1), 26. Punto ético central: acusar a un estudiante basándose en un detector es indefendible. Además, la evidencia muestra sesgo contra estudiantes cuya lengua materna no es el inglés, lo que en Puerto Rico es directamente relevante.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Privacidad y protección: datos estudiantiles</h3>
+        <div class="checklist-two-col">
+          <div>
+            <h4>✗ NUNCA se sube</h4>
+            <ul class="checklist">
+              <li class="checklist-item"><label>Nombres completos de estudiantes</label></li>
+              <li class="checklist-item"><label>Números de expediente o de seguro social</label></li>
+              <li class="checklist-item"><label>Diagnósticos, PEI o información de educación especial</label></li>
+              <li class="checklist-item"><label>Notas, calificaciones o resultados de pruebas identificables</label></li>
+              <li class="checklist-item"><label>Fotografías, videos o grabaciones de menores</label></li>
+              <li class="checklist-item"><label>Direcciones, teléfonos o datos de contacto de familias</label></li>
+              <li class="checklist-item"><label>Documentos disciplinarios o de servicios de apoyo</label></li>
+            </ul>
+          </div>
+          <div>
+            <h4>✓ En su lugar — marque su compromiso</h4>
+            <ul class="checklist">
+              <li class="checklist-item"><input type="checkbox" id="priv1" data-persist="priv-1"><label for="priv1">Anonimizo: "un estudiante de 9no grado con dificultad en factorización"</label></li>
+              <li class="checklist-item"><input type="checkbox" id="priv2" data-persist="priv-2"><label for="priv2">Uso datos agregados: "el 40% del grupo falló el ítem 7"</label></li>
+              <li class="checklist-item"><input type="checkbox" id="priv3" data-persist="priv-3"><label for="priv3">Describo el patrón, no a la persona</label></li>
+              <li class="checklist-item"><input type="checkbox" id="priv4" data-persist="priv-4"><label for="priv4">Trabajo siempre desde la cuenta institucional del DEPR</label></li>
+              <li class="checklist-item"><input type="checkbox" id="priv5" data-persist="priv-5"><label for="priv5">Reviso qué guarda la herramienta antes del primer uso</label></li>
+              <li class="checklist-item"><input type="checkbox" id="priv6" data-persist="priv-6"><label for="priv6">Desactivo el entrenamiento con mis datos cuando existe la opción</label></li>
+              <li class="checklist-item"><input type="checkbox" id="priv7" data-persist="priv-7"><label for="priv7">Ante la duda, no lo subo: reformulo la pregunta</label></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Un asunto de justicia educativa: sesgo algorítmico y equidad</h3>
+        <p>Los modelos aprenden de textos producidos por personas. Heredan, condensan y reproducen los sesgos de esos textos —y lo hacen con apariencia de objetividad técnica.</p>
+        <div class="grid-4">
+          <div class="info-card"><h4>Sesgo lingüístico</h4><p>El español de Puerto Rico está subrepresentado frente al inglés y al español peninsular. Los ejemplos generados suelen ignorar nuestro contexto.</p></div>
+          <div class="info-card"><h4>Sesgo cultural</h4><p>Los ejemplos, nombres y referencias por defecto tienden a ser anglosajones y de clase media.</p></div>
+          <div class="info-card"><h4>Sesgo de representación</h4><p>En imágenes generadas, ciertas profesiones aparecen sistemáticamente asociadas a un género o una raza.</p></div>
+          <div class="info-card"><h4>Brecha de acceso</h4><p>Las versiones más capaces son de pago. Sin política institucional, la IA amplía la desigualdad en vez de reducirla.</p></div>
+        </div>
+        <div class="callout callout-accent">
+          <span class="callout-title">Estrategia práctica</span>
+          <p>Al redactar el prompt, especifique siempre el contexto puertorriqueño y revise los ejemplos generados antes de llevarlos al salón.</p>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <p class="quiz-title">✓ Autoevaluación rápida</p>
+        <p class="quiz-question">Un colega quiere usar un "detector de IA" para acusar formalmente a un estudiante de usar IA sin permiso. Según la evidencia de este módulo, ¿qué debería decirle?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false" data-feedback="Ningún detector evaluado superó 80% de exactitud; usarlo como única prueba es indefendible.">Que proceda: los detectores son confiables si tienen buena reputación</button>
+          <button class="quiz-option" data-correct="true" data-feedback="Correcto. Weber-Wulff et al. (2023) concluyen que ninguna de las 14 herramientas evaluadas es exacta ni confiable como evidencia.">Que no use el detector como evidencia; que pida el proceso y una defensa oral en su lugar</button>
+          <button class="quiz-option" data-correct="false" data-feedback="El texto parafraseado de IA es el que peor detectan los sistemas (26% de exactitud).">Que confíe más si el texto fue parafraseado, porque ahí los detectores son más precisos</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+
+      <div class="section-nav">
+        <a href="#seccion-4" class="prev"><span class="dir">← Anterior</span><strong>4. El ecosistema 2026</strong></a>
+        <a href="#seccion-6" class="next"><span class="dir">Siguiente →</span><strong>6. Práctica</strong></a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 6 -->
+    <section class="module-section" id="seccion-6">
+      <span class="section-kicker"><span class="num-badge">6</span> Práctica</span>
+      <h2>Rediseño de tareas e integridad académica</h2>
+      <p class="section-dek">Reglas claras de uso de la IA en cada asignación. A partir de aquí, el trabajo es sobre sus propias tareas de curso.</p>
+
+      <div class="subsection">
+        <h3>Rediseñar la tarea, no perseguir al estudiante</h3>
+        <div class="before-after">
+          <div class="ba-card ba-before"><strong>Tarea vulnerable a la IA</strong><p style="margin:8px 0 0;">Redacte un ensayo sobre la Segunda Guerra Mundial.</p></div>
+          <span class="ba-arrow">→</span>
+          <div class="ba-card ba-after"><strong>Tarea rediseñada</strong><p style="margin:8px 0 0;">Compare dos fuentes contradictorias sobre un mismo hecho y justifique cuál es más confiable.</p></div>
+        </div>
+        <div class="before-after">
+          <div class="ba-card ba-before"><strong>Tarea vulnerable a la IA</strong><p style="margin:8px 0 0;">Resuelva estos veinte ejercicios de factorización.</p></div>
+          <span class="ba-arrow">→</span>
+          <div class="ba-card ba-after"><strong>Tarea rediseñada</strong><p style="margin:8px 0 0;">Aquí hay cinco soluciones con errores. Identifique cada error y explique qué concepto se malentendió.</p></div>
+        </div>
+        <div class="before-after">
+          <div class="ba-card ba-before"><strong>Tarea vulnerable a la IA</strong><p style="margin:8px 0 0;">Resuma el capítulo 4 del libro de texto.</p></div>
+          <span class="ba-arrow">→</span>
+          <div class="ba-card ba-after"><strong>Tarea rediseñada</strong><p style="margin:8px 0 0;">Conecte el capítulo 4 con un problema real de su comunidad y presente su análisis en tres minutos.</p></div>
+        </div>
+        <div class="before-after">
+          <div class="ba-card ba-before"><strong>Tarea vulnerable a la IA</strong><p style="margin:8px 0 0;">Investigue sobre el cambio climático.</p></div>
+          <span class="ba-arrow">→</span>
+          <div class="ba-card ba-after"><strong>Tarea rediseñada</strong><p style="margin:8px 0 0;">Use IA para generar un primer borrador, márquelo, corríjalo y documente qué cambió y por qué.</p></div>
+        </div>
+        <div class="callout callout-primary">
+          <p><strong>Principio común:</strong> las tareas resistentes a la IA piden juicio, contexto local, proceso visible o defensa oral —no más vigilancia.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Escala de uso para cada asignación: diga con claridad cuánta IA se permite</h3>
+        <p>Haga clic en el nivel que aplicaría a una tarea real suya:</p>
+        <div class="scale-row">
+          <div class="scale-item"><span class="scale-num">0</span><strong>Sin IA</strong><p>El trabajo se realiza sin asistencia de IA en ninguna etapa.</p></div>
+          <div class="scale-item"><span class="scale-num">1</span><strong>IA para explorar</strong><p>Se permite para generar ideas o aclarar conceptos, no para producir el texto entregado.</p></div>
+          <div class="scale-item"><span class="scale-num">2</span><strong>IA para asistir</strong><p>Se permite para revisar redacción, organizar o traducir, con declaración de uso.</p></div>
+          <div class="scale-item"><span class="scale-num">3</span><strong>IA para producir con revisión</strong><p>Se permite generar un borrador, siempre que el estudiante lo corrija, lo documente y lo defienda.</p></div>
+          <div class="scale-item"><span class="scale-num">4</span><strong>IA como objeto de estudio</strong><p>El propósito de la tarea es analizar críticamente la salida de la IA.</p></div>
+        </div>
+        <div class="callout callout-accent">
+          <p>Escriba el nivel en el encabezado de cada asignación. La ambigüedad, no la tecnología, es lo que genera los conflictos de integridad académica.</p>
+        </div>
+      </div>
+
+      <div class="section-nav">
+        <a href="#seccion-5" class="prev"><span class="dir">← Anterior</span><strong>5. Uso responsable</strong></a>
+        <a href="#seccion-7" class="next"><span class="dir">Siguiente →</span><strong>7. Plan de acción</strong></a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 7 -->
+    <section class="module-section" id="seccion-7">
+      <span class="section-kicker"><span class="num-badge">7</span> Plan de acción</span>
+      <h2>Sus próximos 30, 60 y 90 días</h2>
+      <p class="section-dek">Qué hacer al salir de este módulo. Marque cada tarea a medida que la complete — su progreso queda guardado en este navegador.</p>
+
+      <div class="subsection">
+        <div class="grid-3">
+          <div>
+            <h4>Primeros 30 días</h4>
+            <ul class="checklist">
+              <li class="checklist-item"><input type="checkbox" id="p30-1" data-persist="plan-30-1"><label for="p30-1">Active su cuenta institucional de Copilot</label></li>
+              <li class="checklist-item"><input type="checkbox" id="p30-2" data-persist="plan-30-2"><label for="p30-2">Escoja UNA tarea semanal que le consuma tiempo</label></li>
+              <li class="checklist-item"><input type="checkbox" id="p30-3" data-persist="plan-30-3"><label for="p30-3">Practique el modelo RC-TTF con esa tarea</label></li>
+              <li class="checklist-item"><input type="checkbox" id="p30-4" data-persist="plan-30-4"><label for="p30-4">Verifique cada resultado antes de usarlo</label></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Días 31 a 60</h4>
+            <ul class="checklist">
+              <li class="checklist-item"><input type="checkbox" id="p60-1" data-persist="plan-60-1"><label for="p60-1">Añada una segunda herramienta especializada</label></li>
+              <li class="checklist-item"><input type="checkbox" id="p60-2" data-persist="plan-60-2"><label for="p60-2">Rediseñe una asignación con la escala de permisos</label></li>
+              <li class="checklist-item"><input type="checkbox" id="p60-3" data-persist="plan-60-3"><label for="p60-3">Converse con sus estudiantes sobre las reglas</label></li>
+              <li class="checklist-item"><input type="checkbox" id="p60-4" data-persist="plan-60-4"><label for="p60-4">Documente qué funcionó y qué no</label></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Días 61 a 90</h4>
+            <ul class="checklist">
+              <li class="checklist-item"><input type="checkbox" id="p90-1" data-persist="plan-90-1"><label for="p90-1">Comparta lo aprendido con su departamento</label></li>
+              <li class="checklist-item"><input type="checkbox" id="p90-2" data-persist="plan-90-2"><label for="p90-2">Proponga normas comunes de uso de IA</label></li>
+              <li class="checklist-item"><input type="checkbox" id="p90-3" data-persist="plan-90-3"><label for="p90-3">Evalúe el impacto en su carga y en el aprendizaje</label></li>
+              <li class="checklist-item"><input type="checkbox" id="p90-4" data-persist="plan-90-4"><label for="p90-4">Ajuste y decida qué mantiene</label></li>
+            </ul>
+          </div>
+        </div>
+        <p data-checklist-counter="plan-" style="text-align:center; font-weight:600; color:var(--color-primary); margin-top:16px;"></p>
+      </div>
+
+      <div class="subsection">
+        <h3>Cinco errores que verá en colegas — y cómo evitarlos</h3>
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">1</span><div><h4>Coleccionar herramientas</h4><p>Probar veinte apps y no dominar ninguna. Domine tres antes de añadir la cuarta.</p></div></div>
+          <div class="step-item"><span class="step-num">2</span><div><h4>Aceptar la primera respuesta</h4><p>El primer resultado casi nunca es el mejor. Refine, corrija, vuelva a pedir.</p></div></div>
+          <div class="step-item"><span class="step-num">3</span><div><h4>Delegar el juicio profesional</h4><p>La IA propone; usted decide. Toda decisión sobre un estudiante es suya.</p></div></div>
+          <div class="step-item"><span class="step-num">4</span><div><h4>Usarla en silencio</h4><p>Si no le dice a sus estudiantes cómo la usa usted, no puede exigirles transparencia a ellos.</p></div></div>
+          <div class="step-item"><span class="step-num">5</span><div><h4>Subestimar el tiempo de verificación</h4><p>Ahorra en producción y gasta en verificación. Aun así conviene, pero planifíquelo.</p></div></div>
+        </div>
+      </div>
+
+      <div class="section-nav">
+        <a href="#seccion-6" class="prev"><span class="dir">← Anterior</span><strong>6. Práctica</strong></a>
+        <a href="#referencias" class="next"><span class="dir">Siguiente →</span><strong>Referencias</strong></a>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <div class="module-closing">
+      <p class="quote">La pregunta no es si la inteligencia artificial va a sustituir a los maestros. Es si los maestros que la usan con criterio van a enseñar mejor que los que la ignoran.</p>
+      <p class="quote-sign">Y esa decisión, hoy, sigue siendo suya.</p>
+    </div>
+
+    <!-- REFERENCIAS -->
+    <section class="module-section" id="referencias">
+      <span class="section-kicker">Referencias · APA 7ma edición</span>
+      <h2>Referencias</h2>
+      <ul class="ref-list">
+        <li>Corraliza Montero, H. J. (2024). <em>Modelo RC-TTF para la formulación de instrucciones en inteligencia artificial generativa</em> [Marco de trabajo institucional]. Oficina Regional Educativa de Ponce, DEPR.</li>
+        <li>Departamento de Educación de Puerto Rico. (2024). <em>La inteligencia artificial en el sistema educativo</em>. Secretaría Auxiliar de Servicios Académicos.</li>
+        <li>Departamento de Educación de Puerto Rico. (2026). <em>Guía para el uso de la inteligencia artificial en el aprendizaje estudiantil</em>. <a href="https://de.pr.gov" target="_blank" rel="noopener">https://de.pr.gov</a></li>
+        <li>Gallup. (2026). <em>Most teachers receive no formal guidance on AI use</em>. Gallup News. <a href="https://news.gallup.com/poll/710534" target="_blank" rel="noopener">https://news.gallup.com/poll/710534</a></li>
+        <li>Gallup &amp; Walton Family Foundation. (2025). <em>Three in 10 teachers use AI weekly, saving six weeks a year</em>. <a href="https://news.gallup.com/poll/691967" target="_blank" rel="noopener">https://news.gallup.com/poll/691967</a></li>
+        <li>RAND Corporation. (2025). <em>AI use in schools is quickly increasing but guidance lags behind: Findings from the RAND survey panels</em> (RR-A4180-1). <a href="https://www.rand.org/pubs/research_reports/RRA4180-1.html" target="_blank" rel="noopener">https://www.rand.org/pubs/research_reports/RRA4180-1.html</a></li>
+        <li>Research and Markets. (2026). <em>Artificial intelligence in education market report 2026</em>. <a href="https://www.researchandmarkets.com" target="_blank" rel="noopener">https://www.researchandmarkets.com</a></li>
+        <li>Turing, A. M. (1950). Computing machinery and intelligence. <em>Mind, 59</em>(236), 433–460. <a href="https://doi.org/10.1093/mind/LIX.236.433" target="_blank" rel="noopener">https://doi.org/10.1093/mind/LIX.236.433</a></li>
+        <li>UNESCO. (2024). <em>AI competency framework for teachers</em>. United Nations Educational, Scientific and Cultural Organization. <a href="https://www.unesco.org/en/articles/ai-competency-framework-teachers" target="_blank" rel="noopener">https://www.unesco.org/en/articles/ai-competency-framework-teachers</a></li>
+        <li>Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., &amp; Polosukhin, I. (2017). Attention is all you need. <em>Advances in Neural Information Processing Systems, 30</em>.</li>
+        <li>Weber-Wulff, D., Anohina-Naumeca, A., Bjelobaba, S., Foltýnek, T., Guerrero-Dib, J., Popoola, O., Šigut, P., &amp; Waddington, L. (2023). Testing of detection tools for AI-generated text. <em>International Journal for Educational Integrity, 19</em>(1), 26. <a href="https://doi.org/10.1007/s40979-023-00146-z" target="_blank" rel="noopener">https://doi.org/10.1007/s40979-023-00146-z</a></li>
+      </ul>
+
+      <div class="callout callout-primary" style="margin-top:32px; text-align:center;">
+        <h3 style="margin-bottom:6px;">Gracias</h3>
+        <p>Preguntas, dudas y casos concretos de su salón son bienvenidos.</p>
+        <p style="margin-bottom:0;"><strong>Dr. Héctor J. Corraliza Montero, Ed.D.</strong><br>Facilitador Docente de Matemáticas · Oficina Regional Educativa de Ponce<br>Departamento de Educación de Puerto Rico</p>
+      </div>
+      <p class="source-note" style="text-align:center; margin-top:20px;">Contenido verificado a septiembre de 2026. El panorama de herramientas cambia con rapidez: revise las fuentes antes de reutilizar cifras.</p>
+
+      <div class="cover-actions" style="justify-content:center; margin-top:28px;">
+        <a class="btn btn-primary" href="../../recursos/IA-para-Docentes-Corraliza.pptx" download>⬇ Descargar presentación original (.pptx)</a>
+        <a class="btn btn-ghost" href="../../index.html#contacto">Escribir al facilitador</a>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; <span id="year"></span> CorralizaMath · Módulo interactivo desarrollado a partir del taller "IA para Docentes" del Dr. Héctor J. Corraliza Montero.</p>
+  </div>
+</footer>
+
+<script src="module.js"></script>
+</body>
+</html>
