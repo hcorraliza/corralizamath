@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>∑</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/styles.css">
 <link rel="stylesheet" href="module.css">
 </head>
@@ -31,7 +31,7 @@
 <div class="module-shell">
 
   <aside class="module-sidebar" id="moduleSidebar">
-    <p class="sidebar-progress" id="sidebarProgressLabel">0 de 9 secciones vistas</p>
+    <p class="sidebar-progress" id="sidebarProgressLabel">0 de 10 secciones vistas</p>
     <ul class="sidebar-nav">
       <li><a href="#portada"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Presentación</a></li>
       <li><a href="#objetivos"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Antes de empezar</a></li>
@@ -41,6 +41,7 @@
       <li><a href="#modulo-3"><span class="sidebar-num"><span class="sidebar-num-text">3</span></span> El repertorio</a></li>
       <li><a href="#modulo-4"><span class="sidebar-num"><span class="sidebar-num-text">4</span></span> Producción con IA</a></li>
       <li><a href="#cierre"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Cierre</a></li>
+      <li><a href="#evaluacion"><span class="sidebar-num"><span class="sidebar-num-text">★</span></span> Evaluación final</a></li>
       <li><a href="#referencias"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Referencias</a></li>
     </ul>
   </aside>
@@ -1083,6 +1084,85 @@
       </div>
     </section>
 
+    <!-- EVALUACIÓN FINAL -->
+    <section class="module-section" id="evaluacion">
+      <span class="section-kicker">Evaluación final</span>
+      <h2>Compruebe su comprensión del módulo</h2>
+      <p class="section-dek">Cinco preguntas de repaso sobre los cuatro módulos del taller. Necesita al menos 4 de 5 correctas para aprobar y generar su certificado.</p>
+
+      <div class="final-exam" id="examRUTA" data-pass-score="4">
+        <p class="exam-progress">0 de 5 preguntas respondidas</p>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 1 de 5</p>
+          <p class="quiz-question">Según Balasundaram et al. (2024), ¿qué resultado obtuvo el grupo que recibió microaprendizaje frente al grupo control?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: superó al grupo control en ejecución (M = 6.6 frente a 5.6; p < .001) y reportó mayor disfrute.">Superó en ejecución (6.6 frente a 5.6) y reportó mayor disfrute</button>
+            <button class="quiz-option" data-correct="false" data-feedback="El estudio sí encontró una diferencia estadísticamente significativa (p < .001).">No hubo ninguna diferencia significativa</button>
+            <button class="quiz-option" data-correct="false" data-feedback="El grupo de microaprendizaje obtuvo mejor resultado, no peor.">Obtuvo un resultado peor que el grupo control</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 2 de 5</p>
+          <p class="quiz-question">¿Cuántos objetivos de aprendizaje debe atender una microunidad, según su definición operacional?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: uno o dos objetivos. Si necesita tres, probablemente son dos microunidades mal unidas.">Uno o dos</button>
+            <button class="quiz-option" data-correct="false" data-feedback="Tres o cuatro objetivos ya no caben en el foco estrecho que exige una microunidad.">Tres o cuatro</button>
+            <button class="quiz-option" data-correct="false" data-feedback="El foco estrecho es un requisito, no una opción dependiente del tiempo disponible.">Tantos como el tiempo permita</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 3 de 5</p>
+          <p class="quiz-question">Según la estructura de los cinco momentos de una cápsula, ¿qué porcentaje del tiempo corresponde a la Práctica?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="10% corresponde al Gancho y al Chequeo, no a la Práctica.">10%</button>
+            <button class="quiz-option" data-correct="false" data-feedback="25% corresponde al Núcleo.">25%</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: la Práctica es el momento más largo y más protegido, con 35% del tiempo.">35%</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 4 de 5</p>
+          <p class="quiz-question">¿Cuál es la puntuación mínima de ejecución usada en las microevaluaciones del taller?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="60% no es el umbral usado; el taller mantiene coherencia con la planilla de especificaciones al 70%.">60%</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: 70% de ejecución, el mismo umbral de la planilla de especificaciones.">70%</button>
+            <button class="quiz-option" data-correct="false" data-feedback="80% no es el umbral usado en este taller.">80%</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 5 de 5</p>
+          <p class="quiz-question">Según los cinco controles de verificación humana, ¿qué debe hacer el docente antes de entregar un procedimiento matemático generado por IA?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: el control de Exactitud exige verificar todo cálculo y toda referencia antes de usarlo.">Resolverlo usted mismo y confirmar que es correcto</button>
+            <button class="quiz-option" data-correct="false" data-feedback="Un formato prolijo no garantiza exactitud aritmética.">Confiar en el resultado si el formato se ve profesional</button>
+            <button class="quiz-option" data-correct="false" data-feedback="La verificación es responsabilidad del docente que conoce la competencia, no se delega a otro modelo.">Delegar la verificación a otro modelo de IA</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="exam-result">
+          <span class="exam-score">0 / 5</span>
+          <p class="exam-message"></p>
+          <button class="btn btn-ghost exam-retry-btn" type="button">Reiniciar prueba</button>
+        </div>
+
+        <div class="cert-panel" data-module-title="Microaprendizaje para Adultos — Proyecto RUTA" data-facilitator-name="Dr. Héctor J. Corraliza Montero, Ed.D." data-facilitator-title="Director, Proyecto RUTA · Universidad Interamericana de Puerto Rico, Recinto de Ponce">
+          <label for="certNameRUTA">Escriba su nombre completo para el certificado</label>
+          <input type="text" id="certNameRUTA" placeholder="Nombre y apellidos">
+          <button class="btn btn-primary cert-generate-btn" type="button">🎓 Generar certificado</button>
+          <p class="cert-hint">Se abrirá el diálogo de impresión de su navegador — elija "Guardar como PDF" para conservarlo.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- REFERENCIAS -->
     <section class="module-section" id="referencias">
       <div class="module-closing">
@@ -1122,13 +1202,15 @@
     <div class="slide-controls">
       <button class="slide-btn slide-prev" id="slidePrev" type="button" aria-label="Sección anterior">← Anterior</button>
       <div class="slide-dots" id="slideDots"></div>
-      <span class="slide-counter" id="slideCounter">1 / 9</span>
+      <span class="slide-counter" id="slideCounter">1 / 10</span>
       <button class="slide-btn slide-next" id="slideNext" type="button" aria-label="Siguiente sección">Siguiente →</button>
     </div>
 
    </div>
   </main>
 </div>
+
+<div class="certificate-stage" id="certificateStage"></div>
 
 <footer class="site-footer">
   <div class="container">

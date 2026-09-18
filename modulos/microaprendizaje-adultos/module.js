@@ -423,6 +423,133 @@ function initCountdown(rootId) {
 
 document.querySelectorAll("[data-countdown]").forEach((el) => initCountdown(el.id));
 
+/* ---------- Final exam ---------- */
+function initFinalExam(examId) {
+  const exam = document.getElementById(examId);
+  if (!exam) return;
+  const quizzes = Array.from(exam.querySelectorAll(".quiz"));
+  const total = quizzes.length;
+  const passScore = parseInt(exam.dataset.passScore, 10) || Math.ceil(total * 0.8);
+  const resultBox = exam.querySelector(".exam-result");
+  const scoreEl = resultBox.querySelector(".exam-score");
+  const messageEl = resultBox.querySelector(".exam-message");
+  const certPanel = exam.querySelector(".cert-panel");
+  const progressLabel = exam.querySelector(".exam-progress");
+
+  function updateProgress() {
+    const answered = quizzes.filter((q) => q.classList.contains("answered")).length;
+    if (progressLabel) progressLabel.textContent = `${answered} de ${total} preguntas respondidas`;
+    if (answered === total) finish();
+  }
+
+  function finish() {
+    const correct = quizzes.filter((q) => q.classList.contains("correct-answer")).length;
+    const passed = correct >= passScore;
+    resultBox.classList.add("show");
+    resultBox.classList.toggle("pass", passed);
+    resultBox.classList.toggle("fail", !passed);
+    if (scoreEl) scoreEl.textContent = `${correct} / ${total}`;
+    if (messageEl) {
+      messageEl.textContent = passed
+        ? "¡Aprobado! Ya puede generar su certificado."
+        : `No alcanzó el mínimo de ${passScore} de ${total} correctas. Repase el módulo y vuelva a intentarlo.`;
+    }
+    if (certPanel) {
+      certPanel.classList.toggle("show", passed);
+      certPanel.dataset.scoreText = `${correct}/${total}`;
+    }
+  }
+
+  exam.addEventListener("click", (e) => {
+    const opt = e.target.closest(".quiz-option");
+    if (opt) {
+      const quiz = opt.closest(".quiz");
+      if (quiz.classList.contains("answered")) return;
+      quiz.classList.add("answered", opt.dataset.correct === "true" ? "correct-answer" : "incorrect-answer");
+      updateProgress();
+      return;
+    }
+    const retryBtn = e.target.closest(".exam-retry-btn");
+    if (retryBtn) {
+      quizzes.forEach((q) => {
+        q.classList.remove("answered", "correct-answer", "incorrect-answer");
+        q.querySelectorAll(".quiz-option").forEach((o) => {
+          o.disabled = false;
+          o.classList.remove("correct", "incorrect");
+        });
+        const fb = q.querySelector(".quiz-feedback");
+        if (fb) {
+          fb.classList.remove("show", "ok", "bad");
+          fb.textContent = "";
+        }
+      });
+      resultBox.classList.remove("show", "pass", "fail");
+      if (certPanel) certPanel.classList.remove("show");
+      updateProgress();
+    }
+  });
+
+  updateProgress();
+}
+
+document.querySelectorAll(".final-exam").forEach((exam) => initFinalExam(exam.id));
+
+/* ---------- Certificate (print view) ---------- */
+function escapeHtml(str) {
+  const div = document.createElement("div");
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+function renderCertificate({ name, moduleTitle, scoreText, facilitatorName, facilitatorTitle }) {
+  const stage = document.getElementById("certificateStage");
+  if (!stage) return;
+  const today = new Date().toLocaleDateString("es-PR", { year: "numeric", month: "long", day: "numeric" });
+  stage.innerHTML = `
+    <div class="certificate">
+      <img class="cert-logo" src="../../img/logo-ore-ponce.svg" alt="">
+      <p class="cert-institution">Departamento de Educación · Gobierno de Puerto Rico<small>Asuntos Académicos y Programáticos · Oficina Regional Educativa de Ponce</small></p>
+      <h1>Certificado de Aprovechamiento</h1>
+      <p class="cert-sub">Otorgado por CorralizaMath a través de su módulo interactivo de autoestudio</p>
+      <p class="cert-name">${escapeHtml(name)}</p>
+      <p class="cert-body">completó satisfactoriamente el módulo <strong>${escapeHtml(moduleTitle)}</strong> y aprobó su evaluación final con una puntuación de <strong>${escapeHtml(scoreText)}</strong>.</p>
+      <div class="cert-footer">
+        <div class="cert-sign">
+          <img class="sig-img" src="../../img/signature.svg" alt="Firma">
+          <div class="sig-rule"></div>
+          <span class="sig-name">${escapeHtml(facilitatorName)}</span>
+          <span class="sig-line">${escapeHtml(facilitatorTitle)}</span>
+        </div>
+        <div class="cert-date"><span class="date-line">${today}</span></div>
+      </div>
+    </div>`;
+  document.body.classList.add("printing-cert");
+  window.print();
+}
+
+window.addEventListener("afterprint", () => document.body.classList.remove("printing-cert"));
+
+document.querySelectorAll(".cert-generate-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const panel = btn.closest(".cert-panel");
+    const nameInput = panel.querySelector('input[type="text"]');
+    const name = (nameInput.value || "").trim();
+    if (!name) {
+      nameInput.focus();
+      nameInput.style.borderColor = "#c0392b";
+      return;
+    }
+    nameInput.style.borderColor = "";
+    renderCertificate({
+      name,
+      moduleTitle: panel.dataset.moduleTitle,
+      scoreText: panel.dataset.scoreText || "",
+      facilitatorName: panel.dataset.facilitatorName,
+      facilitatorTitle: panel.dataset.facilitatorTitle,
+    });
+  });
+});
+
 /* ---------- Year in footer ---------- */
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();

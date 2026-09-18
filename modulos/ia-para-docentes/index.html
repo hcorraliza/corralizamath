@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>∑</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/styles.css">
 <link rel="stylesheet" href="module.css">
 </head>
@@ -31,7 +31,7 @@
 <div class="module-shell">
 
   <aside class="module-sidebar" id="moduleSidebar">
-    <p class="sidebar-progress" id="sidebarProgressLabel">0 de 10 secciones vistas</p>
+    <p class="sidebar-progress" id="sidebarProgressLabel">0 de 11 secciones vistas</p>
     <ul class="sidebar-nav">
       <li><a href="#portada"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Presentación</a></li>
       <li><a href="#objetivos"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Objetivos</a></li>
@@ -42,6 +42,7 @@
       <li><a href="#seccion-5"><span class="sidebar-num"><span class="sidebar-num-text">5</span></span> Uso responsable</a></li>
       <li><a href="#seccion-6"><span class="sidebar-num"><span class="sidebar-num-text">6</span></span> Práctica</a></li>
       <li><a href="#seccion-7"><span class="sidebar-num"><span class="sidebar-num-text">7</span></span> Plan de acción</a></li>
+      <li><a href="#evaluacion"><span class="sidebar-num"><span class="sidebar-num-text">★</span></span> Evaluación final</a></li>
       <li><a href="#referencias"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Referencias</a></li>
     </ul>
   </aside>
@@ -1035,6 +1036,85 @@
 
     </section>
 
+    <!-- EVALUACIÓN FINAL -->
+    <section class="module-section" id="evaluacion">
+      <span class="section-kicker">Evaluación final</span>
+      <h2>Compruebe su comprensión del módulo</h2>
+      <p class="section-dek">Cinco preguntas de repaso sobre las siete secciones. Necesita al menos 4 de 5 correctas para aprobar y generar su certificado.</p>
+
+      <div class="final-exam" id="examIA" data-pass-score="4">
+        <p class="exam-progress">0 de 5 preguntas respondidas</p>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 1 de 5</p>
+          <p class="quiz-question">Según RAND (2025), ¿qué porcentaje de estudiantes dijo que sus maestros nunca les explicaron cómo usar la IA en el trabajo escolar?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="34% es el porcentaje de docentes con acceso a normas de integridad académica.">34%</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: más del 80% de los estudiantes reportó ese silencio institucional.">Más del 80%</button>
+            <button class="quiz-option" data-correct="false" data-feedback="53% es el porcentaje de docentes de español, matemáticas y ciencias que usaron IA para la escuela.">53%</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 2 de 5</p>
+          <p class="quiz-question">¿Cuál afirmación sobre la IA general (AGI) es correcta según el módulo?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="Ningún sistema actual, incluido ChatGPT, es AGI.">Ya existe en herramientas como ChatGPT</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: la AGI todavía no existe; todo lo que hay hoy es IA estrecha (ANI).">No existe hoy; toda herramienta actual es IA estrecha</button>
+            <button class="quiz-option" data-correct="false" data-feedback="El aprendizaje automático es una de las tres capas, distinta del concepto de AGI.">Es lo mismo que el aprendizaje automático</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 3 de 5</p>
+          <p class="quiz-question">¿Cuál de las siguientes NO es uno de los cinco componentes del modelo RC-TTF?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="El Contexto sí es uno de los cinco componentes (la C de RC-TTF).">Contexto</button>
+            <button class="quiz-option" data-correct="false" data-feedback="El Formato sí es uno de los cinco componentes (la F de RC-TTF).">Formato</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: los cinco componentes son Rol, Contexto, Tarea, Tono y Formato — las Referencias no forman parte del modelo.">Referencias</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 4 de 5</p>
+          <p class="quiz-question">¿Cuál es la única herramienta de IA autorizada por el DEPR para uso con estudiantes en cuenta institucional?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="ChatGPT es una herramienta de propósito general, pero no es la vía autorizada por el DEPR.">ChatGPT</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: Microsoft Copilot en cuenta institucional es la vía autorizada por el DEPR.">Microsoft Copilot</button>
+            <button class="quiz-option" data-correct="false" data-feedback="DeepSeek requiere precaución adicional por sus servidores y normativa fuera de EE. UU.">DeepSeek</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 5 de 5</p>
+          <p class="quiz-question">Según la escala de uso de IA en cada asignación, ¿qué nivel indica que el propósito de la tarea es analizar críticamente la salida de la IA?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="El nivel 0 significa que el trabajo se realiza sin asistencia de IA en ninguna etapa.">Nivel 0 — Sin IA</button>
+            <button class="quiz-option" data-correct="false" data-feedback="El nivel 2 permite usar IA para revisar redacción, organizar o traducir, con declaración de uso.">Nivel 2 — IA para asistir</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: en el nivel 4, IA como objeto de estudio, el propósito de la tarea es analizar críticamente su salida.">Nivel 4 — IA como objeto de estudio</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="exam-result">
+          <span class="exam-score">0 / 5</span>
+          <p class="exam-message"></p>
+          <button class="btn btn-ghost exam-retry-btn" type="button">Reiniciar prueba</button>
+        </div>
+
+        <div class="cert-panel" data-module-title="Inteligencia Artificial para Docentes" data-facilitator-name="Dr. Héctor J. Corraliza Montero, Ed.D." data-facilitator-title="Facilitador Docente de Matemática-OREPonce">
+          <label for="certNameIA">Escriba su nombre completo para el certificado</label>
+          <input type="text" id="certNameIA" placeholder="Nombre y apellidos">
+          <button class="btn btn-primary cert-generate-btn" type="button">🎓 Generar certificado</button>
+          <p class="cert-hint">Se abrirá el diálogo de impresión de su navegador — elija "Guardar como PDF" para conservarlo.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- REFERENCIAS -->
     <section class="module-section" id="referencias">
       <div class="module-closing">
@@ -1076,13 +1156,15 @@
     <div class="slide-controls">
       <button class="slide-btn slide-prev" id="slidePrev" type="button" aria-label="Sección anterior">← Anterior</button>
       <div class="slide-dots" id="slideDots"></div>
-      <span class="slide-counter" id="slideCounter">1 / 10</span>
+      <span class="slide-counter" id="slideCounter">1 / 11</span>
       <button class="slide-btn slide-next" id="slideNext" type="button" aria-label="Siguiente sección">Siguiente →</button>
     </div>
 
    </div>
   </main>
 </div>
+
+<div class="certificate-stage" id="certificateStage"></div>
 
 <footer class="site-footer">
   <div class="container">

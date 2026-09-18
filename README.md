@@ -11,6 +11,9 @@ Portal educativo para organizar recursos de matemáticas, desarrollo profesional
 │   └── styles.css
 ├── js/
 │   └── main.js
+├── img/
+│   ├── logo-ore-ponce.svg
+│   └── signature.svg
 ├── matematicas/
 │   └── index.html
 ├── docentes/
@@ -39,6 +42,16 @@ Portal educativo para organizar recursos de matemáticas, desarrollo profesional
 - **Presentaciones y talleres:** archivos descargables y módulos interactivos.
 - **Libros y publicaciones:** publicaciones propias o cuya distribución esté autorizada.
 - **Normativas y Documentos DEPR:** estándares, mapas curriculares, cartas circulares, guías y documentos oficiales.
+
+## Módulos interactivos
+
+Los talleres de desarrollo profesional se publican como módulos de autoestudio en `modulos/<nombre-del-modulo>/index.html`, enlazados desde la sección "Módulos interactivos" de la página principal. Cada módulo:
+
+- Incluye el contenido completo del taller original, organizado en secciones navegables desde una barra lateral con seguimiento de progreso.
+- Añade actividades interactivas (constructores, acordeones, gráficas, autoevaluaciones) que no estaban en la presentación original.
+- Ofrece un botón para descargar la presentación `.pptx` original desde `recursos/`.
+- Guarda el progreso del usuario (casillas marcadas, secciones vistas) en `localStorage` del navegador — no requiere servidor ni base de datos.
+- Cierra con una **evaluación final** de 5 preguntas (mínimo 4 correctas para aprobar, con opción de reintentar) que, al aprobarse, habilita un **certificado de aprovechamiento** imprimible: el usuario escribe su nombre, se genera una vista de certificado con el logo del Programa de Matemáticas ORE-Ponce (`img/logo-ore-ponce.svg`) y la firma del facilitador (`img/signature.svg`), y se guarda como PDF desde el diálogo de impresión del navegador (`window.print()`).
 
 ## Publicación
 
