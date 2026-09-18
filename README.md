@@ -42,7 +42,17 @@ Portal educativo para organizar recursos de matemáticas, desarrollo profesional
 
 ## Publicación
 
-La rama de producción es `main` y está conectada a Cloudflare. Los cambios enviados a `main` pueden activar un nuevo despliegue automático.
+La arquitectura del proyecto establece `main` como rama de producción y Cloudflare como medio de publicación. Los cambios enviados a `main` pueden activar un nuevo despliegue automático si la integración está configurada. La existencia de un commit no confirma por sí sola que se haya publicado.
+
+Seleccionar `main` explícitamente al consultar o editar: la rama predeterminada de GitHub puede ser diferente. Verificar el resultado público y el estado de despliegue cuando corresponda.
+
+## Directrices y gestión de recursos
+
+- [Directrices completas de CorralizaMath](docs/directrices-corralizamath.md): documento rector proporcionado por el propietario del proyecto.
+- [Instrucciones de trabajo para asistentes y colaboradores](AGENTS.md): aplicación operativa de las directrices a este repositorio.
+- [Ficha para incorporar recursos](docs/plantilla-recurso.md): clasificación, datos editoriales, alineación curricular, publicaciones, documentos DEPR y registro de revisión.
+
+Al incorporar un material, revisar el archivo, completar los datos disponibles, clasificarlo, preparar su descripción, enlazarlo desde su sección y comprobar la lectura o descarga. Conservar los módulos, documentos y rutas existentes. Las funciones futuras se implementan de manera progresiva según las necesidades del proyecto.
 
 ## Criterio para documentos oficiales
 
