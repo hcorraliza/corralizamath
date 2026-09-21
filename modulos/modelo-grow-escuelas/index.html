@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Modelo GROW en las Escuelas | Módulo interactivo · CorralizaMath</title>
+<meta name="description" content="Módulo interactivo de autoestudio: El Modelo GROW aplicado a las escuelas, cultura del uso de datos y las cinco fases (Metas, Objetivos, Realidad, Opciones, Cierre) con ejemplos prácticos para docentes y estudiantes.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>∑</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/styles.css">
+<link rel="stylesheet" href="module.css">
+</head>
+<body class="module-body">
+
+<header class="module-header">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="module-header-inner">
+    <a href="../../index.html" class="module-back">← Corraliza<span style="color:var(--color-accent)">Math</span></a>
+    <span class="module-title-mini">Modelo GROW</span>
+    <div class="module-header-actions">
+      <button class="btn btn-ghost btn-sm" id="sidebarToggle" aria-label="Abrir índice">☰ <span class="btn-label">Índice</span></button>
+      <a class="btn btn-primary btn-sm" href="../../recursos/Modelo-GROW-Escuelas-Corraliza.pptx" download>
+        <span class="btn-icon">⬇</span><span class="btn-label">Descargar presentación</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="module-shell">
+
+  <aside class="module-sidebar" id="moduleSidebar">
+    <p class="sidebar-progress" id="sidebarProgressLabel">0 de 14 secciones vistas</p>
+    <ul class="sidebar-nav">
+      <li><a href="#portada"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Presentación</a></li>
+      <li><a href="#contexto"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Contexto y propósito</a></li>
+      <li><a href="#que-es-grow"><span class="sidebar-num"><span class="sidebar-num-text">1</span></span> Qué es el Modelo GROW</a></li>
+      <li><a href="#fase-metas"><span class="sidebar-num"><span class="sidebar-num-text">2</span></span> Fase 1 · Metas</a></li>
+      <li><a href="#fase-objetivos"><span class="sidebar-num"><span class="sidebar-num-text">3</span></span> Fase 2 · Objetivos</a></li>
+      <li><a href="#fase-realidad"><span class="sidebar-num"><span class="sidebar-num-text">4</span></span> Fase 3 · Realidad</a></li>
+      <li><a href="#fase-opciones"><span class="sidebar-num"><span class="sidebar-num-text">5</span></span> Fase 4 · Opciones</a></li>
+      <li><a href="#fase-cierre"><span class="sidebar-num"><span class="sidebar-num-text">6</span></span> Fase 5 · Cierre</a></li>
+      <li><a href="#ejemplos-practicos"><span class="sidebar-num"><span class="sidebar-num-text">7</span></span> Ejemplos prácticos</a></li>
+      <li><a href="#implementacion"><span class="sidebar-num"><span class="sidebar-num-text">8</span></span> Implementación en la escuela</a></li>
+      <li><a href="#actividades"><span class="sidebar-num"><span class="sidebar-num-text">A</span></span> Actividades de aplicación</a></li>
+      <li><a href="#conclusiones"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Conclusiones</a></li>
+      <li><a href="#evaluacion"><span class="sidebar-num"><span class="sidebar-num-text">★</span></span> Evaluación final</a></li>
+      <li><a href="#referencias"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Referencias</a></li>
+    </ul>
+  </aside>
+
+  <main class="module-content">
+   <div class="slides-viewport" id="slidesViewport">
+    <div class="slides-track" id="slidesTrack">
+
+    <!-- PORTADA -->
+    <section class="module-cover" id="portada">
+      <p class="eyebrow">Desarrollo profesional docente · Módulo interactivo de autoestudio</p>
+      <h1>El Modelo GROW en las Escuelas</h1>
+      <p class="lead">Cultura del uso de datos y coaching estructurado para el desarrollo de docentes y estudiantes</p>
+      <div class="cover-actions">
+        <a href="#contexto" class="btn btn-on-dark">Comenzar el módulo</a>
+        <a class="btn btn-outline-on-dark" href="../../recursos/Modelo-GROW-Escuelas-Corraliza.pptx" download>⬇ Descargar presentación original (.pptx)</a>
+      </div>
+      <div class="cover-meta">
+        <div><span>Facilitador</span><span>Dr. Héctor J. Corraliza Montero</span></div>
+        <div><span>Cargo</span><span>Facilitador Docente de Matemáticas</span></div>
+        <div><span>Institución</span><span>ORE-Ponce · Departamento de Educación de Puerto Rico</span></div>
+      </div>
+    </section>
+
+    <!-- CONTEXTO Y PROPÓSITO -->
+    <section class="module-section" id="contexto">
+      <span class="section-kicker">Reflexión inicial</span>
+      <h2>El mundo cambió, la educación también</h2>
+      <div class="callout callout-quote">
+        <p>Antes de comenzar, tómese un momento para pensar: ¿cómo ha cambiado la manera en que su escuela usa los datos en los últimos años? ¿Qué falta todavía por cambiar?</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Propósito del taller</h3>
+        <p class="section-dek">Marque cada propósito a medida que lo sienta cumplido — su progreso se guarda en este navegador.</p>
+        <ul class="checklist">
+          <li class="checklist-item">
+            <input type="checkbox" id="prop1" data-persist="prop-1">
+            <label for="prop1">Fortalecer el uso de datos para mejorar el aprovechamiento académico.</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" id="prop2" data-persist="prop-2">
+            <label for="prop2">Capacitar a educadores en la toma de decisiones informadas.</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" id="prop3" data-persist="prop-3">
+            <label for="prop3">Promover una cultura de análisis y colaboración en la escuela.</label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Visión del DEPR</h3>
+        <div class="grid-3">
+          <div class="info-card"><p>Crear ambientes educativos basados en datos.</p></div>
+          <div class="info-card"><p>Desarrollar individuos competentes para la vida universitaria y laboral.</p></div>
+          <div class="info-card"><p>Fomentar el uso reflexivo de los datos en la comunidad escolar.</p></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Cultura del uso de datos: cinco elementos clave</h3>
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">1</span><p style="margin:0;">Asegurar el acceso a los datos.</p></div>
+          <div class="step-item"><span class="step-num">2</span><p style="margin:0;">Proveerles significado a los datos.</p></div>
+          <div class="step-item"><span class="step-num">3</span><p style="margin:0;">Aclarar expectativas del uso.</p></div>
+          <div class="step-item"><span class="step-num">4</span><p style="margin:0;">Construir conocimiento y habilidades.</p></div>
+          <div class="step-item"><span class="step-num">5</span><p style="margin:0;">Liderar una cultura de uso.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUÉ ES EL MODELO GROW -->
+    <section class="module-section" id="que-es-grow">
+      <span class="section-kicker"><span class="num-badge">1</span> Fundamentos</span>
+      <h2>Qué es el Modelo GROW</h2>
+
+      <div class="subsection">
+        <p>El Modelo GROW o Proceso GROW es una técnica utilizada para el establecimiento de metas y solución de problemas. Se utiliza también por muchos líderes como una técnica exitosa de desarrollo de colaboradores.</p>
+        <p>Fue desarrollada en el Reino Unido por Graham Alexander, Alan Fine y Sir John Whitmore y empezó a ser muy utilizada en el mundo corporativo a finales de los 80's y principios de los 90's.</p>
+        <p>Su aplicación puede ser muy efectiva en diferentes áreas de la vida, como la personal, la vida de pareja o la vida familiar, ya que provee una metodología estructurada paso a paso que ayuda a establecer objetivos y facilitar el proceso de solución de problemas asociados con los mismos.</p>
+        <p>Otra de las ventajas del Modelo GROW es que puede ser utilizado por la mayoría de las personas, y quizá su mayor valor se encuentre en lo sencillo y práctico de su aplicación.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>El acrónimo GROW</h3>
+        <div class="grid-2">
+          <div class="info-card"><span class="tag">G · Goal</span><h4>Objetivo</h4><p>Definir y establecer la meta a alcanzar.</p></div>
+          <div class="info-card"><span class="tag">R · Reality</span><h4>Realidad</h4><p>Describir y examinar mi situación actual y la distancia que me aleja del reto.</p></div>
+          <div class="info-card"><span class="tag">O · Options</span><h4>Opciones</h4><p>Considerar las opciones y posibilidades que se me presentan para superar las limitaciones.</p></div>
+          <div class="info-card"><span class="tag">W · Will</span><h4>Voluntad y compromiso</h4><p>Establecer un plan de acción detallado con el que comprometerme y motivarme.</p></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Las cinco fases del Modelo GROW</h3>
+        <p>El Modelo GROW está estructurado en cinco diferentes fases secuenciales, las cuales deben de llevarse apropiadamente para lograr los resultados esperados. En el desarrollo de este taller, cada fase se identifica con su letra inicial en español:</p>
+        <div class="stepper-group">
+          <div class="stepper">
+            <button class="stepper-btn active" data-detail="Se identifica una meta: el asunto a discutir y, si es necesario, un objetivo a largo plazo.">
+              <span class="stepper-num">M</span><strong>Metas</strong><span class="desc">Se identifica una meta</span>
+            </button>
+            <button class="stepper-btn" data-detail="Determinamos objetivos asociados a esa meta, con las características SMART.">
+              <span class="stepper-num">O</span><strong>Objetivos</strong><span class="desc">Objetivos asociados a la meta</span>
+            </button>
+            <button class="stepper-btn" data-detail="Analizamos la realidad: el escenario actual del cual partimos, sin suposiciones.">
+              <span class="stepper-num">R</span><strong>Realidad</strong><span class="desc">Analizamos la realidad</span>
+            </button>
+            <button class="stepper-btn" data-detail="Buscamos opciones: se generan todas las posibilidades, sin tomar decisiones todavía.">
+              <span class="stepper-num">O</span><strong>Opciones</strong><span class="desc">Buscamos opciones</span>
+            </button>
+            <button class="stepper-btn" data-detail="Cerramos y preparamos el plan de acción: nos comprometemos con la acción.">
+              <span class="stepper-num">C</span><strong>Cierre</strong><span class="desc">Preparamos el plan de acción</span>
+            </button>
+          </div>
+          <div class="stepper-detail">Se identifica una meta: el asunto a discutir y, si es necesario, un objetivo a largo plazo.</div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>La columna vertebral de preguntas</h3>
+        <p>En cada una de las cinco fases, el proceso gira alrededor de las mismas cuatro preguntas — ¿Qué? ¿Cómo? ¿Dónde? ¿Cuándo? — aplicadas al asunto de esa fase específica. A partir de la próxima sección recorreremos cada fase en detalle, con las preguntas sugeridas al líder, las barreras más comunes y los síntomas de una sesión bien llevada.</p>
+      </div>
+    </section>
+
+    <!-- FASE 1: METAS -->
+    <section class="module-section" id="fase-metas">
+      <span class="section-kicker"><span class="num-badge">2</span> Primera fase</span>
+      <h2>Fase 1: Estableciendo las Metas</h2>
+      <p class="section-dek">Decide el asunto a discutir. Si es necesario, determina un objetivo a largo plazo. La pregunta central de esta fase es ¿Qué?</p>
+
+      <div class="subsection">
+        <p>La primera fase del Modelo GROW es la Fase de Establecimiento de Metas: en ella es necesario definir y establecer un tema de importancia o relevancia para el desarrollo del colaborador, así como la meta específica que se desea lograr y que es el objeto de este esfuerzo.</p>
+        <p>Algunas de las preguntas que puede formular son las siguientes: ¿Cuál es tu reto? ¿Cuál es tu meta? ¿Cómo sabrás que has alcanzado tu meta? Y otras más que a continuación se sugieren:</p>
+        <h4>Preguntas sugeridas al líder</h4>
+        <ol>
+          <li>¿Qué te gustaría lograr?</li>
+          <li>¿Qué esperas de esta sesión?</li>
+          <li>¿Qué te gustaría discutir?</li>
+          <li>Si yo te pudiera conceder un deseo de esta sesión, ¿cuál sería?</li>
+          <li>¿Qué podría suceder que no está pasando ahora, o qué no podría pasar que está sucediendo ahora?</li>
+          <li>¿Qué resultado te gustaría de esta sesión/discusión/interacción?</li>
+          <li>¿Qué necesitas que sucediera para que al terminar sintieras que este tiempo estuvo bien invertido?</li>
+          <li>¿Es realista?</li>
+          <li>¿Podemos hacer esto en el tiempo que tenemos?</li>
+          <li>¿Esto tendrá un valor real para ti?</li>
+        </ol>
+      </div>
+
+      <div class="subsection">
+        <h3>Posibles barreras: Fase Metas</h3>
+        <div class="subject-accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">1</span><span><strong>Falta de credibilidad en el proceso por parte del colaborador</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>Muchas veces, y sobre todo cuando una persona no está acostumbrada a que su jefe le ayude a desarrollarse, no cree o desconfía de las intenciones del proceso. Este miedo se desvanecerá en la medida en la que el colaborador se dé cuenta de que el líder muestra un compromiso sincero con su desarrollo profesional. Es necesario hablar al respecto.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">2</span><span><strong>El colaborador no quiere crecer</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>En ocasiones los colaboradores no saben que hay más allá y piensan que desarrollarse implica únicamente más trabajo y más responsabilidades. Es necesario ayudarle al colaborador a visualizar los beneficios profesionales que le traerá el alcanzar determinada meta.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">3</span><span><strong>El colaborador establece temas o metas irrelevantes para su posición o crecimiento profesional</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>Es necesario que como líder le ayude a establecer temas relevantes de acuerdo con un camino natural de desarrollo y crecimiento en la organización.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">4</span><span><strong>El colaborador identifica temas o metas que no son de ningún valor para la organización</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>El Modelo GROW, para fines del presente programa de desarrollo, tiene una aplicación en el contexto de negocios u organizacional. Es necesario ayudarle al colaborador a identificar temas que le signifiquen un crecimiento dentro de la organización y en función de sus necesidades. La meta debe representar un valor para él y para la organización.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">5</span><span><strong>El colaborador cree que alcanzar metas en un tema determinado será remunerado económicamente</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>Es necesario ser honesto con el colaborador en función de las remuneraciones y las compensaciones, ya que muchas veces este tipo de esfuerzos se asocian con remuneraciones económicas. Es necesario dejarle claro que este es un esfuerzo de desarrollo que quizá en un momento determinado pueda significar un mayor ingreso, dependiendo de la situación y el contexto actual.</p>
+            </div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Síntomas de una sesión exitosa: Fase Metas</h3>
+        <p class="section-dek">Marque los síntomas que observó en su propia sesión de establecimiento de metas.</p>
+        <ul class="checklist" data-checklist-group="sintoma-metas">
+          <li class="checklist-item"><input type="checkbox" id="sm1" data-persist="sintoma-metas-1"><label for="sm1">El colaborador logra identificar con claridad el tema objeto de su desarrollo.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="sm2" data-persist="sintoma-metas-2"><label for="sm2">El colaborador logra identificar metas congruentes con su posición dentro de la organización.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="sm3" data-persist="sintoma-metas-3"><label for="sm3">El colaborador se muestra satisfecho y agradece el apoyo brindado.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="sm4" data-persist="sintoma-metas-4"><label for="sm4">El colaborador expresa su compromiso con el proceso de desarrollo.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="sm5" data-persist="sintoma-metas-5"><label for="sm5">El colaborador se muestra motivado.</label></li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Aplíquelo a su propio caso</h3>
+        <div class="worksheet-box">
+          <label for="miMeta">¿Cuál es la meta que usted quiere trabajar? (Fase 1 de su propio plan GROW)</label>
+          <textarea id="miMeta" data-persist-text="mi-meta" placeholder="Escriba el asunto o la meta que le gustaría lograr…"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 2: OBJETIVOS -->
+    <section class="module-section" id="fase-objetivos">
+      <span class="section-kicker"><span class="num-badge">3</span> Segunda fase</span>
+      <h2>Fase 2: Objetivos</h2>
+      <p class="section-dek">En esta fase se definen los objetivos asociados a la meta planteada, los cuales deben cumplir con las características SMART.</p>
+
+      <div class="subsection">
+        <h3>Objetivos SMART</h3>
+        <div class="grid-2">
+          <div class="info-card"><span class="tag">S · Específicos</span><p>Se ha de buscar la mayor concreción posible para que no haya luego problemas de interpretación y ambas partes lo tengan claro. Nada de vaguedades.</p></div>
+          <div class="info-card"><span class="tag">M · Medibles</span><p>Lo que no se puede medir, simplemente no existe. Se ha de establecer siempre objetivos cuantitativos (que pueden reflejar cualidad). No es lo mismo tener como objetivo ofrecer una gran atención al cliente que reducir el número de quejas un 50 %: en el segundo caso se podrá saber exactamente en qué grado se ha cumplido el objetivo o no.</p></div>
+          <div class="info-card"><span class="tag">A · Alcanzables</span><p>No hay que despegar nunca los pies del suelo. Sin duda hay muchas cosas que se pueden hacer, pero es más importante saber si se deben hacer. Hay que buscar siempre enmarcar los objetivos dentro de la ética, los valores de la compañía —o de uno mismo—, y el entorno, así como analizar cómo pueden afectar a terceras partes.</p></div>
+          <div class="info-card"><span class="tag">R · Realistas</span><p>Los objetivos tienen que conseguir sacar lo mejor de nosotros o del equipo. Tiene que ser un reto. Pero si es demasiado ambicioso y queda fuera de lo posible, entrará en juego la desmotivación. Por ello el objetivo debe ser siempre ambicioso pero posible, y hay que prever la posibilidad de reajustarlo si hay una causa de fuerza mayor.</p></div>
+        </div>
+        <div class="callout callout-accent">
+          <p><strong>T · Temporales:</strong> hay que ser claros con la dimensión temporal de cada objetivo, así como elaborar una línea del tiempo donde vayan marcadas las distintas subobjetivos o etapas para llegar al objetivo. Si te propones reducir las quejas de los clientes en un año al 50 %, deberías establecer una reducción progresiva para cada mes. Así puedes ir corrigiendo las cosas en lugar de tomar medidas drásticas a falta de tres meses de finalización del plazo.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Verifique su meta</h3>
+        <p class="section-dek">Marque cada característica que su meta ya cumple.</p>
+        <div class="smart-check" id="smartCheck1" data-smart-check>
+          <ul class="checklist">
+            <li class="checklist-item"><input type="checkbox" id="sc-s"><label for="sc-s">Específica</label></li>
+            <li class="checklist-item"><input type="checkbox" id="sc-m"><label for="sc-m">Medible</label></li>
+            <li class="checklist-item"><input type="checkbox" id="sc-a"><label for="sc-a">Alcanzable</label></li>
+            <li class="checklist-item"><input type="checkbox" id="sc-r"><label for="sc-r">Realista</label></li>
+            <li class="checklist-item"><input type="checkbox" id="sc-t"><label for="sc-t">Temporal</label></li>
+          </ul>
+          <div class="smart-check-output"></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Para hacer los objetivos SMART: ¿tengo lo que quiero?</h3>
+        <p>Antes de fijar el objetivo, es útil cruzar dos preguntas: ¿lo tengo? y ¿lo quiero? Complete las cuatro celdas para su propia situación.</p>
+        <div class="grid-2">
+          <div class="worksheet-box"><label for="tqSiSi">Sí tengo / Sí quiero</label><textarea id="tqSiSi" data-persist-text="tengo-si-quiero-si" placeholder="¿Qué tiene y quiere conservar o aprovechar?"></textarea></div>
+          <div class="worksheet-box"><label for="tqSiNo">Sí tengo / No quiero</label><textarea id="tqSiNo" data-persist-text="tengo-si-quiero-no" placeholder="¿Qué tiene pero no quiere?"></textarea></div>
+          <div class="worksheet-box"><label for="tqNoSi">No tengo / Sí quiero</label><textarea id="tqNoSi" data-persist-text="tengo-no-quiero-si" placeholder="¿Qué no tiene y sí quiere lograr?"></textarea></div>
+          <div class="worksheet-box"><label for="tqNoNo">No tengo / No quiero</label><textarea id="tqNoNo" data-persist-text="tengo-no-quiero-no" placeholder="¿Qué no tiene y tampoco necesita?"></textarea></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Posibles barreras: Fase Objetivos</h3>
+        <div class="subject-accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">1</span><span><strong>El colaborador no tiene visibilidad de los objetivos a alcanzar para lograr una meta establecida</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>Es necesario que, en base a su experiencia como líder y de acuerdo con su posición en la organización, ayude al colaborador a identificar con claridad los objetivos que tendrá que lograr para alcanzar una meta.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">2</span><span><strong>Objetivos demasiado retadores y poco realistas</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>Es necesario que ayude al colaborador a identificar objetivos retadores, claro, pero también realistas, ya que de lo contrario el esfuerzo será en vano. Es necesario explicarlo.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">3</span><span><strong>Objetivos no medibles</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>Quizá este es el problema más común que se ha encontrado: el colaborador muestra en ocasiones mucha dificultad para saber cómo medir sus avances en función de un objetivo. Es necesario que le ayude a definir métodos de medición cuantitativos, confiables y "representativos" de los avances.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">4</span><span><strong>Dificultad para establecer objetivos en el corto y mediano plazo</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>Muchas veces los colaboradores pretenden plantear objetivos que únicamente se pueden alcanzar en el largo plazo. Es necesario que le ayude a entender esto y que utilice el concepto "small wins", o "poco a poco es que se va lejos", para que el colaborador pueda plantear objetivos a corto y mediano plazo que lo lleven a alcanzar metas en el largo plazo.</p>
+            </div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Síntomas de una sesión exitosa: Fase Objetivos</h3>
+        <ul class="checklist" data-checklist-group="sintoma-obj">
+          <li class="checklist-item"><input type="checkbox" id="so1" data-persist="sintoma-obj-1"><label for="so1">El colaborador logra identificar con claridad los objetivos asociados a una meta en específico.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="so2" data-persist="sintoma-obj-2"><label for="so2">El colaborador logra identificar con claridad los objetivos que pretende lograr de una manera estructurada y congruente con alcanzar una meta.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="so3" data-persist="sintoma-obj-3"><label for="so3">El colaborador identifica objetivos de acuerdo con su nivel de responsabilidad y congruentes con su posición dentro de la organización.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="so4" data-persist="sintoma-obj-4"><label for="so4">El colaborador se siente satisfecho con los objetivos planteados.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="so5" data-persist="sintoma-obj-5"><label for="so5">El colaborador se muestra motivado.</label></li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Aplíquelo a su propio caso</h3>
+        <div class="worksheet-box">
+          <label for="miObjetivo">Escriba su objetivo SMART, respondiendo ¿Qué? ¿Cómo? ¿Dónde? ¿Cuándo?</label>
+          <textarea id="miObjetivo" data-persist-text="mi-objetivo" placeholder="Redacte su objetivo específico, medible, alcanzable, realista y temporal…"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 3: REALIDAD -->
+    <section class="module-section" id="fase-realidad">
+      <span class="section-kicker"><span class="num-badge">4</span> Tercera fase</span>
+      <h2>Fase 3: Realidad</h2>
+      <p class="section-dek">Sin suposiciones. No a las historias irrelevantes. Evitar resolver problemas en esta etapa. Repasa la meta si es necesario.</p>
+
+      <div class="subsection">
+        <p>Una vez tenemos claros los objetivos, es necesario analizar la realidad presente: es decir, de qué escenario partimos. Para identificar claramente este escenario es necesario contestar preguntas como: ¿cuáles son las características o las condiciones de la situación de la cual queremos partir? ¿Con qué recursos cuentas? ¿De qué conocimientos o habilidades careces? ¿Qué problemáticas se te han presentado hasta este momento? Es decir, esta fase implica una radiografía clara y descriptiva del escenario actual y de los recursos con los que se dispone "en este momento" para lograr las metas y los objetivos planteados.</p>
+        <p>Lo anterior es muy importante, ya que definirá el punto de partida del proceso de desarrollo y será el punto de referencia de todos los avances que se presenten.</p>
+        <div class="callout callout-warn">
+          <p><strong>Antes de considerar la situación con cierto detalle</strong>, las metas y los objetivos deben de estar identificados. En esta fase, cuando ya tenemos una idea clara de la realidad, es posible enfocar las metas y los objetivos con mayor precisión o incluso modificarlos, si resulta que la situación es algo diferente de lo que se contempló inicialmente.</p>
+        </div>
+        <h4>Preguntas sugeridas al líder</h4>
+        <ol>
+          <li>¿Cuál es la situación actual?</li>
+          <li>¿Cómo sabes que hay un problema?</li>
+          <li>¿Cómo sabes que esto es preciso?</li>
+          <li>¿Cuándo sucede esto?</li>
+          <li>¿Con qué frecuencia sucede esto?</li>
+          <li>¿Qué efecto tiene esto?</li>
+          <li>¿Cómo has verificado o verificarías que eso es así?</li>
+          <li>¿Qué otros factores son relevantes?</li>
+          <li>¿Quién más es relevante?</li>
+          <li>¿Cuál es tu percepción de la situación?</li>
+          <li>¿Qué más? ¿Qué más has intentado hasta ahora?</li>
+        </ol>
+      </div>
+
+      <div class="subsection">
+        <h3>Posibles barreras: Fase Realidad</h3>
+        <div class="subject-accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">1</span><span><strong>Las metas y los objetivos se tienen que modificar</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>Esta fase del proceso es "crítica", y muchas veces sucede que cuando analizamos la situación de la cual partimos hacia una meta nos damos cuenta de algunos puntos que NO consideramos en las sesiones de identificación de metas y objetivos. Por lo tanto, considere como algo natural el modificar o replantear una meta u objetivo. Se espera que esto no sea de manera dramática; únicamente un ajuste.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">2</span><span><strong>La realidad desalienta al colaborador</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>En repetidas ocasiones se ha visto cómo en esta fase el colaborador puede experimentar desaliento o falta de motivación al estudiar el panorama "real" del cual parte. Como líder es necesario que esté en posibilidad de motivar y alentar a la persona, haciéndole ver que las metas y objetivos son alcanzables, y hacer énfasis en el esfuerzo que se tiene que hacer para lograrlo.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">3</span><span><strong>Se identifican otros implicados</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>También es común que, al analizar la realidad en función de una meta y de ciertos objetivos, nos demos cuenta de que existen otras personas involucradas. Es necesario tomar nota de esto, ya que en la siguiente fase habrá que contemplarlos e identificar acciones relacionadas con "sumar" a estas personas implicadas en conseguir una determinada meta.</p>
+            </div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Síntomas de una sesión exitosa: Fase Realidad</h3>
+        <ul class="checklist" data-checklist-group="sintoma-real">
+          <li class="checklist-item"><input type="checkbox" id="sr1" data-persist="sintoma-real-1"><label for="sr1">El colaborador logra identificar con claridad las características de la situación actual o punto de partida.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="sr2" data-persist="sintoma-real-2"><label for="sr2">El colaborador logra identificar terceras personas implicadas en la consecución de una meta u objetivo.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="sr3" data-persist="sintoma-real-3"><label for="sr3">El colaborador hace consciencia de fortalezas y debilidades antes de tomar acción hacia una meta u objetivo.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="sr4" data-persist="sintoma-real-4"><label for="sr4">El colaborador tiene claros los recursos materiales, económicos y de infraestructura con los que cuenta.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="sr5" data-persist="sintoma-real-5"><label for="sr5">El colaborador se percibe consciente de la realidad y se muestra aún motivado para perseguir sus metas y objetivos.</label></li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Aplíquelo a su propio caso</h3>
+        <div class="worksheet-box">
+          <label for="miRealidad">Describa su realidad actual: recursos, conocimientos, habilidades y obstáculos presentes.</label>
+          <textarea id="miRealidad" data-persist-text="mi-realidad" placeholder="¿De qué escenario parte usted hoy?"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 4: OPCIONES -->
+    <section class="module-section" id="fase-opciones">
+      <span class="section-kicker"><span class="num-badge">5</span> Cuarta fase</span>
+      <h2>Fase 4: Opciones</h2>
+      <p class="section-dek">Ofrece sugerencias con cautela. Genera todas las posibilidades. Asegura que no se tomen decisiones todavía.</p>
+
+      <div class="subsection">
+        <p>Una vez tenemos claro tanto los objetivos como la realidad de la cual parte el colaborador —es importante asegurarse de que ambas fases se inter-relacionen, es decir, que no vayamos, por ejemplo, a ir a Marte en un año con una misión de la NASA siendo que la realidad del colaborador es que es panadero— pasamos a la siguiente fase: definir las opciones, o en otras palabras "la ruta" a seguir para alcanzar los objetivos.</p>
+        <p>Para ello es necesario analizar y buscar todos los caminos, las rutas, etc. que pueden llevar al colaborador a conseguir sus objetivos. Una vez identificado esto, se ESCRIBEN Y SE DETALLAN, sin perder de vista que estos constituyen los caminos o las rutas más cortas y efectivas para conseguir una meta y/o un objetivo específico.</p>
+        <p>En esta etapa el objetivo no es encontrar la "respuesta correcta", sino crear y elaborar una lista de tantos caminos como sea posible tomar. Es más importante la cantidad de opciones que la calidad y factibilidad de cada una.</p>
+        <h4>Preguntas sugeridas al líder</h4>
+        <ol>
+          <li>¿Qué podrías hacer?</li>
+          <li>¿Qué alternativas existen?</li>
+          <li>Dime, ¿qué alternativas de acción percibes? No te preocupes si no son realistas en este momento…</li>
+          <li>¿Qué has visto que ha sido utilizado por otros, o por ti, en otras circunstancias similares?</li>
+          <li>¿Quién podría ayudar?</li>
+          <li>¿Te agradarían sugerencias mías?</li>
+          <li>¿Cuáles son los beneficios y los peligros de hacer eso?</li>
+          <li>¿Cuál de estos te gusta más?</li>
+          <li>De estos, ¿cuáles son de tu interés?</li>
+          <li>Del 1 al 10, califica tu nivel de interés en lo práctico de cada uno de estos.</li>
+          <li>¿Te agradaría escoger uno para actuar sobre él?</li>
+        </ol>
+      </div>
+
+      <div class="subsection">
+        <h3>Posibles barreras: Fase Opciones</h3>
+        <div class="subject-accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">1</span><span><strong>Pocas opciones hacia el logro de objetivos</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>El colaborador logra identificar pocas opciones hacia el logro de objetivos. Es necesario que, como líder, ayude al colaborador a identificar opciones o caminos alternos al logro de objetivos que quizá él no esté contemplando.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">2</span><span><strong>Opciones sin relación de foco con los resultados</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>La idea es que el colaborador logre encontrar el camino más corto y más efectivo para lograr los objetivos que se ha planteado. Es necesario que lo ayude a mantener el foco en los resultados, y puedan determinar juntos si las acciones, decisiones, etc. están íntimamente ligadas al logro de objetivos y logran un impacto significativo en un objetivo determinado.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">3</span><span><strong>Opciones fuera del alcance del colaborador</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>Es necesario que ayude al colaborador a elegir opciones, acciones, caminos o decisiones que estén al alcance de sus posibilidades y dentro de su marco de actuación o jerarquía de mando y toma de decisiones, de acuerdo con la fase anterior de realidad.</p>
+            </div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Síntomas de una sesión exitosa: Fase Opciones</h3>
+        <ul class="checklist" data-checklist-group="sintoma-opc">
+          <li class="checklist-item"><input type="checkbox" id="sopc1" data-persist="sintoma-opc-1"><label for="sopc1">El colaborador identifica un número adecuado de opciones y éstas se observan como viables.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="sopc2" data-persist="sintoma-opc-2"><label for="sopc2">El colaborador elabora un plan de acción detallado y congruente con los objetivos a alcanzar.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="sopc3" data-persist="sintoma-opc-3"><label for="sopc3">El colaborador plantea plazos y fechas límite razonables en su plan de acción.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="sopc4" data-persist="sintoma-opc-4"><label for="sopc4">El colaborador se muestra optimista frente al plan de acción elaborado.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="sopc5" data-persist="sintoma-opc-5"><label for="sopc5">El colaborador se muestra motivado para poner en práctica su plan de acción.</label></li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Aplíquelo a su propio caso</h3>
+        <div class="worksheet-box">
+          <label for="misOpciones">Enumere tantos caminos como sea posible para alcanzar su objetivo. No se detenga a evaluarlos todavía.</label>
+          <textarea id="misOpciones" data-persist-text="mis-opciones" placeholder="Escriba todas las opciones que se le ocurran…"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 5: CIERRE -->
+    <section class="module-section" id="fase-cierre">
+      <span class="section-kicker"><span class="num-badge">6</span> Quinta fase</span>
+      <h2>Fase 5: Cierre</h2>
+      <p class="section-dek">Sigue los pasos específicos y divididos por fases-tiempo. Identifica posibles obstáculos. Acuerda apoyo. Comprométete con la acción.</p>
+
+      <div class="subsection">
+        <p>El propósito de esta fase es pasar de la "discusión" a la "decisión". Consiste en la "construcción" de un plan de acción para responder a una meta establecida, habiendo analizado la realidad y habiendo considerado todas las opciones posibles.</p>
+        <p>Esta etapa requiere una columna vertebral de preguntas:</p>
+        <ul>
+          <li>¿Qué vas a hacer?</li>
+          <li>¿Cuándo vas a hacerlo?</li>
+          <li>¿Esta acción lleva a tu meta?</li>
+          <li>¿Qué obstáculos podría encontrar en el camino?</li>
+          <li>¿Quién necesita estar informado?</li>
+          <li>¿Qué apoyo necesitas?</li>
+        </ul>
+        <h4>Preguntas sugeridas al líder</h4>
+        <ol>
+          <li>¿Cuál es/son los siguientes pasos a seguir?</li>
+          <li>¿Específicamente cuándo los llevas a cabo?</li>
+          <li>¿Qué se puede atravesar?</li>
+          <li>¿Necesitas apuntar los pasos a seguir en tu agenda?</li>
+          <li>¿Qué apoyo necesitas?</li>
+          <li>¿Cómo y cuándo conseguirás ese apoyo?</li>
+        </ol>
+      </div>
+
+      <div class="subsection">
+        <h3>Posibles barreras: Fase Cierre</h3>
+        <p>Consideramos que algunas de las principales barreras que puede encontrar en esta fase del Modelo GROW son las siguientes:</p>
+        <div class="subject-accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">1</span><span><strong>No se elabora un plan de acción detallado y éste no incluye fechas límite o tiempos</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>Es necesario asegurar que el colaborador ha desarrollado un plan de acción detallado para cada uno de sus objetivos, de lo contrario no se logra aterrizar adecuadamente la presente fase. Así mismo, es de vital importancia que el plan de acción que se formule incluya tiempos límite o plazos, ya que seguramente existirán infinidad de razones para aplazar las cosas.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">2</span><span><strong>Opciones sin relación de foco con los resultados</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>La idea es que el colaborador logre encontrar el camino más corto y más efectivo para lograr los objetivos que se ha planteado. Es necesario que lo ayude a mantener el foco en los resultados y puedan determinar juntos si las acciones, decisiones, etc. están íntimamente ligadas al logro de objetivos y, por lo tanto, logren un impacto significativo.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">3</span><span><strong>Opciones fuera del alcance del colaborador</strong></span></span><span class="accordion-chevron">▾</span></button>
+            <div class="accordion-panel"><div class="accordion-panel-inner">
+              <p>Es necesario que ayude al colaborador a elegir opciones, acciones, caminos o decisiones que estén al alcance de sus posibilidades y dentro de su marco de actuación o jerarquía de mando y toma de decisiones, de acuerdo con la fase anterior de realidad.</p>
+            </div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Síntomas de una sesión exitosa: Fase Cierre</h3>
+        <p>Consideramos que estos son algunos de los síntomas que le dejarán saber si la sesión de Cierre fue llevada correctamente:</p>
+        <ul class="checklist" data-checklist-group="sintoma-cierre">
+          <li class="checklist-item"><input type="checkbox" id="sci1" data-persist="sintoma-cierre-1"><label for="sci1">El colaborador elabora un plan de acción detallado y congruente con los objetivos a alcanzar.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="sci2" data-persist="sintoma-cierre-2"><label for="sci2">El colaborador establece fechas límite y plazos razonables para concluir las tareas, en función del tiempo establecido para lograr los objetivos y metas identificadas.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="sci3" data-persist="sintoma-cierre-3"><label for="sci3">El colaborador se muestra optimista frente al plan o los planes de acción elaborados.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="sci4" data-persist="sintoma-cierre-4"><label for="sci4">El colaborador se muestra agradecido por la ayuda brindada a lo largo de todas las fases del Modelo GROW.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="sci5" data-persist="sintoma-cierre-5"><label for="sci5">El colaborador se muestra motivado para poner en marcha su plan de acción.</label></li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Su plan de acción</h3>
+        <div class="grid-2">
+          <div class="worksheet-box"><label for="miCierrePlan">¿Qué vas a hacer y cuándo? Enumere los pasos concretos.</label><textarea id="miCierrePlan" data-persist-text="mi-cierre-plan" placeholder="Pasos y fechas…"></textarea></div>
+          <div class="worksheet-box"><label for="miCierreApoyo">¿Qué obstáculos podría encontrar y qué apoyo necesita?</label><textarea id="miCierreApoyo" data-persist-text="mi-cierre-apoyo" placeholder="Obstáculos y apoyo necesario…"></textarea></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Resumen de su plan GROW</h3>
+        <p class="section-dek">Estas son las respuestas que usted escribió a lo largo de las cinco fases.</p>
+        <div class="grid-2">
+          <div class="callout callout-primary"><strong>Meta:</strong> <span data-recall-text="mi-meta"></span></div>
+          <div class="callout callout-primary"><strong>Objetivo:</strong> <span data-recall-text="mi-objetivo"></span></div>
+          <div class="callout callout-primary"><strong>Realidad:</strong> <span data-recall-text="mi-realidad"></span></div>
+          <div class="callout callout-primary"><strong>Opciones:</strong> <span data-recall-text="mis-opciones"></span></div>
+          <div class="callout callout-primary"><strong>Plan de acción:</strong> <span data-recall-text="mi-cierre-plan"></span></div>
+          <div class="callout callout-primary"><strong>Apoyo necesario:</strong> <span data-recall-text="mi-cierre-apoyo"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EJEMPLOS PRÁCTICOS -->
+    <section class="module-section" id="ejemplos-practicos">
+      <span class="section-kicker"><span class="num-badge">7</span> Ejemplos</span>
+      <h2>Ejemplos prácticos</h2>
+
+      <div class="subsection">
+        <h3>Ejemplo práctico: Docente</h3>
+        <div class="grid-2">
+          <div class="info-card"><span class="tag">Meta</span><p>Mejorar la planificación de clases con metas SMART.</p></div>
+          <div class="info-card"><span class="tag">Realidad</span><p>Dificultades en el uso de datos de rendimiento estudiantil.</p></div>
+          <div class="info-card"><span class="tag">Opciones</span><p>Participar en talleres, usar rúbricas, colaborar con colegas.</p></div>
+          <div class="info-card"><span class="tag">Voluntad</span><p>Implementar nuevas estrategias y evaluar resultados mensualmente.</p></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Ejemplo práctico: Estudiante</h3>
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">1</span><p style="margin:0;"><strong>Meta:</strong> Aprobar con al menos 80 % el próximo examen de matemáticas.</p></div>
+          <div class="step-item"><span class="step-num">2</span><p style="margin:0;"><strong>Realidad:</strong> Actualmente tiene 60 %, se distrae y no estudia con regularidad.</p></div>
+          <div class="step-item"><span class="step-num">3</span><p style="margin:0;"><strong>Opciones:</strong> Crear horario de estudio, pedir ayuda a un compañero, usar apps educativas.</p></div>
+          <div class="step-item"><span class="step-num">4</span><p style="margin:0;"><strong>Voluntad:</strong> Estudiar 1 hora diaria, asistir a tutorías, revisar resultados cada viernes.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPLEMENTACIÓN -->
+    <section class="module-section" id="implementacion">
+      <span class="section-kicker"><span class="num-badge">8</span> Implementación de un Plan de GROW</span>
+      <h2>Implementación en la escuela</h2>
+
+      <div class="subsection">
+        <h3>Creación del Plan de Datos – Modelo GROW</h3>
+        <div class="grid-2">
+          <div class="info-card"><p>Diseñar metas SMART a partir de resultados CRECE.</p></div>
+          <div class="info-card"><p>Analizar la realidad escolar con datos de asistencia y rendimiento.</p></div>
+          <div class="info-card"><p>Generar opciones de mejora colaborativa.</p></div>
+          <div class="info-card"><p>Elaborar un plan de acción concreto con fechas y responsables.</p></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Ejemplos: objetivos por programa académico</h3>
+        <div class="grid-2">
+          <div class="info-card"><span class="tag">Matemáticas</span><p>Aumentar un 10 % el aprovechamiento en CRECE.</p></div>
+          <div class="info-card"><span class="tag">Español</span><p>Mejorar comprensión lectora mediante metas progresivas.</p></div>
+          <div class="info-card"><span class="tag">Inglés</span><p>Incrementar uso de vocabulario académico en un 15 %.</p></div>
+          <div class="info-card"><span class="tag">Ciencia</span><p>Integrar proyectos prácticos basados en datos escolares.</p></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Rúbrica de implementación</h3>
+        <p>Criterios para evaluar un plan GROW escolar:</p>
+        <ul class="checklist">
+          <li class="checklist-item"><label>Claridad de metas definidas.</label></li>
+          <li class="checklist-item"><label>Pertinencia de los objetivos SMART.</label></li>
+          <li class="checklist-item"><label>Realismo en el análisis de la realidad.</label></li>
+          <li class="checklist-item"><label>Variedad y viabilidad de opciones.</label></li>
+          <li class="checklist-item"><label>Plan de acción detallado con tiempos y responsables.</label></li>
+          <li class="checklist-item"><label>Nivel de motivación y compromiso demostrado.</label></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ACTIVIDADES DE APLICACIÓN -->
+    <section class="module-section" id="actividades">
+      <span class="section-kicker"><span class="num-badge">A</span> Actividades de aplicación</span>
+      <h2>Actividades de aplicación</h2>
+
+      <div class="subsection">
+        <h3>Actividad 1 – Análisis de Datos con GROW</h3>
+        <p><strong>Objetivo:</strong> Aplicar el modelo GROW para transformar datos reales en un plan de acción.</p>
+        <p><strong>Instrucciones:</strong></p>
+        <ol>
+          <li>Formar grupos de 4–5 docentes.</li>
+          <li>Analizar datos simulados de la escuela (ej. CRECE, asistencia, rendimiento).</li>
+          <li>Responder con el modelo GROW:
+            <ul>
+              <li><strong>Goal:</strong> meta específica a alcanzar.</li>
+              <li><strong>Reality:</strong> fortalezas y debilidades.</li>
+            </ul>
+          </li>
+        </ol>
+        <p class="source-note">La presentación original detalla las respuestas de Goal y Reality; complete también Options y Will como cierre natural del modelo al trabajar su grupo.</p>
+        <div class="worksheet-box">
+          <label for="act1Respuesta">Respuesta de su grupo (Goal, Reality, Options, Will)</label>
+          <textarea id="act1Respuesta" data-persist-text="actividad1-respuesta" placeholder="Documente el análisis de datos y el plan GROW de su grupo…"></textarea>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Actividad 2 – Diseño de Metas SMART y Rúbrica</h3>
+        <p><strong>Objetivo:</strong> Formular metas SMART y evaluarlas con la rúbrica del Modelo GROW.</p>
+        <p><strong>Instrucciones:</strong></p>
+        <ol>
+          <li>Cada docente selecciona un área de su práctica (ej. comprensión lectora, matemáticas).</li>
+          <li>Formular una meta SMART (Específica, Medible, Alcanzable, Realista, Temporal).</li>
+          <li>Evaluar la meta utilizando la rúbrica del Modelo GROW:
+            <ul>
+              <li>Claridad de la meta.</li>
+              <li>Pertinencia de los objetivos.</li>
+              <li>Realismo del plan.</li>
+              <li>Opciones propuestas.</li>
+              <li>Plan de acción detallado.</li>
+            </ul>
+          </li>
+          <li>Compartir en plenaria ejemplos seleccionados.</li>
+        </ol>
+        <div class="worksheet-box">
+          <label for="act2Meta">Su meta SMART y su autoevaluación con la rúbrica</label>
+          <textarea id="act2Meta" data-persist-text="actividad2-meta" placeholder="Escriba su meta SMART y cómo la evalúa con cada criterio de la rúbrica…"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCLUSIONES -->
+    <section class="module-section" id="conclusiones">
+      <span class="section-kicker">Cierre del taller</span>
+      <h2>Conclusiones</h2>
+
+      <div class="subsection">
+        <p>Independientemente de que el Modelo GROW es considerado como una técnica de solución de problemas, se ha comprobado que también es una técnica muy efectiva de desarrollo de colaboradores, ya que al plantear el logro de una meta (y una serie de objetivos) se está impulsando el desarrollo de nuevos conocimientos, aprendizajes y, en la mayoría de las ocasiones, el desarrollo de habilidades que no poseían con anterioridad.</p>
+        <p>A fin de enmarcar el Modelo GROW dentro del presente programa de desarrollo, a continuación se mencionan las aplicaciones específicas para las cuales lo hemos incluido:</p>
+        <ul class="checklist">
+          <li class="checklist-item"><label>Establecer planes de acción.</label></li>
+          <li class="checklist-item"><label>Orientar al personal hacia los resultados de su área o unidad de trabajo.</label></li>
+          <li class="checklist-item"><label>Mejorar la operación, o el "cómo se están haciendo las cosas".</label></li>
+          <li class="checklist-item"><label>Es una excelente herramienta para impulsar la creatividad e innovación.</label></li>
+          <li class="checklist-item"><label>Es una excelente herramienta para procesos de "change management".</label></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EVALUACIÓN FINAL -->
+    <section class="module-section" id="evaluacion">
+      <span class="section-kicker">★ Evaluación final</span>
+      <h2>Ponga a prueba lo aprendido</h2>
+      <p class="section-dek">Cinco preguntas. Necesita 4 de 5 correctas para aprobar y generar su certificado.</p>
+
+      <div class="final-exam" id="examGrow" data-pass-score="4">
+        <p class="exam-progress">0 de 5 preguntas respondidas</p>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 1 de 5</p>
+          <p class="quiz-question">¿Qué significa el acrónimo GROW en el modelo de coaching?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="GROW no describe los grados escolares; es un acrónimo de cuatro palabras en inglés.">Grados, Recursos, Objetivos, Web</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: Goal (meta), Reality (realidad), Options (opciones) y Will (voluntad y compromiso).">Goal, Reality, Options, Will</button>
+            <button class="quiz-option" data-correct="false" data-feedback="Esas palabras no forman el acrónimo GROW del modelo.">Grupo, Reto, Orden, Trabajo</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 2 de 5</p>
+          <p class="quiz-question">Según el taller, ¿cuál es el propósito principal de la Fase de Realidad?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="Resolver problemas es precisamente lo que se debe evitar en esta etapa; eso corresponde a fases posteriores.">Resolver los problemas identificados de inmediato</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: se trata de obtener una radiografía clara del escenario actual, sin suposiciones.">Analizar el escenario actual del cual se parte, sin suposiciones</button>
+            <button class="quiz-option" data-correct="false" data-feedback="Definir el plan de acción con fechas es el propósito de la Fase de Cierre, no de la Fase de Realidad.">Definir el plan de acción con fechas límite</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 3 de 5</p>
+          <p class="quiz-question">Durante la Fase de Opciones, ¿qué se debe evitar según el taller?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="Generar todas las posibilidades es precisamente lo que se busca en esta fase.">Generar todas las posibilidades sin filtrarlas todavía</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: en esta fase se generan posibilidades; las decisiones se toman más adelante, en la Fase de Cierre.">Tomar decisiones o escoger una opción definitiva</button>
+            <button class="quiz-option" data-correct="false" data-feedback="Ofrecer sugerencias con cautela es una guía válida para el líder en esta fase, no algo que deba evitarse.">Ofrecer sugerencias con cautela</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 4 de 5</p>
+          <p class="quiz-question">¿Cuál de las siguientes NO es una característica SMART de un objetivo?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="Medible sí es una de las cinco características SMART.">Medible</button>
+            <button class="quiz-option" data-correct="false" data-feedback="Temporal sí es una de las cinco características SMART.">Temporal</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: las cinco características SMART son Específico, Medible, Alcanzable, Realista y Temporal. \"Solo teórico\" no forma parte del acrónimo.">Solo teórico</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 5 de 5</p>
+          <p class="quiz-question">Según las conclusiones del taller, además de ser una técnica de solución de problemas, ¿para qué más resulta efectivo el Modelo GROW?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="El taller no presenta el Modelo GROW como sustituto de la evaluación docente formal.">Para sustituir la evaluación formal del desempeño docente</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: el taller señala que también es una técnica muy efectiva de desarrollo de colaboradores.">Como una técnica efectiva de desarrollo de colaboradores</button>
+            <button class="quiz-option" data-correct="false" data-feedback="El taller no lo presenta como una herramienta de evaluación estandarizada.">Para calificar exámenes estandarizados</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="exam-result">
+          <span class="exam-score">0 / 5</span>
+          <p class="exam-message"></p>
+          <button class="btn btn-ghost exam-retry-btn" type="button">Reiniciar prueba</button>
+        </div>
+
+        <div class="cert-panel" data-module-title="El Modelo GROW en las Escuelas" data-facilitator-name="Dr. Héctor J. Corraliza Montero, Ed.D." data-facilitator-title="Facilitador Docente de Matemática-OREPonce">
+          <label for="certNameGrow">Escriba su nombre completo para el certificado</label>
+          <input type="text" id="certNameGrow" placeholder="Nombre y apellidos">
+          <button class="btn btn-primary cert-generate-btn" type="button">🎓 Generar certificado</button>
+          <p class="cert-hint">Se abrirá el diálogo de impresión de su navegador — elija "Guardar como PDF" para conservarlo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFERENCIAS -->
+    <section class="module-section" id="referencias">
+      <div class="module-closing">
+        <p class="quote">«El mundo cambió, la educación también.»</p>
+        <p class="quote-sign">Gracias por su trabajo de hoy.</p>
+      </div>
+
+      <span class="section-kicker">Referencias · APA 7.ª edición</span>
+      <h2>Referencias</h2>
+      <ul class="ref-list">
+        <li>Alexander, G., &amp; Renshaw, B. (2005). <em>Supercoaching: The missing ingredient for high performance</em>. Random House Business Books.</li>
+        <li>Fine, A., &amp; Merrill, M. (2010). <em>You already know how to be great: A simple way to remove interference and unlock your greatest potential</em>. Portfolio Hardcover.</li>
+        <li>Grant, A. M. (2011). The solution-focused coaching model: Enhancing goal attainment, well-being, and hope. <em>The Coaching Psychologist, 7</em>(2), 98–106.</li>
+        <li>Grant, A. M. (2017). Coaching as evidence-based practice: The view through a multiple lens. In T. Bachkirova, G. Spence, &amp; D. Drake (Eds.), <em>The SAGE handbook of coaching</em> (pp. 62–84). SAGE Publications. <a href="https://doi.org/10.4135/9781529637112" target="_blank" rel="noopener">https://doi.org/10.4135/9781529637112</a></li>
+        <li>Whitmore, J. (2009). <em>Coaching for performance: Growing human potential and purpose – The principles and practice of coaching and leadership</em> (4th ed.). Nicholas Brealey Publishing.</li>
+        <li>Departamento de Educación de Puerto Rico. (2022). <em>Estándares de contenido y expectativas de grado</em>. Secretaría Auxiliar de Asuntos Académicos y Programáticos.</li>
+        <li>Departamento de Educación de Puerto Rico. (2025). <em>Plan de Datos 2025-2026: Cultura del uso de datos en las escuelas</em>. Secretaría de Planificación y Rendimiento.</li>
+        <li>Feliciano Cintrón, L. A. (2025). <em>Análisis de datos y modelo GROW: Crecimiento educativo</em>. Superintendencia Auxiliar de Planificación y Rendimiento, DEPR.</li>
+        <li>Stober, D. R., &amp; Grant, A. M. (2006). <em>Evidence based coaching handbook: Putting best practices to work for your clients</em>. John Wiley &amp; Sons.</li>
+        <li>Zepeda, S. J. (2019). <em>Instructional supervision: Applying tools and concepts</em> (4th ed.). Routledge. <a href="https://doi.org/10.4324/9780429398886" target="_blank" rel="noopener">https://doi.org/10.4324/9780429398886</a></li>
+      </ul>
+
+      <div class="callout callout-primary" style="margin-top:32px; text-align:center;">
+        <h3 style="margin-bottom:6px;">Dr. Héctor J. Corraliza Montero, Ed.D.</h3>
+        <p style="margin-bottom:0;">Facilitador Docente de Matemáticas · Oficina Regional Educativa de Ponce<br>Departamento de Educación de Puerto Rico</p>
+      </div>
+
+      <div class="cover-actions" style="justify-content:center; margin-top:28px;">
+        <a class="btn btn-primary" href="../../recursos/Modelo-GROW-Escuelas-Corraliza.pptx" download>⬇ Descargar presentación original (.pptx)</a>
+        <a class="btn btn-ghost" href="../../index.html#contacto">Escribir al facilitador</a>
+      </div>
+    </section>
+
+    </div>
+
+    <div class="slide-controls">
+      <button class="slide-btn slide-prev" id="slidePrev" type="button" aria-label="Sección anterior">← Anterior</button>
+      <div class="slide-dots" id="slideDots"></div>
+      <span class="slide-counter" id="slideCounter">1 / 14</span>
+      <button class="slide-btn slide-next" id="slideNext" type="button" aria-label="Siguiente sección">Siguiente →</button>
+    </div>
+
+   </div>
+  </main>
+</div>
+
+<div class="certificate-stage" id="certificateStage"></div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; <span id="year"></span> CorralizaMath · Módulo interactivo desarrollado a partir del taller "El Modelo GROW en las Escuelas" del Dr. Héctor J. Corraliza Montero.</p>
+  </div>
+</footer>
+
+<script src="module.js"></script>
+</body>
+</html>

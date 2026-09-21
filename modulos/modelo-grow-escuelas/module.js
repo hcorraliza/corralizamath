@@ -1,4 +1,4 @@
-const STORAGE_KEY = "corralizamath.redaccion-examenes-dua.v1";
+const STORAGE_KEY = "corralizamath.modelo-grow-escuelas.v1";
 
 function loadState() {
   try {
@@ -332,52 +332,29 @@ function initTemplateBuilder({ fieldIds, outputId, copyId, resetId, placeholder,
   }
 }
 
-initTemplateBuilder({
-  fieldIds: ["pb-rol", "pb-contexto", "pb-tarea", "pb-tono", "pb-formato"],
-  outputId: "promptOutput",
-  copyId: "promptCopy",
-  resetId: "promptReset",
-  placeholder: "Su instrucción RC-TTF aparecerá aquí a medida que complete los cinco campos…",
-  template: ([rol, contexto, tarea, tono, formato]) => {
-    let text = "";
-    if (rol) text += `Actúa como ${rol}. `;
-    if (contexto) text += `${contexto} `;
-    if (tarea) text += `${tarea} `;
-    if (tono) text += `Usa un tono ${tono}. `;
-    if (formato) text += `Entrégalo en el siguiente formato: ${formato}.`;
-    return text;
-  },
-});
-
-/* ---------- Calculadora de planilla de especificaciones ---------- */
-function initSpecCalculator(rootId) {
+/* ---------- Verificador de meta SMART ---------- */
+function initSmartCheck(rootId) {
   const root = document.getElementById(rootId);
   if (!root) return;
-  const filaInput = root.querySelector(".sc-puntos-fila");
-  const totalInput = root.querySelector(".sc-puntos-totales");
-  const output = root.querySelector(".spec-calc-output");
-
+  const boxes = Array.from(root.querySelectorAll('input[type="checkbox"]'));
+  const output = root.querySelector(".smart-check-output");
   function render() {
-    const fila = parseFloat(filaInput.value);
-    const total = parseFloat(totalInput.value);
-    if (!total || total <= 0) {
-      output.innerHTML = '<span class="placeholder">Escriba los puntos totales de la prueba para calcular.</span>';
+    const done = boxes.filter((b) => b.checked).length;
+    if (!output) return;
+    if (done === 0) {
+      output.innerHTML = '<span class="placeholder">Marque cada característica SMART que su meta ya cumple.</span>';
       return;
     }
-    const dominio = Math.floor(total * 0.7);
-    let text = `Puntuación mínima de ejecución (70 %): ${dominio} de ${total} puntos (redondeado hacia abajo, a favor del estudiante).`;
-    if (fila >= 0 && !Number.isNaN(fila)) {
-      const peso = ((fila / total) * 100).toFixed(1);
-      text = `Peso de esta destreza en la prueba: ${peso} %. ` + text;
-    }
-    output.textContent = text;
+    output.textContent =
+      done === boxes.length
+        ? `Su meta cumple las ${boxes.length} características SMART. Está lista para pasar a la fase de Realidad.`
+        : `Su meta cumple ${done} de ${boxes.length} características SMART. Revise las que faltan antes de continuar.`;
   }
-
-  [filaInput, totalInput].forEach((el) => el && el.addEventListener("input", render));
+  boxes.forEach((b) => b.addEventListener("change", render));
   render();
 }
 
-document.querySelectorAll("[data-spec-calc]").forEach((el) => initSpecCalculator(el.id));
+document.querySelectorAll("[data-smart-check]").forEach((el) => initSmartCheck(el.id));
 
 /* ---------- Countdown timer (Cápsula cero, Receso) ---------- */
 function initCountdown(rootId) {

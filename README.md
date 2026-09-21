@@ -29,11 +29,13 @@ Portal educativo para organizar recursos de matemáticas, desarrollo profesional
 ├── modulos/
 │   ├── ia-para-docentes/
 │   ├── microaprendizaje-adultos/
-│   └── redaccion-examenes-dua/
+│   ├── redaccion-examenes-dua/
+│   └── modelo-grow-escuelas/
 └── recursos/
     ├── IA-para-Docentes-Corraliza.pptx
     ├── Microaprendizaje-Adultos-RUTA-Corraliza.pptx
-    └── Redaccion-Examenes-DUA-Corraliza.pptx
+    ├── Redaccion-Examenes-DUA-Corraliza.pptx
+    └── Modelo-GROW-Escuelas-Corraliza.pptx
 ```
 
 ## Áreas del portal
