@@ -507,8 +507,8 @@ function renderCertificate({ name, moduleTitle, scoreText, facilitatorName, faci
   const today = new Date().toLocaleDateString("es-PR", { year: "numeric", month: "long", day: "numeric" });
   stage.innerHTML = `
     <div class="certificate">
-      <img class="cert-logo" src="../../img/logo-ore-ponce.svg" alt="">
-      <p class="cert-institution">Departamento de Educación · Gobierno de Puerto Rico<small>Asuntos Académicos y Programáticos · Oficina Regional Educativa de Ponce</small></p>
+      <img class="cert-logo" src="../../img/logo-ore-ponce.png" alt="Programa de Matemáticas ORE-Ponce">
+      <img class="cert-institution" src="../../img/membrete-depr.png" alt="Departamento de Educación · Gobierno de Puerto Rico · Asuntos Académicos y Programáticos · ORE-Ponce">
       <h1>Certificado de Aprovechamiento</h1>
       <p class="cert-sub">Otorgado por CorralizaMath a través de su módulo interactivo de autoestudio</p>
       <p class="cert-name">${escapeHtml(name)}</p>

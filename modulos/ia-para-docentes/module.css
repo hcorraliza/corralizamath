@@ -1071,19 +1071,10 @@ body.printing-cert .certificate-stage { display: block; }
 }
 .certificate .cert-logo { width: 86px; height: 86px; margin: 0 auto 10px; display: block; }
 .certificate .cert-institution {
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
-  color: #3a5a52;
-  text-transform: uppercase;
-  margin: 0 0 22px;
-}
-.certificate .cert-institution small {
   display: block;
-  font-size: 0.72rem;
-  text-transform: none;
-  letter-spacing: 0;
-  color: #6b7a74;
-  margin-top: 3px;
+  max-width: 260px;
+  height: auto;
+  margin: 0 auto 22px;
 }
 .certificate h1 {
   font-family: var(--font-display);
