@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redacción de Exámenes con DUA | Módulo interactivo · CorralizaMath</title>
+<meta name="description" content="Módulo interactivo de autoestudio: Redacción de exámenes con Diseño Universal para el Aprendizaje (DUA), Matemáticas 3.º a 12.º grado, Estándares DEPR 2022. Accesibilidad, sesgo, tipos de ítem, modelaje por nivel, planilla de especificaciones y producción asistida por IA.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>∑</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/styles.css">
+<link rel="stylesheet" href="module.css">
+</head>
+<body class="module-body">
+
+<header class="module-header">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="module-header-inner">
+    <a href="../../index.html" class="module-back">← Corraliza<span style="color:var(--color-accent)">Math</span></a>
+    <span class="module-title-mini">Exámenes con DUA</span>
+    <div class="module-header-actions">
+      <button class="btn btn-ghost btn-sm" id="sidebarToggle" aria-label="Abrir índice">☰ <span class="btn-label">Índice</span></button>
+      <a class="btn btn-primary btn-sm" href="../../recursos/Redaccion-Examenes-DUA-Corraliza.pptx" download>
+        <span class="btn-icon">⬇</span><span class="btn-label">Descargar presentación</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="module-shell">
+
+  <aside class="module-sidebar" id="moduleSidebar">
+    <p class="sidebar-progress" id="sidebarProgressLabel">0 de 17 secciones vistas</p>
+    <ul class="sidebar-nav">
+      <li><a href="#portada"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Presentación</a></li>
+      <li><a href="#objetivos"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Antes de empezar</a></li>
+      <li><a href="#activacion"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Activador</a></li>
+      <li><a href="#modulo-1"><span class="sidebar-num"><span class="sidebar-num-text">1</span></span> DUA, acceso y sesgo</a></li>
+      <li><a href="#modulo-2"><span class="sidebar-num"><span class="sidebar-num-text">2</span></span> De la expectativa al ítem</a></li>
+      <li><a href="#modulo-3"><span class="sidebar-num"><span class="sidebar-num-text">3</span></span> Selección múltiple</a></li>
+      <li><a href="#modulo-4"><span class="sidebar-num"><span class="sidebar-num-text">4</span></span> Respuesta abierta</a></li>
+      <li><a href="#modulo-5"><span class="sidebar-num"><span class="sidebar-num-text">5</span></span> Modelaje 3.º–5.º</a></li>
+      <li><a href="#modulo-6"><span class="sidebar-num"><span class="sidebar-num-text">6</span></span> Modelaje 6.º–8.º</a></li>
+      <li><a href="#modulo-7"><span class="sidebar-num"><span class="sidebar-num-text">7</span></span> Modelaje 9.º–12.º</a></li>
+      <li><a href="#modulo-8"><span class="sidebar-num"><span class="sidebar-num-text">8</span></span> Planilla de especificaciones</a></li>
+      <li><a href="#actividad-1"><span class="sidebar-num"><span class="sidebar-num-text">A</span></span> Actividad 1</a></li>
+      <li><a href="#modulo-9"><span class="sidebar-num"><span class="sidebar-num-text">9</span></span> IA y DUA</a></li>
+      <li><a href="#actividad-2"><span class="sidebar-num"><span class="sidebar-num-text">B</span></span> Actividad 2</a></li>
+      <li><a href="#cierre"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Cierre</a></li>
+      <li><a href="#evaluacion"><span class="sidebar-num"><span class="sidebar-num-text">★</span></span> Evaluación final</a></li>
+      <li><a href="#referencias"><span class="sidebar-num"><span class="sidebar-num-text">·</span></span> Referencias</a></li>
+    </ul>
+  </aside>
+
+  <main class="module-content">
+   <div class="slides-viewport" id="slidesViewport">
+    <div class="slides-track" id="slidesTrack">
+
+    <!-- PORTADA -->
+    <section class="module-cover" id="portada">
+      <p class="eyebrow">Taller de desarrollo profesional · Día completo · Módulo interactivo de autoestudio</p>
+      <h1>Redacción de exámenes con Diseño Universal para el Aprendizaje</h1>
+      <p class="lead">Matemáticas · 3.º a 12.º grado · Estándares DEPR 2022</p>
+      <div class="cover-actions">
+        <a href="#objetivos" class="btn btn-on-dark">Comenzar el módulo</a>
+        <a class="btn btn-outline-on-dark" href="../../recursos/Redaccion-Examenes-DUA-Corraliza.pptx" download>⬇ Descargar presentación original (.pptx)</a>
+      </div>
+      <div class="cover-meta">
+        <div><span>Facilitador</span><span>Dr. Héctor J. Corraliza Montero, Ed.D.</span></div>
+        <div><span>Cargo</span><span>Facilitador Docente de Matemáticas</span></div>
+        <div><span>Institución</span><span>Oficina Regional Educativa de Ponce · DEPR</span></div>
+        <div><span>Modalidad</span><span>Taller de día completo, 8:00 a.m. – 3:30 p.m.</span></div>
+      </div>
+    </section>
+
+    <!-- ANTES DE EMPEZAR: agenda + propósito + acuerdos -->
+    <section class="module-section" id="objetivos">
+      <span class="section-kicker">Agenda</span>
+      <h2>Nuestro día de trabajo: 8:00 a.m. – 3:30 p.m.</h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Hora</th><th>Actividad</th></tr></thead>
+          <tbody>
+            <tr><td>8:00 – 8:20</td><td>Bienvenida, activador y acuerdos de trabajo</td></tr>
+            <tr><td>8:20 – 9:20</td><td>Módulo 1 · DUA, accesibilidad y ausencia de sesgo</td></tr>
+            <tr><td>9:20 – 10:15</td><td>Módulos 2–4 · De la expectativa al ítem; selección múltiple y respuesta abierta</td></tr>
+            <tr><td>10:15 – 10:30</td><td>Receso</td></tr>
+            <tr><td>10:30 – 11:40</td><td>Módulos 5–7 · Modelaje por nivel: 3.º–5.º, 6.º–8.º y 9.º–12.º</td></tr>
+            <tr><td>11:40 – 12:10</td><td>Módulo 8 · Planilla de especificaciones</td></tr>
+            <tr><td>12:10 – 1:10</td><td>Almuerzo</td></tr>
+            <tr><td>1:10 – 2:10</td><td>Actividad de aplicación 1 · Construye tu bloque de ítems</td></tr>
+            <tr><td>2:10 – 2:45</td><td>Módulo 9 · Inteligencia artificial y DUA con el modelo RC-TTF</td></tr>
+            <tr><td>2:45 – 3:25</td><td>Actividad de aplicación 2 · Del prompt a la auditoría</td></tr>
+            <tr><td>3:25 – 3:30</td><td>Cierre, compromisos y evaluación del taller</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="source-note">Dos recesos activos de 5 minutos se intercalan dentro de los bloques largos, a discreción del facilitador.</p>
+
+      <div class="subsection">
+        <span class="section-kicker">Propósito</span>
+        <h3>Al finalizar el taller, el maestro será capaz de…</h3>
+        <p class="section-dek">Marque cada objetivo a medida que lo sienta cumplido — su progreso se guarda en este navegador.</p>
+        <ul class="checklist">
+          <li class="checklist-item">
+            <input type="checkbox" id="obj1" data-persist="obj-1">
+            <label for="obj1"><strong>1. Aplicar los principios del DUA.</strong><br>Redactar ítems accesibles que midan el aprendizaje y no la destreza de decodificar un examen mal escrito.</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" id="obj2" data-persist="obj-2">
+            <label for="obj2"><strong>2. Alinear cada ítem a una expectativa.</strong><br>Enlazar el ítem con el estándar, la expectativa y el indicador del Programa de Matemáticas (DEPR, 2022) y con un nivel DOK declarado.</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" id="obj3" data-persist="obj-3">
+            <label for="obj3"><strong>3. Redactar los tres tipos de ítem.</strong><br>Selección múltiple, respuesta abierta sencilla y respuesta abierta de aplicación, con sus baremos, para 3.º–5.º, 6.º–8.º y 9.º–12.º.</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" id="obj4" data-persist="obj-4">
+            <label for="obj4"><strong>4. Detectar y eliminar sesgo.</strong><br>Identificar sesgo lingüístico, cultural, socioeconómico, de género y de conocimiento previo, y reescribir el ítem.</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" id="obj5" data-persist="obj-5">
+            <label for="obj5"><strong>5. Construir la planilla de especificaciones.</strong><br>Distribuir destrezas, cantidad, valor, DOK y peso; fijar la puntuación mínima de ejecución y decidir la reenseñanza.</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" id="obj6" data-persist="obj-6">
+            <label for="obj6"><strong>6. Usar la IA con criterio profesional.</strong><br>Aplicar el modelo RC-TTF (Corraliza, 2024) para generar y luego auditar un examen con DUA.</label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <span class="section-kicker">Cómo trabajaremos</span>
+        <h3>Acuerdos del taller y productos del día</h3>
+        <div class="grid-2">
+          <div>
+            <h4>Acuerdos de trabajo</h4>
+            <ul class="checklist">
+              <li class="checklist-item"><label>Trabajamos con nuestro propio examen, no con ejemplos ajenos.</label></li>
+              <li class="checklist-item"><label>Criticamos el ítem, nunca a quien lo redactó.</label></li>
+              <li class="checklist-item"><label>Toda afirmación curricular se verifica en el documento oficial.</label></li>
+              <li class="checklist-item"><label>Los celulares quedan disponibles: los usaremos en la tarde.</label></li>
+              <li class="checklist-item"><label>Lo que no se produce hoy, no se produce.</label></li>
+            </ul>
+          </div>
+          <div>
+            <div class="info-card" style="margin-bottom:14px;">
+              <span class="tag">A · Producto 1</span>
+              <h4>Bloque de ítems</h4>
+              <p>Tres ítems para su grado —selección múltiple, respuesta abierta sencilla y respuesta abierta de aplicación— con baremo, respuestas posibles y la fila correspondiente de la planilla de especificaciones.</p>
+            </div>
+            <div class="info-card">
+              <span class="tag">B · Producto 2</span>
+              <h4>Examen auditado</h4>
+              <p>Un examen generado con IA a partir de un prompt RC-TTF adaptado a su grado, acompañado de un informe de auditoría de una página con al menos tres hallazgos corregidos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTIVADOR -->
+    <section class="module-section" id="activacion">
+      <span class="section-kicker">Activador · 8 minutos</span>
+      <h2>Piense en el último examen que usted administró</h2>
+      <div class="step-list">
+        <div class="step-item"><span class="step-num">1</span><p style="margin:0;">Cuando un estudiante falló un ítem, ¿falló porque no dominaba la destreza o porque no entendió lo que el ítem le pedía?</p></div>
+        <div class="step-item"><span class="step-num">2</span><p style="margin:0;">¿Puede identificar, para cada ítem, la expectativa del Programa de Matemáticas que ese ítem mide?</p></div>
+        <div class="step-item"><span class="step-num">3</span><p style="margin:0;">¿Qué proporción de su examen midió memoria y qué proporción midió razonamiento?</p></div>
+      </div>
+      <div class="worksheet-box">
+        <label for="activadorTexto">Escriba su respuesta. No la comparta todavía: la retomaremos al cierre del día.</label>
+        <textarea id="activadorTexto" data-persist-text="activador" placeholder="Piense en un ítem concreto de su último examen…"></textarea>
+      </div>
+    </section>
+
+    <!-- MÓDULO 1: DUA, ACCESIBILIDAD Y SESGO -->
+    <section class="module-section" id="modulo-1">
+      <span class="section-kicker"><span class="num-badge">1</span> DUA, accesibilidad y ausencia de sesgo · 60 minutos</span>
+      <h2>El examen como barrera o como puerta</h2>
+      <p class="section-dek">Qué garantiza el DUA en una prueba · barreras frecuentes en matemáticas · formato accesible · cinco tipos de sesgo y cómo se reescriben · lista de cotejo de imparcialidad.</p>
+
+      <div class="subsection">
+        <h3>El DUA aplicado a la evaluación</h3>
+        <div class="callout callout-quote">
+          <p>«El Diseño Universal garantiza que todos nuestros estudiantes puedan obtener resultados sin que su desempeño haya sido obstaculizado por alguna situación particular.»</p>
+        </div>
+        <div class="grid-3">
+          <div class="info-card"><span class="tag">✓ Sí debe medir</span><p>La expectativa del Programa de Matemáticas que usted seleccionó. Nada más.</p></div>
+          <div class="info-card"><span class="tag">✕ No debe medir</span><p>Velocidad de lectura, vocabulario ajeno al grado, conocimiento cultural previo, capacidad visual o memoria de trabajo innecesaria.</p></div>
+          <div class="info-card"><span class="tag">= La prueba de fuego</span><p>Si un estudiante domina la destreza y aun así falla el ítem, el problema está en el ítem.</p></div>
+        </div>
+        <p class="source-note">Adaptado del taller Redacción de exámenes basados en el Diseño Universal (Corraliza Montero, ORE-Ponce).</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Los tres principios del DUA en un examen de matemáticas</h3>
+        <div class="grid-3">
+          <div class="info-card">
+            <h4>Representación — el «qué» del aprendizaje</h4>
+            <ul style="padding-left:18px; margin:8px 0 0; color:var(--color-ink-soft); font-size:0.9rem;">
+              <li>Enunciado en oraciones cortas y directas.</li>
+              <li>La información numérica aparece en texto y también en tabla, dibujo o recta numérica.</li>
+              <li>Vocabulario matemático definido; vocabulario innecesario eliminado.</li>
+              <li>Tipografía, tamaño y espaciado legibles.</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h4>Acción y expresión — el «cómo» del aprendizaje</h4>
+            <ul style="padding-left:18px; margin:8px 0 0; color:var(--color-ink-soft); font-size:0.9rem;">
+              <li>El estudiante puede mostrar el procedimiento con dibujo, tabla, ecuación o explicación escrita.</li>
+              <li>El baremo reconoce todas esas formas.</li>
+              <li>Espacio suficiente para trabajar en la misma página del ítem.</li>
+              <li>Se permite calculadora cuando la destreza medida no es el cálculo.</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h4>Participación — el «porqué» del aprendizaje</h4>
+            <ul style="padding-left:18px; margin:8px 0 0; color:var(--color-ink-soft); font-size:0.9rem;">
+              <li>Contextos reconocibles para cualquier estudiante de Puerto Rico.</li>
+              <li>Progresión de dificultad: los ítems accesibles primero.</li>
+              <li>Instrucciones que dicen exactamente qué se espera.</li>
+              <li>Puntuación parcial: el esfuerzo parcialmente correcto vale.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="source-note">CAST (2024). Universal Design for Learning Guidelines, versión 3.0.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>¿Qué garantiza el Diseño Universal en la prueba?</h3>
+        <div class="grid-2">
+          <div class="info-card"><span class="tag">✓</span><p>Igualdad de acceso para todo estudiante.</p></div>
+          <div class="info-card"><span class="tag">✓</span><p>Contenido preciso, claro y legible, con un nivel de lectura y comprensión apropiado al grado.</p></div>
+          <div class="info-card"><span class="tag">✓</span><p>Preguntas apropiadas para estudiantes con necesidades especiales.</p></div>
+          <div class="info-card"><span class="tag">✓</span><p>Instrucciones y procedimientos simples y claros de acuerdo con el grado.</p></div>
+          <div class="info-card"><span class="tag">✓</span><p>Estilo simple y claro, consistente con los indicadores del grado.</p></div>
+          <div class="info-card"><span class="tag">✓</span><p>Ilustraciones, gráficas y dibujos claros, sencillos y apropiados para todo estudiante.</p></div>
+        </div>
+        <p class="section-dek">Estas seis garantías son el criterio con el que se revisa cada ítem modelado en este módulo.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Barreras frecuentes en un examen de matemáticas</h3>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Barrera</th><th>Cómo aparece en el examen</th><th>Qué termina midiendo</th></tr></thead>
+            <tbody>
+              <tr><td>Lingüística</td><td>Enunciados largos, subordinadas encadenadas, vocabulario que el grado no ha trabajado.</td><td>El estudiante que lee despacio pierde puntos que domina.</td></tr>
+              <tr><td>De formato</td><td>Letra pequeña, texto apretado, gráficas borrosas, opciones que se dividen entre dos páginas.</td><td>Se induce el error por descuido, no por desconocimiento.</td></tr>
+              <tr><td>De contexto</td><td>Situaciones que exigen conocer un deporte, un viaje o un producto específico.</td><td>Se mide experiencia de vida, no matemática.</td></tr>
+              <tr><td>De carga cognitiva</td><td>Ítems encadenados: la parte B no se puede contestar si se falló la parte A.</td><td>Un error inicial se castiga varias veces.</td></tr>
+              <tr><td>De expresión</td><td>Solo se acepta una forma de mostrar el procedimiento.</td><td>El estudiante que razona con dibujo o tabla queda sin crédito.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="source-note">Cada barrera de esta tabla tiene una contramedida directa en las secciones siguientes.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Formato accesible: cuatro decisiones que sí importan</h3>
+        <div class="grid-2">
+          <div class="info-card">
+            <h4>Uso de la letra (Aa)</h4>
+            <ul style="padding-left:18px; margin:8px 0 0; color:var(--color-ink-soft); font-size:0.9rem;">
+              <li>Fuentes que distinguen mayúsculas de minúsculas.</li>
+              <li>Familia sans serif: Arial, Verdana, Calibri.</li>
+              <li>Tamaño entre 12 y 18 puntos.</li>
+              <li>Evitar cursiva, subrayado y textos largos en mayúscula.</li>
+              <li>La negrita, en dosis moderadas.</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h4>Espaciado (↕)</h4>
+            <ul style="padding-left:18px; margin:8px 0 0; color:var(--color-ink-soft); font-size:0.9rem;">
+              <li>No usar la tecla «enter» para separar párrafos y títulos.</li>
+              <li>Usar la opción Párrafo de la pestaña Inicio y fijar espaciado anterior y posterior.</li>
+              <li>Evitar espacios innecesarios entre una sección y otra.</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h4>Imágenes y gráficas (▣)</h4>
+            <ul style="padding-left:18px; margin:8px 0 0; color:var(--color-ink-soft); font-size:0.9rem;">
+              <li>Insertar en formato JPEG, JPG o PNG.</li>
+              <li>Añadir texto alterno puntual y concreto (clic derecho ▸ Formato de imagen ▸ Texto alterno).</li>
+              <li>La imagen mantiene posición con el texto: sin autoajuste.</li>
+              <li>La imagen va en párrafo aparte, no incrustada en medio del texto.</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h4>Viñetas (▪)</h4>
+            <ul style="padding-left:18px; margin:8px 0 0; color:var(--color-ink-soft); font-size:0.9rem;">
+              <li>Usar viñetas simples y de alto contraste.</li>
+              <li>Evitar viñetas decorativas, círculos huecos o multicolores que los lectores de pantalla no interpretan.</li>
+              <li>Mantener una sola familia de viñetas en todo el documento.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Sesgo en los ítems: cinco tipos que debemos cazar</h3>
+        <div class="grid-3">
+          <div class="info-card"><span class="tag">① Lingüístico</span><p>El ítem exige un nivel de lectura superior al grado, o usa vocabulario que no se ha enseñado en la clase de matemáticas.</p></div>
+          <div class="info-card"><span class="tag">② Cultural</span><p>El contexto supone experiencias que no todos los estudiantes tienen: nieve, deportes específicos, viajes, celebraciones particulares.</p></div>
+          <div class="info-card"><span class="tag">③ Socioeconómico</span><p>Se asume acceso a bienes, servicios o actividades con costo: vacaciones, dispositivos, restaurantes, membresías.</p></div>
+          <div class="info-card"><span class="tag">④ De género</span><p>Los nombres y los roles se reparten de forma estereotipada, o un género aparece siempre en la posición de menor competencia.</p></div>
+          <div class="info-card"><span class="tag">⑤ De conocimiento previo</span><p>Para resolver el ítem hace falta un dato de otra materia o de la vida adulta que el ítem no provee.</p></div>
+        </div>
+        <div class="callout callout-accent">
+          <p><strong>Regla práctica:</strong> si para resolver el ítem hace falta algo que no se enseña en matemáticas, ese algo es sesgo.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Antes y después: cuatro reescrituras</h3>
+        <div class="before-after">
+          <div class="ba-card ba-before"><strong>Socioeconómico</strong><p style="margin:8px 0 0;">En tus vacaciones en el extranjero compraste 3 recuerdos de $18.00 cada uno.</p></div>
+          <span class="ba-arrow">→</span>
+          <div class="ba-card ba-after"><strong>Redacción corregida</strong><p style="margin:8px 0 0;">La clase compró 3 paquetes de semillas de $18.00 cada uno para el huerto.</p></div>
+        </div>
+        <div class="before-after">
+          <div class="ba-card ba-before"><strong>Cultural</strong><p style="margin:8px 0 0;">La temperatura bajó de 8 °F a −3 °F mientras patinabas sobre hielo.</p></div>
+          <span class="ba-arrow">→</span>
+          <div class="ba-card ba-after"><strong>Redacción corregida</strong><p style="margin:8px 0 0;">La temperatura de un laboratorio bajó de 8 °C a −3 °C en dos horas.</p></div>
+        </div>
+        <div class="before-after">
+          <div class="ba-card ba-before"><strong>De género</strong><p style="margin:8px 0 0;">Luis calculó el presupuesto y Ana repartió los bizcochos.</p></div>
+          <span class="ba-arrow">→</span>
+          <div class="ba-card ba-after"><strong>Redacción corregida</strong><p style="margin:8px 0 0;">Ana calculó el presupuesto y Luis organizó la entrega.</p></div>
+        </div>
+        <div class="before-after">
+          <div class="ba-card ba-before"><strong>Lingüístico</strong><p style="margin:8px 0 0;">Considerando que, no obstante lo anterior, se pretende determinar el valor.</p></div>
+          <span class="ba-arrow">→</span>
+          <div class="ba-card ba-after"><strong>Redacción corregida</strong><p style="margin:8px 0 0;">Determina el valor de x. Muestra tu procedimiento.</p></div>
+        </div>
+        <p class="source-note">En los cuatro casos la destreza matemática medida es exactamente la misma. Solo cambió la barrera.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Lista de cotejo de imparcialidad del ítem</h3>
+        <p class="section-dek">Es la herramienta que se usa en la coevaluación de la Actividad 1 y en la auditoría de la Actividad 2. Marque cada criterio para practicar con un ítem propio.</p>
+        <ul class="checklist">
+          <li class="checklist-item"><input type="checkbox" id="fair1" data-persist="fair-1"><label for="fair1">¿El contenido del ítem es accesible a todos los estudiantes en términos de sensibilidad e imparcialidad?</label></li>
+          <li class="checklist-item"><input type="checkbox" id="fair2" data-persist="fair-2"><label for="fair2">¿El nivel de lectura del enunciado corresponde al grado, o es superior?</label></li>
+          <li class="checklist-item"><input type="checkbox" id="fair3" data-persist="fair-3"><label for="fair3">¿El contexto es reconocible para cualquier estudiante de Puerto Rico, sin importar su municipio, su escuela o los recursos de su familia?</label></li>
+          <li class="checklist-item"><input type="checkbox" id="fair4" data-persist="fair-4"><label for="fair4">¿Los nombres y los roles del enunciado están distribuidos sin estereotipos de género?</label></li>
+          <li class="checklist-item"><input type="checkbox" id="fair5" data-persist="fair-5"><label for="fair5">¿El ítem provee todos los datos que hacen falta, sin suponer conocimiento de otra materia?</label></li>
+          <li class="checklist-item"><input type="checkbox" id="fair6" data-persist="fair-6"><label for="fair6">¿El estudiante puede mostrar lo que sabe por más de una vía —dibujo, tabla, ecuación o explicación—?</label></li>
+          <li class="checklist-item"><input type="checkbox" id="fair7" data-persist="fair-7"><label for="fair7">¿La ilustración o gráfica aporta información necesaria, o solo decora?</label></li>
+          <li class="checklist-item"><input type="checkbox" id="fair8" data-persist="fair-8"><label for="fair8">¿Se eliminó toda palabra que no sea imprescindible para resolver?</label></li>
+        </ul>
+        <div class="callout callout-primary">
+          <span class="callout-title">Cuando alguna casilla queda sin marcar</span>
+          <p>No se descarta el ítem: se reescribe. Casi siempre basta con acortar el enunciado, cambiar el contexto o añadir una representación visual. El ítem reescrito vuelve a pasar por la lista completa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÓDULO 2: DE LA EXPECTATIVA AL ÍTEM -->
+    <section class="module-section" id="modulo-2">
+      <span class="section-kicker"><span class="num-badge">2</span> De la expectativa al ítem · 25 minutos</span>
+      <h2>Nada se redacta antes de decidir qué se mide</h2>
+      <p class="section-dek">Estructura del código DEPR 2022 · secuencia de cursos de 3.º a 12.º · niveles de profundidad (DOK 1–4) · tipos de pregunta para una prueba.</p>
+
+      <div class="subsection">
+        <h3>La cadena de alineación: cinco decisiones antes de escribir</h3>
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">1</span><div><h4>Estándar</h4><p>Uno de los seis estándares de contenido del Programa de Matemáticas.</p></div></div>
+          <div class="step-item"><span class="step-num">2</span><div><h4>Expectativa</h4><p>Lo que el estudiante debe lograr en ese estándar, en ese grado.</p></div></div>
+          <div class="step-item"><span class="step-num">3</span><div><h4>Indicador</h4><p>La conducta observable y evaluable que hará visible la expectativa.</p></div></div>
+          <div class="step-item"><span class="step-num">4</span><div><h4>Nivel DOK</h4><p>La profundidad del pensamiento que se le exigirá al estudiante.</p></div></div>
+          <div class="step-item"><span class="step-num">5</span><div><h4>Tipo de ítem</h4><p>El formato que mejor evidencia ese indicador en ese nivel DOK.</p></div></div>
+        </div>
+        <div class="callout callout-warn">
+          <span class="callout-title">El error más común</span>
+          <p>Redactar primero el ítem y buscar después a qué expectativa «se parece». Cuando se hace así, la prueba termina midiendo lo que era fácil de preguntar en vez de lo que era importante enseñar, y la planilla de especificaciones se convierte en un ejercicio de relleno.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Cómo se lee un código de expectativa del DEPR 2022</h3>
+        <div class="callout callout-primary">
+          <p style="font-family:var(--font-display); font-size:1.3rem; text-align:center; color:var(--color-primary-dark);"><strong>7</strong>.<strong>A</strong>.<strong>7</strong>.<strong>2</strong></p>
+          <p style="text-align:center; margin:0;">Grado · Estándar · Expectativa · Indicador</p>
+        </div>
+        <p class="section-dek">Ejemplo: 7.A.7.2 se lee «séptimo grado, estándar de Álgebra, séptima expectativa, segundo indicador».</p>
+        <h4>Los seis estándares de contenido</h4>
+        <div class="grid-3">
+          <div class="info-card"><span class="tag">N</span><h4>Numeración y operación</h4></div>
+          <div class="info-card"><span class="tag">A</span><h4>Álgebra</h4></div>
+          <div class="info-card"><span class="tag">G</span><h4>Geometría</h4></div>
+          <div class="info-card"><span class="tag">M</span><h4>Medición</h4></div>
+          <div class="info-card"><span class="tag">E</span><h4>Análisis de datos y probabilidad</h4></div>
+          <div class="info-card"><span class="tag">F</span><h4>Funciones</h4></div>
+        </div>
+        <div class="callout callout-warn">
+          <p>⚠ Los códigos de expectativa son ilustrativos del formato oficial. Verifique el código exacto en Estándares y expectativas — Programa de Matemáticas (DEPR, 2022) antes de usarlos.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>La secuencia de cursos de 3.º a 12.º en Puerto Rico</h3>
+        <div class="grid-3">
+          <div class="info-card">
+            <span class="tag">3.º – 5.º</span>
+            <h4>Matemáticas de nivel elemental</h4>
+            <p>Numeración y operación con cardinales, fracciones y decimales; patrones; geometría de figuras planas; medición y datos.</p>
+          </div>
+          <div class="info-card">
+            <span class="tag">6.º – 8.º</span>
+            <h4>6.º y 7.º (Preálgebra) · Álgebra I en 8.º</h4>
+            <p>Enteros y racionales; razón, proporción y por ciento; expresiones y ecuaciones; funciones lineales; geometría y estadística descriptiva.</p>
+          </div>
+          <div class="info-card">
+            <span class="tag">9.º – 12.º</span>
+            <h4>Álgebra II (9.º) · Geometría (10.º) · Trigonometría (11.º) · Estadísticas o Precálculo (12.º)</h4>
+            <p>Funciones cuadráticas, polinómicas y exponenciales; razonamiento y demostración geométrica; razones trigonométricas; análisis e inferencia de datos.</p>
+          </div>
+        </div>
+        <p class="source-note">El taller modela un ítem de cada tipo en cada uno de los tres niveles. El código de expectativa cambia; la arquitectura del ítem, no.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Niveles de profundidad del conocimiento (DOK) en matemáticas</h3>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Nivel</th><th>Verbos</th><th>Ejemplo del taller</th></tr></thead>
+            <tbody>
+              <tr><td><strong>DOK 1</strong><br>Recordar y reproducir</td><td>identificar · calcular · recordar · medir · reconocer · nombrar</td><td>Multiplica 6 × 24.</td></tr>
+              <tr><td><strong>DOK 2</strong><br>Destreza y concepto</td><td>clasificar · comparar · estimar · organizar · interpretar · resolver problemas de rutina</td><td>Determina el precio de una mochila de $45.00 con 20 % de descuento.</td></tr>
+              <tr><td><strong>DOK 3</strong><br>Razonamiento estratégico</td><td>justificar · explicar · formular conjeturas · argumentar · resolver problemas no rutinarios</td><td>Explica si 30 metros de cerca bastan para rodear el huerto. Justifica con los cálculos.</td></tr>
+              <tr><td><strong>DOK 4</strong><br>Pensamiento extendido</td><td>diseñar · investigar · modelar · conectar varios conceptos · evaluar una afirmación</td><td>Evalúa la afirmación «la mayoría obtuvo 90 o más» usando el conjunto de datos.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout-accent">
+          <p><strong>Criterio de balance:</strong> una prueba de sala de clases debería colocar entre el 30 % y el 45 % de su puntuación en los niveles DOK 3 y 4. Ese porcentaje se declara en la planilla de especificaciones.</p>
+        </div>
+        <p class="source-note">El DOK no mide dificultad, mide profundidad. Un cálculo con números grandes sigue siendo DOK 1 aunque sea difícil.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Tipos de preguntas para una prueba</h3>
+        <div class="grid-2">
+          <div>
+            <h4>Objetivas</h4>
+            <div class="info-card" style="margin-bottom:10px;"><h4>Alternativas múltiples</h4><p>Todos los niveles de pensamiento.</p></div>
+            <div class="info-card" style="margin-bottom:10px;"><h4>Cuadrículas</h4><p>Solo para matemáticas; el estudiante transcribe su respuesta numérica.</p></div>
+            <div class="info-card" style="margin-bottom:10px;"><h4>Pareo</h4><p>Memoria y comprensión.</p></div>
+            <div class="info-card" style="margin-bottom:10px;"><h4>Cierto y falso</h4><p>Hechos, datos, vocabulario.</p></div>
+            <div class="info-card"><h4>Orden de sucesos</h4><p>Aplicación.</p></div>
+          </div>
+          <div>
+            <h4>Subjetivas</h4>
+            <div class="info-card"><h4>Pregunta de respuesta abierta</h4><p>Requiere baremo o matriz de valoración. Alcanza todos los niveles de pensamiento. Pregunta cerrada: una sola respuesta posible.</p></div>
+            <div class="callout callout-warn" style="margin-top:14px;">
+              <span class="callout-title">Por qué hoy no trabajamos «llena blancos»</span>
+              <p>Se limita a memoria y comprensión, castiga la ortografía y la sinonimia, y ofrece muy poca información diagnóstica sobre el razonamiento del estudiante.</p>
+            </div>
+          </div>
+        </div>
+        <p class="section-dek" style="margin-top:14px;">Los tres formatos del taller de hoy: <strong>selección múltiple</strong> · <strong>respuesta abierta sencilla</strong> · <strong>respuesta abierta de aplicación</strong>.</p>
+      </div>
+    </section>
+
+    <!-- MÓDULO 3: SELECCIÓN MÚLTIPLE -->
+    <section class="module-section" id="modulo-3">
+      <span class="section-kicker"><span class="num-badge">3</span> El ítem de selección múltiple · 15 minutos</span>
+      <h2>Anatomía, reglas y diseño del distractor</h2>
+      <p class="section-dek">Premisa, estímulo, opciones y distractores · reglas de redacción de la premisa · reglas de redacción de las opciones · el distractor como diagnóstico.</p>
+
+      <div class="subsection">
+        <h3>Anatomía del ítem de selección múltiple</h3>
+        <div class="example-block">
+          <h4>Ítem modelo · 4.º grado</h4>
+          <p style="font-size:0.85rem; color:var(--color-ink-soft); margin-bottom:4px;">Lee la información y contesta la pregunta. (Estímulo)</p>
+          <div class="example-prompt">La escuela compró 6 cajas de marcadores. Cada caja tiene 24 marcadores.<br>¿Cuántos marcadores compró la escuela en total? (Premisa)</div>
+          <p style="margin:10px 0 4px;">A. 30 &nbsp;&nbsp; B. 124 &nbsp;&nbsp; <strong>C. 144</strong> &nbsp;&nbsp; D. 164</p>
+        </div>
+        <div class="grid-2" style="margin-top:14px;">
+          <div class="info-card"><h4>Premisa</h4><p>Parte del ítem que establece lo que el estudiante debe contestar.</p></div>
+          <div class="info-card"><h4>Estímulo</h4><p>Texto, tabla o imagen con la información que debe analizarse para responder.</p></div>
+          <div class="info-card"><h4>Opciones de respuesta</h4><p>Respuestas posibles, en forma textual, entre las que el estudiante selecciona.</p></div>
+          <div class="info-card"><h4>Distractores (A, B y D)</h4><p>Opciones incorrectas que permiten al estudiante discriminar y escoger la que cree correcta.</p></div>
+        </div>
+        <p class="source-note">Un ítem de selección múltiple contiene una premisa, ofrece tres o cuatro opciones de respuesta y puede incluir un estímulo. El estímulo es opcional pero muy útil desde la perspectiva del DUA: convierte el texto en una segunda representación de la misma información.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Reglas para redactar la premisa</h3>
+        <div class="grid-3">
+          <div class="info-card"><span class="tag">✓</span><h4>Escriba ítems concisos y claros</h4><p>La premisa debe entenderse en una sola lectura. Elimine toda palabra que no aporte a resolver.</p></div>
+          <div class="info-card"><span class="tag">✓</span><h4>Redacte ideas completas</h4><p>La pregunta debe ser comprensible sin necesidad de leer las opciones de respuesta.</p></div>
+          <div class="info-card"><span class="tag">✓</span><h4>Que funcione de forma independiente</h4><p>El ítem no debe requerir la respuesta de otra premisa para poder contestarse.</p></div>
+          <div class="info-card"><span class="tag">✕</span><h4>Evite absolutos</h4><p>Palabras como siempre, todos y jamás inducen a descartar la opción por su forma, no por su contenido.</p></div>
+          <div class="info-card"><span class="tag">✕</span><h4>Evite negativos</h4><p>Ninguno, nunca y no obligan a un doble procesamiento que nada tiene que ver con la destreza medida.</p></div>
+          <div class="info-card"><span class="tag">✕</span><h4>Evite la repetición</h4><p>Si una palabra o frase se repite en las cuatro opciones, muévala a la premisa.</p></div>
+        </div>
+        <p class="source-note">Adaptado de las recomendaciones de redacción de ítems del taller original (ORE-Ponce) y de Haladyna y Rodriguez (2013).</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Reglas para redactar las opciones de respuesta</h3>
+        <div class="grid-2">
+          <div>
+            <h4>Las opciones deben…</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.94rem;">
+              <li>Tener una sola respuesta correcta.</li>
+              <li>Ser paralelas visual y gramaticalmente: misma extensión aproximada, misma estructura.</li>
+              <li>Relacionarse conceptual y gramaticalmente con la premisa planteada.</li>
+              <li>Ordenarse de forma lógica: ascendente o descendente cuando son numéricas.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Ninguna opción debe…</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.94rem;">
+              <li>Negar la veracidad de la premisa.</li>
+              <li>Eliminar a otra opción.</li>
+              <li>Ofrecer pistas sobre la respuesta correcta de ese ítem o de cualquier otro ítem de la prueba.</li>
+              <li>Ser tan absurda que nadie la escogería: un distractor que no atrae no informa.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout callout-accent">
+          <p><strong>Regla de oro del DUA:</strong> si dos estudiantes con el mismo dominio leen las opciones y llegan a conclusiones distintas por la forma en que están escritas, el ítem falla.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>El distractor como herramienta de diagnóstico</h3>
+        <p>Cada distractor debe corresponder a un error real y previsible del estudiante. Así, al corregir, la opción marcada le dice al maestro qué hay que reenseñar.</p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Opción</th><th>Valor</th><th>Error que representa</th><th>Qué se reenseña</th></tr></thead>
+            <tbody>
+              <tr><td>A · 30</td><td>Incorrecta</td><td>Sumó en vez de multiplicar: 6 + 24 = 30.</td><td>Interpretación del lenguaje multiplicativo «cada caja tiene».</td></tr>
+              <tr><td>B · 124</td><td>Incorrecta</td><td>No reagrupó: escribió 6 × 4 = 24 y 6 × 2 = 12 sin llevar.</td><td>Algoritmo de multiplicación con reagrupación.</td></tr>
+              <tr><td>C · 144</td><td>Correcta</td><td>6 × 24 = 144.</td><td>—</td></tr>
+              <tr><td>D · 164</td><td>Incorrecta</td><td>Reagrupó con el dígito equivocado: sumó 4 en lugar de 2.</td><td>Valor posicional en la reagrupación.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout-primary">
+          <span class="callout-title">Tres preguntas para validar un distractor</span>
+          <p>1. ¿Algún estudiante real de mi salón cometería este error? &nbsp;&nbsp; 2. ¿El valor es plausible, del mismo orden de magnitud que la respuesta correcta? &nbsp;&nbsp; 3. ¿Puedo nombrar la destreza que reenseñaría si muchos lo escogen?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÓDULO 4: RESPUESTA ABIERTA -->
+    <section class="module-section" id="modulo-4">
+      <span class="section-kicker"><span class="num-badge">4</span> El ítem de respuesta abierta · 15 minutos</span>
+      <h2>Sencilla y de aplicación</h2>
+      <p class="section-dek">Características del formato · anatomía de la respuesta abierta sencilla · anatomía de la respuesta abierta de aplicación · qué debemos evitar · los baremos de 2, 3, 4 y 5 puntos.</p>
+
+      <div class="subsection">
+        <h3>Características del ítem de respuesta abierta</h3>
+        <div class="grid-3">
+          <div class="info-card"><span class="tag">1</span><h4>No piden creencias ni valores personales</h4><p>La premisa no interroga la perspectiva personal del estudiante como ser humano, sino su razonamiento matemático sobre datos dados.</p></div>
+          <div class="info-card"><span class="tag">2</span><h4>Admiten varias respuestas correctas</h4><p>El estudiante construye su respuesta; puede llegar por más de un camino y obtener la puntuación completa o parcial.</p></div>
+          <div class="info-card"><span class="tag">3</span><h4>Son compatibles con la rúbrica establecida</h4><p>Cada ítem tiene su baremo, que describe con precisión qué se espera en cada nivel de puntuación.</p></div>
+          <div class="info-card"><span class="tag">4</span><h4>Permiten puntuación parcial</h4><p>Reconocen respuestas completas y parciales, lo que reduce el efecto de un error de cálculo aislado.</p></div>
+          <div class="info-card"><span class="tag">5</span><h4>Miden lo que la selección múltiple no alcanza</h4><p>Son el formato ideal para indicadores de justificación, modelación y comunicación matemática.</p></div>
+          <div class="info-card"><span class="tag">6</span><h4>Son el corazón del DUA</h4><p>Aceptan dibujo, tabla, ecuación o explicación escrita como evidencia válida del mismo razonamiento.</p></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Anatomía de la respuesta abierta sencilla (2 puntos)</h3>
+        <div class="example-block">
+          <h4>Ítem modelo · 5.º grado — la estructura A/B</h4>
+          <div class="example-prompt">En una clase de 5.º grado hay 24 estudiantes. Cinco octavos (5/8) de los estudiantes participan en el club de ciencias.<br>A. ¿Cuántos estudiantes participan en el club de ciencias?<br>B. Explica cómo determinaste tu respuesta.<br>Contesta las partes A y B en el espacio provisto. Puedes usar un dibujo, una tabla o una operación para explicar.</div>
+          <p class="section-dek" style="margin:8px 0 0;">Parte A: nombra, identifica, calcula o enumera. Parte B: analiza, explica, discute, muestra o ilustra. Las instrucciones le recuerdan al estudiante que debe contestar ambas partes para optar por la puntuación completa.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Puntos</th><th>Descripción</th></tr></thead>
+            <tbody>
+              <tr><td>2</td><td>Responde correctamente la parte A (15 estudiantes) y explica el procedimiento en la parte B.</td></tr>
+              <tr><td>1</td><td>Solo responde la parte A, o solo explica correctamente el procedimiento en la parte B con un error de cálculo.</td></tr>
+              <tr><td>0</td><td>No responde, o la respuesta no se refiere a la pregunta.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="source-note">La parte B es la que hace visible el razonamiento. Sin ella, el ítem sería equivalente a uno de selección múltiple sin opciones.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Anatomía de la respuesta abierta de aplicación (4 a 5 puntos)</h3>
+        <div class="example-block">
+          <h4>Ítem modelo · 4.º grado — situación auténtica</h4>
+          <div class="example-prompt">La clase de 4.º grado quiere sembrar un huerto rectangular en el patio de la escuela. El huerto medirá 8 metros de largo y 5 metros de ancho. La clase tiene 30 metros de cerca.<br>A. Haz un dibujo del huerto y rotula sus medidas.<br>B. Determina cuánta cerca se necesita para rodear el huerto. Muestra tu procedimiento.<br>C. Explica si los 30 metros de cerca son suficientes. Justifica tu respuesta con los cálculos.<br>Contesta todas las partes de la pregunta en el espacio provisto.</div>
+        </div>
+        <div class="grid-3" style="margin-top:14px;">
+          <div class="info-card"><h4>Varias vías de expresión</h4><p>La parte A abre la puerta a quien razona visualmente.</p></div>
+          <div class="info-card"><h4>Partes independientes</h4><p>Un error en B no impide obtener crédito en A ni en C.</p></div>
+          <div class="info-card"><h4>Cierre con justificación</h4><p>DOK 3 · Medición y resolución de problemas · 4 puntos. La parte C lleva el ítem a DOK 3: hay que decidir.</p></div>
+        </div>
+        <p class="source-note">La diferencia entre sencilla y de aplicación no es la extensión: es que la de aplicación exige decidir, modelar o evaluar, no solo calcular y explicar.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>¿Qué debemos evitar en un ítem de respuesta abierta?</h3>
+        <div class="grid-2">
+          <div class="info-card"><span class="tag">✕</span><h4>Preguntas demasiado abiertas</h4><p>Inducen respuestas extensas que el estudiante no logra terminar y que el maestro no puede puntuar con consistencia.</p></div>
+          <div class="info-card"><span class="tag">✕</span><h4>Instrucciones inconclusas o confusas</h4><p>Si el estudiante no sabe cuántas partes debe contestar, pierde puntos por procedimiento, no por matemática.</p></div>
+          <div class="info-card"><span class="tag">✕</span><h4>Presumir que se lee entre líneas</h4><p>No dé por sentado que el estudiante infiere lo que usted quiere. Dígalo de forma explícita.</p></div>
+          <div class="info-card"><span class="tag">✕</span><h4>Vaguedad en el lenguaje</h4><p>Especifique exactamente lo que se espera: «muestra el procedimiento», «usa los datos de la tabla», «justifica con los cálculos».</p></div>
+        </div>
+        <div class="callout callout-primary">
+          <span class="callout-title">Guíe al estudiante con su premisa</span>
+          <p>Ayúdelo a saber exactamente qué debe contestar. La parte A nombra, identifica o enumera. La parte B analiza, explica, discute, muestra o ilustra. Esa progresión, sostenida en toda la prueba, hace que el estudiante reconozca la estructura y dedique su energía a la matemática.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Los baremos de la planilla de especificaciones</h3>
+        <p class="section-dek">Cuatro escalas de puntuación para respuesta abierta en matemáticas, en orden creciente de evidencia exigida.</p>
+        <div class="grid-4">
+          <div class="info-card"><h4>Rúbrica de 2 puntos</h4><p><strong>1</strong> — Solo escoge/escribe la contestación correcta.<br><strong>2</strong> — Procedimiento y solución correcta.</p></div>
+          <div class="info-card"><h4>Rúbrica de 3 puntos</h4><p><strong>1</strong> — Solo escribe la contestación correcta.<br><strong>2</strong> — Procedimiento y solución correcta.<br><strong>3</strong> — Fórmula, procedimiento y solución correcta.</p></div>
+          <div class="info-card"><h4>Rúbrica de 4 puntos</h4><p><strong>1</strong> — Solo escoge la contestación correcta.<br><strong>2</strong> — Procedimiento y solución correcta.<br><strong>3</strong> — Fórmula, procedimiento y solución correcta.<br><strong>4</strong> — Dibujo o gráfico, fórmula, procedimiento y solución correcta.</p></div>
+          <div class="info-card"><h4>Rúbrica de 5 puntos</h4><p><strong>1</strong> — Solo escoge la contestación correcta.<br><strong>2</strong> — Procedimiento y solución correcta.<br><strong>3</strong> — Fórmula, procedimiento y solución correcta.<br><strong>4</strong> — Dibujo o gráfico, fórmula, procedimiento y solución correcta.<br><strong>5</strong> — Dibujo o gráfico, fórmula, procedimiento, conversión de unidades y solución correcta.</p></div>
+        </div>
+        <p class="source-note">Baremos tomados de la Planilla de especificaciones (Corraliza Montero, ORE-Ponce), en forma condensada. El baremo se selecciona según la evidencia que el ítem realmente pide — no use el baremo de 4 puntos si el ítem no pide dibujo o gráfico.</p>
+      </div>
+    </section>
+
+    <!-- MÓDULO 5: MODELAJE 3.º-5.º -->
+    <section class="module-section" id="modulo-5">
+      <span class="section-kicker"><span class="num-badge">5</span> Modelaje · 3.º a 5.º grado · 25 minutos</span>
+      <h2>Tres ítems completos con baremo y planilla</h2>
+      <p class="section-dek">Perfil del evaluando y decisiones DUA · Modelo A (selección múltiple, 3.º) · Modelo B (respuesta abierta sencilla, 5.º) · Modelo C (respuesta abierta de aplicación, 4.º) · planilla de especificaciones de 4.º grado.</p>
+
+      <div class="subsection">
+        <h3>Quién es el estudiante que va a contestar</h3>
+        <div class="grid-2">
+          <div>
+            <h4>Perfil del evaluando · 3.º a 5.º grado</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.92rem;">
+              <li>El enunciado no pasa de dos oraciones cortas; una idea por oración.</li>
+              <li>Su pensamiento matemático transita de lo concreto a lo pictórico y de ahí a lo simbólico.</li>
+              <li>Su lectura todavía se está automatizando: un enunciado largo consume la energía que necesita para razonar.</li>
+              <li>Trabaja mejor con cantidades y contextos que puede visualizar dentro de la escuela o la casa.</li>
+              <li>Explica su razonamiento con más facilidad dibujando que escribiendo.</li>
+              <li>La variabilidad dentro del salón es amplia: conviven lectores fluidos y lectores en desarrollo.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Decisiones de DUA para este nivel</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.92rem;">
+              <li>Toda cantidad importante aparece también en tabla o dibujo.</li>
+              <li>Se ofrece siempre espacio para dibujar como forma válida de mostrar el procedimiento.</li>
+              <li>Las instrucciones específicas van en oración aparte y en negrita.</li>
+              <li>Cuatro opciones de respuesta breves, del mismo largo y en orden numérico ascendente.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="subject-accordion">
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">A</span><span><strong>Modelo A · Selección múltiple</strong><br><span class="subj-sub">3.º grado · Numeración y operación</span></span></span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner">
+            <p class="section-dek">Ítem · 1 punto · DOK 2</p>
+            <div class="example-block">
+              <div class="example-prompt">La tabla muestra la cantidad de libros que la biblioteca escolar prestó en cuatro meses.<br><br>
+              septiembre: 1,204 &nbsp;·&nbsp; octubre: 1,240 &nbsp;·&nbsp; noviembre: 1,024 &nbsp;·&nbsp; diciembre: 1,402<br><br>
+              ¿En qué mes la biblioteca prestó la mayor cantidad de libros?<br>
+              A. septiembre &nbsp; B. octubre &nbsp; C. noviembre &nbsp; <strong>D. diciembre</strong></div>
+            </div>
+            <div class="grid-2" style="margin-top:12px;">
+              <div class="info-card"><h4>Ficha de alineación</h4><p><strong>Grado:</strong> 3.º · <strong>Estándar:</strong> Numeración y operación (N)<br><strong>Expectativa:</strong> 3.N.1 · Reconoce la relación entre los números, las cantidades que estos representan, el valor y el lugar posicional de los dígitos.<br><strong>DOK:</strong> Nivel 2 · Destreza y concepto<br><strong>Valor/Clave:</strong> 1 punto · Respuesta correcta: D</p></div>
+              <div class="info-card"><h4>Chequeo DUA de este ítem</h4><p>Enunciado de una sola oración · información numérica en texto y en tabla · opciones de una palabra, del mismo largo · contexto escolar accesible a cualquier estudiante · no exige lectura de un párrafo para llegar a la pregunta.</p></div>
+            </div>
+
+            <h4 style="margin-top:18px;">Qué diagnostica cada distractor</h4>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Opción</th><th>Valor</th><th>Error que representa</th><th>Reenseñanza que dispara</th></tr></thead>
+                <tbody>
+                  <tr><td>A · septiembre</td><td>1,204</td><td>Comparó solo la primera cifra distinta y se detuvo en la centena.</td><td>Procedimiento completo de comparación de izquierda a derecha.</td></tr>
+                  <tr><td>B · octubre</td><td>1,240</td><td>Confundió 1,240 con 1,402: leyó los dígitos sin atender su posición.</td><td>Valor posicional: el 4 en la centena vale más que el 4 en la decena.</td></tr>
+                  <tr><td>C · noviembre</td><td>1,024</td><td>Escogió el menor: invirtió el sentido de la pregunta.</td><td>Vocabulario comparativo: mayor, menor, mayor cantidad.</td></tr>
+                  <tr><td>D · diciembre</td><td>1,402</td><td>Respuesta correcta: 1,402 es el mayor de los cuatro valores.</td><td>—</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="grid-2">
+              <div class="info-card"><h4>Lo que este ítem le dice al maestro</h4><p>Si tres o más estudiantes escogen B, el grupo no ha consolidado valor posicional y hay que volver atrás antes de seguir con adición y sustracción de cuatro dígitos.</p></div>
+              <div class="info-card"><h4>Variación para dar acceso adicional</h4><p>Para un grupo con lectores en desarrollo, sustituya la tabla por una gráfica de barras con los mismos cuatro valores. La expectativa medida y el nivel DOK no cambian.</p></div>
+            </div>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">B</span><span><strong>Modelo B · Respuesta abierta sencilla</strong><br><span class="subj-sub">5.º grado · Fracciones</span></span></span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner">
+            <p class="section-dek">Ítem · 2 puntos · DOK 2</p>
+            <div class="example-block">
+              <div class="example-prompt">En una clase de 5.º grado hay 24 estudiantes. Cinco octavos (5/8) de los estudiantes participan en el club de ciencias.<br>A. ¿Cuántos estudiantes participan en el club de ciencias?<br>B. Explica cómo determinaste tu respuesta.<br>Contesta las partes A y B en el espacio provisto. Puedes usar un dibujo, una tabla o una operación.</div>
+            </div>
+            <p><strong>Estándar/Expectativa:</strong> 5.N.3 · Operaciones con fracciones y decimales en la solución de problemas (verificar el indicador exacto). <strong>DOK:</strong> Nivel 2 · el estudiante ejecuta un procedimiento y comunica cómo lo hizo. <strong>Valor:</strong> 2 puntos.</p>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Pts.</th><th>Descripción del desempeño</th></tr></thead>
+                <tbody>
+                  <tr><td>2</td><td>Responde 15 en la parte A y explica el procedimiento en la parte B.</td></tr>
+                  <tr><td>1</td><td>Solo responde 15 sin explicar, o explica correctamente el procedimiento con un error de cálculo.</td></tr>
+                  <tr><td>0</td><td>No responde, o la respuesta no se refiere a la pregunta.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="section-dek">Parte A: 15 estudiantes. Parte B, cualquiera de estas vías: (1) Dividí 24 entre 8 y obtuve 3; luego multipliqué 3 × 5 = 15. (2) Multipliqué 5/8 × 24 = 120/8 = 15. (3) Dibujé 24 fichas en 8 grupos de 3 y conté 5 grupos: 15.</p>
+            <p class="source-note">Las tres vías valen dos puntos. Ese es el principio de acción y expresión del DUA hecho rúbrica.</p>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">C</span><span><strong>Modelo C · Respuesta abierta de aplicación</strong><br><span class="subj-sub">4.º grado · Medición</span></span></span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner">
+            <p class="section-dek">Ítem · 4 puntos · DOK 3</p>
+            <div class="example-block">
+              <div class="example-prompt">La clase de 4.º grado quiere sembrar un huerto rectangular en el patio de la escuela. El huerto medirá 8 metros de largo y 5 metros de ancho. La clase tiene 30 metros de cerca.<br>A. Haz un dibujo del huerto y rotula sus medidas.<br>B. Determina cuánta cerca se necesita para rodear el huerto. Muestra tu procedimiento.<br>C. Explica si los 30 metros de cerca son suficientes. Justifica tu respuesta con los cálculos.</div>
+            </div>
+            <p><strong>Estándar/Expectativa:</strong> 4.M.9 · Perímetro de figuras planas en situaciones de la vida diaria. <strong>DOK:</strong> Nivel 3 · el estudiante calcula, decide y justifica la decisión con los cálculos. <strong>Acceso DUA:</strong> las tres partes son independientes, de modo que un error en B no anula el crédito de A ni el razonamiento de C.</p>
+            <p class="section-dek">No basta calcular el perímetro: el estudiante debe comparar 26 metros con 30 metros, tomar una decisión —sí alcanza— y defenderla con los números. Ese salto de calcular a decidir y justificar es lo que lo coloca en DOK 3.</p>
+
+            <h4>Baremo de 4 puntos y respuestas posibles</h4>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Pts.</th><th>Descripción del desempeño</th></tr></thead>
+                <tbody>
+                  <tr><td>4</td><td>Dibuja y rotula el rectángulo, escribe la fórmula del perímetro, hace el procedimiento y concluye correctamente que la cerca alcanza.</td></tr>
+                  <tr><td>3</td><td>Escribe la fórmula, hace el procedimiento y obtiene 26 m, pero no dibuja o no justifica la conclusión.</td></tr>
+                  <tr><td>2</td><td>Hace el procedimiento y obtiene 26 m, sin fórmula ni conclusión justificada.</td></tr>
+                  <tr><td>1</td><td>Solo escribe la contestación correcta (26 m o «sí alcanza») sin procedimiento.</td></tr>
+                  <tr><td>0</td><td>No responde, o el procedimiento no corresponde a la situación planteada.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="section-dek">Parte A: rectángulo rotulado con 8 m y 5 m. Parte B: P = 2(l + a) = 2(8 + 5) = 2(13) = 26 metros (también vale 8+5+8+5=26). Parte C: Sí son suficientes, porque 26 m &lt; 30 m; sobran 4 metros de cerca.</p>
+            <div class="callout callout-warn">
+              <span class="callout-title">Errores previsibles</span>
+              <p>Calcular el área (40 m²) en lugar del perímetro · Sumar solo dos lados: 8 + 5 = 13 m · Obtener 26 m y concluir que no alcanza por comparar mal.</p>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Planilla de especificaciones · ejemplo de 4.º grado</h3>
+        <p class="section-dek">Prueba de Matemáticas · 4.º grado · 30 puntos · duración estimada: 55 minutos</p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Destrezas</th><th>Ejercicios</th><th>Valor</th><th>Puntos</th><th>DOK</th><th>Peso %</th></tr></thead>
+            <tbody>
+              <tr><td>Valor posicional y comparación (4.N.1)</td><td>6 SM</td><td>1</td><td>6</td><td>1–2</td><td>20 %</td></tr>
+              <tr><td>Multiplicación y división (4.N.2)</td><td>8 SM</td><td>1</td><td>8</td><td>1–2</td><td>27 %</td></tr>
+              <tr><td>Perímetro: cálculo y comunicación (4.M.9)</td><td>2 RA sencilla</td><td>2</td><td>4</td><td>2–3</td><td>13 %</td></tr>
+              <tr><td>Aplicación del perímetro en el entorno escolar (4.M.9)</td><td>3 RA aplicación</td><td>4</td><td>12</td><td>3–4</td><td>40 %</td></tr>
+              <tr><td><strong>TOTAL</strong></td><td>19 ejercicios</td><td>—</td><td><strong>30</strong></td><td>—</td><td>100 %</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="stat-tiles">
+          <div class="stat-tile"><span class="num">21 / 30</span><p>Puntuación mínima de ejecución (70 %)</p></div>
+          <div class="stat-tile"><span class="num">40 %</span><p>Puntuación en DOK 3 y 4 (12 de los 30 puntos)</p></div>
+          <div class="stat-tile"><span class="num">55 min</span><p>1 min por SM · 5 min por RA de aplicación</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÓDULO 6: MODELAJE 6.º-8.º -->
+    <section class="module-section" id="modulo-6">
+      <span class="section-kicker"><span class="num-badge">6</span> Modelaje · 6.º a 8.º grado · 25 minutos</span>
+      <h2>Del número racional a la función lineal</h2>
+      <p class="section-dek">Perfil del evaluando y decisiones DUA · Modelo A (selección múltiple, 7.º) · Modelo B (respuesta abierta sencilla, 6.º) · Modelo C (respuesta abierta de aplicación, 8.º · Álgebra I) · planilla de especificaciones de 7.º grado.</p>
+
+      <div class="subsection">
+        <h3>Quién es el estudiante que va a contestar</h3>
+        <div class="grid-2">
+          <div>
+            <h4>Perfil del evaluando · 6.º a 8.º grado</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.92rem;">
+              <li>Todo dato necesario está en el enunciado o en la tabla; ninguno se supone.</li>
+              <li>Transita del razonamiento aritmético al algebraico: la letra deja de ser una etiqueta y pasa a ser una cantidad variable.</li>
+              <li>Es el nivel con mayor variabilidad de dominio dentro de un mismo salón: conviven rezagos de elemental con estudiantes listos para Álgebra I.</li>
+              <li>Sostiene textos más largos, pero se desconcentra ante enunciados con datos irrelevantes.</li>
+              <li>Le pesa el vocabulario algebraico nuevo: expresión, coeficiente, término, variable, razón.</li>
+              <li>Reacciona bien a contextos de dinero, tiempo, deporte escolar y consumo, si los datos vienen dados.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Decisiones de DUA para este nivel</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.92rem;">
+              <li>Las partes del ítem son independientes: un error en B no bloquea C.</li>
+              <li>El vocabulario algebraico se define dentro del ítem la primera vez que aparece.</li>
+              <li>Se permite calculadora cuando la destreza medida no es el cálculo.</li>
+              <li>La tabla de valores acompaña a la ecuación como segunda representación.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="subject-accordion">
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">A</span><span><strong>Modelo A · Selección múltiple</strong><br><span class="subj-sub">7.º grado · Por ciento</span></span></span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner">
+            <p class="section-dek">Ítem · 1 punto · DOK 2</p>
+            <div class="example-block">
+              <div class="example-prompt">Una tienda vende una mochila escolar en $45.00. Durante una promoción, el precio se reduce en un 20 %.<br>¿Cuál es el precio de la mochila durante la promoción?<br>A. $9.00 &nbsp; B. $25.00 &nbsp; <strong>C. $36.00</strong> &nbsp; D. $54.00</div>
+            </div>
+            <p><strong>Grado/Curso:</strong> 7.º grado · Preálgebra · <strong>Estándar:</strong> Numeración y operación (N) · <strong>Expectativa:</strong> 7.N.2 · Razón, proporción y por ciento en la solución de problemas. <strong>DOK:</strong> Nivel 2 · aplicación de un procedimiento conocido en contexto. <strong>Valor/Clave:</strong> 1 punto · Respuesta correcta: C ($36.00).</p>
+            <div class="callout callout-primary"><span class="callout-title">Decisión de accesibilidad</span><p>Las cuatro opciones se escriben con el mismo formato monetario y en orden ascendente. La alineación de los signos de dólar evita que el estudiante compare mal por efecto visual.</p></div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Opción</th><th>Error que representa</th></tr></thead>
+                <tbody>
+                  <tr><td>$9.00</td><td>Calculó solo el descuento (0.20 × 45 = 9) y lo reportó como precio final.</td></tr>
+                  <tr><td>$25.00</td><td>Restó 20 unidades en lugar del 20 %: 45 − 20 = 25. Confunde por ciento con cantidad.</td></tr>
+                  <tr><td>$36.00</td><td>Correcta: 45 − (0.20 × 45) = 45 − 9 = 36. También 0.80 × 45 = 36.</td></tr>
+                  <tr><td>$54.00</td><td>Aumentó el 20 % en vez de reducirlo: 45 + 9 = 54.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">B</span><span><strong>Modelo B · Respuesta abierta sencilla</strong><br><span class="subj-sub">6.º grado · Números enteros</span></span></span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner">
+            <p class="section-dek">Ítem · 2 puntos · DOK 2</p>
+            <div class="example-block">
+              <div class="example-prompt">La temperatura de un laboratorio bajó de 8 °C a −3 °C en dos horas.<br>A. ¿Cuántos grados bajó la temperatura?<br>B. Explica cómo determinaste tu respuesta.<br>Contesta las partes A y B. Puedes apoyarte en la recta numérica (−4 a 8) que aparece abajo.</div>
+            </div>
+            <p><strong>Estándar/Expectativa:</strong> 6.N.1 · Entiende el ordenamiento y el valor absoluto de los números enteros. <strong>DOK:</strong> Nivel 2 · interpreta una situación con enteros y comunica el procedimiento. <strong>Valor:</strong> 2 puntos.</p>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Pts.</th><th>Descripción del desempeño</th></tr></thead>
+                <tbody>
+                  <tr><td>2</td><td>Responde 11 grados en la parte A y explica el procedimiento en la parte B.</td></tr>
+                  <tr><td>1</td><td>Solo responde 11 sin explicar, o explica bien el procedimiento con un error de signo o de cálculo.</td></tr>
+                  <tr><td>0</td><td>No responde, o la respuesta no se refiere a la pregunta.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="section-dek">Parte A: 11 grados. Parte B, cualquiera de estas vías: (1) Resté: 8 − (−3) = 8 + 3 = 11. (2) Conté en la recta numérica de 8 a 0 y de 0 a −3: 8 + 3 = 11. (3) Usé el valor absoluto: |8| + |−3| = 11.</p>
+            <p class="source-note">La recta numérica no es decoración: es la segunda representación que permite al estudiante con rezago llegar a la respuesta sin dominar la resta de enteros con signo.</p>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">C</span><span><strong>Modelo C · Respuesta abierta de aplicación</strong><br><span class="subj-sub">8.º grado · Álgebra I</span></span></span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner">
+            <p class="section-dek">Ítem · 4 puntos · DOK 3</p>
+            <div class="example-block">
+              <div class="example-prompt">Un centro comunitario alquila bicicletas. Cobra $8.00 por la renta inicial más $3.00 por cada hora de uso.<br>A. Escribe una ecuación que represente el costo total c en función del número de horas h.<br>B. Determina el costo de alquilar una bicicleta por 5 horas. Muestra tu procedimiento.<br>C. Una persona pagó $29.00. Determina por cuántas horas alquiló la bicicleta. Muestra tu procedimiento.<br>D. Explica qué representa el valor 8 en esta situación.</div>
+            </div>
+            <p><strong>Curso/Estándar:</strong> 8.º grado · Álgebra I · Estándar de Álgebra (A) · <strong>Expectativa:</strong> 8.A · Representa y resuelve situaciones de la vida real mediante funciones lineales. <strong>DOK:</strong> Nivel 3 · modela, resuelve en dos direcciones e interpreta el significado de un parámetro. <strong>Acceso DUA:</strong> las cuatro partes son independientes. El estudiante que no logra escribir la ecuación en A puede aun así resolver B con aritmética y obtener crédito.</p>
+            <p class="section-dek">Calcular el costo (B) y despejar las horas (C) son procedimientos. Interpretar qué representa el 8 en la situación —el costo fijo que se paga aunque no se use ni una hora— exige conectar el parámetro algebraico con el contexto real. Sin la parte D, este ítem se quedaría en DOK 2.</p>
+
+            <h4>Baremo de 4 puntos y respuestas posibles</h4>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Pts.</th><th>Descripción del desempeño</th></tr></thead>
+                <tbody>
+                  <tr><td>4</td><td>Escribe la ecuación correcta, resuelve B y C con procedimiento visible e interpreta correctamente el valor 8 en el contexto.</td></tr>
+                  <tr><td>3</td><td>Escribe la ecuación y resuelve B y C correctamente, pero la interpretación de la parte D es incompleta o ausente.</td></tr>
+                  <tr><td>2</td><td>Resuelve B y C con procedimiento correcto sin escribir la ecuación, o escribe la ecuación y resuelve solo una de las dos partes.</td></tr>
+                  <tr><td>1</td><td>Solo escribe una contestación correcta sin procedimiento.</td></tr>
+                  <tr><td>0</td><td>No responde, o el procedimiento no corresponde a la situación planteada.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="section-dek">A: c = 8 + 3h (también válida: c = 3h + 8). B: c = 8 + 3(5) = $23.00. C: 29 = 8 + 3h → 21 = 3h → h = 7 horas. D: El 8 es el costo fijo de la renta inicial: se paga al alquilar, aunque se use la bicicleta cero horas.</p>
+            <div class="callout callout-warn">
+              <span class="callout-title">Errores previsibles</span>
+              <p>Escribir c = 8h + 3, invirtiendo el costo fijo y la tasa · En C, dividir 29 entre 3 sin restar primero la renta inicial · En D, describir el 8 como «lo que se paga por hora».</p>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Planilla de especificaciones · ejemplo de 7.º grado</h3>
+        <p class="section-dek">Prueba de Matemáticas · 7.º grado (Preálgebra) · 36 puntos · duración estimada: 60 minutos</p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Destrezas</th><th>Ejercicios</th><th>Valor</th><th>Puntos</th><th>DOK</th><th>Peso %</th></tr></thead>
+            <tbody>
+              <tr><td>Razón, proporción y por ciento (7.N.2)</td><td>8 SM</td><td>1</td><td>8</td><td>1–2</td><td>22 %</td></tr>
+              <tr><td>Operaciones con números racionales (7.N.4)</td><td>6 SM</td><td>1</td><td>6</td><td>1–2</td><td>17 %</td></tr>
+              <tr><td>Expresiones y ecuaciones: procedimiento y explicación (7.A.7)</td><td>5 RA sencilla</td><td>2</td><td>10</td><td>2</td><td>28 %</td></tr>
+              <tr><td>Aplicación de la proporcionalidad en contexto (7.N.2 · 7.A.7)</td><td>3 RA aplicación</td><td>4</td><td>12</td><td>3–4</td><td>33 %</td></tr>
+              <tr><td><strong>TOTAL</strong></td><td>22 ejercicios</td><td>—</td><td><strong>36</strong></td><td>—</td><td>100 %</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="stat-tiles">
+          <div class="stat-tile"><span class="num">25 / 36</span><p>Puntuación mínima (70 % de 36 = 25.2, redondeado a 25)</p></div>
+          <div class="stat-tile"><span class="num">33 %</span><p>Puntuación en DOK 3 y 4 (12 de los 36 puntos)</p></div>
+          <div class="stat-tile"><span class="num">Hacia abajo</span><p>Regla de redondeo: a favor del estudiante, anunciada antes de administrar la prueba</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÓDULO 7: MODELAJE 9.º-12.º -->
+    <section class="module-section" id="modulo-7">
+      <span class="section-kicker"><span class="num-badge">7</span> Modelaje · 9.º a 12.º grado · 25 minutos</span>
+      <h2>De la función cuadrática al análisis de datos</h2>
+      <p class="section-dek">Perfil del evaluando y decisiones DUA · Modelo A (selección múltiple, 10.º · Geometría) · Modelo B (respuesta abierta sencilla, 9.º · Álgebra II) · Modelo C (respuesta abierta de aplicación, 12.º · Estadísticas) · planilla de especificaciones de 10.º grado.</p>
+
+      <div class="subsection">
+        <h3>Quién es el estudiante que va a contestar</h3>
+        <div class="grid-2">
+          <div>
+            <h4>Perfil del evaluando · 9.º a 12.º grado</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.92rem;">
+              <li>Opera con razonamiento formal: generaliza, demuestra y trabaja con representaciones múltiples de una misma relación.</li>
+              <li>Ya arrastra una historia de éxito o de fracaso con las matemáticas que condiciona su disposición ante la prueba.</li>
+              <li>Puede sostener enunciados largos, pero un enunciado denso sin necesidad sigue siendo una barrera de lectura.</li>
+              <li>Necesita saber con precisión qué nivel de justificación se le exige: ¿basta el cálculo o hace falta argumentar?</li>
+              <li>Trabaja con contextos de trabajo, presupuesto, datos y ciudadanía si los datos están completos en el ítem.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Decisiones de DUA para este nivel</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.92rem;">
+              <li>Las fórmulas que no son objeto de medición se proveen dentro del ítem.</li>
+              <li>Toda figura geométrica aparece rotulada y a escala razonable.</li>
+              <li>Se aceptan gráfica, tabla, ecuación o argumento verbal como evidencia del mismo razonamiento.</li>
+              <li>La instrucción declara el nivel de justificación esperado: «muestra el procedimiento», «justifica con los datos».</li>
+              <li>Se elimina todo dato del enunciado que no se use para resolver.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="subject-accordion">
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">A</span><span><strong>Modelo A · Selección múltiple</strong><br><span class="subj-sub">10.º grado · Geometría</span></span></span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner">
+            <p class="section-dek">Ítem · 1 punto · DOK 2</p>
+            <div class="example-block">
+              <div class="example-prompt">En el triángulo rectángulo ABC, el cateto AB mide 9 cm y el cateto BC mide 12 cm.<br>¿Cuál es la longitud de la hipotenusa AC?<br>Fórmula provista: a² + b² = c²<br>A. 3 cm &nbsp; <strong>B. 15 cm</strong> &nbsp; C. 21 cm &nbsp; D. 225 cm</div>
+            </div>
+            <p><strong>Curso/Estándar:</strong> 10.º grado · Geometría (G) · <strong>Expectativa:</strong> 10.G · Aplica el teorema de Pitágoras para resolver problemas con triángulos rectángulos. <strong>DOK:</strong> Nivel 2 · aplicación directa de una relación conocida. <strong>Valor/Clave:</strong> 1 punto · Respuesta correcta: B (15 cm).</p>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Opción</th><th>Error que representa</th></tr></thead>
+                <tbody>
+                  <tr><td>3 cm</td><td>Restó los catetos: 12 − 9 = 3. Trata la relación como aditiva.</td></tr>
+                  <tr><td>15 cm</td><td>Correcta: 9² + 12² = 81 + 144 = 225; √225 = 15.</td></tr>
+                  <tr><td>21 cm</td><td>Sumó los catetos: 9 + 12 = 21. Aplica la desigualdad triangular como si fuera igualdad.</td></tr>
+                  <tr><td>225 cm</td><td>Calculó c² correctamente pero no extrajo la raíz cuadrada. Es el distractor más frecuente.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="source-note">Proveer la fórmula es una decisión de DUA deliberada: la expectativa medida es aplicar el teorema, no recordarlo.</p>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">B</span><span><strong>Modelo B · Respuesta abierta sencilla</strong><br><span class="subj-sub">9.º grado · Álgebra II</span></span></span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner">
+            <p class="section-dek">Ítem · 2 puntos · DOK 2</p>
+            <div class="example-block">
+              <div class="example-prompt">Considera la función f(x) = x² − 6x + 5.<br>A. Determina los ceros de la función.<br>B. Explica el método que utilizaste para determinarlos.<br>Fórmula provista: x = [−b ± √(b² − 4ac)] ÷ 2a<br>Contesta las partes A y B. Puedes factorizar, completar el cuadrado, aplicar la fórmula cuadrática o analizar la gráfica.</div>
+            </div>
+            <p><strong>Curso/Expectativa:</strong> 9.º grado · Álgebra II · 9.A · Determina e interpreta los ceros de una función cuadrática. <strong>DOK:</strong> Nivel 2 · ejecuta un método y comunica cuál usó y por qué. <strong>Valor:</strong> 2 puntos.</p>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Pts.</th><th>Descripción del desempeño</th></tr></thead>
+                <tbody>
+                  <tr><td>2</td><td>Identifica x = 1 y x = 5 en la parte A y nombra y describe el método usado en la parte B.</td></tr>
+                  <tr><td>1</td><td>Identifica los dos ceros sin explicar el método, o describe correctamente un método válido con un error aritmético.</td></tr>
+                  <tr><td>0</td><td>No responde, o la respuesta no se refiere a la pregunta.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="section-dek">Parte A: x = 1 y x = 5. Parte B, cualquiera de estas vías: (1) Factoricé: x² − 6x + 5 = (x−1)(x−5) = 0. (2) Apliqué la fórmula cuadrática con a=1, b=−6, c=5. (3) Grafiqué la parábola y leí los interceptos en x.</p>
+            <p class="source-note">Nombrar explícitamente los cuatro métodos aceptables en las instrucciones es una decisión de DUA: elimina la ambigüedad sobre qué se considera respuesta válida.</p>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="subj-label"><span class="subj-badge">C</span><span><strong>Modelo C · Respuesta abierta de aplicación</strong><br><span class="subj-sub">12.º grado · Estadísticas</span></span></span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner">
+            <p class="section-dek">Ítem · 5 puntos · DOK 4</p>
+            <div class="example-block">
+              <div class="example-prompt">Un maestro registró las puntuaciones de 10 estudiantes en una prueba de matemáticas: 72, 85, 90, 68, 95, 78, 88, 90, 74, 80.<br>A. Determina la media y la mediana del conjunto de datos. Muestra tu procedimiento.<br>B. Determina el rango del conjunto de datos.<br>C. Un estudiante afirma: «la mayoría de los estudiantes obtuvo 90 o más». Evalúa la afirmación usando los datos y justifica tu conclusión.</div>
+            </div>
+            <p><strong>Curso/Estándar:</strong> 12.º grado · Análisis de datos y probabilidad (E) · <strong>Expectativa:</strong> 12.E · Calcula e interpreta medidas de tendencia central y de dispersión para evaluar afirmaciones sobre un conjunto de datos. <strong>DOK:</strong> Nivel 4 · conecta varias medidas, evalúa una afirmación ajena y construye un argumento con evidencia numérica.</p>
+            <p class="section-dek">El estudiante no solo calcula: debe juzgar la validez de una afirmación que otra persona hizo, escoger cuál de las medidas calculadas sostiene su juicio y construir el argumento. Evaluar la afirmación de un tercero con evidencia propia es la marca del pensamiento extendido.</p>
+
+            <h4>Baremo de 5 puntos y respuestas posibles</h4>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Pts.</th><th>Descripción del desempeño</th></tr></thead>
+                <tbody>
+                  <tr><td>5</td><td>Organiza los datos, calcula media y mediana con procedimiento, determina el rango y evalúa la afirmación con evidencia numérica explícita.</td></tr>
+                  <tr><td>4</td><td>Cumple todo lo anterior salvo la organización previa de los datos, o la justificación de C es correcta pero incompleta.</td></tr>
+                  <tr><td>3</td><td>Calcula correctamente media y mediana con procedimiento, pero falla el rango o no evalúa la afirmación.</td></tr>
+                  <tr><td>2</td><td>Hace un procedimiento correcto y obtiene una sola de las medidas solicitadas.</td></tr>
+                  <tr><td>1</td><td>Solo escribe una contestación correcta sin procedimiento.</td></tr>
+                  <tr><td>0</td><td>No responde, o el procedimiento no corresponde a los datos ofrecidos.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="section-dek">Datos ordenados: 68, 72, 74, 78, 80, 85, 88, 90, 90, 95. A · Media: 820 ÷ 10 = 82. A · Mediana: (80+85)÷2 = 82.5. B · Rango: 95−68 = 27. C · Evaluación: la afirmación es incorrecta. Solo 3 de los 10 estudiantes (90, 90 y 95) obtuvieron 90 o más; eso es el 30 %, que no constituye una mayoría. La mediana de 82.5 confirma que la mitad del grupo quedó por debajo de 83.</p>
+            <p class="source-note">Nota para el maestro: la media (82) y la mediana (82.5) son casi iguales, lo que indica una distribución sin valores extremos que la distorsionen. Ese dato puede convertirse en una parte D opcional.</p>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Planilla de especificaciones · ejemplo de 10.º grado (Geometría)</h3>
+        <p class="section-dek">Prueba de Geometría · 10.º grado · 40 puntos · duración estimada: 70 minutos</p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Destrezas</th><th>Ejercicios</th><th>Valor</th><th>Puntos</th><th>DOK</th><th>Peso %</th></tr></thead>
+            <tbody>
+              <tr><td>Relaciones entre ángulos y rectas paralelas (10.G)</td><td>10 SM</td><td>1</td><td>10</td><td>1–2</td><td>25 %</td></tr>
+              <tr><td>Teorema de Pitágoras y triángulos rectángulos (10.G)</td><td>6 SM</td><td>1</td><td>6</td><td>2</td><td>15 %</td></tr>
+              <tr><td>Área y volumen: procedimiento y comunicación (10.G)</td><td>4 RA sencilla</td><td>2</td><td>8</td><td>2–3</td><td>20 %</td></tr>
+              <tr><td>Modelación geométrica de una situación real (10.G)</td><td>4 RA aplicación</td><td>4</td><td>16</td><td>3–4</td><td>40 %</td></tr>
+              <tr><td><strong>TOTAL</strong></td><td>24 ejercicios</td><td>—</td><td><strong>40</strong></td><td>—</td><td>100 %</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="stat-tiles">
+          <div class="stat-tile"><span class="num">28 / 40</span><p>Puntuación mínima de ejecución (70 %)</p></div>
+          <div class="stat-tile"><span class="num">40 %</span><p>Puntuación en DOK 3 y 4 (16 de los 40 puntos)</p></div>
+          <div class="stat-tile" style="grid-column: span 2;"><span class="num">33–40 %</span><p>Comparación entre los tres niveles: 4.º grado 40 %, 7.º grado 33 %, 10.º grado 40 % en DOK 3–4 — la progresión está en la complejidad del contenido, no en la profundidad exigida.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÓDULO 8: PLANILLA DE ESPECIFICACIONES -->
+    <section class="module-section" id="modulo-8">
+      <span class="section-kicker"><span class="num-badge">8</span> La planilla de especificaciones · 30 minutos</span>
+      <h2>El plano del examen antes de construirlo</h2>
+      <p class="section-dek">Las seis columnas y qué decide cada una · cómo se calculan pesos, dominio y tiempo · de la corrección a la reenseñanza · errores frecuentes al completarla.</p>
+
+      <div class="subsection">
+        <h3>Las seis columnas de la planilla y qué decide cada una</h3>
+        <div class="grid-3">
+          <div class="info-card"><span class="tag">1</span><h4>Destrezas cubiertas en la prueba</h4><p>La expectativa o el indicador del Programa de Matemáticas que se va a medir, escrito con su código. Una fila por destreza.</p></div>
+          <div class="info-card"><span class="tag">2</span><h4>Cantidad de ejercicios</h4><p>Cuántos ítems miden esa destreza y de qué tipo. Ninguna destreza importante se mide con un solo ítem.</p></div>
+          <div class="info-card"><span class="tag">3</span><h4>Valor de los ejercicios</h4><p>Puntos por ítem. La selección múltiple vale 1; la respuesta abierta, entre 2 y 5 según el baremo escogido.</p></div>
+          <div class="info-card"><span class="tag">4</span><h4>Puntuación mínima de ejecución (70 %)</h4><p>El punto de corte de dominio. Se calcula sobre el total y se comunica al estudiante antes de administrar la prueba.</p></div>
+          <div class="info-card"><span class="tag">5</span><h4>Nivel de profundidad / DOK</h4><p>El rango DOK de los ítems de esa fila. Permite ver de un vistazo si la prueba se quedó en memoria.</p></div>
+          <div class="info-card"><span class="tag">6</span><h4>Peso en la prueba (%)</h4><p>La proporción del total que aporta esa destreza. Debe corresponder al tiempo de enseñanza que se le dedicó.</p></div>
+        </div>
+        <p class="source-note">Estructura de la Planilla de especificaciones (Corraliza Montero, ORE-Ponce), completada con los encabezados del formulario original. La columna 6 es la que denuncia los desequilibrios: si se enseñaron seis semanas de fracciones y esa destreza pesa 8 % de la prueba, la prueba no representa la enseñanza.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Cómo se calculan el peso, el dominio y el tiempo</h3>
+        <div class="grid-3">
+          <div class="info-card">
+            <h4>Peso porcentual</h4>
+            <p style="font-family:var(--font-display); color:var(--color-primary-dark);">Puntos de la fila ÷ Puntos totales × 100</p>
+            <p class="section-dek" style="margin:0;">Ejemplo de 7.º grado: 12 ÷ 36 × 100 = 33 %</p>
+            <p class="source-note">Los pesos de todas las filas deben sumar 100 %. Si no suman, hay puntos sin destreza asignada.</p>
+          </div>
+          <div class="info-card">
+            <h4>Puntuación mínima de ejecución</h4>
+            <p style="font-family:var(--font-display); color:var(--color-primary-dark);">Puntos totales × 0.70</p>
+            <p class="section-dek" style="margin:0;">Ejemplo de 7.º grado: 36 × 0.70 = 25.2 → 25 puntos</p>
+            <p class="source-note">El redondeo se hace a favor del estudiante y se decide antes de administrar la prueba.</p>
+          </div>
+          <div class="info-card">
+            <h4>Tiempo estimado</h4>
+            <p style="font-size:0.9rem;">1 min por SM · 3 min por RA sencilla · 5 min por RA de aplicación</p>
+            <p class="section-dek" style="margin:0;">Ejemplo de 7.º grado: 14(1) + 5(3) + 3(5) = 44 min + 25 % de holgura ≈ 55–60 min</p>
+            <p class="source-note">Si el tiempo excede el período de clase, se recorta la prueba, no al estudiante.</p>
+          </div>
+        </div>
+
+        <h4 style="margin-top:22px;">🛠 Calculadora rápida de planilla</h4>
+        <p>Pruebe con los puntos de su propia prueba:</p>
+        <div class="spec-calc" id="specCalc1" data-spec-calc>
+          <div class="grid-2">
+            <div class="builder-field">
+              <label>Puntos de esta destreza (fila)</label>
+              <input type="number" class="sc-puntos-fila" min="0" placeholder="ej. 12">
+            </div>
+            <div class="builder-field">
+              <label>Puntos totales de la prueba</label>
+              <input type="number" class="sc-puntos-totales" min="0" placeholder="ej. 36">
+            </div>
+          </div>
+          <div class="spec-calc-output"><span class="placeholder">Escriba los puntos totales de la prueba para calcular.</span></div>
+        </div>
+
+        <div class="callout callout-primary">
+          <span class="callout-title">Prueba de coherencia antes de imprimir</span>
+          <p>Los pesos suman 100 % · la suma de puntos por fila iguala el total · ninguna destreza queda con un solo ítem · entre el 30 % y el 45 % de la puntuación está en DOK 3–4 · el tiempo estimado cabe en el período.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>De la corrección a la decisión: la segunda mitad de la planilla</h3>
+        <p class="section-dek">La planilla no termina cuando se imprime la prueba. Sus dos últimas secciones se completan después de corregir y son las que convierten la calificación en enseñanza.</p>
+        <h4>Distribución de notas</h4>
+        <div class="table-wrap">
+          <table class="worksheet-table">
+            <thead><tr><th>Nota</th><th>Total de estudiantes</th></tr></thead>
+            <tbody>
+              <tr><td>A (100 – 90)</td><td><input type="text" data-persist-text="notas-A"></td></tr>
+              <tr><td>B (89 – 80)</td><td><input type="text" data-persist-text="notas-B"></td></tr>
+              <tr><td>C (79 – 70)</td><td><input type="text" data-persist-text="notas-C"></td></tr>
+              <tr><td>D (69 – 60)</td><td><input type="text" data-persist-text="notas-D"></td></tr>
+              <tr><td>F (59 – 0)</td><td><input type="text" data-persist-text="notas-F"></td></tr>
+              <tr><td><strong>TOTAL</strong></td><td><input type="text" data-persist-text="notas-total"></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h4 style="margin-top:18px;">Estudiantes a dar reenseñanza — cómo se usa</h4>
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">1</span><p style="margin:0;">La distribución de notas se compara con la puntuación mínima de ejecución. Si más del 30 % del grupo queda bajo el punto de corte, el problema no es individual: es de enseñanza o de instrumento.</p></div>
+          <div class="step-item"><span class="step-num">2</span><p style="margin:0;">La lista de reenseñanza se organiza por destreza, no por estudiante: se agrupan los que fallaron la misma expectativa.</p></div>
+          <div class="step-item"><span class="step-num">3</span><p style="margin:0;">Los distractores más escogidos dicen qué reenseñar; las respuestas de 1 punto en el baremo dicen qué está a medio construir.</p></div>
+        </div>
+        <p class="source-note">Secciones tomadas de la Planilla de especificaciones (Corraliza Montero, ORE-Ponce). Argumento para el maestro escéptico: la planilla no es papeleo, es lo que le ahorra tiempo cuando tiene que justificar decisiones de reenseñanza o de acomodo.</p>
+      </div>
+    </section>
+
+    <!-- ACTIVIDAD 1 -->
+    <section class="module-section" id="actividad-1">
+      <span class="section-kicker"><span class="num-badge">A</span> Actividad de aplicación 1 · 60 minutos</span>
+      <h2>Construye tu bloque de ítems</h2>
+      <p class="section-dek">Organización: tríos por nivel (3.º–5.º, 6.º–8.º, 9.º–12.º) — o trabájelo solo/a si hace el módulo en autoestudio. Producto: un bloque de tres ítems con baremos y una fila completa de la planilla de especificaciones.</p>
+
+      <div class="subsection">
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">1</span><div><h4>5 min · Escoge la expectativa</h4><p>Abre el documento del Programa de Matemáticas (DEPR, 2022), selecciona una expectativa de tu grado y anota su código completo y el indicador que vas a medir.</p></div></div>
+          <div class="step-item"><span class="step-num">2</span><div><h4>15 min · Ítem de selección múltiple</h4><p>Redacta un ítem de DOK 1 o 2 con premisa, estímulo opcional y cuatro opciones. Escribe al lado de cada distractor el error conceptual que representa.</p></div></div>
+          <div class="step-item"><span class="step-num">3</span><div><h4>15 min · Respuesta abierta sencilla</h4><p>Redacta un ítem de 2 puntos con partes A y B, instrucciones específicas y su baremo. Anota al menos dos vías distintas de respuesta correcta.</p></div></div>
+          <div class="step-item"><span class="step-num">4</span><div><h4>15 min · Respuesta abierta de aplicación</h4><p>Redacta un ítem de 4 puntos con al menos tres partes independientes, una de las cuales exija decidir o justificar. Añade el baremo y las respuestas posibles.</p></div></div>
+          <div class="step-item"><span class="step-num">5</span><div><h4>10 min · Completa la planilla</h4><p>Llena la fila correspondiente: destreza y código, cantidad de ejercicios, valor, puntos, rango DOK y peso porcentual dentro de la prueba que estás planificando.</p></div></div>
+        </div>
+        <p class="source-note">Materiales: hoja de trabajo impresa, lista de cotejo del ítem, planilla de especificaciones en blanco y el documento del Programa de Matemáticas.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Hoja de trabajo: qué debe contener cada ítem</h3>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Campo</th><th>Selección múltiple</th><th>Respuesta abierta sencilla</th><th>Respuesta abierta de aplicación</th></tr></thead>
+            <tbody>
+              <tr><td>Código de expectativa</td><td>Obligatorio</td><td>Obligatorio</td><td>Obligatorio</td></tr>
+              <tr><td>Estímulo</td><td>Opcional (recomendado)</td><td>Opcional</td><td>Obligatorio</td></tr>
+              <tr><td>Premisa</td><td>Una pregunta</td><td>Partes A y B</td><td>Tres o cuatro partes independientes</td></tr>
+              <tr><td>Instrucciones específicas</td><td>No aplica</td><td>Obligatorias</td><td>Obligatorias</td></tr>
+              <tr><td>Opciones / baremo</td><td>4 opciones + error de cada distractor</td><td>Baremo de 2 puntos</td><td>Baremo de 4 o 5 puntos</td></tr>
+              <tr><td>Respuestas posibles</td><td>Clave</td><td>Al menos dos vías válidas</td><td>Respuesta completa y una parcial</td></tr>
+              <tr><td>Nivel DOK declarado</td><td>1 – 2</td><td>2</td><td>3 – 4</td></tr>
+              <tr><td>Valor en puntos</td><td>1</td><td>2</td><td>4 o 5</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="source-note">Ningún ítem se considera terminado hasta que la lista de cotejo esté completa y otro trío (o una relectura en frío, si trabaja solo/a) lo haya revisado.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Lista de cotejo del ítem</h3>
+        <ul class="checklist">
+          <li class="checklist-item"><input type="checkbox" id="itemchk1" data-persist="itemchk-1"><label for="itemchk1">1. ¿El ítem mide los conocimientos y la destreza que menciona la expectativa o el indicador del estándar?</label></li>
+          <li class="checklist-item"><input type="checkbox" id="itemchk2" data-persist="itemchk-2"><label for="itemchk2">2. ¿La pregunta es clara y comprensible, y no requiere que el estudiante lea las opciones de respuesta para entenderla?</label></li>
+          <li class="checklist-item"><input type="checkbox" id="itemchk3" data-persist="itemchk-3"><label for="itemchk3">3. ¿Usa el lenguaje apropiado para el grado?</label></li>
+          <li class="checklist-item"><input type="checkbox" id="itemchk4" data-persist="itemchk-4"><label for="itemchk4">4. ¿Usa el formato correcto y apropiado para el tipo de ítem?</label></li>
+          <li class="checklist-item"><input type="checkbox" id="itemchk5" data-persist="itemchk-5"><label for="itemchk5">5. ¿Funciona el ítem de forma independiente, sin necesitar la respuesta de otra premisa?</label></li>
+          <li class="checklist-item"><input type="checkbox" id="itemchk6" data-persist="itemchk-6"><label for="itemchk6">6. ¿Está la pregunta formulada de manera clara y concisa?</label></li>
+          <li class="checklist-item"><input type="checkbox" id="itemchk7" data-persist="itemchk-7"><label for="itemchk7">7. ¿El contenido del ítem es accesible a todos los estudiantes en términos de sensibilidad e imparcialidad?</label></li>
+          <li class="checklist-item"><input type="checkbox" id="itemchk8" data-persist="itemchk-8"><label for="itemchk8">8. ¿Necesita el ítem un diagrama, ilustración, fórmula, bosquejo u organizador gráfico en el estímulo?</label></li>
+          <li class="checklist-item"><input type="checkbox" id="itemchk9" data-persist="itemchk-9"><label for="itemchk9">9. ¿Completó correctamente la información de la hoja de asignación del ítem: código, DOK, valor y clave?</label></li>
+        </ul>
+        <div class="callout callout-primary">
+          <span class="callout-title">Regla de la lista</span>
+          <p>Un ítem con una sola casilla sin marcar no se descarta: se reescribe y vuelve a pasar la lista completa desde el punto 1. La revisión la hace siempre otra persona, nunca quien redactó el ítem.</p>
+        </div>
+        <p class="source-note">Criterios de revisión de ítems del taller original (ORE-Ponce). Los puntos 1 al 5 se revisan mientras se redacta; los puntos 6 al 9, en la coevaluación.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Protocolo de coevaluación entre pares · últimos 10 minutos</h3>
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">1</span><div><h4>Intercambio</h4><p>Cada trío entrega su bloque de tres ítems al trío del mismo nivel que tiene al lado. Nadie explica su ítem: si hace falta explicarlo, el ítem no está claro.</p></div></div>
+          <div class="step-item"><span class="step-num">2</span><div><h4>Lectura como estudiante</h4><p>El trío revisor contesta los tres ítems como si fuera un estudiante del grado. Anota dónde dudó y qué tuvo que releer.</p></div></div>
+          <div class="step-item"><span class="step-num">3</span><div><h4>Lista de cotejo</h4><p>Aplica los nueve criterios y marca solo lo que puede evidenciar en el texto del ítem, no lo que supone que el autor quiso decir.</p></div></div>
+          <div class="step-item"><span class="step-num">4</span><div><h4>Devolución en tres frases</h4><p>Una fortaleza concreta, una barrera detectada y una sugerencia de reescritura. Se entrega por escrito, no en conversación.</p></div></div>
+        </div>
+        <div class="callout callout-warn">
+          <span class="callout-title">Por qué la coevaluación no es opcional</span>
+          <p>El sesgo y la ambigüedad son puntos ciegos: quien redactó el ítem ya sabe lo que quiso decir y por eso lo entiende siempre. Solo un lector externo puede detectar la barrera. Esta es la razón por la que las pruebas estandarizadas se someten a revisión por comité antes de administrarse.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Mi bloque de ítems</h3>
+        <div class="worksheet-box">
+          <label for="miItemSM">Mi ítem de selección múltiple</label>
+          <textarea id="miItemSM" data-persist-text="actividad1-sm" placeholder="Código de expectativa, premisa, estímulo, opciones y el error de cada distractor…"></textarea>
+        </div>
+        <div class="worksheet-box">
+          <label for="miItemRAsencilla">Mi ítem de respuesta abierta sencilla</label>
+          <textarea id="miItemRAsencilla" data-persist-text="actividad1-rasencilla" placeholder="Partes A y B, instrucciones específicas, baremo de 2 puntos y dos vías de respuesta…"></textarea>
+        </div>
+        <div class="worksheet-box">
+          <label for="miItemRAaplicacion">Mi ítem de respuesta abierta de aplicación</label>
+          <textarea id="miItemRAaplicacion" data-persist-text="actividad1-raaplicacion" placeholder="Tres o cuatro partes independientes, una que exija decidir o justificar, baremo y respuestas posibles…"></textarea>
+        </div>
+        <div class="worksheet-box">
+          <label for="miPlanillaFila">Mi fila de la planilla de especificaciones</label>
+          <textarea id="miPlanillaFila" data-persist-text="actividad1-planilla" placeholder="Destreza y código, cantidad de ejercicios, valor, puntos, rango DOK y peso porcentual…"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÓDULO 9: IA Y DUA -->
+    <section class="module-section" id="modulo-9">
+      <span class="section-kicker"><span class="num-badge">9</span> Inteligencia artificial y DUA en la evaluación · 35 minutos</span>
+      <h2>El modelo RC-TTF aplicado a la redacción de exámenes</h2>
+      <p class="section-dek">Qué puede y qué no puede hacer la IA · el modelo RC-TTF (Corraliza, 2024) · prompt modelo para un examen con DUA · adaptación por nivel de grado · riesgos y auditoría del resultado.</p>
+
+      <div class="subsection">
+        <h3>¿Qué puede y qué no puede hacer la IA en la redacción de exámenes?</h3>
+        <div class="grid-2">
+          <div>
+            <h4>Sí puede</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.92rem;">
+              <li>Producir un primer borrador de veinte ítems en minutos, no en horas.</li>
+              <li>Generar variantes de un mismo ítem para distintos niveles de lectura.</li>
+              <li>Redactar baremos consistentes con la estructura que usted le indique.</li>
+              <li>Proponer distractores a partir de errores conceptuales que usted describa.</li>
+              <li>Reescribir un enunciado denso en lenguaje apropiado al grado.</li>
+              <li>Calcular pesos, puntuaciones y tiempos si usted le da la estructura.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>No puede</h4>
+            <ul style="padding-left:18px; color:var(--color-ink-soft); font-size:0.92rem;">
+              <li>Conocer con certeza los códigos del Programa de Matemáticas del DEPR 2022.</li>
+              <li>Saber qué se enseñó realmente en su salón este semestre.</li>
+              <li>Reconocer el sesgo específico de su comunidad escolar.</li>
+              <li>Juzgar si el nivel DOK que declara corresponde a la demanda real del ítem.</li>
+              <li>Validar que la respuesta que ofrece como correcta lo sea.</li>
+              <li>Asumir la responsabilidad profesional por el instrumento.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout callout-primary">
+          <p><strong>La IA redacta; el maestro decide, verifica y firma.</strong> La responsabilidad profesional no es delegable.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>El modelo RC-TTF para formular prompts</h3>
+        <p>Cinco componentes que convierten una instrucción vaga en un encargo profesional verificable. Haga clic en cada letra:</p>
+        <div class="sense-row">
+          <div class="sense-letter"><span class="big">R</span><strong>Rol</strong><p>Qué especialista debe ser la herramienta: currículo, evaluación educativa, Matemáticas y DUA del sistema educativo de Puerto Rico.</p></div>
+          <div class="sense-letter"><span class="big">C</span><strong>Contexto</strong><p>Grado, tema, perfil del grupo, duración y —lo más importante— los datos o el contenido que la herramienta debe usar de forma exclusiva.</p></div>
+          <div class="sense-letter"><span class="big">T</span><strong>Tarea</strong><p>Cantidad y tipo de reactivos, integración del DUA, progresión DOK, total de puntos, punto de dominio y todos los anejos exigidos.</p></div>
+          <div class="sense-letter"><span class="big">T</span><strong>Tono</strong><p>Registro profesional y accesible, sin disminuir el rigor del grado, en español apropiado para Puerto Rico.</p></div>
+          <div class="sense-letter"><span class="big">F</span><strong>Formato</strong><p>Tipo de documento, organización visual, separación entre el examen y el material docente, y la prohibición explícita de inventar datos o códigos.</p></div>
+        </div>
+        <p class="source-note">Modelo RC-TTF (Corraliza, 2024). Rol · Contexto · Tarea · Tono · Formato. El componente que más resultados cambia es el Contexto: sin datos suministrados, la herramienta inventa.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Prompt modelo: examen de Matemáticas con DUA</h3>
+        <div class="rc-prompt">[ROL] Actúa como especialista en currículo, evaluación educativa, Matemáticas y Diseño Universal para el Aprendizaje (DUA) del sistema educativo de Puerto Rico.
+
+[CONTEXTO] Crea un examen de [tema] para estudiantes de [grado] con [perfil del grupo]. Duración: [minutos]. Utiliza exclusivamente el contenido que te suministro a continuación: [pegar el contenido enseñado].
+
+[TAREA] Diseña [N] reactivos: [n1] de selección múltiple, [n2] de preguntas abiertas sencillas (no llena blancos) y [n3] de preguntas abiertas de aplicación. Integra DUA, progresión DOK 1–4 y opciones equivalentes de expresión. Total: [X] puntos; dominio: [0.70 × X] puntos (70 %). Incluye clave, rúbricas, planilla de especificaciones, distribución de notas, tiempo estimado, plan de reenseñanza y alineación curricular DEPR 2022 verificable.
+
+[TONO] Profesional, académico, claro, motivador, respetuoso y accesible, sin disminuir el rigor de [grado]. Emplea español apropiado para Puerto Rico.
+
+[FORMATO] Documento Word organizado, visualmente predecible y listo para imprimir. Separa el examen del material docente. Verifica respuestas, puntuaciones, porcentajes, DOK y duración. No inventes datos, estándares ni códigos curriculares.</div>
+        <div class="callout callout-warn">
+          <p>La última oración del componente Formato —«no inventes datos, estándares ni códigos curriculares»— es la instrucción más importante de todo el prompt.</p>
+        </div>
+
+        <h4 style="margin-top:22px;">🛠 Construya su propio prompt RC-TTF</h4>
+        <p>Complete los cinco campos para un examen real de su grado.</p>
+        <div class="builder">
+          <div class="builder-grid">
+            <div class="builder-field">
+              <label for="pb-rol"><span class="letter-badge">R</span>Rol</label>
+              <input type="text" id="pb-rol" placeholder="ej. especialista en currículo, evaluación educativa, Matemáticas y DUA de Puerto Rico">
+            </div>
+            <div class="builder-field">
+              <label for="pb-contexto"><span class="letter-badge">C</span>Contexto</label>
+              <input type="text" id="pb-contexto" placeholder="ej. Examen de fracciones para 5.º grado, 24 estudiantes, 55 minutos. Contenido: [pegar lo enseñado].">
+            </div>
+            <div class="builder-field">
+              <label for="pb-tarea"><span class="letter-badge">T</span>Tarea</label>
+              <input type="text" id="pb-tarea" placeholder="ej. 14 SM, 5 RA sencilla, 3 RA de aplicación. DUA, DOK 1-4, 30 puntos, dominio 21. No inventes códigos.">
+            </div>
+            <div class="builder-field">
+              <label for="pb-tono"><span class="letter-badge">T</span>Tono</label>
+              <input type="text" id="pb-tono" placeholder="ej. profesional, claro y accesible, español de Puerto Rico">
+            </div>
+            <div class="builder-field" style="grid-column: span 2;">
+              <label for="pb-formato"><span class="letter-badge">F</span>Formato</label>
+              <input type="text" id="pb-formato" placeholder="ej. documento Word listo para imprimir, examen separado del material docente">
+            </div>
+          </div>
+          <div class="builder-output" id="promptOutput"><span class="placeholder">Su instrucción RC-TTF aparecerá aquí a medida que complete los cinco campos…</span></div>
+          <div class="builder-actions">
+            <button class="btn btn-primary btn-sm" id="promptCopy" type="button">Copiar instrucción</button>
+            <button class="btn btn-ghost btn-sm" id="promptReset" type="button">Borrar campos</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Cómo se adapta el prompt en cada nivel</h3>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Componente</th><th>3.º a 5.º grado</th><th>6.º a 8.º grado</th><th>9.º a 12.º grado</th></tr></thead>
+            <tbody>
+              <tr><td>Contexto</td><td>Enunciados de una o dos oraciones; contextos de la escuela y la casa.</td><td>Contextos de dinero, tiempo y consumo con todos los datos dados.</td><td>Contextos de trabajo, presupuesto, datos y ciudadanía.</td></tr>
+              <tr><td>Distribución de reactivos</td><td>14 SM · 2 RA sencilla · 3 RA de aplicación</td><td>14 SM · 5 RA sencilla · 3 RA de aplicación</td><td>16 SM · 4 RA sencilla · 4 RA de aplicación</td></tr>
+              <tr><td>Progresión DOK</td><td>DOK 1–3, con el 40 % de los puntos en DOK 3.</td><td>DOK 1–4, con el 33 % de los puntos en DOK 3–4.</td><td>DOK 1–4, con el 40 % de los puntos en DOK 3–4.</td></tr>
+              <tr><td>Instrucción DUA específica</td><td>Exige espacio para dibujar y una tabla o gráfica por cada dato numérico.</td><td>Exige partes independientes y definición del vocabulario algebraico nuevo.</td><td>Exige fórmulas provistas, figuras rotuladas y nivel de justificación declarado.</td></tr>
+              <tr><td>Formato</td><td>Letra de 14 a 16 puntos; una pregunta por bloque visual.</td><td>Letra de 12 a 14 puntos; tabla de valores junto a cada ecuación.</td><td>Letra de 12 puntos; hoja de fórmulas al inicio de la prueba.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="source-note">Las distribuciones de reactivos corresponden a las tres planillas modeladas en los módulos 5, 6 y 7.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Cinco riesgos que hay que vigilar en el resultado</h3>
+        <div class="grid-3">
+          <div class="info-card"><span class="tag">!</span><h4>Alucinación de códigos curriculares</h4><p>La herramienta puede producir códigos con la forma correcta —7.A.7.2— que no existen en el documento del DEPR. Todo código se verifica uno por uno.</p></div>
+          <div class="info-card"><span class="tag">!</span><h4>DOK inflado</h4><p>Suele etiquetar como DOK 3 ítems que solo piden calcular y describir el cálculo. Revise la demanda real, no la etiqueta.</p></div>
+          <div class="info-card"><span class="tag">!</span><h4>Respuestas incorrectas en la clave</h4><p>Los errores aritméticos y de signo son frecuentes. Resuelva cada ítem usted mismo antes de imprimir.</p></div>
+          <div class="info-card"><span class="tag">!</span><h4>Sesgo importado</h4><p>Los contextos generados tienden a lo genérico estadounidense. Revise nombres, monedas, distancias, clima y referencias culturales.</p></div>
+          <div class="info-card"><span class="tag">!</span><h4>Distractores decorativos</h4><p>Genera opciones plausibles a la vista pero sin correspondencia con un error conceptual real. Exíjale que nombre el error de cada distractor.</p></div>
+        </div>
+        <p class="source-note">Los cinco riesgos son la razón por la que el producto de la Actividad 2 es un examen auditado y no un examen generado.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Auditoría del examen generado: ocho verificaciones</h3>
+        <ul class="checklist">
+          <li class="checklist-item"><input type="checkbox" id="audit1" data-persist="audit-1"><label for="audit1"><strong>Códigos.</strong> Cada código de expectativa aparece en el documento del Programa de Matemáticas (DEPR, 2022) y corresponde al grado.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="audit2" data-persist="audit-2"><label for="audit2"><strong>DUA y sesgo.</strong> El examen pasa la lista de cotejo de imparcialidad y ofrece más de una forma de expresar la respuesta.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="audit3" data-persist="audit-3"><label for="audit3"><strong>Contenido.</strong> Todo lo que se pregunta se enseñó; nada de lo enseñado y esencial quedó fuera.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="audit4" data-persist="audit-4"><label for="audit4"><strong>Puntuación.</strong> La suma de los valores iguala el total, los pesos suman 100 % y el punto de dominio es el 70 %.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="audit5" data-persist="audit-5"><label for="audit5"><strong>Matemática.</strong> Usted resolvió cada ítem y la clave coincide con su resultado.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="audit6" data-persist="audit-6"><label for="audit6"><strong>Rúbricas.</strong> Cada ítem de respuesta abierta tiene su baremo, y el baremo pide exactamente lo que el ítem pidió.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="audit7" data-persist="audit-7"><label for="audit7"><strong>DOK.</strong> El nivel declarado corresponde a la demanda real: calcular no es justificar.</label></li>
+          <li class="checklist-item"><input type="checkbox" id="audit8" data-persist="audit-8"><label for="audit8"><strong>Formato y tiempo.</strong> Letra, espaciado, imágenes y viñetas cumplen; el tiempo estimado cabe en el período de clase.</label></li>
+        </ul>
+        <div class="callout callout-warn">
+          <span class="callout-title">Criterio de aceptación</span>
+          <p>Un examen generado por IA solo se administra cuando las ocho verificaciones están marcadas. Si una falla, se corrige en el documento —no se le vuelve a pedir a la herramienta que lo arregle sin revisar el resultado—. El maestro es quien firma el instrumento.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTIVIDAD 2 -->
+    <section class="module-section" id="actividad-2">
+      <span class="section-kicker"><span class="num-badge">B</span> Actividad de aplicación 2 · 40 minutos</span>
+      <h2>Del prompt a la auditoría</h2>
+      <p class="section-dek">Organización: los mismos tríos por nivel. Producto: un examen generado con IA y un informe de auditoría de una página con tres hallazgos corregidos.</p>
+
+      <div class="subsection">
+        <div class="step-list">
+          <div class="step-item"><span class="step-num">1</span><div><h4>10 min · Adapta el prompt RC-TTF</h4><p>Completa los corchetes del prompt modelo con tu grado, tu tema, el perfil real de tu grupo, la duración de tu período y la fila de distribución de reactivos de tu nivel. Pega el contenido que enseñaste.</p></div></div>
+          <div class="step-item"><span class="step-num">2</span><div><h4>8 min · Genera el examen</h4><p>Ejecuta el prompt en la herramienta de IA disponible. No aceptes el primer resultado como final: si falta algún anejo solicitado, pídelo de forma explícita.</p></div></div>
+          <div class="step-item"><span class="step-num">3</span><div><h4>17 min · Audita con las ocho verificaciones</h4><p>Aplica la lista completa. Resuelve al menos tres ítems tú mismo. Verifica cada código de expectativa contra el documento del Programa de Matemáticas. Marca cada hallazgo en el documento.</p></div></div>
+          <div class="step-item"><span class="step-num">4</span><div><h4>5 min · Corrige y documenta</h4><p>Corrige al menos tres hallazgos directamente en el examen y escribe en el informe qué encontraste, por qué era un problema y qué cambiaste.</p></div></div>
+        </div>
+        <p class="source-note">Cierre en plenaria: cada trío informa en un minuto el hallazgo que más le sorprendió.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Rúbrica del informe de auditoría</h3>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Criterio</th><th>Excelente (4)</th><th>Competente (3)</th><th>En desarrollo (2)</th></tr></thead>
+            <tbody>
+              <tr><td>Adaptación del prompt</td><td>Completa los cinco componentes RC-TTF con datos reales del grupo y del contenido enseñado.</td><td>Completa los cinco componentes, pero el contexto es genérico.</td><td>Omite componentes o no suministra contenido propio.</td></tr>
+              <tr><td>Verificación curricular</td><td>Verifica todos los códigos contra el documento oficial y documenta los que no existen.</td><td>Verifica la mayoría de los códigos.</td><td>Acepta los códigos generados sin verificarlos.</td></tr>
+              <tr><td>Verificación matemática</td><td>Resuelve tres o más ítems y detecta toda discrepancia con la clave.</td><td>Resuelve al menos un ítem y compara con la clave.</td><td>No resuelve ningún ítem.</td></tr>
+              <tr><td>Análisis de DUA y sesgo</td><td>Aplica la lista de imparcialidad y propone reescrituras concretas.</td><td>Identifica barreras, pero sin proponer la reescritura.</td><td>No aplica la lista de imparcialidad.</td></tr>
+              <tr><td>Documentación del hallazgo</td><td>Describe qué encontró, por qué era un problema y qué cambió, en los tres hallazgos.</td><td>Describe los hallazgos, pero no todos incluyen la justificación.</td><td>Menciona hallazgos sin describir la corrección.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="source-note">Total: 20 puntos · Dominio: 14 puntos (70 %). La misma regla que aplicamos a nuestros estudiantes se aplica a nuestro propio trabajo.</p>
+      </div>
+
+      <div class="worksheet-box">
+        <label for="informeAuditoria">Mi informe de auditoría</label>
+        <textarea id="informeAuditoria" data-persist-text="actividad2-informe" placeholder="Tres hallazgos: qué encontró, por qué era un problema y qué cambió en cada uno…"></textarea>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="module-section" id="cierre">
+      <span class="section-kicker">Cierre</span>
+      <h2>Siete principios para llevarse</h2>
+      <div class="step-list">
+        <div class="step-item"><span class="step-num">1</span><p style="margin:0;">Primero la expectativa, después el ítem. El orden inverso produce pruebas que miden lo fácil de preguntar.</p></div>
+        <div class="step-item"><span class="step-num">2</span><p style="margin:0;">La accesibilidad no baja el rigor: elimina la barrera que no es matemática.</p></div>
+        <div class="step-item"><span class="step-num">3</span><p style="margin:0;">Cada distractor debe corresponder a un error real y decir qué hay que reenseñar.</p></div>
+        <div class="step-item"><span class="step-num">4</span><p style="margin:0;">La respuesta abierta se redacta junto con su baremo, nunca después.</p></div>
+        <div class="step-item"><span class="step-num">5</span><p style="margin:0;">Varias vías de respuesta correcta valen lo mismo si evidencian el mismo razonamiento.</p></div>
+        <div class="step-item"><span class="step-num">6</span><p style="margin:0;">La planilla de especificaciones es el plano de la prueba y el plan de la reenseñanza.</p></div>
+        <div class="step-item"><span class="step-num">7</span><p style="margin:0;">La IA redacta borradores; el maestro verifica, corrige y firma.</p></div>
+      </div>
+
+      <div class="subsection">
+        <h3>Volvamos al activador</h3>
+        <p class="section-dek">Esto fue lo que usted escribió esta mañana sobre su último examen:</p>
+        <div class="callout callout-quote" data-recall-text="activador"></div>
+        <div class="worksheet-box">
+          <label for="cambioActivador">¿Qué cambiaría hoy en ese instrumento? Escríbalo en una línea: será el primer punto de su plan de acción.</label>
+          <textarea id="cambioActivador" data-persist-text="cierre-cambio" placeholder="Lo primero que cambiaría es…"></textarea>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Plan de acción a 30 días</h3>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-year">7 días</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">
+            <strong>Esta semana.</strong> Ajusto el formato de mi próximo examen: letra, espaciado, imágenes con texto alterno y viñetas simples. Aplico la lista de cotejo de imparcialidad a los ítems que ya tenía redactados.
+          </div></div>
+          <div class="timeline-item"><span class="timeline-year">15 días</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">
+            <strong>En dos semanas.</strong> Completo la planilla de especificaciones de mi próxima prueba antes de redactar el primer ítem. Sustituyo mis ítems de llena blancos por respuesta abierta sencilla de dos puntos con baremo.
+          </div></div>
+          <div class="timeline-item"><span class="timeline-year">30 días</span><div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div><div class="timeline-content">
+            <strong>En un mes.</strong> Administro una prueba completa construida con esta metodología. Analizo los distractores más escogidos y organizo la reenseñanza por destreza. Comparto un ítem modelo con mi departamento.
+          </div></div>
+        </div>
+        <div class="worksheet-box">
+          <label for="compromisoHoy">Compromiso de hoy: escriba una sola acción concreta con fecha</label>
+          <textarea id="compromisoHoy" data-persist-text="compromiso" placeholder="Voy a… antes del [fecha]."></textarea>
+        </div>
+        <p class="source-note">El compromiso escrito con fecha es lo que convierte el taller en cambio de práctica.</p>
+      </div>
+    </section>
+
+    <!-- EVALUACIÓN FINAL -->
+    <section class="module-section" id="evaluacion">
+      <span class="section-kicker">Evaluación final</span>
+      <h2>Compruebe su comprensión del módulo</h2>
+      <p class="section-dek">Cinco preguntas de repaso sobre el taller completo. Necesita al menos 4 de 5 correctas para aprobar y generar su certificado.</p>
+
+      <div class="final-exam" id="examDUA" data-pass-score="4">
+        <p class="exam-progress">0 de 5 preguntas respondidas</p>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 1 de 5</p>
+          <p class="quiz-question">Según la «prueba de fuego» del DUA, si un estudiante domina la destreza y aun así falla el ítem, ¿dónde está el problema?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="La prueba de fuego apunta explícitamente al ítem, no al estudiante.">En el estudiante: necesita más práctica</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: si domina la destreza y aun así falla, el problema está en el ítem.">En el ítem: mide algo que no es la destreza</button>
+            <button class="quiz-option" data-correct="false" data-feedback="El principio no evalúa al maestro, evalúa si el instrumento midió lo que debía medir.">En el maestro que no enseñó bien</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 2 de 5</p>
+          <p class="quiz-question">¿Qué mide realmente el nivel DOK de un ítem?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="Un cálculo con números grandes sigue siendo DOK 1 aunque sea difícil: DOK no es dificultad.">Cuán difícil es el ítem para el estudiante</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: el DOK mide profundidad de pensamiento, no dificultad.">La profundidad del pensamiento exigido</button>
+            <button class="quiz-option" data-correct="false" data-feedback="El tiempo se estima aparte (1 min por SM, 3 por RA sencilla, 5 por RA de aplicación); no es lo que define el DOK.">Cuánto tiempo toma resolver el ítem</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 3 de 5</p>
+          <p class="quiz-question">Según las reglas de redacción de opciones de respuesta, ¿qué nunca debe hacer un distractor?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="Las opciones numéricas sí deben ordenarse de forma ascendente o descendente; eso es correcto, no un error.">Ser numérico y estar en orden ascendente</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: ninguna opción debe ofrecer pistas sobre la respuesta correcta ni negar la premisa.">Ofrecer pistas sobre la respuesta correcta o negar la premisa</button>
+            <button class="quiz-option" data-correct="false" data-feedback="Al contrario: cada distractor debe corresponder a un error real y previsible, plausible en valor.">Corresponder a un error real y previsible del estudiante</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 4 de 5</p>
+          <p class="quiz-question">¿Cómo se calcula la puntuación mínima de ejecución en la planilla de especificaciones, y cómo se redondea?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="El umbral del taller es 70 %, no 60 %.">Puntos totales × 0.60, redondeado hacia arriba</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: puntos totales × 0.70, redondeado hacia abajo, a favor del estudiante, y se anuncia antes de administrar la prueba.">Puntos totales × 0.70, redondeado hacia abajo</button>
+            <button class="quiz-option" data-correct="false" data-feedback="El punto de corte se decide y se comunica antes de administrar la prueba, nunca después de ver los resultados.">Se decide después de ver los resultados de la clase</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="quiz">
+          <p class="quiz-title">Pregunta 5 de 5</p>
+          <p class="quiz-question">Según el módulo de IA y DUA, ¿qué es lo que la inteligencia artificial NO puede hacer de forma confiable?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false" data-feedback="Producir un primer borrador rápido sí es algo que la IA puede hacer bien, según el módulo.">Producir un primer borrador de veinte ítems en minutos</button>
+            <button class="quiz-option" data-correct="true" data-feedback="Correcto: puede producir códigos con la forma correcta que no existen en el documento oficial. Todo código se verifica.">Conocer con certeza los códigos oficiales del Programa de Matemáticas</button>
+            <button class="quiz-option" data-correct="false" data-feedback="Reescribir un enunciado en lenguaje más claro es algo que la IA sí puede hacer.">Reescribir un enunciado denso en lenguaje más claro</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+
+        <div class="exam-result">
+          <span class="exam-score">0 / 5</span>
+          <p class="exam-message"></p>
+          <button class="btn btn-ghost exam-retry-btn" type="button">Reiniciar prueba</button>
+        </div>
+
+        <div class="cert-panel" data-module-title="Redacción de Exámenes con Diseño Universal para el Aprendizaje" data-facilitator-name="Dr. Héctor J. Corraliza Montero, Ed.D." data-facilitator-title="Facilitador Docente de Matemática-OREPonce">
+          <label for="certNameDUA">Escriba su nombre completo para el certificado</label>
+          <input type="text" id="certNameDUA" placeholder="Nombre y apellidos">
+          <button class="btn btn-primary cert-generate-btn" type="button">🎓 Generar certificado</button>
+          <p class="cert-hint">Se abrirá el diálogo de impresión de su navegador — elija "Guardar como PDF" para conservarlo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFERENCIAS -->
+    <section class="module-section" id="referencias">
+      <div class="module-closing">
+        <p class="quote">«Un buen examen no es el que más estudiantes reprueba, sino el que con más precisión dice qué enseñar mañana.»</p>
+        <p class="quote-sign">Gracias por su trabajo de hoy.</p>
+      </div>
+
+      <span class="section-kicker">Referencias · APA 7.ª edición</span>
+      <h2>Referencias</h2>
+      <ul class="ref-list">
+        <li>American Educational Research Association, American Psychological Association y National Council on Measurement in Education. (2014). <em>Standards for educational and psychological testing</em>. AERA.</li>
+        <li>CAST. (2024). Universal Design for Learning guidelines version 3.0. <a href="https://udlguidelines.cast.org" target="_blank" rel="noopener">https://udlguidelines.cast.org</a></li>
+        <li>Corraliza Montero, H. J. (2024). <em>Modelo RC-TTF para la formulación de prompts en contextos educativos</em> [Modelo pedagógico]. Oficina Regional Educativa de Ponce.</li>
+        <li>Departamento de Educación de Puerto Rico. (2022). <em>Estándares de contenido y expectativas de grado: Programa de Matemáticas</em>. DEPR.</li>
+        <li>Gregory, G. H. y Chapman, C. (2002). <em>Differentiated instructional strategies</em>. Corwin Press.</li>
+        <li>Haladyna, T. M. y Rodriguez, M. C. (2013). <em>Developing and validating test items</em>. Routledge.</li>
+        <li>Thompson, S. J., Johnstone, C. J. y Thurlow, M. L. (2002). <em>Universal design applied to large scale assessments</em> (Synthesis Report 44). National Center on Educational Outcomes.</li>
+        <li>Webb, N. L. (1997). <em>Criteria for alignment of expectations and assessments in mathematics and science education</em> (Research Monograph No. 6). Council of Chief State School Officers.</li>
+      </ul>
+      <p class="source-note" style="text-align:center; margin-top:16px;">Los ítems, baremos y planillas modelados en este taller fueron construidos para fines de adiestramiento. Verifique todo código de expectativa en el documento oficial del Programa de Matemáticas antes de usarlo en una prueba.</p>
+
+      <div class="callout callout-primary" style="margin-top:32px; text-align:center;">
+        <h3 style="margin-bottom:6px;">Dr. Héctor J. Corraliza Montero, Ed.D.</h3>
+        <p style="margin-bottom:0;">Facilitador Docente de Matemáticas · Oficina Regional Educativa de Ponce<br>Departamento de Educación de Puerto Rico</p>
+      </div>
+
+      <div class="cover-actions" style="justify-content:center; margin-top:28px;">
+        <a class="btn btn-primary" href="../../recursos/Redaccion-Examenes-DUA-Corraliza.pptx" download>⬇ Descargar presentación original (.pptx)</a>
+        <a class="btn btn-ghost" href="../../index.html#contacto">Escribir al facilitador</a>
+      </div>
+    </section>
+
+    </div>
+
+    <div class="slide-controls">
+      <button class="slide-btn slide-prev" id="slidePrev" type="button" aria-label="Sección anterior">← Anterior</button>
+      <div class="slide-dots" id="slideDots"></div>
+      <span class="slide-counter" id="slideCounter">1 / 17</span>
+      <button class="slide-btn slide-next" id="slideNext" type="button" aria-label="Siguiente sección">Siguiente →</button>
+    </div>
+
+   </div>
+  </main>
+</div>
+
+<div class="certificate-stage" id="certificateStage"></div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; <span id="year"></span> CorralizaMath · Módulo interactivo desarrollado a partir del taller "Redacción de Exámenes con Diseño Universal para el Aprendizaje" del Dr. Héctor J. Corraliza Montero.</p>
+  </div>
+</footer>
+
+<script src="module.js"></script>
+</body>
+</html>
