@@ -10,9 +10,11 @@ Portal educativo para organizar recursos de matemáticas, desarrollo profesional
 ├── css/
 │   └── styles.css
 ├── js/
-│   └── main.js
+│   ├── main.js
+│   └── visits.js
 ├── img/
-│   ├── logo-ore-ponce.svg
+│   ├── logo-ore-ponce.png
+│   ├── membrete-depr.png
 │   └── signature.svg
 ├── matematicas/
 │   └── index.html
@@ -35,7 +37,11 @@ Portal educativo para organizar recursos de matemáticas, desarrollo profesional
     ├── IA-para-Docentes-Corraliza.pptx
     ├── Microaprendizaje-Adultos-RUTA-Corraliza.pptx
     ├── Redaccion-Examenes-DUA-Corraliza.pptx
-    └── Modelo-GROW-Escuelas-Corraliza.pptx
+    ├── Modelo-GROW-Escuelas-Corraliza.pptx
+    └── libros/
+        ├── ia-en-el-sistema-educativo-depr-2024.pdf
+        ├── guia-ia-aprendizaje-estudiantil-depr-2025.pdf
+        └── 200-prompts-para-educadores-unitec-2024.pdf
 ```
 
 ## Áreas del portal
@@ -56,6 +62,16 @@ Los talleres de desarrollo profesional se publican como módulos de autoestudio 
 - Ofrece un botón para descargar la presentación `.pptx` original desde `recursos/`.
 - Guarda el progreso del usuario (casillas marcadas, secciones vistas) en `localStorage` del navegador — no requiere servidor ni base de datos.
 - Cierra con una **evaluación final** de 5 preguntas (mínimo 4 correctas para aprobar, con opción de reintentar) que, al aprobarse, habilita un **certificado de aprovechamiento** imprimible: el usuario escribe su nombre, se genera una vista de certificado con el logo del Programa de Matemáticas ORE-Ponce (`img/logo-ore-ponce.svg`) y la firma del facilitador (`img/signature.svg`), y se guarda como PDF desde el diálogo de impresión del navegador (`window.print()`).
+
+## Contador de visitas
+
+Cada página principal y cada módulo interactivo muestra públicamente cuántas visitas ha recibido esa sección (`js/visits.js`), y la página de inicio incluye una sección "Estadísticas de uso" con el conteo de las seis áreas y los cuatro módulos en una sola vista.
+
+El conteo se apoya en [GoatCounter](https://www.goatcounter.com), un servicio externo gratuito y sin cookies. Mientras la cuenta no esté configurada, los contadores se muestran como «—» o con un aviso de "no disponible" en vez de fallar. Para activarlos:
+
+1. Crear una cuenta gratuita en GoatCounter con el código de sitio `corralizamath` (para que coincida con `GOATCOUNTER_HOST` en `js/visits.js`; si se usa otro código, cambiar esa constante).
+2. Seguir la documentación vigente de GoatCounter para habilitar la visibilidad pública del contador de esa cuenta — es lo que permite leer los números sin iniciar sesión.
+3. Verificar que las páginas del sitio carguen el script de seguimiento (`//gc.zgo.at/count.js`, ya incluido en cada página) y que los números aparezcan tras algunas visitas reales.
 
 ## Publicación
 

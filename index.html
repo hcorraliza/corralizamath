@@ -165,6 +165,18 @@
       </div>
     </section>
 
+    <section id="estadisticas" class="section">
+      <div class="container">
+        <p class="eyebrow">Transparencia</p>
+        <h2>Estadísticas de uso</h2>
+        <p class="section-intro">Visitas públicas por área del portal y por módulo interactivo, actualizadas automáticamente.</p>
+        <div class="visit-summary-grid" id="visitSummary">
+          <div class="visit-zone"><span class="visit-zone-name">Cargando estadísticas…</span></div>
+        </div>
+        <p class="source-note" style="margin-top:16px; font-size:0.85rem; color:var(--color-ink-soft);">Conteo mediante GoatCounter, un servicio de estadísticas sin cookies ni datos personales. Si el contador aún no está activo, las cifras se mostrarán como «—».</p>
+      </div>
+    </section>
+
     <section id="temas" class="section section-alt">
       <div class="container">
         <h2>Matemáticas con comprensión</h2>
@@ -192,5 +204,22 @@
     </div>
   </footer>
   <script src="js/main.js"></script>
+  <script src="js/visits.js"></script>
+  <script>
+    renderVisitSummary("visitSummary", [
+      { label: "Inicio", paths: ["/", "/index.html"] },
+      { label: "Matemáticas por niveles", paths: ["/matematicas/index.html"] },
+      { label: "Recursos para docentes", paths: ["/docentes/index.html"] },
+      { label: "IA y Tecnología Educativa", paths: ["/ia-tecnologia/index.html"] },
+      { label: "Presentaciones y talleres", paths: ["/presentaciones/index.html"] },
+      { label: "Libros y publicaciones", paths: ["/libros/index.html"] },
+      { label: "Normativas y Documentos DEPR", paths: ["/normativas-depr/index.html"] },
+      { label: "Módulo: IA para Docentes", paths: ["/modulos/ia-para-docentes/index.html"] },
+      { label: "Módulo: Microaprendizaje para Adultos", paths: ["/modulos/microaprendizaje-adultos/index.html"] },
+      { label: "Módulo: Redacción de Exámenes con DUA", paths: ["/modulos/redaccion-examenes-dua/index.html"] },
+      { label: "Módulo: El Modelo GROW en las Escuelas", paths: ["/modulos/modelo-grow-escuelas/index.html"] },
+    ]);
+  </script>
+  <script data-goatcounter="https://corralizamath.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
